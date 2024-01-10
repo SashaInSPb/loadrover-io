@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
+            level="ERROR"/>
+    <logger name="org.springframework.beans.factory" level="WARN"/>
+    <logger name="org.springframework.jdbc.support" level="WARN"/>
+    <logger name="org.apache" level="INFO"/>
+    <logger name="net.sf.ehcache" level="INFO"/>
+    <logger name="org.apache.ibatis" level="INFO"/>
+    <logger name="org.aspectj" level="INFO"/>
+    <logger name="com.zaxxer.hikari" level="INFO"/>
+    <logger name="org.hibernate" level="INFO"/>
+    <logger name="javax.management" level="WARN"/>
+    <logger name="jdk.event.security" level="INFO"/>
+
+    <logger name="java.io.serialization" level="ERROR"/>
+    <logger name="sun.rmi" level="ERROR"/>
+    <logger name="org.xnio" level="ERROR"/>
+    <logger name="io.undertow" level="ERROR"/>
+    <logger name="org.postgresql.jdbc.PgConnection" level="ERROR"/>
+    <logger name="org.postgresql.core.v3.QueryExecutorImpl" level="ERROR"/>
+    <logger name="org.postgresql.core.v3.ConnectionFactoryImpl" level="ERROR"/>
+    <logger name="org.postgresql.jre7.sasl.ScramAuthenticator" level="ERROR"/>
+
+    <logger name="jakarta.activation" level="ERROR"/>
+    <logger name="org.mariadb.jdbc.message.server.OkPacket" level="ERROR"/>
+    <logger name="io.swagger.v3.core" level="ERROR"/>
+    <logger name="io.swagger" level="ERROR"/>
+
+    <logger name="org.mariadb.jdbc.client" level="ERROR"/>
+
+    <!-- log file path -->
+    <property name="LOG_PATH" value="logs/"/>
+
+    <!-- log file name -->
+    <property name="LOG_FILE_NAME" value="boracat_tms_log"/>
+    <property name="ERR_LOG_FILE_NAME" value="err_log"/>
+
+    <!-- pattern -->
+    <property name="LOG_PATTERN"
+              value="%-5level %d{HH:mm:ss.SSS} %X{LOGSEQ:--} %X{LOGINID:--} %logger{36} - %msg %ex %n"/>
+
+    <springProfile name="local">
+        <logger name="org.springframework.cache" level="DEBUG"/>
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${LOG_PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <root level="DEBUG">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="!local">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${LOG_PATH}/${LOG_FILE_NAME}.log</file>
+            <append>true</append>
+
+            <encoder>
+                <pattern>${LOG_PATTERN}</pattern>
+            </encoder>
+
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_PATH}/${LOG_FILE_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>10</maxHistory>
+            </rollingPolicy>
+
+        </appender>
+
+        <appender name="ERR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>error</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <file>${LOG_PATH}/${ERR_LOG_FILE_NAME}.log</file>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <pattern>${LOG_PATTERN}</pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_PATH}/${ERR_LOG_FILE_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            </rollingPolicy>
+        </appender>
+
+
+        <root level="DEBUG">
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="ERR"/>
+        </root>
+
+    </springProfile>
+
+</configuration>
