@@ -50,7 +50,7 @@ class ScenarioService(
 
         // Queue로 시나리오 순서 관리
         var itm: String
-        var orderBookQueue: Queue<String> = LinkedList(request.schedule.orderBook)
+        val orderBookQueue: Queue<String> = LinkedList(request.schedule.orderBook)
         for (idx in 0 until  orderBookQueue.size) {
             // 포인터가 가르키는 원소를 리턴하거나 비었을 경우, null을 뱉어낸다.
             itm = orderBookQueue.poll()
@@ -103,7 +103,7 @@ class ScenarioService(
     }
 
     private fun getHeader(host: String, agentType: UserAgent, jwtToken: String?): List<ScenarioDto.HeaderField> {
-        var headers: MutableList<ScenarioDto.HeaderField> = mutableListOf()
+        val headers: MutableList<ScenarioDto.HeaderField> = mutableListOf()
 
         when (agentType) {
             UserAgent.CHROME_114 -> headers.add(
