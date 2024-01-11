@@ -1,11 +1,6 @@
 spring:
   main:
     allow-bean-definition-overriding: true
-#  datasource:
-#    url: jdbc:mysql://10.78.7.137:13306/boracat_dev
-#    username: boracat_dev
-#    password: boracat_dev_0525!
-#    driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
   servlet:
@@ -31,7 +26,7 @@ springdoc:
 
 loadrover:
   gatling:
-    path: C:\Project\gatling-3.9.5
+    path: classpath:/data/
     simulation: simulations
   output:
-    class-name: "SimulationDev"
+    class-name-prefix: "SimulationDev"
