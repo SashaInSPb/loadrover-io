@@ -2,6 +2,7 @@ import io.gatling.javaapi.core.CoreDsl.constantUsersPerSec
 import io.gatling.javaapi.core.CoreDsl.scenario
 import io.gatling.javaapi.core.Simulation
 import io.gatling.javaapi.http.HttpDsl.http
+//import io.gatling.javaapi.http.HttpDsl.http
 import java.time.Duration
 
 class TestSimulation: Simulation() {

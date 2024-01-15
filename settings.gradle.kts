@@ -7,7 +7,12 @@ pluginManagement {
         kotlin("plugin.spring") version kotlinPluginVersion
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
+}
 
 rootProject.name = "loadrover-io"
 include("api")
 include("gatling")
+include("gatling:kotlin")
+findProject(":gatling:kotlin")?.name = "kotlin"
