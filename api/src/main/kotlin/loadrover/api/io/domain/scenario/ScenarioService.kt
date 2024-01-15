@@ -1,6 +1,6 @@
-package io.bytescorp.loadrover.domain.scenario
+package loadrover.api.io.domain.scenario
 
-import io.bytescorp.loadrover.config.LoadroverConfig
+import loadrover.api.io.config.LoadroverConfig
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.File

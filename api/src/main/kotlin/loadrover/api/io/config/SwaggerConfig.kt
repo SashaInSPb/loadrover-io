@@ -1,4 +1,4 @@
-package io.bytescorp.loadrover.config
+package loadrover.api.io.config
 
 import org.springdoc.core.models.GroupedOpenApi
 import org.springframework.context.annotation.Bean

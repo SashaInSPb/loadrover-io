@@ -9,54 +9,87 @@ plugins {
 	kotlin("plugin.spring") version "1.8.22"
 }
 
-group = "io.2bytescorp"
-version = "0.0.1-SNAPSHOT"
-
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 }
 
-configurations {
-	compileOnly {
-		extendsFrom(configurations.annotationProcessor.get())
+allprojects {
+	group = "loadrover.io"
+	version = "0.0.1-SNAPSHOT"
+
+	repositories {
+		mavenCentral()
 	}
 }
 
-repositories {
-	mavenCentral()
-}
+subprojects {
 
-dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-mustache")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	apply(plugin = "io.spring.dependency-management")
+	apply(plugin = "org.springframework.boot")
+	apply(plugin = "org.jetbrains.kotlin.plugin.spring")
+	apply(plugin = "kotlin")
+	apply(plugin = "java")
+	apply(plugin = "io.gatling.gradle")
 
-	//kotlin
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-	//annotiaion
-	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	dependencies {
+		implementation("org.springframework.boot:spring-boot-starter-mustache")
+		implementation("org.springframework.boot:spring-boot-starter-web")
 
-	//swagger
-	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
+		//kotlin
+		implementation("org.jetbrains.kotlin:kotlin-reflect")
+		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-	//string
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+		//annotation
+		annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
-}
+		//swagger
+		implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
 
-tasks.withType<KotlinCompile> {
-	kotlinOptions {
-		freeCompilerArgs += "-Xjsr305=strict"
-		jvmTarget = "17"
+		//string
+		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	}
+
+	tasks.withType<KotlinCompile> {
+		kotlinOptions {
+			freeCompilerArgs += "-Xjsr305=strict"
+			jvmTarget = "17"
+		}
+	}
+
+	tasks.withType<Test> {
+		useJUnitPlatform()
+	}
+
+	tasks.register("prepareKotlinBuildScriptModel"){
+	}
+
+	configurations {
+		compileOnly {
+			extendsFrom(configurations.annotationProcessor.get())
+		}
 	}
 }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+// api
+project(":api") {
+	dependencies {
+		implementation(project(":gatling"))
+	}
+
+	tasks.withType<Test> {
+		exclude("**/*")
+		useJUnitPlatform()
+	}
 }
 
-tasks.bootBuildImage {
-	builder.set("paketobuildpacks/builder-jammy-base:latest")
+// gatling
+project(":gatling") {
+	// jar는 만드나, boot로 실행되는 jar는 만들지 않도록 하는 설정
+	tasks.jar {
+		enabled = true
+	}
+	tasks.bootJar {
+		enabled = false
+	}
 }

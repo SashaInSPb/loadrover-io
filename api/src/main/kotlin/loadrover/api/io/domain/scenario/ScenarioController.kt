@@ -1,4 +1,4 @@
-package io.bytescorp.loadrover.domain.scenario
+package loadrover.api.io.domain.scenario
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag

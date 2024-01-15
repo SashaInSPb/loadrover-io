@@ -1,4 +1,4 @@
-package io.bytescorp.loadrover.domain.scenario
+package loadrover.api.io.domain.scenario
 
 class ScenarioDto {
 

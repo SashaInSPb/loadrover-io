@@ -1,4 +1,4 @@
-package io.bytescorp.loadrover.infra
+package loadrover.api.io.infra
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
