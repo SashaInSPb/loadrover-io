@@ -129,8 +129,4 @@ class ScenarioService(
         return headers.toList()
     }
 
-    fun createScenario() {
-
-    }
-
 }
