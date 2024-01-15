@@ -4,6 +4,7 @@ import java.util.Objects.requireNonNull
 
 object IDEPathHelper {
     private val projectRootDir = Paths.get(requireNonNull(javaClass.getResource("gatling.conf"), "Couldn't locate gatling.conf").toURI()).parent.parent.parent.parent
+//    private val projectRootDir = Paths.get("")
     private val gradleBuildDirectory = projectRootDir.resolve("build")
     private val gradleSrcDirectory = projectRootDir.resolve("src").resolve("main")
 
