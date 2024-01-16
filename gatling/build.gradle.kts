@@ -1,11 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "3.1.7"
-	id("io.spring.dependency-management") version "1.1.4"
-	id("io.gatling.gradle") version "3.10.3"
 	kotlin("jvm") version "1.8.22"
-	kotlin("plugin.spring") version "1.8.22"
+	kotlin("plugin.allopen")
+//	kotlin("plugin.spring") version "1.8.22"
+	id("io.gatling.gradle") version "3.10.3"
 }
 
 apply(plugin = "io.gatling.gradle")
@@ -21,16 +20,19 @@ allOpen {
 //}
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-mustache")
-	implementation("org.springframework.boot:spring-boot-starter-web")
+//	implementation("org.springframework.boot:spring-boot-starter-mustache")
+//	implementation("org.springframework.boot:spring-boot-starter-web")
+//
+//	//kotlin
+//	implementation("org.jetbrains.kotlin:kotlin-reflect")
+//	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+//
+//	//annotation
+//	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
-	//kotlin
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-	//annotation
-	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-
-	//string
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+//	//string
+//	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("io.gatling.highcharts:gatling-charts-highcharts:3.9.3")
+	implementation("io.gatling:gatling-app:3.9.3")
+	implementation("io.gatling:gatling-core:3.9.3")
 }

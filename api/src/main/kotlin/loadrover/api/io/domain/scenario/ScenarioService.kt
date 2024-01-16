@@ -4,6 +4,8 @@ import loadrover.api.io.config.LoadroverConfig
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.File
+import java.nio.file.*
+import java.nio.file.attribute.BasicFileAttributes
 import java.util.*
 
 @Service
@@ -129,8 +131,45 @@ class ScenarioService(
         return headers.toList()
     }
 
-    fun createScenario() {
+    fun moveSimulationToProgress() {
+        val sourceFile = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.simulation}/SimulationDev8c9f8b9c-1a66-4367-ad02-15060a3407dc.java"
+        val progressDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.simulation}/progress/"
 
+        val srcPath: Path = Path.of(sourceFile)
+        val destinationDirectory: Path = Path.of(progressDirectory)
+
+        try {
+            Files.move(
+                srcPath,
+                destinationDirectory.resolve(srcPath.fileName),
+                StandardCopyOption.REPLACE_EXISTING
+            )
+
+            println("File moved successfully!")
+        } catch (e: Exception) {
+            println("Error moving file: ${e.message}")
+        }
+    }
+
+    fun getScenarioList() {
+        val progressDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.simulation}/progress/"
+        val directoryPath: Path = Path.of(progressDirectory)
+
+        try {
+            Files.walkFileTree(
+                directoryPath,
+                setOf(FileVisitOption.FOLLOW_LINKS),
+                Integer.MAX_VALUE,
+                object: SimpleFileVisitor<Path>() {
+                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        println("File Name: ${file?.fileName}, Path: $file")
+                        return FileVisitResult.CONTINUE
+                    }
+                }
+            )
+        } catch (e: Exception) {
+            println("Error reading files: ${e.message}")
+        }
     }
 
 }

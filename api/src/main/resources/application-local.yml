@@ -26,7 +26,11 @@ springdoc:
 
 loadrover:
   gatling:
-    path: classpath:/data/
-    simulation: simulations
+    path: /Users/sasha/Downloads
+    data: data
+    work: work
+    progress: progress
+    simulation: simulation
+    result: result
   output:
     class-name-prefix: "SimulationDev"
