@@ -1,5 +1,6 @@
 package loadrover.api.io.domain.scenario
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverConfig
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
@@ -14,16 +15,38 @@ class ScenarioService(
 ) {
     private val log = LoggerFactory.getLogger(ScenarioService::class.java)
 
+    fun getFileList(): MutableSet<FileDto> {
+        val sourceFileList = searchDirectory("source")
+        val workFileIdList = searchDirectory("work").map { it.scenarioId }
+        val progressFileIdList = searchDirectory("progress").map { it.scenarioId }
+        val resultFileIdList = searchDirectory("result").map { it.scenarioId }
+
+        for (sourceFile in sourceFileList) {
+            if (sourceFile.scenarioId in workFileIdList) sourceFile.status = ScenarioStatus.READY
+            if (sourceFile.scenarioId in progressFileIdList) sourceFile.status = ScenarioStatus.PROGRESS
+            if (sourceFile.scenarioId in resultFileIdList) sourceFile.status = ScenarioStatus.COMPLETE
+        }
+
+        return sourceFileList
+    }
+
     // 시나리오 생성
-    fun createScenario(request: ScenarioDto.RequestProjectDto) {
-        val projectUUID = getUUID()
-        val scenarioCtrl = ScenarioDto.ScenarioControl()
-        val projectClass = loadroverConfig.output.classNamePrefix + projectUUID
-        val userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
-        val host = "https://dev.boracat.io"
+    fun createScenario(request: ScenarioDto.RequestScenarioDto) {
+        val scenarioUUID = getUUID()
+        val scenarioClass = loadroverConfig.output.classNamePrefix + scenarioUUID
 
+        saveSourceFile(request, scenarioUUID, scenarioClass)
 
-        // header field 값 추가
+        // Scheduler 이용
+//        val fileName = file.originalFilename!!
+//        val scenarioUUID = fileName.removePrefix(loadroverConfig.output.classNamePrefix).removeSuffix(".json")
+//        val scenarioClass = fileName.removeSuffix(".json")
+//        val request = jacksonObjectMapper().readValue<ScenarioDto.RequestScenarioDto>(file.bytes)
+
+        val userAgent = UserAgent.CHROME_114
+        val host = request.target.host
+        var headerIdx = 0
+
         val codes = StringBuilder()
         codes.append("import java.time.Duration;\n")
         codes.append("import java.util.*;\n")
@@ -33,26 +56,31 @@ class ScenarioService(
         codes.append("import static io.gatling.javaapi.core.CoreDsl.*;\n")
         codes.append("import static io.gatling.javaapi.http.HttpDsl.*;\n")
         codes.append("import static io.gatling.javaapi.jdbc.JdbcDsl.*;\n")
-        codes.append("public class $projectClass extends Simulation {{\n")
+        codes.append("public class $scenarioClass extends Simulation {{\n")
         codes.append("HttpProtocolBuilder httpProtocol = http\n")
         codes.append("    .baseUrl(\"${host}\")\n")
         codes.append("    .inferHtmlResources()\n")
         codes.append("    .acceptEncodingHeader(\"gzip, deflate, br\")\n")
         codes.append("    .acceptLanguageHeader(\"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7\")\n")
-        codes.append("    .userAgentHeader(\"${userAgent}\");")
+        codes.append("    .userAgentHeader(\"${userAgent.value}\");")
 
-        val headerId = "headers_0"
+        val headerId = "headers_${headerIdx}"
         codes.append("Map<CharSequence, String> $headerId = new HashMap<>();\n")
 
-        val headers: List<ScenarioDto.HeaderField> = getHeader(host, UserAgent.CHROME_114, request.auth.policy)
+        val headers: List<ScenarioDto.HeaderField> = getHeader(host, userAgent, request.auth.policy)
 
         for (headerField in headers) {
-            codes.append("$headerId.put(\"$projectUUID\");\n")
+            codes.append("$headerId.put(\"$scenarioUUID\");\n")
         }
+        // TODO: 이 부분 다시 체크
+        headerIdx ++
 
         // Queue로 시나리오 순서 관리
-        var itm: String
         val orderBookQueue: Queue<String> = LinkedList(request.schedule.orderBook)
+        val scenarioCtrl = ScenarioDto.ScenarioControl()
+        codes.append("ScenarioBuilder scn = scenario(\"$scenarioUUID\")\n")
+
+        var itm: String
         for (idx in 0 until  orderBookQueue.size) {
             // 포인터가 가르키는 원소를 리턴하거나 비었을 경우, null을 뱉어낸다.
             itm = orderBookQueue.poll()
@@ -84,24 +112,44 @@ class ScenarioService(
             }
 
             codes.append(";\n")
-            codes.append("setUp(scn.injectOpen(atOnceUsers(${request.project.concurrent}))).protocols(httpsProtocol);")
+            codes.append("setUp(scn.injectOpen(atOnceUsers(${request.scenario.concurrent}))).protocols(httpsProtocol);")
             codes.append("}}\n")
         }
 
-        val savePath = "${loadroverConfig.gatling.path}/user-files/${loadroverConfig.gatling.simulation}/${projectClass}.java"
-
+        // work 디렉토리로 저장
+        val savePath = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.work}/${scenarioClass}.java"
 
         try {
             val codeString: String = codes.toString()
-            File(savePath).bufferedWriter().use { it.write(codeString) }
+            File(savePath).bufferedWriter().use {
+                it.write(codeString)
+            }
         } catch (e: Exception) {
-            log.debug("ProjectUUID: $projectUUID")
+            log.debug("ProjectUUID: $scenarioUUID")
         }
+    }
 
+    fun moveWorkToProgress(fileName: String) {
+        val workDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.work}/$fileName"
+        val progressDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.progress}/"
+
+        val srcPath: Path = Path.of(workDirectory)
+        val destinationDirectory: Path = Path.of(progressDirectory)
+
+        try {
+            Files.move(
+                srcPath,
+                destinationDirectory.resolve(srcPath.fileName),
+                StandardCopyOption.REPLACE_EXISTING
+            )
+
+        } catch (e: Exception) {
+            println("Failed to move progress directory: ${e.message}")
+        }
     }
 
     private fun getUUID(): String {
-        return UUID.randomUUID().toString()
+        return System.currentTimeMillis().toString()
     }
 
     private fun getHeader(host: String, agentType: UserAgent, jwtToken: String?): List<ScenarioDto.HeaderField> {
@@ -131,29 +179,10 @@ class ScenarioService(
         return headers.toList()
     }
 
-    fun moveSimulationToProgress() {
-        val sourceFile = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.simulation}/SimulationDev8c9f8b9c-1a66-4367-ad02-15060a3407dc.java"
-        val progressDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.simulation}/progress/"
-
-        val srcPath: Path = Path.of(sourceFile)
-        val destinationDirectory: Path = Path.of(progressDirectory)
-
-        try {
-            Files.move(
-                srcPath,
-                destinationDirectory.resolve(srcPath.fileName),
-                StandardCopyOption.REPLACE_EXISTING
-            )
-
-            println("File moved successfully!")
-        } catch (e: Exception) {
-            println("Error moving file: ${e.message}")
-        }
-    }
-
-    fun getScenarioList() {
-        val progressDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.simulation}/progress/"
-        val directoryPath: Path = Path.of(progressDirectory)
+    private fun searchDirectory(path: String): MutableSet<FileDto> {
+        val sourceFileDirectory = "${loadroverConfig.gatling.path}/user_files/${path}/"
+        val directoryPath: Path = Path.of(sourceFileDirectory)
+        val fileList: MutableSet<FileDto> = mutableSetOf()
 
         try {
             Files.walkFileTree(
@@ -162,14 +191,47 @@ class ScenarioService(
                 Integer.MAX_VALUE,
                 object: SimpleFileVisitor<Path>() {
                     override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        fileList.plusAssign(
+                            FileDto(
+                                scenarioId = when (path) {
+                                    loadroverConfig.gatling.source -> file?.fileName.toString().removeSuffix(".json")
+//                                    loadroverConfig.gatling.result -> file?.fileName.toString().removeSuffix("")
+                                    else -> file?.fileName.toString().removeSuffix(".java")
+                                },
+                                status = when (path) {
+                                    loadroverConfig.gatling.source -> ScenarioStatus.PRECONVERSION
+                                    loadroverConfig.gatling.work -> ScenarioStatus.READY
+                                    loadroverConfig.gatling.progress -> ScenarioStatus.PROGRESS
+                                    loadroverConfig.gatling.result -> ScenarioStatus.COMPLETE
+                                    else -> ScenarioStatus.STOP
+                                }
+                            )
+                        )
                         println("File Name: ${file?.fileName}, Path: $file")
                         return FileVisitResult.CONTINUE
                     }
                 }
             )
         } catch (e: Exception) {
-            println("Error reading files: ${e.message}")
+            println("Failed to read files: ${e.message}")
+        }
+
+        return fileList
+    }
+
+    // data 디렉토리 내 json 파일로 저장
+    private fun saveSourceFile(request: ScenarioDto.RequestScenarioDto, scenarioUUID: String, scenarioClass: String) {
+        val savePath = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.source}/${scenarioClass}.json"
+        val serializedObject = jacksonObjectMapper().writeValueAsString(request)
+
+        try {
+            File(savePath).bufferedWriter().use {
+                it.write(serializedObject)
+            }
+        } catch (e: Exception) {
+            log.error("Failed to save JSON source file, ProjectUUID: $scenarioUUID")
         }
     }
+
 
 }

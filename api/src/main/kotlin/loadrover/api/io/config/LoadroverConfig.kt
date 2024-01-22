@@ -13,10 +13,9 @@ data class LoadroverConfig(
 
     data class GatlingProperty(
         val path: String,
-        val data: String,
+        val source: String,
         val work: String,
         val progress: String,
-        val simulation: String,
         val result: String
     )
 }

@@ -2,12 +2,8 @@ package loadrover.api.io.domain.scenario
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.PutMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
+import org.springframework.web.multipart.MultipartFile
 
 @RestController
 @RequestMapping("/scenario")
@@ -15,30 +11,31 @@ import org.springframework.web.bind.annotation.RestController
 class ScenarioController(
     private val scenarioService: ScenarioService,
 ) {
+
+    // 스케쥴러 이용
+//    @PostMapping("", consumes = ["multipart/form-data"])
     @PostMapping("")
     @Operation(summary = "", description = "")
-    fun createScenario(@RequestBody request: ScenarioDto.RequestProjectDto) {
+    fun createScenario(@RequestBody request: ScenarioDto.RequestScenarioDto){
         return scenarioService.createScenario(request)
     }
 
     @PutMapping("")
     @Operation(summary = "", description = "")
-    fun moveSimulationToProgress() {
-        return scenarioService.moveSimulationToProgress()
+    fun moveSimulationToProgress(fileName: String) {
+        return scenarioService.moveWorkToProgress(fileName)
     }
 
-    @GetMapping("")
+    @GetMapping("/list")
     @Operation(summary = "", description = "")
-    fun getScenarioList() {
-        return scenarioService.getScenarioList()
+    fun getScenarioList(): MutableSet<FileDto> {
+        return scenarioService.getFileList()
     }
 
-//    // Simutlation run 테스트
-//    @GetMapping("")
+    // 스케쥴러 이용
+//    @PostMapping("")
 //    @Operation(summary = "", description = "")
-//    fun runSimulation() {
-//        val runner = GatlingTestRunner("TestSimulation")
-//        // 원하는 동작을 호출
-//        runner.runTest()
+//    fun saveScenarioAsJSON(@RequestBody request: ScenarioDto.RequestScenarioDto) {
+//        return scenarioService.saveSourceFile(request)
 //    }
 }

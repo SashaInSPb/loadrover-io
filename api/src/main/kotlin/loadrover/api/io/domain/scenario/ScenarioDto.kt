@@ -1,5 +1,7 @@
 package loadrover.api.io.domain.scenario
 
+import java.time.LocalDateTime
+
 class ScenarioDto {
 
     data class HeaderField(
@@ -25,13 +27,13 @@ class ScenarioDto {
         }
     }
 
-    data class RequestProjectDto(
-        val project: ProjectPropertyDto,
+    data class RequestScenarioDto(
+        val scenario: ScenarioPropertyDto,
         val target: TargetPropertyDto,
         val auth: AuthPropertyDto,
         val schedule: Schedule
     ) {
-        data class ProjectPropertyDto(
+        data class ScenarioPropertyDto(
             val name: String,
             val concurrent: Short
         )
@@ -66,6 +68,12 @@ class ScenarioDto {
     }
 }
 
+data class FileDto(
+    val scenarioId: String,
+    var status: ScenarioStatus,
+    var workDate: LocalDateTime? = null
+)
+
 enum class HttpHeaderSection(
     val value: String
 ) {
@@ -87,4 +95,9 @@ enum class ScenarioAction (
     GetRequest("GET_REQUEST"),
     PostRequest("POST_REQUEST"),
     Pause("PAUSE")
+}
+
+// File로 관리되는 시나리오 상태값
+enum class ScenarioStatus {
+    PRECONVERSION, READY, PROGRESS, COMPLETE, STOP
 }
