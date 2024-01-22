@@ -12,6 +12,18 @@ allOpen {
 	annotation("com.fasterxml.jackson.annotation.JsonInclude")
 }
 
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+kotlin {
+	jvmToolchain(17)
+}
+
 //noArg {
 //	annotation("jakarta.persistence.Entity") // @Entity가 붙은 클래스에 한해서만 no arg 플러그인을 적용
 //	annotation("com.fasterxml.jackson.annotation.JsonInclude")
