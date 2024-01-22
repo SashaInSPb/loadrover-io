@@ -5,6 +5,7 @@ pluginManagement {
         kotlin("plugin.allopen") version kotlinPluginVersion
         kotlin("plugin.noarg") version kotlinPluginVersion
         kotlin("plugin.spring") version kotlinPluginVersion
+        kotlin("kapt") version "1.7.21"
     }
 }
 
