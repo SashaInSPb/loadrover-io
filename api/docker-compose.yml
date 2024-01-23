@@ -17,5 +17,5 @@ services:
 #      - /home/bcat_be/dev-be-log/loadrover/opt/workspace/logs
 
 networks:
-  load-test:
+  load-test-network:
     name: load-test-network
