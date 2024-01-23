@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  load-test-be:
+    container_name: load-test-be
+    ports:
+      - "3020:3000"
+    networks:
+      - load-test-network
+
+networks:
+  load-test-network:
+    name: load-test-network

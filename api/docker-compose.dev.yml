@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  oad-test-be:
+  load-test-be:
     build:
       context:
         dockerfile: Dockerfile
