@@ -43,7 +43,7 @@ jobs:
       # docker image run
       - name: Docker Compose up
         run: |
-          cd /home/bcat_be/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server
+          cd /home/bcat_be/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/api
           
           if docker-compose ps -q load-test-be >/dev/null; then
             docker-compose down
