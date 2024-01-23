@@ -35,7 +35,7 @@
     <property name="LOG_PATH" value="logs/"/>
 
     <!-- log file name -->
-    <property name="LOG_FILE_NAME" value="boracat_tms_log"/>
+    <property name="LOG_FILE_NAME" value="loadrover_dev_log"/>
     <property name="ERR_LOG_FILE_NAME" value="err_log"/>
 
     <!-- pattern -->
