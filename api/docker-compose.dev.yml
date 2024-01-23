@@ -3,8 +3,8 @@ version: '3.8'
 services:
   load-test-be:
     build:
-      context:
-        dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile
     container_name: load-test-be
     ports:
       - "3020:3000"
