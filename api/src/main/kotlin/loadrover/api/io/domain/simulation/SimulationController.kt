@@ -30,7 +30,7 @@ class SimulationController(
     // result 내 scenarioId와 progress 내 id를 비교 후, 일치하는 id가 있다면 progress 내 파일 삭제
     @PutMapping("")
     @Operation(summary = "", description = "")
-    fun moveSimulationToProgress() {
+    fun moveSimulationToProgress(): String {
         return simulationService.moveProgressToResult()
     }
 
