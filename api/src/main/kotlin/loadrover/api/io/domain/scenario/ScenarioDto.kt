@@ -57,6 +57,7 @@ class ScenarioDto {
 }
 
 data class FileDto(
+    val scenarioTitle: String,
     val scenarioId: String,
     var status: ScenarioStatus,
     var workDate: LocalDateTime? = null

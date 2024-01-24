@@ -12,7 +12,7 @@ class FileUtils(
     private val loadroverConfig: LoadroverConfig
 ) {
     fun searchDirectory(path: String): MutableSet<FileDto> {
-        val fileDirectory = "${loadroverConfig.gatling.path}/${path}"
+        val fileDirectory = if (path == "work") "gatling/src/gatling/kotlin/work" else "${loadroverConfig.gatling.path}/${path}"
         val directoryPath: Path = Path.of(fileDirectory)
         val fileList: MutableSet<FileDto> = mutableSetOf()
 
@@ -23,11 +23,18 @@ class FileUtils(
                 Integer.MAX_VALUE,
                 object: SimpleFileVisitor<Path>() {
                     override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        val fileName = file?.fileName.toString()
+                        val regex = Regex("-[0-9]")
+
                         fileList.plusAssign(
                             FileDto(
+                                scenarioTitle = when (path) {
+                                    loadroverConfig.gatling.source -> fileName.removeSuffix(".json").replace(regex,"")
+                                    else -> fileName.removeSuffix(".kt").replace(regex,"")
+                                },
                                 scenarioId = when (path) {
-                                    loadroverConfig.gatling.source -> file?.fileName.toString().removeSuffix(".json")
-                                    else -> file?.fileName.toString().removeSuffix(".kt")
+                                    loadroverConfig.gatling.source -> fileName.removeSuffix(".json")
+                                    else -> fileName.removeSuffix(".kt")
                                 },
                                 status = when (path) {
                                     loadroverConfig.gatling.source -> ScenarioStatus.PRE_CONVERSION

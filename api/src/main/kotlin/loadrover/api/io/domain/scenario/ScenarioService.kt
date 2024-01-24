@@ -9,6 +9,8 @@ import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
+import java.text.SimpleDateFormat
+import java.util.Date
 
 @Service
 class ScenarioService(
@@ -113,7 +115,7 @@ class ScenarioService(
         codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)")
         codes.append("}}\n")
 
-        //TODO: 따로 디렉토리 관리
+        //TODO: work 따로 디렉토리 관리
         val savePath = "gatling/src/gatling/kotlin/work/${scenarioClass}.kt"
 
         try {
@@ -146,7 +148,8 @@ class ScenarioService(
     }
 
     private fun getUUID(): String {
-        return System.currentTimeMillis().toString()
+        val dataFormat = SimpleDateFormat("yyyyMMddHHmmssSSS")
+        return dataFormat.format(Date()).toString()
     }
 
     private fun getHeader(agentType: UserAgent, jwtToken: String?): List<ScenarioDto.HeaderField> {
