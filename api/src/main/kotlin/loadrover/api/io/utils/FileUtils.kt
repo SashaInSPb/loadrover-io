@@ -12,7 +12,7 @@ class FileUtils(
     private val loadroverConfig: LoadroverConfig
 ) {
     fun searchDirectory(path: String): MutableSet<FileDto> {
-        val fileDirectory = "${loadroverConfig.gatling.path}/user_files/${path}/"
+        val fileDirectory = "${loadroverConfig.gatling.path}/${path}"
         val directoryPath: Path = Path.of(fileDirectory)
         val fileList: MutableSet<FileDto> = mutableSetOf()
 
@@ -30,7 +30,7 @@ class FileUtils(
                                     else -> file?.fileName.toString().removeSuffix(".kt")
                                 },
                                 status = when (path) {
-                                    loadroverConfig.gatling.source -> ScenarioStatus.PRECONVERSION
+                                    loadroverConfig.gatling.source -> ScenarioStatus.PRE_CONVERSION
                                     loadroverConfig.gatling.work -> ScenarioStatus.READY
                                     loadroverConfig.gatling.progress -> ScenarioStatus.PROGRESS
                                     loadroverConfig.gatling.result -> ScenarioStatus.COMPLETE

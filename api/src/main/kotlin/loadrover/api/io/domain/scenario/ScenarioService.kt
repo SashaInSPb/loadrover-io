@@ -22,7 +22,7 @@ class ScenarioService(
         val sourceFileList = fileUtils.searchDirectory("source")
         val workFileIdList = fileUtils.searchDirectory("work").map { it.scenarioId }
         val progressFileIdList = fileUtils.searchDirectory("progress").map { it.scenarioId }
-        val resultFileIdList = fileUtils.searchDirectory("result").map { it.scenarioId }
+        val resultFileIdList = fileUtils.searchDirectory("static/result").map { it.scenarioId }
 
         for (sourceFile in sourceFileList) {
             if (sourceFile.scenarioId in workFileIdList) sourceFile.status = ScenarioStatus.READY
@@ -45,14 +45,11 @@ class ScenarioService(
 
         // kotlin class file로 만들기
         val codes = StringBuilder()
-        codes.append("import io.gatling.javaapi.core.CoreDsl.constantUsersPerSec\n")
-        codes.append("import io.gatling.javaapi.core.CoreDsl.scenario\n")
-        codes.append("import io.gatling.javaapi.core.Simulation\n")
-        codes.append("import io.gatling.javaapi.http.HttpDsl.http\n")
-        codes.append("import java.time.Duration\n")
-//        codes.append("import static io.gatling.javaapi.core.CoreDsl.*;\n")
-//        codes.append("import static io.gatling.javaapi.http.HttpDsl.*;\n")
-//        codes.append("import static io.gatling.javaapi.jdbc.JdbcDsl.*;\n")
+        codes.append("package work\n\n")
+
+        codes.append("import io.gatling.javaapi.core.*\n")
+        codes.append("import io.gatling.javaapi.core.CoreDsl.*\n")
+        codes.append("import io.gatling.javaapi.http.HttpDsl.*\n\n")
 
         codes.append("class ${scenarioClass}: Simulation() {\n")
         codes.append("val httpProtocol = http\n")
@@ -60,18 +57,13 @@ class ScenarioService(
         codes.append("    .inferHtmlResources()\n")
         codes.append("    .acceptEncodingHeader(\"gzip, deflate, br\")\n")
         codes.append("    .acceptLanguageHeader(\"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7\")\n")
-        codes.append("    .userAgentHeader(\"${userAgent.value}\")")
+        codes.append("    .userAgentHeader(\"${userAgent.value}\")\n")
 
-        var headerIdx = 0
+        val headerIdx = 0
         val headerId = "headers_${headerIdx}"
-        codes.append("val $headerId: Map<CharSequence, String> = HashMap()\n")
+        codes.append("val $headerId: MutableMap<CharSequence, String> = HashMap()\n")
 
         val headers: List<ScenarioDto.HeaderField> = getHeader(host, userAgent, request.auth.policy)
-
-        for (headerField in headers) {
-            codes.append("$headerId.put(\"$scenarioUUID\")\n")
-            headerIdx ++
-        }
 
         // Queue로 시나리오 순서 관리
         val orderBookQueue: Queue<String> = LinkedList(request.schedule.orderBook)
@@ -109,10 +101,14 @@ class ScenarioService(
                 }
             }
 
-            codes.append("init {")
-            codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.scenario.concurrent}))).protocols(httpsProtocol)")
-            codes.append("}}}\n")
+            codes.append("init {\n")
+            for (headerField in headers) {
+                codes.append("$headerId.put(\"${headerField.section}\",\"${headerField.value}\")\n")
+            }
+            codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.scenario.concurrent}))).protocols(httpProtocol)")
+            codes.append("}}\n")
         }
+
 
         // work 디렉토리로 저장
         val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
@@ -128,8 +124,8 @@ class ScenarioService(
     }
 
     fun moveWorkToProgress(fileName: String) {
-        val workDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.work}/$fileName"
-        val progressDirectory = "${loadroverConfig.gatling.path}/user_files/${loadroverConfig.gatling.progress}/"
+        val workDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.work}/$fileName"
+        val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/"
 
         val srcPath: Path = Path.of(workDirectory)
         val destinationDirectory: Path = Path.of(progressDirectory)

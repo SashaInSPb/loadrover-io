@@ -18,20 +18,17 @@ class SimulationController(
     }
 
     // Simulation build & run 테스트
+    //TODO: process 디렉토리로 옮기기
     @PostMapping("/run")
     @Operation(summary = "", description = "")
     fun buildSimulation(@RequestBody scenarioName: String): String {
-        Runtime.getRuntime().exec("gradle gatlingRun-simulations.${scenarioName}")
+
+        try {
+            Runtime.getRuntime().exec("gradle gatlingRun-work.${scenarioName}")
+        } catch (e: Error) {
+            println("Error: $e")
+        }
         // 실행 결과 반환
         return "Test progressing"
     }
-
-    // TODO: Scheduler, 디렉토리 옮기기
-    // result 내 scenarioId와 progress 내 id를 비교 후, 일치하는 id가 있다면 progress 내 파일 삭제
-    @PutMapping("")
-    @Operation(summary = "", description = "")
-    fun moveSimulationToProgress(): String {
-        return simulationService.moveProgressToResult()
-    }
-
 }

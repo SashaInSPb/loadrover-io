@@ -99,5 +99,5 @@ enum class ScenarioAction (
 
 // File로 관리되는 시나리오 상태값
 enum class ScenarioStatus {
-    PRECONVERSION, READY, PROGRESS, COMPLETE, STOP
+    PRE_CONVERSION, READY, PROGRESS, COMPLETE, STOP
 }
