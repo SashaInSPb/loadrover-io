@@ -17,7 +17,6 @@ class SimulationController(
         return simulationService.getSimulationResult(scenarioId)
     }
 
-    // Simulation build & run 테스트
     //TODO: process 디렉토리로 옮기기, 진행상황 찾아보기
     @PostMapping("/run")
     @Operation(summary = "", description = "")

@@ -28,42 +28,30 @@ class ScenarioDto {
     }
 
     data class RequestScenarioDto(
-        val scenario: ScenarioPropertyDto,
-        val target: TargetPropertyDto,
-        val auth: AuthPropertyDto,
-        val schedule: Schedule
+        val task: TaskDetail,
+        val process: Map<Int, RequestDetail> = mapOf(),
+        val accountList: List<AccountDetail> = listOf()
     ) {
-        data class ScenarioPropertyDto(
+
+        data class TaskDetail(
             val name: String,
-            val concurrent: Short
+            val targetHost: String,
+            val concurrent: Int,
+            val authType: AuthType,
+            val jwtObjectName: String
         )
 
-        data class TargetPropertyDto(
-            val host: String
+        data class RequestDetail(
+            val apiType: ApiType,
+            val apiUrl: String,
+            val loginUse: Boolean,
+            val params: String,
+            val pause: Int
         )
 
-        data class AuthPropertyDto(
-            val policy: String?
-        )
-    }
-
-    data class Schedule(
-        val orderBook: List<String>,
-        val getRequest: List<ScheduleTypeGetRequest?>,
-        val postRequest: List<ScheduleTypePostRequest?>,
-        val pause: List<ScheduleTypePause?>
-    ) {
-        data class ScheduleTypeGetRequest(
-            val endpoint: String
-        )
-
-        data class ScheduleTypePostRequest(
-            val endpoint: String,
-            val payload: String
-        )
-
-        data class ScheduleTypePause(
-            val sec: Short
+        data class AccountDetail(
+            val id: String,
+            val password: String
         )
     }
 }
@@ -97,7 +85,15 @@ enum class ScenarioAction (
     Pause("PAUSE")
 }
 
-// File로 관리되는 시나리오 상태값
+// File System으로 관리되는 시나리오 상태값
 enum class ScenarioStatus {
     PRE_CONVERSION, READY, PROGRESS, COMPLETE, STOP
+}
+
+enum class ApiType {
+    GET, POST, PUT, DELETE
+}
+
+enum class AuthType {
+    JWT, BASIC
 }

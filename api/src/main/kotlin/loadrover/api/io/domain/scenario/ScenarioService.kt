@@ -33,7 +33,6 @@ class ScenarioService(
         return sourceFileList
     }
 
-    // 시나리오 생성
     fun createScenario(request: ScenarioDto.RequestScenarioDto) {
         val scenarioUUID = getUUID()
         val scenarioClass = loadroverConfig.output.classNamePrefix + scenarioUUID
@@ -41,9 +40,8 @@ class ScenarioService(
         saveSourceFile(request, scenarioUUID, scenarioClass)
 
         val userAgent = UserAgent.CHROME_114
-        val host = request.target.host
+        val host = request.task.targetHost
 
-        // kotlin class file로 만들기
         val codes = StringBuilder()
         codes.append("package work\n\n")
 
@@ -63,55 +61,61 @@ class ScenarioService(
         val headerId = "headers_${headerIdx}"
         codes.append("val $headerId: MutableMap<CharSequence, String> = HashMap()\n")
 
-        val headers: List<ScenarioDto.HeaderField> = getHeader(host, userAgent, request.auth.policy)
+        val headers: List<ScenarioDto.HeaderField> = getHeader(host, userAgent, request.task.jwtObjectName)
 
-        // Queue로 시나리오 순서 관리
-        val orderBookQueue: Queue<String> = LinkedList(request.schedule.orderBook)
-        val scenarioCtrl = ScenarioDto.ScenarioControl()
         codes.append("val scn = scenario(\"$scenarioUUID\")\n")
-        codes.append("  .exec(http(\"request1\").get(\"/health-check2\"))\n")
+//        codes.append("  .exec(http(\"request1\").get(\"/health-check2\"))\n")
 
-        var itm: String
-        for (idx in 0 until  orderBookQueue.size) {
-            // 포인터가 가르키는 원소를 리턴하거나 비었을 경우, null을 뱉어낸다.
-            itm = orderBookQueue.poll()
 
-            when (itm) {
-                ScenarioAction.GetRequest.value -> {
+        for (action in request.process) {
+            when (action.value.apiType) {
+                ApiType.GET -> {
                     codes.append(".exec(")
-                    codes.append("http(\"request_${idx}__${request.schedule.getRequest[scenarioCtrl.idxGetRequest]?.endpoint}\")")
-                    codes.append(".get(\"${request.schedule.getRequest[scenarioCtrl.idxGetRequest]?.endpoint}\")")
+                    codes.append("http(\"request_${action.value.apiType}\")")
+                    codes.append(".get(\"${action.value.apiUrl}\")")
                     codes.append(".headers($headerId)")
                     codes.append(")\n")
-                    scenarioCtrl.tickGetRequest()
                 }
-                ScenarioAction.Pause.value -> {
-                    codes.append(".pause(${request.schedule.pause[scenarioCtrl.idxPause]?.sec})\n")
-                    scenarioCtrl.tickPause()
-                }
-                ScenarioAction.PostRequest.value -> {
-                    val payLoad: String? = request.schedule.postRequest[scenarioCtrl.idxPostRequest]?.payload?.replace("\"", "\\\"")
+                ApiType.POST -> {
+                    val payload = action.value.params.replace("\"", "\\\"")
+//                    val payLoad: String? = request.schedule.postRequest[scenarioCtrl.idxPostRequest]?.payload?.replace("\"", "\\\"")
 
                     codes.append(".exec(")
-                    codes.append(("http(\"request_${idx}__${request.schedule.postRequest[scenarioCtrl.idxPostRequest]?.endpoint}\")"))
-                    codes.append(".post(\"${request.schedule.postRequest[scenarioCtrl.idxPostRequest]?.endpoint}\")")
+                    codes.append(("http(\"request_${action.value.apiType}\")"))
+                    codes.append(".post(\"${action.value.apiUrl}\")")
                     codes.append(".headers($headerId)")
-                    codes.append(".body(StringBody(\"${payLoad}\"))")
+                    codes.append(".body(StringBody(\"${payload}\"))")
                     codes.append(")\n")
-                    scenarioCtrl.tickPostRequest()
+                }
+                ApiType.PUT -> {
+                    val payload = action.value.params.replace("\"", "\\\"")
+
+                    codes.append(".exec(")
+                    codes.append(("http(\"request_${action.value.apiType}\")"))
+                    codes.append(".put(\"${action.value.apiUrl}\")")
+                    codes.append(".headers($headerId)")
+                    codes.append(".body(StringBody(\"${payload}\"))")
+                    codes.append(")\n")
+
+                }
+                ApiType.DELETE -> {
+                    codes.append(".exec(")
+                    codes.append(("http(\"request_${action.value.apiType}\")"))
+                    codes.append(".delete(\"${action.value.apiUrl}\")")
+                    codes.append(".headers($headerId)")
+                    codes.append(")\n")
                 }
             }
-
-            codes.append("init {\n")
-            for (headerField in headers) {
-                codes.append("$headerId.put(\"${headerField.section}\",\"${headerField.value}\")\n")
-            }
-            codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.scenario.concurrent}))).protocols(httpProtocol)")
-            codes.append("}}\n")
         }
 
+        codes.append("init {\n")
+        for (headerField in headers) {
+            codes.append("$headerId.put(\"${headerField.section}\",\"${headerField.value}\")\n")
+        }
+        codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)")
+        codes.append("}}\n")
 
-        // work 디렉토리로 저장
+        //TODO: 따로 디렉토리 관리
         val savePath = "gatling/src/gatling/kotlin/work/${scenarioClass}.kt"
 
         try {

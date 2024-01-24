@@ -32,4 +32,4 @@ loadrover:
     progress: progress
     result: result
   output:
-    class-name-prefix: "Dev"
+    class-name-prefix: "dev"
