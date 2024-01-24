@@ -15,6 +15,7 @@ data class LoadroverConfig(
         val path: String,
         val source: String,
         val work: String,
+        val workPath: String,
         val progress: String,
         val result: String
     )

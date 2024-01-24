@@ -6,11 +6,8 @@ import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.File
-import java.nio.file.Files
-import java.nio.file.Path
-import java.nio.file.StandardCopyOption
 import java.text.SimpleDateFormat
-import java.util.Date
+import java.util.*
 
 @Service
 class ScenarioService(
@@ -23,7 +20,7 @@ class ScenarioService(
         val sourceFileList = fileUtils.searchDirectory("source")
         val workFileIdList = fileUtils.searchDirectory("work").map { it.scenarioId }
         val progressFileIdList = fileUtils.searchDirectory("progress").map { it.scenarioId }
-        val resultFileIdList = fileUtils.searchDirectory("static/result").map { it.scenarioId }
+        val resultFileIdList = fileUtils.searchResultDirectory().map { it.scenarioId }
 
         for (sourceFile in sourceFileList) {
             if (sourceFile.scenarioId in workFileIdList) sourceFile.status = ScenarioStatus.READY
@@ -36,7 +33,7 @@ class ScenarioService(
 
     fun createScenario(request: ScenarioDto.RequestScenarioDto) {
         val scenarioUUID = getUUID()
-        val scenarioClass = loadroverConfig.output.classNamePrefix + scenarioUUID
+        val scenarioClass = request.task.name + scenarioUUID
 
         saveSourceFile(request, scenarioUUID, scenarioClass)
 
@@ -116,7 +113,7 @@ class ScenarioService(
         codes.append("}}\n")
 
         //TODO: work 따로 디렉토리 관리
-        val savePath = "gatling/src/gatling/kotlin/work/${scenarioClass}.kt"
+        val savePath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
 
         try {
             val codeString: String = codes.toString()
@@ -125,25 +122,6 @@ class ScenarioService(
             }
         } catch (e: Exception) {
             log.error("Failed to create: ${e.message}, scenarioUUID: $scenarioUUID")
-        }
-    }
-
-    fun moveWorkToProgress(fileName: String) {
-        val workDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.work}/$fileName"
-        val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/"
-
-        val srcPath: Path = Path.of(workDirectory)
-        val destinationDirectory: Path = Path.of(progressDirectory)
-
-        try {
-            Files.move(
-                srcPath,
-                destinationDirectory.resolve(srcPath.fileName),
-                StandardCopyOption.REPLACE_EXISTING
-            )
-
-        } catch (e: Exception) {
-            log.error("Failed to move progress directory: ${e.message}")
         }
     }
 

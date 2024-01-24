@@ -2,7 +2,9 @@ package loadrover.api.io.domain.simulation
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
+import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.*
+import java.util.concurrent.TimeUnit
 
 @RestController
 @RequestMapping("/simulation")
@@ -10,6 +12,30 @@ import org.springframework.web.bind.annotation.*
 class SimulationController(
     private val simulationService: SimulationService
 ) {
+    private val log = LoggerFactory.getLogger(SimulationService::class.java)
+
+    //TODO: 테스트 진행상황 알 수 있는 방법 알아보기
+    @PostMapping("/run")
+    @Operation(summary = "", description = "")
+    fun runSimulation(@RequestBody request: SimulationDto.RunSimulationRequest): String {
+
+        try {
+            val process = Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId}")
+            // TODO: gatling 실행시키고, 1초 내로 프로세스가 종료되지 않는 경우, 파일이동을 시킨다.? 확인 필요
+            val timeoutInMillis: Long = 1000
+
+            // 프로세스가 종료되나?,,
+            if (process.waitFor(timeoutInMillis, TimeUnit.MILLISECONDS)) {
+                simulationService.moveWorkToProgress(request.scenarioId)
+            }
+
+        } catch (e: Error) {
+            log.error("Failed to run simulation: ${e.message}, scenarioId: ${request.scenarioId}")
+        }
+
+        // 실행 결과 반환 실패 뱉기
+        return "Test progressing"
+    }
 
     @GetMapping("/{scenarioId}")
     @Operation(summary = "", description = "")
@@ -17,17 +43,8 @@ class SimulationController(
         return simulationService.getSimulationResult(scenarioId)
     }
 
-    //TODO: process 디렉토리로 옮기기, 진행상황 찾아보기
-    @PostMapping("/run")
-    @Operation(summary = "", description = "")
-    fun buildSimulation(@RequestBody scenarioName: String): String {
-
-        try {
-            Runtime.getRuntime().exec("gradle gatlingRun-work.${scenarioName}")
-        } catch (e: Error) {
-            println("Error: $e")
-        }
-        // 실행 결과 반환
-        return "Test progressing"
+    @GetMapping
+    fun moveProgressToResult() {
+        simulationService.moveProgressToResult()
     }
 }

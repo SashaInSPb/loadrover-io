@@ -22,10 +22,10 @@ class ScenarioController(
         return scenarioService.getFileList()
     }
 
-    @PutMapping("")
-    @Operation(summary = "", description = "")
-    fun moveSimulationToProgress(fileName: String) {
-        return scenarioService.moveWorkToProgress(fileName)
-    }
+//    @PutMapping("")
+//    @Operation(summary = "", description = "")
+//    fun moveSimulationToProgress(fileName: String) {
+//        return scenarioService.moveWorkToProgress(fileName)
+//    }
 
 }

@@ -21,7 +21,7 @@ class SimulationScheduler(
     fun moveProgressToResult(): String {
         val progressFileList = fileUtils.searchDirectory("progress")
         // 폴더이므로 파일 찾는 방식은 구분되어야 함
-        val resultFileIdList = fileUtils.searchDirectory("static/result").map { it.scenarioId }
+        val resultFileIdList = fileUtils.searchResultDirectory().map { it.scenarioId }
 
         for (progressFile in progressFileList) {
             if (progressFile.scenarioId in resultFileIdList) {

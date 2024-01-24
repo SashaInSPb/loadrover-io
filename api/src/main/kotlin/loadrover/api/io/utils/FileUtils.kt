@@ -12,7 +12,7 @@ class FileUtils(
     private val loadroverConfig: LoadroverConfig
 ) {
     fun searchDirectory(path: String): MutableSet<FileDto> {
-        val fileDirectory = if (path == "work") "gatling/src/gatling/kotlin/work" else "${loadroverConfig.gatling.path}/${path}"
+        val fileDirectory = if (path == "work") "${loadroverConfig.gatling.workPath}/${path}" else "${loadroverConfig.gatling.path}/${path}"
         val directoryPath: Path = Path.of(fileDirectory)
         val fileList: MutableSet<FileDto> = mutableSetOf()
 
@@ -56,4 +56,38 @@ class FileUtils(
 
         return fileList
     }
+
+    fun searchResultDirectory(): MutableSet<FileDto> {
+        val fileDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
+        val directoryPath: Path = Path.of(fileDirectory)
+        val fileList: MutableSet<FileDto> = mutableSetOf()
+
+        try {
+            Files.walkFileTree(
+                directoryPath,
+                setOf(FileVisitOption.FOLLOW_LINKS),
+                Int.MAX_VALUE,
+                object : SimpleFileVisitor<Path>() {
+                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        val fileName = file?.fileName.toString()
+
+                        if (file?.nameCount == directoryPath.nameCount + 1) {
+                            fileList.plusAssign(
+                                FileDto(
+                                    scenarioTitle = fileName.removeSuffix(".kt"),
+                                    scenarioId = fileName.removeSuffix(".kt"),
+                                    status = ScenarioStatus.COMPLETE
+                                )
+                            )
+                        }
+                        return FileVisitResult.CONTINUE
+                    }
+                }
+            )
+        } catch (e: Exception) {
+            println("Failed to read files: ${e.message}")
+        }
+        return fileList
+    }
+
 }
