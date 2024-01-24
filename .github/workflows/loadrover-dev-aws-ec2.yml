@@ -46,8 +46,9 @@ jobs:
           cd /home/bcat_be/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/api
           
           if docker-compose ps -q load-test-be >/dev/null; then
-            docker-compose down
-          docker rmi $(docker images 'load-test-be*' -q) || true
+            docker-compose stop
+            
+          docker rmi $(docker images '*load-test-be*' -q) || true
           fi
-            docker-compose pull && 
+            docker-compose build && 
             docker-compose up -d
