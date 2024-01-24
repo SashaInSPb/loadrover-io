@@ -69,6 +69,7 @@ class ScenarioService(
         val orderBookQueue: Queue<String> = LinkedList(request.schedule.orderBook)
         val scenarioCtrl = ScenarioDto.ScenarioControl()
         codes.append("val scn = scenario(\"$scenarioUUID\")\n")
+        codes.append("  .exec(http(\"request1\").get(\"/health-check2\"))\n")
 
         var itm: String
         for (idx in 0 until  orderBookQueue.size) {
@@ -111,7 +112,7 @@ class ScenarioService(
 
 
         // work 디렉토리로 저장
-        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
+        val savePath = "gatling/src/gatling/kotlin/work/${scenarioClass}.kt"
 
         try {
             val codeString: String = codes.toString()
