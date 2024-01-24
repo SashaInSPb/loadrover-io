@@ -46,7 +46,7 @@ class ScenarioDto {
             val apiUrl: String,
             val loginUse: Boolean,
             val params: String,
-            val pause: Int
+            val pause: Int? = 0
         )
 
         data class AccountDetail(
@@ -75,14 +75,6 @@ enum class UserAgent(
 ) {
     CHROME_114("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"),
     FIREFOX_114("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0"),
-}
-
-enum class ScenarioAction (
-    val value: String
-) {
-    GetRequest("GET_REQUEST"),
-    PostRequest("POST_REQUEST"),
-    Pause("PAUSE")
 }
 
 // File System으로 관리되는 시나리오 상태값

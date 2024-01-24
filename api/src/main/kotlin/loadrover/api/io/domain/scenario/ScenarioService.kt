@@ -9,7 +9,6 @@ import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
-import java.util.*
 
 @Service
 class ScenarioService(
@@ -55,18 +54,20 @@ class ScenarioService(
         codes.append("    .inferHtmlResources()\n")
         codes.append("    .acceptEncodingHeader(\"gzip, deflate, br\")\n")
         codes.append("    .acceptLanguageHeader(\"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7\")\n")
-        codes.append("    .userAgentHeader(\"${userAgent.value}\")\n")
+        // 중복
+//        codes.append("    .userAgentHeader(\"${userAgent.value}\")\n")
 
         val headerIdx = 0
         val headerId = "headers_${headerIdx}"
         codes.append("val $headerId: MutableMap<CharSequence, String> = HashMap()\n")
+        val headers: List<ScenarioDto.HeaderField> = getHeader(userAgent, request.task.jwtObjectName)
 
-        val headers: List<ScenarioDto.HeaderField> = getHeader(host, userAgent, request.task.jwtObjectName)
-
+        codes.append("init {\n")
+        for (headerField in headers) {
+            codes.append("$headerId.put(\"${headerField.section}\",\"${headerField.value}\")\n")
+        }
         codes.append("val scn = scenario(\"$scenarioUUID\")\n")
-//        codes.append("  .exec(http(\"request1\").get(\"/health-check2\"))\n")
-
-
+        // TODO: process 순서 보장 필요
         for (action in request.process) {
             when (action.value.apiType) {
                 ApiType.GET -> {
@@ -75,10 +76,10 @@ class ScenarioService(
                     codes.append(".get(\"${action.value.apiUrl}\")")
                     codes.append(".headers($headerId)")
                     codes.append(")\n")
+                    codes.append(".pause(${action.value.pause})\n")
                 }
                 ApiType.POST -> {
                     val payload = action.value.params.replace("\"", "\\\"")
-//                    val payLoad: String? = request.schedule.postRequest[scenarioCtrl.idxPostRequest]?.payload?.replace("\"", "\\\"")
 
                     codes.append(".exec(")
                     codes.append(("http(\"request_${action.value.apiType}\")"))
@@ -86,6 +87,7 @@ class ScenarioService(
                     codes.append(".headers($headerId)")
                     codes.append(".body(StringBody(\"${payload}\"))")
                     codes.append(")\n")
+                    codes.append(".pause(${action.value.pause})\n")
                 }
                 ApiType.PUT -> {
                     val payload = action.value.params.replace("\"", "\\\"")
@@ -96,21 +98,17 @@ class ScenarioService(
                     codes.append(".headers($headerId)")
                     codes.append(".body(StringBody(\"${payload}\"))")
                     codes.append(")\n")
-
+                    codes.append(".pause(${action.value.pause})\n")
                 }
                 ApiType.DELETE -> {
                     codes.append(".exec(")
                     codes.append(("http(\"request_${action.value.apiType}\")"))
                     codes.append(".delete(\"${action.value.apiUrl}\")")
                     codes.append(".headers($headerId)")
-                    codes.append(")\n")
+                    codes.append(")")
+                    codes.append(".pause(${action.value.pause})\n")
                 }
             }
-        }
-
-        codes.append("init {\n")
-        for (headerField in headers) {
-            codes.append("$headerId.put(\"${headerField.section}\",\"${headerField.value}\")\n")
         }
         codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)")
         codes.append("}}\n")
@@ -151,7 +149,7 @@ class ScenarioService(
         return System.currentTimeMillis().toString()
     }
 
-    private fun getHeader(host: String, agentType: UserAgent, jwtToken: String?): List<ScenarioDto.HeaderField> {
+    private fun getHeader(agentType: UserAgent, jwtToken: String?): List<ScenarioDto.HeaderField> {
         val headers: MutableList<ScenarioDto.HeaderField> = mutableListOf()
 
         when (agentType) {
@@ -182,7 +180,7 @@ class ScenarioService(
         return headers.toList()
     }
 
-    // data 디렉토리 내 json 파일로 저장
+    // request json 파일로 저장
     private fun saveSourceFile(request: ScenarioDto.RequestScenarioDto, scenarioUUID: String, scenarioClass: String) {
         val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioClass}.json"
         val serializedObject = jacksonObjectMapper().writeValueAsString(request)
