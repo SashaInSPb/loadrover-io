@@ -17,10 +17,10 @@ class ScenarioService(
     private val log = LoggerFactory.getLogger(ScenarioService::class.java)
 
     fun getFileList(): MutableSet<FileDto> {
-        val sourceFileList = fileUtils.searchDirectory("source")
-        val workFileIdList = fileUtils.searchDirectory("work").map { it.scenarioId }
-        val progressFileIdList = fileUtils.searchDirectory("progress").map { it.scenarioId }
-        val resultFileIdList = fileUtils.searchResultDirectory().map { it.scenarioId }
+        val sourceFileList = fileUtils.searchFiles("source")
+        val workFileIdList = fileUtils.searchFiles("work").map { it.scenarioId }
+        val progressFileIdList = fileUtils.searchFiles("progress").map { it.scenarioId }
+        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
 
         for (sourceFile in sourceFileList) {
             if (sourceFile.scenarioId in workFileIdList) sourceFile.status = ScenarioStatus.READY

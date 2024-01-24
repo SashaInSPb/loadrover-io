@@ -11,7 +11,7 @@ import java.nio.file.attribute.BasicFileAttributes
 class FileUtils(
     private val loadroverConfig: LoadroverConfig
 ) {
-    fun searchDirectory(path: String): MutableSet<FileDto> {
+    fun searchFiles(path: String): MutableSet<FileDto> {
         val fileDirectory = if (path == "work") "${loadroverConfig.gatling.workPath}/${path}" else "${loadroverConfig.gatling.path}/${path}"
         val directoryPath: Path = Path.of(fileDirectory)
         val fileList: MutableSet<FileDto> = mutableSetOf()
@@ -40,7 +40,6 @@ class FileUtils(
                                     loadroverConfig.gatling.source -> ScenarioStatus.PRE_CONVERSION
                                     loadroverConfig.gatling.work -> ScenarioStatus.READY
                                     loadroverConfig.gatling.progress -> ScenarioStatus.PROGRESS
-                                    loadroverConfig.gatling.result -> ScenarioStatus.COMPLETE
                                     else -> ScenarioStatus.STOP
                                 }
                             )
@@ -57,29 +56,38 @@ class FileUtils(
         return fileList
     }
 
-    fun searchResultDirectory(): MutableSet<FileDto> {
-        val fileDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
-        val directoryPath: Path = Path.of(fileDirectory)
-        val fileList: MutableSet<FileDto> = mutableSetOf()
+    // 파일이 아닌 폴더로 결과물이 있는 result 출력용
+    fun searchFolders(): MutableSet<FileDto> {
+        val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
+        val resultPath: Path = Path.of(resultDirectory)
+        val folderList: MutableSet<FileDto> = mutableSetOf()
 
         try {
             Files.walkFileTree(
-                directoryPath,
+                resultPath,
                 setOf(FileVisitOption.FOLLOW_LINKS),
                 Int.MAX_VALUE,
                 object : SimpleFileVisitor<Path>() {
-                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-                        val fileName = file?.fileName.toString()
+                    override fun preVisitDirectory(dir: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        val scenarioId = dir?.fileName
+                            .toString()
+                            .replace("-\\d+".toRegex(),"")
 
-                        if (file?.nameCount == directoryPath.nameCount + 1) {
-                            fileList.plusAssign(
+                        if (dir?.nameCount == resultPath.nameCount + 1) {
+                            folderList.plusAssign(
                                 FileDto(
-                                    scenarioTitle = fileName.removeSuffix(".kt"),
-                                    scenarioId = fileName.removeSuffix(".kt"),
+                                    scenarioTitle = scenarioId.replace("\\d{17}$".toRegex(),""),
+                                    scenarioId = scenarioId,
                                     status = ScenarioStatus.COMPLETE
                                 )
                             )
+//                            println("Directory Name: ${dir.fileName}, Path: $dir")
                         }
+                        return FileVisitResult.CONTINUE
+                    }
+
+                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        // 파일은 출력하지 않고 지나갑니다.
                         return FileVisitResult.CONTINUE
                     }
                 }
@@ -87,7 +95,7 @@ class FileUtils(
         } catch (e: Exception) {
             println("Failed to read files: ${e.message}")
         }
-        return fileList
+        return folderList
     }
 
 }

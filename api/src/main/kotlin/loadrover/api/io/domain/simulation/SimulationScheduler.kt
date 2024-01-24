@@ -19,9 +19,9 @@ class SimulationScheduler(
 
     @Scheduled(cron = "1 0 0 ? * 7") // 매주 일요일 00:00:01
     fun moveProgressToResult(): String {
-        val progressFileList = fileUtils.searchDirectory("progress")
+        val progressFileList = fileUtils.searchFiles("progress")
         // 폴더이므로 파일 찾는 방식은 구분되어야 함
-        val resultFileIdList = fileUtils.searchResultDirectory().map { it.scenarioId }
+        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
 
         for (progressFile in progressFileList) {
             if (progressFile.scenarioId in resultFileIdList) {

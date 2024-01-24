@@ -16,9 +16,9 @@ class SimulationService(
     private val log = LoggerFactory.getLogger(SimulationService::class.java)
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
-        // 중복된 scenarioID가 있는 경우?
+        val resultList = fileUtils.searchFolders()
 
-
+        println("resultList: $resultList")
 
         return SimulationDto.ResultResponse(
             htmlPath = "",
@@ -27,9 +27,9 @@ class SimulationService(
     }
 
     fun moveProgressToResult(): String {
-        val progressFileList = fileUtils.searchDirectory("progress")
+        val progressFileList = fileUtils.searchFiles("progress")
         // 폴더이므로 파일 찾는 방식은 구분되어야 함
-        val resultFileIdList = fileUtils.searchResultDirectory().map { it.scenarioId }
+        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
 
         for (progressFile in progressFileList) {
             if (progressFile.scenarioId in resultFileIdList) {
@@ -50,13 +50,13 @@ class SimulationService(
         val workDirectory = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioId}.kt"
         val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${scenarioId}.kt"
 
-        val srcPath: Path = Path.of(workDirectory)
-        val destinationDirectory: Path = Path.of(progressDirectory)
+        val workPath: Path = Path.of(workDirectory)
+        val progressPath: Path = Path.of(progressDirectory)
 
         try {
             Files.move(
-                srcPath,
-                destinationDirectory,
+                workPath,
+                progressPath,
                 StandardCopyOption.REPLACE_EXISTING
             )
         } catch (e: Exception) {
