@@ -31,13 +31,18 @@ class ScenarioService(
         return sourceFileList
     }
 
-//    fun getFileList2(): MutableSet<FileDto> {
-//
-//        // 같은 아이디가 있을 경우, 에러를 뱉자
-//        val sourceFileList = fileUtils
-//
-//        return sourceFileList
-//    }
+    fun getFileList2(): MutableSet<FileDto> {
+
+        val sourceFileList = fileUtils.searchFiles1("source")
+        val progressFileList = fileUtils.searchFiles1("progress")
+        val completeFileList = fileUtils.searchFiles1("complete")
+
+        val result = sourceFileList
+            .union(progressFileList)
+            .union(completeFileList)
+
+        return result.toMutableSet()
+    }
 
     fun createScenario(request: ScenarioDto.RequestScenarioDto) {
         val scenarioUUID = getUUID()
@@ -120,7 +125,6 @@ class ScenarioService(
         codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)")
         codes.append("}}\n")
 
-        //TODO: work 따로 디렉토리 관리
         val savePath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
 
         try {

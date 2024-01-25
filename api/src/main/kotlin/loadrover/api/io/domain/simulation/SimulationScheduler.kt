@@ -8,6 +8,9 @@ import org.springframework.scheduling.annotation.EnableScheduling
 import org.springframework.scheduling.annotation.Scheduled
 import java.nio.file.Files
 import java.nio.file.Path
+import java.nio.file.StandardCopyOption
+import java.time.LocalDateTime
+import java.util.Date
 
 @EnableScheduling
 @SpringBootApplication
@@ -17,25 +20,33 @@ class SimulationScheduler(
 ) {
     private val log = LoggerFactory.getLogger(SimulationService::class.java)
 
-    @Scheduled(cron = "1 0 0 ? * 7") // 매주 일요일 00:00:01
-    fun moveProgressToResult(): String {
-        val progressFileList = fileUtils.searchFiles("progress")
-        // 폴더이므로 파일 찾는 방식은 구분되어야 함
-        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
+    @Scheduled(cron = "0 */1 * * * *") // 매 1분
+    fun moveProgressToComplete() {
+        val progressFileList = fileUtils.searchFiles1("progress")
+        val resultFileIdList = fileUtils.searchFolders1().map { it.scenarioId }
 
         for (progressFile in progressFileList) {
+            val scenarioId = progressFile.scenarioId
+
             if (progressFile.scenarioId in resultFileIdList) {
-                val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${progressFile.scenarioId}.kt"
-                val srcPath: Path = Path.of(progressDirectory)
+                val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${scenarioId}.json"
+                val completeDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.complete}/${scenarioId}.json"
+
+                val progressPath: Path = Path.of(progressDirectory)
+                val completePath: Path = Path.of(completeDirectory)
 
                 try {
-                    Files.delete(srcPath)
+                    Files.move(
+                        progressPath,
+                        completePath,
+                        StandardCopyOption.REPLACE_EXISTING
+                    )
                 } catch (e: Exception) {
-                    log.error("Failed to delete test complete file, scenarioId: ${progressFile.scenarioId}")
+                    log.error("Failed to move file: ${e.message}")
                 }
             }
         }
-        return "Success"
+        println("Check simulation results: ${LocalDateTime.now()}")
     }
 
 }

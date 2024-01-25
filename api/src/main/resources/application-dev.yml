@@ -26,11 +26,12 @@ springdoc:
 
 loadrover:
   gatling:
-    path: ../../app/etc/api/src/main/resources/static
+    path: ../../app/etc/gatling/src/gatling/resources/static
     source: source
     progress: progress
-    result: result
     work: work
     work-path: ../../app/etc/gatling/src/gatling/kotlin
+    complete: complete
+    result: result
   output:
     class-name-prefix: "dev"

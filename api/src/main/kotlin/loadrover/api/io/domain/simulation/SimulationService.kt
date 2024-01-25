@@ -5,9 +5,12 @@ import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
+import java.io.*
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
 
 @Service
 class SimulationService(
@@ -17,52 +20,48 @@ class SimulationService(
     private val log = LoggerFactory.getLogger(SimulationService::class.java)
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
-        // result 폴더에서 scenarioId를 가지고 있는 폴더로 접근
         val resultList = fileUtils.searchFolders()
         var htmlPath = ""
+        var filePath = ""
 
+        // 정리필요
         for (result in resultList) {
             if (result.scenarioId.contains(scenarioId)) {
-                val resultDirectory = "${loadroverConfig.gatling.result}/${result.scenarioId}/index.html"
-                htmlPath = ServletUriComponentsBuilder.fromCurrentContextPath().path(resultDirectory).toUriString()
+                val resultDirectory = "${loadroverConfig.gatling.result}/${result.scenarioId}"
+                val htmlDirectory = "$resultDirectory/index.html"
+
+                val zipFileName = "${result.scenarioId.replace("-\\d+".toRegex(),"")}.zip"
+                val zipFileDirectory = "$resultDirectory/$zipFileName"
+                val folderPath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/${result.scenarioId}"
+
+                // TODO: memory leak 발생
+                try {
+                    zipFolder(folderPath, "$folderPath/$zipFileName")
+                } catch (e: Error) {
+                    log.error("Failed to create zip file: ${e.message}, scenarioId: $folderPath/$zipFileName")
+                }
+
+                htmlPath = ServletUriComponentsBuilder.fromCurrentContextPath().path(htmlDirectory).toUriString()
+                filePath = ServletUriComponentsBuilder.fromCurrentContextPath().path(zipFileDirectory).toUriString()
             }
         }
 
         return SimulationDto.ResultResponse(
+            filePath = filePath,
             htmlPath = htmlPath
         )
     }
 
-    fun moveProgressToResult(): String {
-        val progressFileList = fileUtils.searchFiles("progress")
-        // 폴더이므로 파일 찾는 방식은 구분되어야 함
-        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
+    fun moveReadyToProgress(scenarioId: String) {
+        val sourceDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioId}.json"
+        val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${scenarioId}.json"
 
-        for (progressFile in progressFileList) {
-            if (progressFile.scenarioId in resultFileIdList) {
-                val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${progressFile.scenarioId}.kt"
-                val srcPath: Path = Path.of(progressDirectory)
-
-                try {
-                    Files.delete(srcPath)
-                } catch (e: Exception) {
-                    log.error("Failed to delete test complete file: ${e.message}, scenarioId: ${progressFile.scenarioId}")
-                }
-            }
-        }
-        return "Success"
-    }
-
-    fun moveWorkToProgress(scenarioId: String) {
-        val workDirectory = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioId}.kt"
-        val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${scenarioId}.kt"
-
-        val workPath: Path = Path.of(workDirectory)
+        val sourcePath: Path = Path.of(sourceDirectory)
         val progressPath: Path = Path.of(progressDirectory)
 
         try {
             Files.move(
-                workPath,
+                sourcePath,
                 progressPath,
                 StandardCopyOption.REPLACE_EXISTING
             )
@@ -71,5 +70,34 @@ class SimulationService(
         }
     }
 
+    // TODO: 프로세서가 멈추지 않는 문제 발생
+    fun zipFolder(folderPath: String, zipFilePath: String) {
+        FileOutputStream(zipFilePath).use { fos ->
+            ZipOutputStream(fos).use { zos ->
+                val sourceFile = File(folderPath)
+                zipFile(sourceFile, "", zos)
+            }
+        }
+    }
+
+    private fun zipFile(fileToZip: File, parentPath: String, zipOut: ZipOutputStream) {
+        val filePath = if (parentPath.isNotEmpty()) "$parentPath/${fileToZip.name}" else fileToZip.name
+
+        if (fileToZip.isDirectory) {
+            val entries = fileToZip.listFiles() ?: return
+            for (childFile in entries) {
+                zipFile(childFile, filePath, zipOut)
+            }
+        } else {
+            FileInputStream(fileToZip).use { fis ->
+                BufferedInputStream(fis).use { bis ->
+                    val zipEntry = ZipEntry(filePath)
+                    zipOut.putNextEntry(zipEntry)
+                    bis.copyTo(zipOut)
+                    zipOut.closeEntry()
+                }
+            }
+        }
+    }
 
 }

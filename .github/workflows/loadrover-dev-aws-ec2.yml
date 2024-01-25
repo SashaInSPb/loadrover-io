@@ -52,3 +52,12 @@ jobs:
           fi
             docker-compose build && 
             docker-compose up -d
+          
+          cd /home/bcat_fe/load-test/actions-runner/_work/load-test.web/load-test.web
+          
+          if docker-compose ps -q nginx >/dev/null; then
+                      docker-compose down
+                      docker rmi $(docker images '*nginx*' -q) || true
+          fi
+          docker-compose build
+          docker-compose up -d

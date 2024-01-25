@@ -29,8 +29,9 @@ loadrover:
     path: gatling/src/gatling/resources/static
     source: source
     progress: progress
-    result: result
     work: work
     work-path: gatling/src/gatling/kotlin
+    complete: complete
+    result: result
   output:
     class-name-prefix: "local"

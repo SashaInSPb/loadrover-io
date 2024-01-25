@@ -4,7 +4,6 @@ import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.*
-import java.util.concurrent.TimeUnit
 
 @RestController
 @RequestMapping("/simulation")
@@ -20,18 +19,13 @@ class SimulationController(
     fun runSimulation(@RequestBody request: SimulationDto.RunSimulationRequest): String {
 
         try {
-
             val process = Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId} -stacktrace")
-            val timeoutInMillis: Long = 1000
-
-
-//            if (process.waitFor(timeoutInMillis, TimeUnit.MILLISECONDS)) {
-//                simulationService.moveWorkToProgress(request.scenarioId)
-//            }
-
         } catch (e: Error) {
             log.error("Failed to run simulation: ${e.message}, scenarioId: ${request.scenarioId}")
         }
+
+        // source -> process 디렉토리로 json 파일 이동
+        simulationService.moveReadyToProgress(request.scenarioId)
 
         // 실행 결과 반환 실패 뱉기
         return "Test progressing"
