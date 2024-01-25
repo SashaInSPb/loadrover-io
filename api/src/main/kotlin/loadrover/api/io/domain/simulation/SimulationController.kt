@@ -37,13 +37,9 @@ class SimulationController(
     }
 
     @GetMapping("/{scenarioId}")
-    @Operation(summary = "", description = "")
+    @Operation(summary = "", description = "Test420240124205133197")
     fun getSimulationResult(@PathVariable("scenarioId") scenarioId: String): SimulationDto.ResultResponse {
         return simulationService.getSimulationResult(scenarioId)
     }
 
-    @GetMapping
-    fun moveProgressToResult() {
-        simulationService.moveProgressToResult()
-    }
 }
