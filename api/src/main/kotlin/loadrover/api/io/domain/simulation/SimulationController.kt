@@ -21,7 +21,6 @@ class SimulationController(
 
         try {
             val process = Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId}")
-            // TODO: gatling 실행시키고, 1초 내로 프로세스가 종료되지 않는 경우, 파일이동을 시킨다.? 확인 필요
             val timeoutInMillis: Long = 1000
 
             // 프로세스가 종료되나?,,
