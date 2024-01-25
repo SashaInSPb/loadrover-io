@@ -4,7 +4,7 @@ import io.gatling.javaapi.core.*
 import io.gatling.javaapi.core.CoreDsl.*
 import io.gatling.javaapi.http.HttpDsl.*
 
-class test420240124205133197: Simulation() {
+class Test420240124205133197: Simulation() {
 val httpProtocol = http
     .baseUrl("http://localhost:8089/tms")
     .inferHtmlResources()

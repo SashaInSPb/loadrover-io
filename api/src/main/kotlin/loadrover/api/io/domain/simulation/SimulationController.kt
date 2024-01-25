@@ -20,13 +20,14 @@ class SimulationController(
     fun runSimulation(@RequestBody request: SimulationDto.RunSimulationRequest): String {
 
         try {
-            val process = Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId}")
+
+            val process = Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId} -stacktrace")
             val timeoutInMillis: Long = 1000
 
-            // 프로세스가 종료되나?,,
-            if (process.waitFor(timeoutInMillis, TimeUnit.MILLISECONDS)) {
-                simulationService.moveWorkToProgress(request.scenarioId)
-            }
+
+//            if (process.waitFor(timeoutInMillis, TimeUnit.MILLISECONDS)) {
+//                simulationService.moveWorkToProgress(request.scenarioId)
+//            }
 
         } catch (e: Error) {
             log.error("Failed to run simulation: ${e.message}, scenarioId: ${request.scenarioId}")

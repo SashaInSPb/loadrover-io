@@ -13,6 +13,8 @@ services:
       - TZ=Asia/Seoul # 타임존 설정
     networks:
       - load-test-network
+    volumes:
+      -../gatling:/app/etc
 
 networks:
   load-test-network:

@@ -22,10 +22,10 @@ class ScenarioController(
         return scenarioService.getFileList()
     }
 
-//    @PutMapping("")
+//    @GetMapping("/list2")
 //    @Operation(summary = "", description = "")
-//    fun moveSimulationToProgress(fileName: String) {
-//        return scenarioService.moveWorkToProgress(fileName)
+//    fun getScenarioList2(): MutableSet<FileDto> {
+//        return scenarioService.getFileList2()
 //    }
 
 }

@@ -31,6 +31,14 @@ class ScenarioService(
         return sourceFileList
     }
 
+//    fun getFileList2(): MutableSet<FileDto> {
+//
+//        // 같은 아이디가 있을 경우, 에러를 뱉자
+//        val sourceFileList = fileUtils
+//
+//        return sourceFileList
+//    }
+
     fun createScenario(request: ScenarioDto.RequestScenarioDto) {
         val scenarioUUID = getUUID()
         val scenarioClass = request.task.name + scenarioUUID
