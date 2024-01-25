@@ -7,7 +7,6 @@ class SimulationDto {
     )
 
     data class ResultResponse(
-        val htmlPath: String,
-        val filePath: String
+        val htmlPath: String
     )
 }

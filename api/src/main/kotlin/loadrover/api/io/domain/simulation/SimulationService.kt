@@ -4,6 +4,7 @@ import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
@@ -16,13 +17,19 @@ class SimulationService(
     private val log = LoggerFactory.getLogger(SimulationService::class.java)
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
+        // result 폴더에서 scenarioId를 가지고 있는 폴더로 접근
         val resultList = fileUtils.searchFolders()
+        var htmlPath = ""
 
-        println("resultList: $resultList")
+        for (result in resultList) {
+            if (result.scenarioId.contains(scenarioId)) {
+                val resultDirectory = "${loadroverConfig.gatling.result}/${result.scenarioId}/index.html"
+                htmlPath = ServletUriComponentsBuilder.fromCurrentContextPath().path(resultDirectory).toUriString()
+            }
+        }
 
         return SimulationDto.ResultResponse(
-            htmlPath = "",
-            filePath = ""
+            htmlPath = htmlPath
         )
     }
 

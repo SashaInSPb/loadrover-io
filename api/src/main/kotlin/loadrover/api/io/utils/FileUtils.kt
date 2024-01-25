@@ -69,15 +69,15 @@ class FileUtils(
                 Int.MAX_VALUE,
                 object : SimpleFileVisitor<Path>() {
                     override fun preVisitDirectory(dir: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-                        val scenarioId = dir?.fileName
-                            .toString()
-                            .replace("-\\d+".toRegex(),"")
+                        val simulationId = dir?.fileName.toString()
 
                         if (dir?.nameCount == resultPath.nameCount + 1) {
                             folderList.plusAssign(
                                 FileDto(
-                                    scenarioTitle = scenarioId.replace("\\d{17}$".toRegex(),""),
-                                    scenarioId = scenarioId,
+                                    scenarioTitle = simulationId
+                                        .replace("-\\d+".toRegex(),"")
+                                        .replace("\\d{17}$".toRegex(),""),
+                                    scenarioId = simulationId,
                                     status = ScenarioStatus.COMPLETE
                                 )
                             )
@@ -87,7 +87,6 @@ class FileUtils(
                     }
 
                     override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-                        // 파일은 출력하지 않고 지나갑니다.
                         return FileVisitResult.CONTINUE
                     }
                 }
