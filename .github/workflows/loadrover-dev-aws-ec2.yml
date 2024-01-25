@@ -10,15 +10,15 @@ on:
 jobs:
   build-and-push:
     name: build-and-push
-    runs-on: [self-hosted, loadrover-io-dev] # loadrover-io-dev 라는 라벨의 self-hosted runner 사용
+    runs-on: [self-hosted, loadrover] # loadrover-io-dev 라는 라벨의 self-hosted runner 사용
     steps:
       # docker-compose install
       - name: Install Docker Compose
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S apt-get update
-          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S apt-get install -y docker-compose
+          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S apt-get update
+          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S apt-get install -y docker-compose
 
       # docker-compose.yml 파일 복사
       - name: Checkout code
@@ -43,7 +43,7 @@ jobs:
       # docker image run
       - name: Docker Compose up
         run: |
-          cd /home/bcat_be/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/api
+          cd /home/bcat_fe/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/api
           
           if docker-compose ps -q load-test-be >/dev/null; then
             docker-compose stop
