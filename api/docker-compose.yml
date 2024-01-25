@@ -14,7 +14,7 @@ services:
     networks:
       - load-test-network
     volumes:
-      -../gatling:/app/etc
+      - ../gatling:/app/etc/gatling
 
 networks:
   load-test-network:
