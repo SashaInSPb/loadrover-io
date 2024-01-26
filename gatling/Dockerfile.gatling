@@ -1,6 +1,8 @@
 FROM denvazh/gatling:latest
 WORKDIR /gatling
 COPY ./gatling /gatling
-COPY ./gatling/run-gatling.sh /opt/gatling/run-gatling.sh
-RUN chmod +x /opt/gatling/run-gatling.sh
-CMD ["/opt/gatling/run-gatling.sh"]
+ENTRYPOINT ["gatling.sh", "-s", "computerdatabase.BasicSimulation"]
+
+# COPY ./gatling/run-gatling.sh /opt/gatling/run-gatling.sh
+# RUN chmod +x /opt/gatling/run-gatling.sh
+# CMD ["/opt/gatling/run-gatling.sh"]

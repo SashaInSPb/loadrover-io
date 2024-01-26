@@ -22,6 +22,7 @@ services:
     volumes:
       - ./gatling/src/gatling/kotlin/work:/gatling/src/gatling/kotlin/work
       - ./gatling/src/gatling/resources/static/result:/gatling/src/gatling/resources/static/result
+    command: ["-s", "computerdatabase.BasicSimulation"]
     depends_on:
       - load-test-be
     networks:
