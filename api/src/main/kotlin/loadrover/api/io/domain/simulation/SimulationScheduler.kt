@@ -10,7 +10,6 @@ import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
 import java.time.LocalDateTime
-import java.util.Date
 
 @EnableScheduling
 @SpringBootApplication
@@ -22,8 +21,8 @@ class SimulationScheduler(
 
     @Scheduled(cron = "0 */1 * * * *") // 매 1분
     fun moveProgressToComplete() {
-        val progressFileList = fileUtils.searchFiles1("progress")
-        val resultFileIdList = fileUtils.searchFolders1().map { it.scenarioId }
+        val progressFileList = fileUtils.searchFiles("progress")
+        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
 
         for (progressFile in progressFileList) {
             val scenarioId = progressFile.scenarioId

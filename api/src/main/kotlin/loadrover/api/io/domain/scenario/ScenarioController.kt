@@ -22,10 +22,4 @@ class ScenarioController(
         return scenarioService.getFileList()
     }
 
-    @GetMapping("/list2")
-    @Operation(summary = "", description = "")
-    fun getScenarioList2(): MutableSet<FileDto> {
-        return scenarioService.getFileList2()
-    }
-
 }

@@ -17,25 +17,10 @@ class ScenarioService(
     private val log = LoggerFactory.getLogger(ScenarioService::class.java)
 
     fun getFileList(): MutableSet<FileDto> {
+
         val sourceFileList = fileUtils.searchFiles("source")
-        val workFileIdList = fileUtils.searchFiles("work").map { it.scenarioId }
-        val progressFileIdList = fileUtils.searchFiles("progress").map { it.scenarioId }
-        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
-
-        for (sourceFile in sourceFileList) {
-            if (sourceFile.scenarioId in workFileIdList) sourceFile.status = ScenarioStatus.READY
-            if (sourceFile.scenarioId in progressFileIdList) sourceFile.status = ScenarioStatus.PROGRESS
-            if (sourceFile.scenarioId in resultFileIdList) sourceFile.status = ScenarioStatus.COMPLETE
-        }
-
-        return sourceFileList
-    }
-
-    fun getFileList2(): MutableSet<FileDto> {
-
-        val sourceFileList = fileUtils.searchFiles1("source")
-        val progressFileList = fileUtils.searchFiles1("progress")
-        val completeFileList = fileUtils.searchFiles1("complete")
+        val progressFileList = fileUtils.searchFiles("progress")
+        val completeFileList = fileUtils.searchFiles("complete")
 
         val result = sourceFileList
             .union(progressFileList)
@@ -123,6 +108,7 @@ class ScenarioService(
             }
         }
         codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)")
+        codes.append(".apply{ println(\"Gatling scenario setup completed.\")} ")
         codes.append("}}\n")
 
         val savePath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"

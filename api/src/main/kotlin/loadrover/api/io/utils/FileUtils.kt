@@ -11,53 +11,8 @@ import java.nio.file.attribute.BasicFileAttributes
 class FileUtils(
     private val loadroverConfig: LoadroverConfig
 ) {
+
     fun searchFiles(path: String): MutableSet<FileDto> {
-        val fileDirectory = if (path == "work") "${loadroverConfig.gatling.workPath}/${path}" else "${loadroverConfig.gatling.path}/${path}"
-        val directoryPath: Path = Path.of(fileDirectory)
-        val fileList: MutableSet<FileDto> = mutableSetOf()
-
-        try {
-            Files.walkFileTree(
-                directoryPath,
-                setOf(FileVisitOption.FOLLOW_LINKS),
-                Integer.MAX_VALUE,
-                object: SimpleFileVisitor<Path>() {
-                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-                        val fileName = file?.fileName.toString()
-                        val regex = Regex("-[0-9]")
-
-                        fileList.plusAssign(
-                            FileDto(
-                                scenarioTitle = when (path) {
-                                    loadroverConfig.gatling.source -> fileName.removeSuffix(".json").replace(regex,"")
-                                    else -> fileName.removeSuffix(".kt").replace(regex,"")
-                                },
-                                scenarioId = when (path) {
-                                    loadroverConfig.gatling.source -> fileName.removeSuffix(".json")
-                                    else -> fileName.removeSuffix(".kt")
-                                },
-                                status = when (path) {
-                                    loadroverConfig.gatling.source -> ScenarioStatus.PRE_CONVERSION
-                                    loadroverConfig.gatling.work -> ScenarioStatus.READY
-                                    loadroverConfig.gatling.progress -> ScenarioStatus.PROGRESS
-                                    else -> ScenarioStatus.STOP
-                                }
-                            )
-                        )
-                        println("File Name: ${file?.fileName}, Path: $file")
-                        return FileVisitResult.CONTINUE
-                    }
-                }
-            )
-        } catch (e: Exception) {
-            println("Failed to read files: ${e.message}")
-        }
-
-        return fileList
-    }
-
-    // test
-    fun searchFiles1(path: String): MutableSet<FileDto> {
         val fileDirectory = if (path == "work") "${loadroverConfig.gatling.workPath}/${path}" else "${loadroverConfig.gatling.path}/${path}"
         val directoryPath: Path = Path.of(fileDirectory)
         val fileList: MutableSet<FileDto> = mutableSetOf()
@@ -97,46 +52,6 @@ class FileUtils(
 
     // 파일이 아닌 폴더로 결과물이 있는 result 출력용
     fun searchFolders(): MutableSet<FileDto> {
-        val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
-        val resultPath: Path = Path.of(resultDirectory)
-        val folderList: MutableSet<FileDto> = mutableSetOf()
-
-        try {
-            Files.walkFileTree(
-                resultPath,
-                setOf(FileVisitOption.FOLLOW_LINKS),
-                Int.MAX_VALUE,
-                object : SimpleFileVisitor<Path>() {
-                    override fun preVisitDirectory(dir: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-                        val simulationId = dir?.fileName.toString()
-
-                        if (dir?.nameCount == resultPath.nameCount + 1) {
-                            folderList.plusAssign(
-                                FileDto(
-                                    scenarioTitle = simulationId
-                                        .replace("-\\d+".toRegex(),"")
-                                        .replace("\\d{17}$".toRegex(),""),
-                                    scenarioId = simulationId,
-                                    status = ScenarioStatus.COMPLETE
-                                )
-                            )
-//                            println("Directory Name: ${dir.fileName}, Path: $dir")
-                        }
-                        return FileVisitResult.CONTINUE
-                    }
-
-                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-                        return FileVisitResult.CONTINUE
-                    }
-                }
-            )
-        } catch (e: Exception) {
-            println("Failed to read files: ${e.message}")
-        }
-        return folderList
-    }
-
-    fun searchFolders1(): MutableSet<FileDto> {
         val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
         val resultPath: Path = Path.of(resultDirectory)
         val folderList: MutableSet<FileDto> = mutableSetOf()
