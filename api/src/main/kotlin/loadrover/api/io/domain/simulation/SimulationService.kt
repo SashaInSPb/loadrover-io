@@ -5,7 +5,10 @@ import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
-import java.io.*
+import java.io.BufferedInputStream
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
@@ -20,7 +23,7 @@ class SimulationService(
     private val log = LoggerFactory.getLogger(SimulationService::class.java)
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
-        val resultList = fileUtils.searchFolders()
+        val resultList = fileUtils.searchResultFolders()
         var htmlPath = ""
         var filePath = ""
 
@@ -36,7 +39,7 @@ class SimulationService(
 
                 // TODO: memory leak 발생
                 try {
-                    zipFolder(folderPath, "$folderPath/$zipFileName")
+//                    zipFolder(folderPath, "$folderPath/$zipFileName")
                 } catch (e: Error) {
                     log.error("Failed to create zip file: ${e.message}, scenarioId: $folderPath/$zipFileName")
                 }
@@ -71,7 +74,7 @@ class SimulationService(
     }
 
     // TODO: 프로세서가 멈추지 않는 문제 발생
-    fun zipFolder(folderPath: String, zipFilePath: String) {
+    private fun zipFolder(folderPath: String, zipFilePath: String) {
         FileOutputStream(zipFilePath).use { fos ->
             ZipOutputStream(fos).use { zos ->
                 val sourceFile = File(folderPath)

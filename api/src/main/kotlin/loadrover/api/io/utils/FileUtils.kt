@@ -38,7 +38,6 @@ class FileUtils(
                                 }
                             )
                         )
-                        println("File Name: ${file?.fileName}, Path: $file")
                         return FileVisitResult.CONTINUE
                     }
                 }
@@ -51,7 +50,7 @@ class FileUtils(
     }
 
     // 파일이 아닌 폴더로 결과물이 있는 result 출력용
-    fun searchFolders(): MutableSet<FileDto> {
+    fun searchResultFolders(): MutableSet<FileDto> {
         val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
         val resultPath: Path = Path.of(resultDirectory)
         val folderList: MutableSet<FileDto> = mutableSetOf()

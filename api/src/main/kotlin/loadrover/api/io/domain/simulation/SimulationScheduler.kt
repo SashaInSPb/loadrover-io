@@ -22,7 +22,7 @@ class SimulationScheduler(
     @Scheduled(cron = "0 */1 * * * *") // 매 1분
     fun moveProgressToComplete() {
         val progressFileList = fileUtils.searchFiles("progress")
-        val resultFileIdList = fileUtils.searchFolders().map { it.scenarioId }
+        val resultFileIdList = fileUtils.searchResultFolders().map { it.scenarioId }
 
         for (progressFile in progressFileList) {
             val scenarioId = progressFile.scenarioId
