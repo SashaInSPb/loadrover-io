@@ -45,7 +45,7 @@ class SimulationScheduler(
                 }
             }
         }
-        println("Check simulation results: ${LocalDateTime.now()}")
+        println("Check simulation result: ${LocalDateTime.now()}")
     }
 
 }

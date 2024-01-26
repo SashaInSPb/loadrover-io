@@ -108,14 +108,14 @@ class ScenarioService(
             }
         }
         codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)")
-        codes.append(".apply{ println(\"Gatling scenario setup completed.\")} ")
+        codes.append(".apply{ println(\"Scenario setup completed.\")} ")
         codes.append("}}\n")
 
-        val savePath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
+        val saveWorkPath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
 
         try {
             val codeString: String = codes.toString()
-            File(savePath).bufferedWriter().use {
+            File(saveWorkPath).bufferedWriter().use {
                 it.write(codeString)
             }
         } catch (e: Exception) {

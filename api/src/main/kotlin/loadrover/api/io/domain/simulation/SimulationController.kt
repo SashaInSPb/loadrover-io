@@ -27,10 +27,12 @@ class SimulationController(
             try {
                 println("Running simulation. scenarioId: ${request.scenarioId}")
                 Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId} -stacktrace")
+
                 simulationService.moveReadyToProgress(request.scenarioId)
                 ResponseEntity.ok("Running simulation, scenarioId: ${request.scenarioId}")
             } catch (e: Error) {
                 println("Failed to run simulation: ${e.message}, scenarioId: ${request.scenarioId}")
+
                 ResponseEntity.status(500).body("Failed to run simulation, scenarioId: ${request.scenarioId}")
             }
         }
