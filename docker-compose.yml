@@ -4,7 +4,7 @@ services:
   load-test-be:
     build:
       context: .
-      dockerfile: /api/Dockerfile.dev
+      dockerfile: api/Dockerfile.dev
     container_name: load-test-be
     ports:
       - "3020:8800"
@@ -13,17 +13,15 @@ services:
       - TZ=Asia/Seoul # 타임존 설정
     networks:
       - load-test-network
-    volumes:
-      - ../gatling:/app/etc/gatling
 
   gatling:
     container_name: gatling
     build:
       context: .
-      dockerfile: /gatling/Dockerfile.gatling
+      dockerfile: gatling/Dockerfile.gatling
     volumes:
-      - ./gatling/user-files:/gatling/user-files
-      - ./gatling/results:/gatling/results
+      - ./gatling/src/gatling/kotlin/work:/gatling/src/gatling/kotlin/work
+      - ./gatling/src/gatling/resources/static/result:/gatling/src/gatling/resources/static/result
     depends_on:
       - load-test-be
     networks:
