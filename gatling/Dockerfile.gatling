@@ -1,0 +1,4 @@
+FROM denvazh/gatling:latest
+WORKDIR /gatling
+COPY ./gatling /gatling
+ENTRYPOINT ["gatling.sh"]

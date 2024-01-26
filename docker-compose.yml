@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  load-test-be:
+    build:
+      context: .
+      dockerfile: /api/Dockerfile.dev
+    container_name: load-test-be
+    ports:
+      - "3020:8800"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev # 환경 변수 설정
+      - TZ=Asia/Seoul # 타임존 설정
+    networks:
+      - load-test-network
+    volumes:
+      - ../gatling:/app/etc/gatling
+
+  gatling:
+    container_name: gatling
+    build:
+      context: .
+      dockerfile: /gatling/Dockerfile.gatling
+    volumes:
+      - ./gatling/user-files:/gatling/user-files
+      - ./gatling/results:/gatling/results
+    depends_on:
+      - load-test-be
+    networks:
+      - load-test-network
+
+networks:
+  load-test-network:
+    name: load-test-network
