@@ -26,6 +26,7 @@ class SimulationController(
         return CompletableFuture.supplyAsync {
             try {
                 println("Running simulation. scenarioId: ${request.scenarioId}")
+//                Runtime.getRuntime().exec("./gradlew :gatling:gatlingRun-work.${request.scenarioId} -stacktrace")
                 Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId} -stacktrace")
 
                 simulationService.moveReadyToProgress(request.scenarioId)

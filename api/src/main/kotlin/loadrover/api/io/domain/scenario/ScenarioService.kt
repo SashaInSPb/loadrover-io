@@ -56,59 +56,78 @@ class ScenarioService(
 
         val headerIdx = 0
         val headerId = "headers_${headerIdx}"
+        val headers: List<ScenarioDto.HeaderField> = getHeader(userAgent)
         codes.append("val $headerId: MutableMap<CharSequence, String> = HashMap()\n")
-        val headers: List<ScenarioDto.HeaderField> = getHeader(userAgent, request.task.jwtObjectName)
 
         codes.append("init {\n")
+
         for (headerField in headers) {
             codes.append("$headerId.put(\"${headerField.section}\",\"${headerField.value}\")\n")
         }
-        codes.append("val scn = scenario(\"$scenarioUUID\")\n")
-        // TODO: process 순서 보장 필요
-        for (action in request.process) {
-            when (action.value.apiType) {
-                ApiType.GET -> {
-                    codes.append(".exec(")
-                    codes.append("http(\"request_${action.value.apiType}\")")
-                    codes.append(".get(\"${action.value.apiUrl}\")")
-                    codes.append(".headers($headerId)")
-                    codes.append(")\n")
-                    codes.append(".pause(${action.value.pause})\n")
-                }
-                ApiType.POST -> {
-                    val payload = action.value.params.replace("\"", "\\\"")
 
-                    codes.append(".exec(")
-                    codes.append(("http(\"request_${action.value.apiType}\")"))
-                    codes.append(".post(\"${action.value.apiUrl}\")")
-                    codes.append(".headers($headerId)")
-                    codes.append(".body(StringBody(\"${payload}\"))")
-                    codes.append(")\n")
-                    codes.append(".pause(${action.value.pause})\n")
-                }
-                ApiType.PUT -> {
-                    val payload = action.value.params.replace("\"", "\\\"")
+        codes.append("val scn = scenario(\"${request.task.name}+$scenarioUUID\")\n")
 
-                    codes.append(".exec(")
-                    codes.append(("http(\"request_${action.value.apiType}\")"))
-                    codes.append(".put(\"${action.value.apiUrl}\")")
-                    codes.append(".headers($headerId)")
-                    codes.append(".body(StringBody(\"${payload}\"))")
-                    codes.append(")\n")
-                    codes.append(".pause(${action.value.pause})\n")
-                }
-                ApiType.DELETE -> {
-                    codes.append(".exec(")
-                    codes.append(("http(\"request_${action.value.apiType}\")"))
-                    codes.append(".delete(\"${action.value.apiUrl}\")")
-                    codes.append(".headers($headerId)")
-                    codes.append(")")
-                    codes.append(".pause(${action.value.pause})\n")
+        // account list를 돌면서 시나리오 생성
+        for (account in request.accountList) {
+            // TODO: process 순서 보장 필요
+            for (action in request.process) {
+                when (action.value.apiType) {
+                    ApiType.GET -> {
+                        codes.append(".exec(")
+                        codes.append("http(\"request_${action.value.apiType}\")")
+                        codes.append(".get(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)")
+                        codes.append(")\n")
+                        codes.append(".pause(${action.value.pause})\n")
+                    }
+                    ApiType.POST -> {
+                        var payload = action.value.params.replace("\"", "\\\"")
+
+                        // 로그인 시, payload 작성
+                        if (action.value.apiUrl.contains("authentication")) {
+                            payload = "{\"email\":\"${account.id}\",\"password\":\"${account.password}\",\"loginSite\":\"LPM\"}".replace("\"", "\\\"")
+                        }
+
+                        codes.append(".exec(")
+                        codes.append(("http(\"request_${action.value.apiType}\")"))
+                        codes.append(".post(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)")
+                        codes.append(".body(StringBody(\"${payload}\"))")
+
+                        // 로그인 후, access token 추출
+                        if (action.value.apiUrl.contains("authentication")) {
+                            codes.append(".check(jsonPath(\"$.accessToken\").saveAs(\"accessToken\")))\n")
+                        }
+                        codes.append(".pause(${action.value.pause})\n")
+
+                        // 로그인 시, header에 access 토큰 추가
+                        if (action.value.apiUrl.contains("authentication")) {
+                            codes.append("$headerId.put(\"${HttpHeaderSection.AUTHORIZATION.value}\",\"bearer #accessToken\")\n")
+                        }
+                    }
+                    ApiType.PUT -> {
+                        val payload = action.value.params.replace("\"", "\\\"")
+
+                        codes.append(".exec(")
+                        codes.append(("http(\"request_${action.value.apiType}\")"))
+                        codes.append(".put(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)")
+                        codes.append(".body(StringBody(\"${payload}\"))")
+                        codes.append(")\n")
+                        codes.append(".pause(${action.value.pause})\n")
+                    }
+                    ApiType.DELETE -> {
+                        codes.append(".exec(")
+                        codes.append(("http(\"request_${action.value.apiType}\")"))
+                        codes.append(".delete(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)")
+                        codes.append(")")
+                        codes.append(".pause(${action.value.pause})\n")
+                    }
                 }
             }
         }
-        codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)")
-        codes.append(".apply{ println(\"Scenario setup completed.\")} ")
+        codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)\n")
         codes.append("}}\n")
 
         val saveWorkPath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
@@ -128,7 +147,7 @@ class ScenarioService(
         return dataFormat.format(Date()).toString()
     }
 
-    private fun getHeader(agentType: UserAgent, jwtToken: String?): List<ScenarioDto.HeaderField> {
+    private fun getHeader(agentType: UserAgent): List<ScenarioDto.HeaderField> {
         val headers: MutableList<ScenarioDto.HeaderField> = mutableListOf()
 
         when (agentType) {
@@ -152,11 +171,19 @@ class ScenarioService(
                 "application/json, text/plain, */*")
         )
 
+        headers.add(
+            ScenarioDto.HeaderField(
+                HttpHeaderSection.CONTENT_TYPE.value,
+                "application/json")
+        )
+
+        return headers.toList()
+    }
+
+    private fun getAuthorization(headers: MutableList<ScenarioDto.HeaderField>, jwtToken: String?) {
         if (!jwtToken.isNullOrEmpty()) {
             headers.add(ScenarioDto.HeaderField(HttpHeaderSection.AUTHORIZATION.value, "bearer $jwtToken"))
         }
-
-        return headers.toList()
     }
 
     // request json 파일로 저장

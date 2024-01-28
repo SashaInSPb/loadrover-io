@@ -9,24 +9,6 @@ class ScenarioDto {
         val value: String
     )
 
-    data class ScenarioControl(
-        var idxGetRequest: Int = 0,
-        var idxPostRequest: Int = 0,
-        var idxPause: Int = 0
-    ) {
-        fun tickGetRequest() {
-            idxGetRequest++
-        }
-
-        fun tickPostRequest() {
-            idxPostRequest++
-        }
-
-        fun tickPause() {
-            idxPause++
-        }
-    }
-
     data class RequestScenarioDto(
         val task: TaskDetail,
         val process: Map<Int, RequestDetail> = mapOf(),
@@ -63,12 +45,14 @@ data class FileDto(
     var workDate: LocalDateTime? = null
 )
 
+// TODO: 첫자 대문자인지 체크
 enum class HttpHeaderSection(
     val value: String
 ) {
     USER_AGENT("UserAgent"),
-    ACCEPT("Accept"),
-    AUTHORIZATION("authorization")
+    ACCEPT("accept"),
+    CONTENT_TYPE("Content-Type"),
+    AUTHORIZATION("Authorization")
 }
 
 enum class UserAgent(
