@@ -1,1 +1,0 @@
-{"task":{"name":"TEst4","targetHost":"http://localhost:8089/tms","concurrent":10,"authType":"JWT","jwtObjectName":""},"process":{"1":{"apiType":"GET","apiUrl":"/health-check","loginUse":false,"params":"","pause":1},"2":{"apiType":"GET","apiUrl":"/health-check","loginUse":false,"params":"","pause":1}},"accountList":[{"id":"string","password":"string"}]}
