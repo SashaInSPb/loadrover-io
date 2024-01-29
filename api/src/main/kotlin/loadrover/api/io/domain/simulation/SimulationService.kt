@@ -24,34 +24,25 @@ class SimulationService(
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
         val resultList = fileUtils.searchResultFolders()
-        var htmlPath = ""
-        var filePath = ""
 
         // 정리필요
-        for (result in resultList) {
-            if (result.scenarioId.contains(scenarioId)) {
-                val resultDirectory = "${loadroverConfig.gatling.result}/${result.scenarioId}"
-                val htmlDirectory = "$resultDirectory/index.html"
+        // 숫자비교해서 큰 값으로 보내줄 것
+        val filterList = resultList
+            .filter { it.scenarioId.contains(scenarioId) }
+            .map { it.scenarioId }
 
-                val zipFileName = "${result.scenarioId.replace("-\\d+".toRegex(),"")}.zip"
-                val zipFileDirectory = "$resultDirectory/$zipFileName"
-                val folderPath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/${result.scenarioId}"
+        val latestResult = filterList.maxByOrNull { extractNumberAfterHyphen(it) }
 
-                // TODO: memory leak 발생
-                try {
-//                    zipFolder(folderPath, "$folderPath/$zipFileName")
-                } catch (e: Error) {
-                    log.error("Failed to create zip file: ${e.message}, scenarioId: $folderPath/$zipFileName")
-                }
+//        // TODO: memory leak 발생
+//        try {
+////                    zipFolder(folderPath, "$folderPath/$zipFileName")
+//        } catch (e: Error) {
+//            log.error("Failed to create zip file: ${e.message}")
+//        }
 
-                htmlPath = ServletUriComponentsBuilder.fromCurrentContextPath().path(htmlDirectory).toUriString()
-                filePath = ServletUriComponentsBuilder.fromCurrentContextPath().path(zipFileDirectory).toUriString()
-            }
-        }
 
         return SimulationDto.ResultResponse(
-            filePath = filePath,
-            htmlPath = htmlPath
+            fileName = latestResult,
         )
     }
 
@@ -101,6 +92,15 @@ class SimulationService(
                 }
             }
         }
+    }
+
+    private fun extractNumberAfterHyphen(folderName: String): Long {
+        val hyphenIndex = folderName.indexOf('-')
+        if (hyphenIndex != -1 && hyphenIndex < folderName.length -1) {
+            val numberString = folderName.substring(hyphenIndex +1 )
+            return numberString.toLongOrNull() ?: 0
+        }
+        return 0
     }
 
 }

@@ -70,8 +70,7 @@ class FileUtils(
                                     scenarioTitle = simulationId
                                         .replace("-\\d+".toRegex(),"")
                                         .replace("\\d{17}$".toRegex(),""),
-                                    scenarioId = simulationId
-                                        .replace("-\\d+".toRegex(),""),
+                                    scenarioId = simulationId,
                                     status = ScenarioStatus.COMPLETE
                                 )
                             )
