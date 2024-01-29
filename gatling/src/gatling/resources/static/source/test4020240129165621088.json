@@ -1,0 +1,1 @@
+{"task":{"name":"test40","targetHost":"http://localhost:8089/tms","concurrent":1,"authType":"JWT","jwtObjectName":""},"process":{"1":{"apiType":"GET","apiUrl":"/health-check2","loginUse":true,"params":"","pause":1}},"accountList":[{"id":"taewan@2bytescorp.com","password":"qwer1234!"}]}
