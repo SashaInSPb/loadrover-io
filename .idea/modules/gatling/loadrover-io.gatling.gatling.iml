@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../../../gatling/src/gatling" dumb="true">
+      <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/kotlin/work" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static/complete" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static/progress" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static/result" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static/source" />
+    </content>
+  </component>
   <component name="FacetManager">
     <facet external-system-id="GRADLE" type="kotlin-language" name="Kotlin">
       <configuration version="5" platform="JVM 17" allPlatforms="JVM [17]" useProjectSettings="false">
