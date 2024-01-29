@@ -1,0 +1,32 @@
+ERROR 19:07:39.562 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'loadrover' to loadrover.api.io.config.LoadroverConfig:
+
+    Reason: java.lang.NullPointerException: Parameter specified as non-null is null: method loadrover.api.io.config.LoadroverConfig.<init>, parameter output
+
+Action:
+
+Update your application's configuration
+  
+ERROR 19:10:02.331 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'loadrover' to loadrover.api.io.config.LoadroverConfig:
+
+    Reason: java.lang.NullPointerException: Parameter specified as non-null is null: method loadrover.api.io.config.LoadroverConfig.<init>, parameter output
+
+Action:
+
+Update your application's configuration
+  

@@ -31,7 +31,7 @@ class ScenarioService(
 
     fun createScenario(request: ScenarioDto.RequestScenarioDto) {
         val scenarioUUID = getUUID()
-        val scenarioClass = request.task.name + scenarioUUID
+        val scenarioClass = "${request.task.name}${scenarioUUID}"
 
         saveSourceFile(request, scenarioUUID, scenarioClass)
 
@@ -100,7 +100,7 @@ class ScenarioService(
                         }
                         codes.append(".pause(${action.value.pause})\n")
 
-                        // 로그인 시, header에 access 토큰 추가
+                        // 로그인 시, header에 access 토큰 추가, 중간에 끼면 안됨
                         if (action.value.apiUrl.contains("authentication")) {
                             codes.append("$headerId.put(\"${HttpHeaderSection.AUTHORIZATION.value}\",\"bearer #accessToken\")\n")
                         }

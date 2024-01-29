@@ -1,0 +1,58 @@
+INFO  19:07:38.698 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt v0.0.1-SNAPSHOT using Java 17.0.5 with PID 38728 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/libs/api-0.0.1-SNAPSHOT.jar started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 19:07:38.699 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  19:07:38.700 - - loadrover.api.io.ApiApplicationKt - No active profile set, falling back to 1 default profile: "default"  
+INFO  19:07:39.437 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)  
+INFO  19:07:39.443 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  19:07:39.443 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  19:07:39.493 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  19:07:39.494 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 754 ms  
+WARN  19:07:39.541 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileUtils' defined in URL [jar:file:/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/libs/api-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/loadrover/api/io/utils/FileUtils.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'loadrover-loadrover.api.io.config.LoadroverConfig': Could not bind properties to 'LoadroverConfig' : prefix=loadrover, ignoreInvalidFields=false, ignoreUnknownFields=true  
+INFO  19:07:39.542 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  19:07:39.550 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 19:07:39.562 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'loadrover' to loadrover.api.io.config.LoadroverConfig:
+
+    Reason: java.lang.NullPointerException: Parameter specified as non-null is null: method loadrover.api.io.config.LoadroverConfig.<init>, parameter output
+
+Action:
+
+Update your application's configuration
+  
+INFO  19:10:01.458 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt v0.0.1-SNAPSHOT using Java 17.0.5 with PID 38902 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/libs/api-0.0.1-SNAPSHOT.jar started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 19:10:01.460 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  19:10:01.461 - - loadrover.api.io.ApiApplicationKt - No active profile set, falling back to 1 default profile: "default"  
+INFO  19:10:02.198 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)  
+INFO  19:10:02.207 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  19:10:02.207 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  19:10:02.258 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  19:10:02.258 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 757 ms  
+WARN  19:10:02.307 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileUtils' defined in URL [jar:file:/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/libs/api-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/loadrover/api/io/utils/FileUtils.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'loadrover-loadrover.api.io.config.LoadroverConfig': Could not bind properties to 'LoadroverConfig' : prefix=loadrover, ignoreInvalidFields=false, ignoreUnknownFields=true  
+INFO  19:10:02.309 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  19:10:02.316 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 19:10:02.331 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'loadrover' to loadrover.api.io.config.LoadroverConfig:
+
+    Reason: java.lang.NullPointerException: Parameter specified as non-null is null: method loadrover.api.io.config.LoadroverConfig.<init>, parameter output
+
+Action:
+
+Update your application's configuration
+  
