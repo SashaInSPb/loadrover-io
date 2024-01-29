@@ -4,7 +4,6 @@ import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder
 import java.io.BufferedInputStream
 import java.io.File
 import java.io.FileInputStream
