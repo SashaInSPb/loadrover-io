@@ -34,7 +34,7 @@ springdoc:
 
 loadrover:
   gatling:
-    path: ../gatling/src/gatling/resources/static
+    path: gatling/src/gatling/resources/static
     source: source
     progress: progress
     work: work

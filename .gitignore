@@ -1,11 +1,13 @@
-/logs/err_log.log
-/logs/loadrover_log.log
-/logs/
-build/
+/build/**
+/gatling/build/**
+/logs/**
 
 ## resources ##
-/gatling/src/gatling/resources/static/
-/gatling/src/gatling/kotlin/work/
+/gatling/src/gatling/resources/static/complete/**
+/gatling/src/gatling/resources/static/result/**
+/gatling/src/gatling/resources/static/progress/**
+/gatling/src/gatling/resources/static/source/**
+/gatling/src/gatling/kotlin/work/**
 
 ### IntelliJ IDEA ###
 .idea
@@ -15,3 +17,4 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+

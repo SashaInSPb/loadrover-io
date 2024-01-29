@@ -23,14 +23,11 @@ class SimulationService(
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
         val resultList = fileUtils.searchResultFolders()
-
-        // 정리필요
-        // 숫자비교해서 큰 값으로 보내줄 것
-        val filterList = resultList
+        val filteredList = resultList
             .filter { it.scenarioId.contains(scenarioId) }
             .map { it.scenarioId }
 
-        val latestResult = filterList.maxByOrNull { extractNumberAfterHyphen(it) }
+        val latestResult = filteredList.maxByOrNull { extractNumberAfterHyphen(it) }
 
 //        // TODO: memory leak 발생
 //        try {
@@ -38,7 +35,6 @@ class SimulationService(
 //        } catch (e: Error) {
 //            log.error("Failed to create zip file: ${e.message}")
 //        }
-
 
         return SimulationDto.ResultResponse(
             fileName = latestResult,
