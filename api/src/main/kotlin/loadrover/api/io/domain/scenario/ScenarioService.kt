@@ -101,9 +101,9 @@ class ScenarioService(
                         codes.append(".pause(${action.value.pause})\n")
 
                         // 로그인 시, header에 access 토큰 추가, 중간에 끼면 안됨
-                        if (action.value.apiUrl.contains("authentication")) {
-                            codes.append("$headerId.put(\"${HttpHeaderSection.AUTHORIZATION.value}\",\"bearer #accessToken\")\n")
-                        }
+//                        if (action.value.apiUrl.contains("authentication")) {
+//                            codes.append("$headerId.put(\"${HttpHeaderSection.AUTHORIZATION.value}\",\"bearer #accessToken\")\n")
+//                        }
                     }
                     ApiType.PUT -> {
                         val payload = action.value.params.replace("\"", "\\\"")
