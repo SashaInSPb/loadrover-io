@@ -27,6 +27,7 @@ class SimulationController(
             try {
                 println("Running simulation. scenarioId: ${request.scenarioId}")
                 Runtime.getRuntime().exec("./gradlew :gatling:gatlingRun-work.${request.scenarioId} -stacktrace")
+                // dev 브랜치에서 실행 코드
 //                Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId} -stacktrace")
 
                 simulationService.moveReadyToProgress(request.scenarioId)

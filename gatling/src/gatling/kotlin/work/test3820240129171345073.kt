@@ -16,8 +16,18 @@ headers_0.put("UserAgent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit
 headers_0.put("accept","application/json, text/plain, */*")
 headers_0.put("Content-Type","application/json")
 val scn = scenario("test38+20240129171345073")
-.exec(http("request_POST").post("/auth/authentication").headers(headers_0).body(StringBody("{\"email\":\"taewan@2bytescorp.com\",\"password\":\"qwer1234!\",\"loginSite\":\"LPM\"}")).check(jsonPath("$.accessToken").saveAs("accessToken")))
+.exec(
+    http("request_POST")
+        .post("/auth/authentication")
+        .headers(headers_0)
+        .body(StringBody("{\"email\":\"taewan@2bytescorp.com\",\"password\":\"qwer1234!\",\"loginSite\":\"LPM\"}"))
+        .check(jsonPath("$.accessToken").saveAs("accessToken")))
+
 .pause(1)
+.exec(session => {
+    val accessToken = session("accessToken")
+    session.set("updatedHeaders", headers_0.put("Authorization", "bearer $accessToken"))
+})
 .exec(http("request_GET").get("/mywork/detail").headers(headers_0))
 .pause(1)
 .exec(http("request_POST").post("/auth/authentication").headers(headers_0).body(StringBody("{\"email\":\"88parksw@2bytescorp.com\",\"password\":\"qwer1234!\",\"loginSite\":\"LPM\"}")).check(jsonPath("$.accessToken").saveAs("accessToken")))
