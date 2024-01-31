@@ -3,18 +3,19 @@ package loadrover.api.io.domain.scenario
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.utils.FileUtils
-import loadrover.api.io.utils.logger
-import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
+import org.slf4j.LoggerFactory
 
 @Service
 class ScenarioService(
     private val loadroverConfig: LoadroverConfig,
     private val fileUtils: FileUtils
 ) {
+    private val logger = LoggerFactory.getLogger(ScenarioService::class.java)
+
     fun getFileList(): MutableSet<FileDto> {
 
         val sourceFileList = fileUtils.searchFiles("source")
@@ -30,7 +31,7 @@ class ScenarioService(
 
     fun createScenario(request: ScenarioDto.RequestScenarioDto) {
         val scenarioUUID = getUUID()
-        val scenarioClass = "${request.task.name}${scenarioUUID}"
+        val scenarioClass = "${request.task.name.lowercase()}${scenarioUUID}"
 
         saveSourceFile(request, scenarioUUID, scenarioClass)
 
@@ -43,9 +44,11 @@ class ScenarioService(
         codes.append("import io.gatling.javaapi.core.*\n")
         codes.append("import io.gatling.javaapi.core.CoreDsl.*\n")
         codes.append("import io.gatling.javaapi.http.HttpDsl.*\n")
-        codes.append("import java.lang.Exception\n\n")
+        codes.append("import java.lang.Exception\n")
+        codes.append("import org.slf4j.LoggerFactory\n\n")
 
         codes.append("class ${scenarioClass}: Simulation() {\n")
+        codes.append("private val logger = LoggerFactory.getLogger(${scenarioClass}::class.java)\n\n")
         codes.append("val httpProtocol = http\n")
         codes.append("    .baseUrl(\"${host}\")\n")
         codes.append("    .inferHtmlResources()\n")
@@ -55,13 +58,11 @@ class ScenarioService(
 
         val headerIdx = 0
         val headerId = "headers_${headerIdx}"
-        codes.append("val $headerId: Map<String, String> = mutableMapOf()\n")
+//        codes.append("val $headerId: Map<String, String> = mutableMapOf()\n")
         codes.append("\n")
 
-        codes.append("override fun before() { println(\"-------------------------------------------- Scenario $scenarioClass is about to start.------------------------------------------------------------------\") }\n")
-        codes.append("override fun after() { println(\"-------------------------------------------- Scenario $scenarioClass was completed.------------------------------------------------------------------\") }\n")
-        codes.append("fun onError(errorMessage: String) { println(\"-------------------------------------------- An error occurred: \$errorMessage ------------------------------------------------------------------\") }\n")
-
+        codes.append("override fun before() { logger.debug(\"-------------------------------------------- Scenario $scenarioClass is about to start.------------------------------------------------------------------\") }\n")
+        codes.append("override fun after() { logger.debug(\"-------------------------------------------- Scenario $scenarioClass was completed.------------------------------------------------------------------\") }\n")
         codes.append("init {\n")
 
         // 상기 httpProtocol 메서드로 처리 가능할지 확인
@@ -81,13 +82,21 @@ class ScenarioService(
                             codes.append("http(\"request_${action.value.apiType}\")")
                             codes.append(".get(\"${action.value.apiUrl}\")")
                             codes.append(".headers($headerId)")
-                            codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken}\")")
+
+                            if (action.value.loginUse) {
+                                codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken}\")")
+                            }
                             codes.append(")\n")
                             codes.append(".pause(${action.value.pause})\n")
                         }
 
+                        // account 없을 경우도 체크.
                         ApiType.POST -> {
-                            var payload = action.value.params.replace("\"", "\\\"")
+                            var payload = action.value.params
+                                .replace("\n", "")
+                                .replace("\"","\\\"")
+                                .replace("\\s".toRegex(), "")
+
                             // 로그인 시, payload 작성
                             if (action.value.apiUrl.contains("authentication")) {
                                 payload =
@@ -101,23 +110,34 @@ class ScenarioService(
                             codes.append("http(\"request_${action.value.apiType}\")")
                             codes.append(".post(\"${action.value.apiUrl}\")")
                             codes.append(".headers($headerId)")
+
+                            if (action.value.loginUse) {
+                                codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken}\")")
+                            }
                             codes.append(".body(StringBody(\"${payload}\"))")
 
                             // 로그인 후, access token 추출
                             if (action.value.apiUrl.contains("authentication")) {
-                                codes.append(".check(jsonPath(\"$.accessToken\").saveAs(\"accessToken\")))\n")
+                                codes.append(".check(jsonPath(\"$.accessToken\").saveAs(\"accessToken\"))\n")
                             }
-
+                            codes.append(")\n")
                             codes.append(".pause(${action.value.pause})\n")
                         }
 
                         ApiType.PUT -> {
-                            val payload = action.value.params.replace("\"", "\\\"")
+                            val payload = action.value.params
+                                .replace("\n", "")
+                                .replace("\"","\\\"")
+                                .replace("\\s".toRegex(), "")
 
                             codes.append(".exec(")
                             codes.append(("http(\"request_${action.value.apiType}\")"))
                             codes.append(".put(\"${action.value.apiUrl}\")")
                             codes.append(".headers($headerId)")
+
+                            if (action.value.loginUse) {
+                                codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken}\")")
+                            }
                             codes.append(".body(StringBody(\"${payload}\"))")
                             codes.append(")\n")
                             codes.append(".pause(${action.value.pause})\n")
@@ -128,6 +148,10 @@ class ScenarioService(
                             codes.append(("http(\"request_${action.value.apiType}\")"))
                             codes.append(".delete(\"${action.value.apiUrl}\")")
                             codes.append(".headers($headerId)\n")
+
+                            if (action.value.loginUse) {
+                                codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken}\")")
+                            }
                             codes.append(")\n")
                             codes.append(".pause(${action.value.pause})\n")
                         }
@@ -147,7 +171,10 @@ class ScenarioService(
                     }
 
                     ApiType.POST -> {
-                        var payload = action.value.params.replace("\"", "\\\"")
+                        var payload = action.value.params
+                            .replace("\n", "")
+                            .replace("\"","\\\"")
+                            .replace("\\s".toRegex(), "")
 
                         codes.append(".exec(")
                         codes.append("http(\"request_${action.value.apiType}\")")
@@ -159,7 +186,10 @@ class ScenarioService(
                     }
 
                     ApiType.PUT -> {
-                        val payload = action.value.params.replace("\"", "\\\"")
+                        val payload = action.value.params
+                            .replace("\n", "")
+                            .replace("\"","\\\"")
+                            .replace("\\s".toRegex(), "")
 
                         codes.append(".exec(")
                         codes.append(("http(\"request_${action.value.apiType}\")"))
@@ -185,7 +215,7 @@ class ScenarioService(
         codes.append("try {\n")
         codes.append("this.setUp(scn.injectOpen(atOnceUsers(${request.task.concurrent}))).protocols(httpProtocol)\n")
         codes.append("} catch(e: Exception) {\n")
-        codes.append("this.onError(\"Error during scenario setup: \${e.message}\")")
+        codes.append("logger.error(\"Error during scenario setup: \${e.message}\")")
         codes.append("}\n")
         codes.append("}\n")
         codes.append("}\n")
@@ -198,7 +228,7 @@ class ScenarioService(
                 it.write(codeString)
             }
         } catch (e: Exception) {
-            logger().error("Failed to create: ${e.message.toString()}, scenarioUUID: $scenarioUUID")
+            logger.error("Failed to create: ${e.message.toString()}, scenarioUUID: $scenarioUUID")
         }
     }
 
@@ -256,7 +286,7 @@ class ScenarioService(
                 it.write(serializedObject)
             }
         } catch (e: Exception) {
-            logger().error("Failed to save JSON source file, ScenarioUUID: $scenarioUUID")
+            logger.error("Failed to save JSON source file, ScenarioUUID: $scenarioUUID")
         }
     }
 

@@ -2,7 +2,6 @@ package loadrover.api.io.domain.simulation
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
-import loadrover.api.io.utils.logger
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseEntity
 import org.springframework.scheduling.annotation.Async
@@ -15,7 +14,7 @@ import java.util.concurrent.CompletableFuture
 class SimulationController(
     private val simulationService: SimulationService
 ) {
-    private val log = LoggerFactory.getLogger(SimulationService::class.java)
+    private val logger = LoggerFactory.getLogger(SimulationService::class.java)
 
     //TODO: 테스트 진행 상황 알 수 있는 방법 알아보기
     @Async
@@ -23,8 +22,8 @@ class SimulationController(
     @Operation(summary = "", description = "")
     fun runSimulation(@RequestBody request: SimulationDto.RunSimulationRequest): CompletableFuture<ResponseEntity<String>> {
 
-        if (logger().isDebugEnabled) {
-            logger().debug("API call received. scenarioId: ${request.scenarioId}")
+        if (logger.isDebugEnabled) {
+            logger.debug("API call received. scenarioId: ${request.scenarioId}")
         }
 
         return CompletableFuture.supplyAsync {
