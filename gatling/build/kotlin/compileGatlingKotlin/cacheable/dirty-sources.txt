@@ -1,6 +1,0 @@
-/Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test4020240129165621088.kt
-/Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test44_accountTest20240130111031128.kt
-/Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test3820240129171409743.kt
-/Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test3820240129171345073.kt
-/Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test4020240129165655217.kt
-/Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test44_accountTest20240130111218475.kt
