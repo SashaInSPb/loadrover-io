@@ -1,33 +1,33 @@
-version: "3.8"
-
-services:
-  load-test-be:
-    build:
-      context: .
-      dockerfile: api/Dockerfile.dev
-    container_name: load-test-be
-    ports:
-      - "3020:8800"
-    environment:
-      - SPRING_PROFILES_ACTIVE=dev # 환경 변수 설정
-      - TZ=Asia/Seoul # 타임존 설정
-    networks:
-      - load-test-network
-
-  gatling:
-    container_name: gatling
-    build:
-      context: .
-      dockerfile: gatling/Dockerfile.gatling
-    volumes:
-      - ./gatling/src/gatling/kotlin/work:/gatling/src/gatling/kotlin/work
-      - ./gatling/src/gatling/resources/static/result:/gatling/src/gatling/resources/static/result
-    command: ["-s", "computerdatabase.BasicSimulation"]
-    depends_on:
-      - load-test-be
-    networks:
-      - load-test-network
-
-networks:
-  load-test-network:
-    driver: bridge
+#version: "3.8"
+#
+#services:
+#  load-test-be:
+#    build:
+#      context: .
+#      dockerfile: api/Dockerfile.dev
+#    container_name: load-test-be
+#    ports:
+#      - "3020:8800"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=dev # 환경 변수 설정
+#      - TZ=Asia/Seoul # 타임존 설정
+#    networks:
+#      - load-test-network
+#
+#  gatling:
+#    container_name: gatling
+#    build:
+#      context: .
+#      dockerfile: gatling/Dockerfile.gatling
+#    volumes:
+#      - ./gatling/src/gatling/kotlin/work:/gatling/src/gatling/kotlin/work
+#      - ./gatling/src/gatling/resources/static/result:/gatling/src/gatling/resources/static/result
+#    command: ["-s", "computerdatabase.BasicSimulation"]
+#    depends_on:
+#      - load-test-be
+#    networks:
+#      - load-test-network
+#
+#networks:
+#  load-test-network:
+#    driver: bridge

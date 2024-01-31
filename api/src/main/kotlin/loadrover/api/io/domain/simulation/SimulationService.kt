@@ -2,7 +2,7 @@ package loadrover.api.io.domain.simulation
 
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.utils.FileUtils
-import org.slf4j.LoggerFactory
+import loadrover.api.io.utils.logger
 import org.springframework.stereotype.Service
 import java.io.BufferedInputStream
 import java.io.File
@@ -19,8 +19,6 @@ class SimulationService(
     private val fileUtils: FileUtils,
     private val loadroverConfig: LoadroverConfig
 ) {
-    private val log = LoggerFactory.getLogger(SimulationService::class.java)
-
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
         val resultList = fileUtils.searchResultFolders()
         val filteredList = resultList
@@ -55,7 +53,7 @@ class SimulationService(
                 StandardCopyOption.REPLACE_EXISTING
             )
         } catch (e: Exception) {
-            log.error("Failed to move file: ${e.message}")
+            logger().error("Failed to move file: ${e.message.toString()}")
         }
     }
 

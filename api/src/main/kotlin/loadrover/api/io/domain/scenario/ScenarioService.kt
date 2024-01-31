@@ -3,6 +3,7 @@ package loadrover.api.io.domain.scenario
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.utils.FileUtils
+import loadrover.api.io.utils.logger
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.File
@@ -14,8 +15,6 @@ class ScenarioService(
     private val loadroverConfig: LoadroverConfig,
     private val fileUtils: FileUtils
 ) {
-    private val log = LoggerFactory.getLogger(ScenarioService::class.java)
-
     fun getFileList(): MutableSet<FileDto> {
 
         val sourceFileList = fileUtils.searchFiles("source")
@@ -199,7 +198,7 @@ class ScenarioService(
                 it.write(codeString)
             }
         } catch (e: Exception) {
-            log.error("Failed to create: ${e.message}, scenarioUUID: $scenarioUUID")
+            logger().error("Failed to create: ${e.message.toString()}, scenarioUUID: $scenarioUUID")
         }
     }
 
@@ -257,7 +256,7 @@ class ScenarioService(
                 it.write(serializedObject)
             }
         } catch (e: Exception) {
-            log.error("Failed to save JSON source file, ScenarioUUID: $scenarioUUID")
+            logger().error("Failed to save JSON source file, ScenarioUUID: $scenarioUUID")
         }
     }
 
