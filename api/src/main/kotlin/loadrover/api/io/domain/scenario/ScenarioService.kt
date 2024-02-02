@@ -8,6 +8,7 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 import org.slf4j.LoggerFactory
+import kotlin.math.ceil
 
 @Service
 class ScenarioService(
@@ -59,7 +60,6 @@ class ScenarioService(
 
         val headerIdx = 0
         val headerId = "headers_${headerIdx}"
-        val accountListSize = request.accountList.size
 
         codes.append("override fun before() { logger.debug(\"-------------------------------------------- Scenario $scenarioClass is about to start.------------------------------------------------------------------\") }\n")
         codes.append("override fun after() { logger.debug(\"-------------------------------------------- Scenario $scenarioClass was completed.------------------------------------------------------------------\") }\n")
@@ -71,10 +71,14 @@ class ScenarioService(
         codes.append("\"Content-Type\" to \"application/json\"\n")
         codes.append(")\n")
 
+        val accountListSize = request.accountList.size
+        for (idx in 0 until accountListSize + 1) {
 
-        // account 개수에 맞게 scn 생성
-        // account list가 없을 경우도 상정할 것.
-        for (idx in 0 until accountListSize) {
+            // account List 내 원소가 없을 때,
+            if (idx > accountListSize - 1 && idx != 0) {
+                break
+            }
+
             codes.append("val scn${idx} = scenario(\"${request.task.name}$scenarioUUID-$idx\")\n")
 
             for (action in request.process) {
@@ -160,11 +164,14 @@ class ScenarioService(
 
         codes.append("try {\n")
         codes.append("this.setUp(\n")
-        val concurrentDenominator = if (accountListSize == 0) 1 else accountListSize
+        val concurrentUsers = if (accountListSize == 0) request.task.concurrent else ceil(request.task.concurrent.toDouble() / accountListSize).toInt()
 
-        for (idx in 0 until accountListSize) {
-//            codes.append("scn$idx.injectOpen(atOnceUsers(${request.task.concurrent / concurrentDenominator })).protocols(httpProtocol),\n")
-            codes.append("scn$idx.injectOpen(atOnceUsers(${request.task.concurrent})).protocols(httpProtocol),\n")
+        for (idx in 0 until accountListSize + 1) {
+            // account List 내 원소가 없을 때,
+            if (idx > accountListSize - 1 && idx != 0) {
+                break
+            }
+            codes.append("scn$idx.injectOpen(atOnceUsers(${concurrentUsers})).protocols(httpProtocol),\n")
         }
         codes.append(")\n")
         codes.append("} catch(e: Exception) {\n")
