@@ -665,3 +665,5 @@ DEBUG 15:34:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 
 DEBUG 15:34:59.350 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240202153432226  
 DEBUG 15:35:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:35:00.005124  
 DEBUG 15:36:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:36:00.017906  
+DEBUG 15:37:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:37:00.012975  
+DEBUG 15:38:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:38:00.010282  
