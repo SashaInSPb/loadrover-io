@@ -28,7 +28,7 @@ class SimulationController(
 
         return CompletableFuture.supplyAsync {
             try {
-                Runtime.getRuntime().exec("./gradlew :gatling:gatlingRun-work.${request.scenarioId} -stacktrace > output.log 2> output.log")
+                Runtime.getRuntime().exec("./gradlew :gatling:gatlingRun-work.${request.scenarioId} -stacktrace")
 
                 // dev 브랜치에서 실행 코드
 //                Runtime.getRuntime().exec("gradle gatlingRun-work.${request.scenarioId} -stacktrace")
