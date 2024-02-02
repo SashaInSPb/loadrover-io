@@ -1,8 +1,0 @@
-18:42:49.362  - - scenario class created
-18:43:22.641  - - Run simulation
-18:52:01.498  - - Run simulation
-18:52:01.505  - - Run simulation
-18:53:47.502  - - Run simulation
-18:53:47.511  - - Run simulation
-18:55:20.392  - - Run simulation
-18:55:20.404  - - Run simulation
