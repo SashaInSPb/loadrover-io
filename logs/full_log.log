@@ -1,28 +1,9 @@
-> Task :clean UP-TO-DATE
-> Task :api:clean UP-TO-DATE
-> Task :gatling:clean
-> Task :gatling:compileKotlin NO-SOURCE
-> Task :gatling:compileJava NO-SOURCE
-> Task :gatling:compileScala NO-SOURCE
-> Task :gatling:processResources NO-SOURCE
-> Task :gatling:classes UP-TO-DATE
-> Task :gatling:compileTestKotlin NO-SOURCE
-> Task :gatling:compileTestJava NO-SOURCE
-> Task :gatling:compileTestScala NO-SOURCE
-> Task :gatling:processTestResources NO-SOURCE
-> Task :gatling:testClasses UP-TO-DATE
-> Task :gatling:processGatlingResources
-
-> Task :gatling:compileGatlingKotlin FAILED
-e: file:///Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test20240202115234291.kt:19:1 Expecting member declaration
-e: file:///Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/kotlin/work/test20240202115234291.kt:19:13 'before' hides member of supertype 'Simulation' and needs 'override' modifier
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':gatling:compileGatlingKotlin'.
-> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-   > Compilation error. See log for more details
+Could not create task ':gatling:gatlingRun-~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server'.
+> The task name 'gatlingRun-~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server' must not contain any of the following characters: [/, \, :, <, >, ", ?, *, |].
 
 * Try:
 > Run with --info or --debug option to get more log output.
@@ -30,51 +11,13 @@ Execution failed for task ':gatling:compileGatlingKotlin'.
 > Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':gatling:compileGatlingKotlin'.
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:148)
-	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:146)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:134)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:78)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
-Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:283)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:336)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:319)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:324)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:256)
+org.gradle.api.internal.tasks.DefaultTaskContainer$TaskCreationException: Could not create task ':gatling:gatlingRun-~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server'.
+	at org.gradle.api.internal.tasks.DefaultTaskContainer.taskCreationException(DefaultTaskContainer.java:721)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer.access$600(DefaultTaskContainer.java:77)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer$TaskCreatingProvider.domainObjectCreationException(DefaultTaskContainer.java:713)
+	at org.gradle.api.internal.DefaultNamedDomainObjectCollection$AbstractDomainObjectCreatingProvider.tryCreate(DefaultNamedDomainObjectCollection.java:954)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer$TaskCreatingProvider.access$1401(DefaultTaskContainer.java:660)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer$TaskCreatingProvider$1.run(DefaultTaskContainer.java:686)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
@@ -83,144 +26,164 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:233)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:216)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:199)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:166)
-	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
-	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:78)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
-	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
-	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
-	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
-	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:50)
-	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:28)
-	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.executeDelegateBroadcastingChanges(CaptureStateAfterExecutionStep.java:100)
-	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:72)
-	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:50)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
-	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:179)
-	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:70)
-	at org.gradle.internal.Either$Right.fold(Either.java:175)
-	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:59)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:68)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:46)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:25)
-	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:36)
-	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:22)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:91)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:55)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:55)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:37)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
-	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:77)
-	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:38)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:108)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:55)
-	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:71)
-	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:45)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNonEmptySources(SkipEmptyWorkStep.java:177)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:86)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:53)
-	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
-	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
-	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:75)
-	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:41)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:66)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:66)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:38)
-	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:32)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:293)
-	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
-	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:21)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:47)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:34)
-	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:64)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:145)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:134)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:78)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
-Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
-	at org.jetbrains.kotlin.gradle.tasks.TasksUtilsKt.throwExceptionIfCompilationFailed(tasksUtils.kt:22)
-	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:138)
-	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:76)
-	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
-	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:78)
-	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
-	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:170)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer$TaskCreatingProvider.tryCreate(DefaultTaskContainer.java:682)
+	at org.gradle.api.internal.DefaultNamedDomainObjectCollection$AbstractDomainObjectCreatingProvider.calculateOwnValue(DefaultNamedDomainObjectCollection.java:935)
+	at org.gradle.api.internal.provider.AbstractMinimalProvider.getOrNull(AbstractMinimalProvider.java:105)
+	at org.gradle.api.internal.DefaultNamedDomainObjectCollection.findByName(DefaultNamedDomainObjectCollection.java:296)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer.findByName(DefaultTaskContainer.java:564)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer.findByName(DefaultTaskContainer.java:76)
+	at org.gradle.api.internal.DefaultNamedDomainObjectCollection.getByName(DefaultNamedDomainObjectCollection.java:332)
+	at org.gradle.api.internal.tasks.DefaultTaskCollection.getByName(DefaultTaskCollection.java:46)
+	at org.gradle.execution.TaskNameResolver$SingleProjectTaskSelectionResult.collectTasks(TaskNameResolver.java:154)
+	at org.gradle.execution.TaskSelection.getTasks(TaskSelection.java:45)
+	at org.gradle.execution.commandline.CommandLineTaskParser.parseTasks(CommandLineTaskParser.java:50)
+	at org.gradle.execution.TaskNameResolvingBuildTaskScheduler.scheduleRequestedTasks(TaskNameResolvingBuildTaskScheduler.java:51)
+	at org.gradle.execution.DefaultTasksBuildTaskScheduler.scheduleRequestedTasks(DefaultTasksBuildTaskScheduler.java:72)
+	at org.gradle.initialization.DefaultTaskExecutionPreparer.lambda$scheduleRequestedTasks$0(DefaultTaskExecutionPreparer.java:46)
 	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:360)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:239)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:232)
+	at org.gradle.initialization.DefaultTaskExecutionPreparer.scheduleRequestedTasks(DefaultTaskExecutionPreparer.java:45)
+	at org.gradle.initialization.VintageBuildModelController.lambda$scheduleRequestedTasks$0(VintageBuildModelController.java:76)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$1(StateTransitionController.java:99)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$2(StateTransitionController.java:114)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:110)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:98)
+	at org.gradle.initialization.VintageBuildModelController.scheduleRequestedTasks(VintageBuildModelController.java:76)
+	at org.gradle.internal.build.DefaultBuildLifecycleController$DefaultWorkGraphBuilder.addRequestedTasks(DefaultBuildLifecycleController.java:404)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.lambda$scheduleRequestedTasks$0(DefaultBuildTreeWorkPreparer.java:41)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$populateWorkGraph$7(DefaultBuildLifecycleController.java:189)
+	at org.gradle.internal.build.DefaultBuildWorkPreparer.populateWorkGraph(DefaultBuildWorkPreparer.java:42)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer$PopulateWorkGraph.populateTaskGraph(BuildOperationFiringBuildWorkPreparer.java:106)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer$PopulateWorkGraph.run(BuildOperationFiringBuildWorkPreparer.java:92)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer.populateWorkGraph(BuildOperationFiringBuildWorkPreparer.java:67)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$populateWorkGraph$8(DefaultBuildLifecycleController.java:189)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$1(StateTransitionController.java:99)
+	at org.gradle.internal.model.StateTransitionController.lambda$inState$2(StateTransitionController.java:114)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:110)
+	at org.gradle.internal.model.StateTransitionController.inState(StateTransitionController.java:98)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.populateWorkGraph(DefaultBuildLifecycleController.java:189)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.populateWorkGraph(DefaultBuildWorkGraphController.java:169)
+	at org.gradle.composite.internal.DefaultBuildController.populateWorkGraph(DefaultBuildController.java:76)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraphBuilder.withWorkGraph(DefaultIncludedBuildTaskGraph.java:153)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.lambda$scheduleRequestedTasks$1(DefaultBuildTreeWorkPreparer.java:41)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph$1.run(DefaultIncludedBuildTaskGraph.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph.scheduleWork(DefaultIncludedBuildTaskGraph.java:204)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:37)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:36)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:112)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController.scheduleAndRunRequestedTasks(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:68)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:98)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:169)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$7(StateTransitionController.java:169)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:169)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:95)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:68)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:63)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:140)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:123)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:62)
+	at org.gradle.internal.buildtree.InitProblems.execute(InitProblems.java:38)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:58)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:78)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:133)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
-	... 2 more
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:92)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:80)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:69)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:32)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:51)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:39)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:64)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+Caused by: org.gradle.api.InvalidUserDataException: The task name 'gatlingRun-~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server' must not contain any of the following characters: [/, \, :, <, >, ", ?, *, |].
+	at org.gradle.util.internal.NameValidator.newInvalidUserDataException(NameValidator.java:45)
+	at org.gradle.util.internal.NameValidator.validate(NameValidator.java:38)
+	at org.gradle.api.internal.project.taskfactory.TaskFactory.create(TaskFactory.java:61)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory.create(AnnotationProcessingTaskFactory.java:48)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer.createTask(DefaultTaskContainer.java:328)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer.access$200(DefaultTaskContainer.java:77)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer$TaskCreatingProvider.createDomainObject(DefaultTaskContainer.java:703)
+	at org.gradle.api.internal.tasks.DefaultTaskContainer$TaskCreatingProvider.createDomainObject(DefaultTaskContainer.java:660)
+	at org.gradle.api.internal.DefaultNamedDomainObjectCollection$AbstractDomainObjectCreatingProvider.tryCreate(DefaultNamedDomainObjectCollection.java:947)
+	... 157 more
 
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
@@ -229,441 +192,4 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 863ms
-5 actionable tasks: 3 executed, 2 up-to-date
-INFO  12:41:48.189 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  12:41:48.196 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  12:41:48.197 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  12:41:48.245 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  12:41:48.246 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 679 ms  
-WARN  12:41:48.629 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  12:41:48.678 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  12:42:36.229 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  12:42:36.235 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  12:42:36.236 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  12:42:36.237 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 12:43:48.874 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-ERROR 12:45:01.248 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-INFO  12:51:12.445 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  12:51:12.452 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  12:51:12.452 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  12:51:12.503 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  12:51:12.504 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 639 ms  
-WARN  12:51:12.905 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  12:51:12.955 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  12:51:20.223 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  12:51:20.228 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  12:51:20.228 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  12:51:20.229 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 12:51:20.308 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-ERROR 12:51:42.729 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-ERROR 12:52:14.164 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-INFO  12:52:52.139 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  12:52:52.145 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  12:52:52.146 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  12:52:52.197 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  12:52:52.198 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 637 ms  
-WARN  12:52:52.615 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  12:52:52.666 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  12:52:54.954 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  12:52:54.960 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  12:52:54.960 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  12:52:54.961 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 12:52:55.035 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-INFO  12:53:58.429 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  12:53:58.436 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  12:53:58.436 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  12:53:58.487 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  12:53:58.487 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 622 ms  
-WARN  12:53:58.887 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  12:53:58.937 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  12:54:02.955 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  12:54:02.959 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  12:54:02.960 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  12:54:02.960 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
-ERROR 12:54:08.735 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-ERROR 12:54:25.946 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202124236332.json  
-INFO  12:56:54.177 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  12:56:54.185 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  12:56:54.185 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  12:56:54.238 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  12:56:54.238 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 658 ms  
-WARN  12:56:54.644 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  12:56:54.692 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  12:57:11.329 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  12:57:11.334 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  12:57:11.334 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  12:57:11.335 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 12:58:45.003 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202125711432.json  
-ERROR 14:14:05.643 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-INFO  14:16:49.540 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:16:49.547 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:16:49.547 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:16:49.597 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:16:49.598 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 647 ms  
-WARN  14:16:50.116 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:16:50.163 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:16:52.266 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:16:52.270 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:16:52.271 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:16:52.271 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
-ERROR 14:16:54.646 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-ERROR 14:17:56.333 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-ERROR 14:18:22.942 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-INFO  14:19:34.920 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:19:34.928 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:19:34.928 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:19:34.980 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:19:34.981 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 626 ms  
-WARN  14:19:35.356 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:19:35.406 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:19:39.979 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:19:39.984 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:19:39.984 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:19:39.985 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 14:19:42.156 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-INFO  14:20:48.678 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:20:48.685 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:20:48.685 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:20:48.738 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:20:48.739 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 672 ms  
-WARN  14:20:49.183 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:20:49.241 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:20:55.929 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:20:55.933 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:20:55.933 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:20:55.934 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 14:20:57.434 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-ERROR 14:21:18.229 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-INFO  14:21:44.921 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:21:44.928 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:21:44.928 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:21:44.978 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:21:44.979 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 607 ms  
-WARN  14:21:45.373 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:21:45.422 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:22:09.524 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:22:09.531 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:22:09.531 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:22:09.580 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:22:09.581 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 620 ms  
-WARN  14:22:09.980 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:22:10.028 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:22:24.082 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:22:24.091 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:22:24.091 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:22:24.092 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-INFO  14:25:37.403 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:25:37.409 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:25:37.409 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:25:37.469 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:25:37.469 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 652 ms  
-WARN  14:25:37.890 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:25:37.944 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:25:49.684 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:25:49.697 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:25:49.697 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:25:49.750 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:25:49.751 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 627 ms  
-WARN  14:25:50.154 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:25:50.210 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:26:13.832 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:26:13.836 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:26:13.837 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:26:13.838 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-INFO  14:29:25.710 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:29:25.716 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:29:25.716 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:29:25.770 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:29:25.771 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 671 ms  
-WARN  14:29:26.190 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:29:26.272 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:29:53.461 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:29:53.465 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:29:53.465 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:29:53.466 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 14:32:03.635 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-INFO  14:32:23.575 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:32:23.581 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:32:23.582 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:32:23.632 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:32:23.633 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 704 ms  
-WARN  14:32:24.073 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:32:24.132 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:32:27.096 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:32:27.101 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:32:27.101 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:32:27.102 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 14:32:27.172 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-ERROR 14:34:16.249 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-INFO  14:35:22.066 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 16658 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
-DEBUG 14:35:22.068 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
-INFO  14:35:22.069 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
-INFO  14:35:22.694 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:35:22.700 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:35:22.700 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:35:22.752 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:35:22.753 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 652 ms  
-DEBUG 14:35:22.947 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.ScenarioController:
-	{POST [/scenario]}: createScenario(RequestScenarioDto)
-	{GET [/scenario/list]}: getScenarioList()  
-DEBUG 14:35:22.948 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.SimulationController:
-	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
-	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)  
-DEBUG 14:35:22.949 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.i.HealthCheckController:
-	{GET [/health-check]}: healthCheck()  
-DEBUG 14:35:22.950 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.b.a.w.s.e.BasicErrorController:
-	{ [/error]}: error(HttpServletRequest)
-	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
-DEBUG 14:35:22.952 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.MultipleOpenApiWebMvcResource:
-	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
-	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
-DEBUG 14:35:22.954 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
-DEBUG 14:35:22.954 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerWelcomeWebMvc:
-	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
-DEBUG 14:35:22.955 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerConfigResource:
-	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
-DEBUG 14:35:22.958 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
-DEBUG 14:35:23.302 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
-WARN  14:35:23.313 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:35:23.363 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:35:23.371 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.666 seconds (process running for 1.949)  
-INFO  14:35:26.995 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:35:27.000 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:35:27.000 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:35:27.001 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-DEBUG 14:35:27.059 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240202115107349  
-ERROR 14:35:27.066 - - l.a.i.d.scenario.ScenarioService - Failed to move file: gatling/src/gatling/resources/static/source/test20240202115107349.json  
-DEBUG 14:36:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:36:00.018891  
-DEBUG 14:37:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:37:00.013693  
-INFO  14:37:15.321 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 16795 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
-DEBUG 14:37:15.323 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
-INFO  14:37:15.323 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
-INFO  14:37:15.893 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:37:15.899 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:37:15.912 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:37:15.962 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:37:15.963 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 609 ms  
-DEBUG 14:37:16.137 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.ScenarioController:
-	{POST [/scenario]}: createScenario(RequestScenarioDto)
-	{GET [/scenario/list]}: getScenarioList()  
-DEBUG 14:37:16.139 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.SimulationController:
-	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
-	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)  
-DEBUG 14:37:16.139 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.i.HealthCheckController:
-	{GET [/health-check]}: healthCheck()  
-DEBUG 14:37:16.140 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.b.a.w.s.e.BasicErrorController:
-	{ [/error]}: error(HttpServletRequest)
-	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
-DEBUG 14:37:16.141 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.MultipleOpenApiWebMvcResource:
-	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
-	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
-DEBUG 14:37:16.144 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
-DEBUG 14:37:16.144 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerWelcomeWebMvc:
-	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
-DEBUG 14:37:16.145 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerConfigResource:
-	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
-DEBUG 14:37:16.148 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
-DEBUG 14:37:16.335 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
-WARN  14:37:16.353 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:37:16.401 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:37:16.409 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.366 seconds (process running for 1.694)  
-DEBUG 14:38:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:38:00.016149  
-INFO  14:38:25.770 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  14:38:25.773 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:38:25.774 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:38:25.774 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
-INFO  14:38:26.288 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 266 ms  
-DEBUG 14:38:26.433 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
-DEBUG 14:38:46.522 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240202143832946  
-DEBUG 14:39:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:39:00.010167  
-DEBUG 14:40:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:40:00.010405  
-DEBUG 14:41:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:41:00.006983  
-DEBUG 14:42:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:42:00.003599  
-DEBUG 14:42:59.990 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:42:59.990812  
-DEBUG 14:44:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:44:00.002354  
-DEBUG 14:45:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:45:00.019435  
-DEBUG 14:46:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:46:00.007415  
-DEBUG 14:47:00.000 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:47:00.000744  
-DEBUG 14:48:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:48:00.005314  
-DEBUG 14:49:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:49:00.011460  
-DEBUG 14:50:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:50:00.010052  
-DEBUG 14:51:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:51:00.003517  
-DEBUG 14:52:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:52:00.013929  
-DEBUG 14:53:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:53:00.014153  
-DEBUG 14:54:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:54:00.008623  
-DEBUG 14:55:00.001 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:55:00.000892  
-DEBUG 14:56:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:56:00.017461  
-DEBUG 14:57:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:57:00.008141  
-DEBUG 14:58:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:58:00.002976  
-DEBUG 14:59:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T14:59:00.007981  
-DEBUG 15:00:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:00:00.002485  
-DEBUG 15:01:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:01:00.007722  
-DEBUG 15:02:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:02:00.003736  
-DEBUG 15:03:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:03:00.002538  
-DEBUG 15:04:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:04:00.005115  
-DEBUG 15:05:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:05:00.018655  
-DEBUG 15:06:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:06:00.007350  
-DEBUG 15:07:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:07:00.005908  
-DEBUG 15:08:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:08:00.013373  
-DEBUG 15:09:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:09:00.007572  
-DEBUG 15:10:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:10:00.001948  
-DEBUG 15:11:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:11:00.010421  
-DEBUG 15:12:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:12:00.008814  
-DEBUG 15:13:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:13:00.006506  
-DEBUG 15:14:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:14:00.003655  
-DEBUG 15:15:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:15:00.010877  
-DEBUG 15:16:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:16:00.004091  
-DEBUG 15:17:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:17:00.003043  
-DEBUG 15:18:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:18:00.004664  
-DEBUG 15:19:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:19:00.003517  
-DEBUG 15:20:00.060 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:20:00.060349  
-DEBUG 15:21:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:21:00.005029  
-DEBUG 15:22:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:22:00.009200  
-DEBUG 15:23:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:23:00.012357  
-DEBUG 15:24:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:24:00.013488  
-DEBUG 15:25:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:25:00.013309  
-DEBUG 15:26:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:26:00.002310  
-INFO  15:28:14.137 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt v0.0.1-SNAPSHOT using Java 17.0.5 with PID 20299 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api-0.0.1-SNAPSHOT.jar started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
-DEBUG 15:28:14.139 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
-INFO  15:28:14.139 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
-INFO  15:28:14.824 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  15:28:14.834 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  15:28:14.834 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  15:28:14.882 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  15:28:14.883 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 708 ms  
-DEBUG 15:28:15.140 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.i.HealthCheckController:
-	{GET [/health-check]}: healthCheck()  
-DEBUG 15:28:15.142 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.SimulationController:
-	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
-	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)  
-DEBUG 15:28:15.142 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.ScenarioController:
-	{POST [/scenario]}: createScenario(RequestScenarioDto)
-	{GET [/scenario/list]}: getScenarioList()  
-DEBUG 15:28:15.143 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.b.a.w.s.e.BasicErrorController:
-	{ [/error]}: error(HttpServletRequest)
-	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
-DEBUG 15:28:15.144 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.MultipleOpenApiWebMvcResource:
-	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
-	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
-DEBUG 15:28:15.147 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
-DEBUG 15:28:15.148 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerWelcomeWebMvc:
-	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
-DEBUG 15:28:15.148 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerConfigResource:
-	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
-DEBUG 15:28:15.154 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
-DEBUG 15:28:15.333 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
-WARN  15:28:15.346 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  15:28:15.396 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  15:28:15.409 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.585 seconds (process running for 1.862)  
-INFO  15:28:19.465 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  15:28:19.470 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  15:28:19.470 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  15:28:19.471 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-INFO  15:28:20.024 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 252 ms  
-DEBUG 15:28:20.175 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
-DEBUG 15:29:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:29:00.019521  
-DEBUG 15:29:32.842 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240202152842371  
-DEBUG 15:30:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:30:00.008528  
-INFO  15:32:01.286 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt v0.0.1-SNAPSHOT using Java 17.0.5 with PID 20623 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api-0.0.1-SNAPSHOT.jar started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
-DEBUG 15:32:01.288 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
-INFO  15:32:01.288 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
-INFO  15:32:01.958 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  15:32:01.964 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  15:32:01.964 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  15:32:02.008 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  15:32:02.008 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 682 ms  
-DEBUG 15:32:02.256 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.i.HealthCheckController:
-	{GET [/health-check]}: healthCheck()  
-DEBUG 15:32:02.258 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.SimulationController:
-	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
-	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)  
-DEBUG 15:32:02.259 - - _.s.w.s.HandlerMapping.Mappings - 
-	l.a.i.d.s.ScenarioController:
-	{POST [/scenario]}: createScenario(RequestScenarioDto)
-	{GET [/scenario/list]}: getScenarioList()  
-DEBUG 15:32:02.260 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.b.a.w.s.e.BasicErrorController:
-	{ [/error]}: error(HttpServletRequest)
-	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
-DEBUG 15:32:02.261 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.MultipleOpenApiWebMvcResource:
-	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
-	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
-DEBUG 15:32:02.264 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
-DEBUG 15:32:02.264 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerWelcomeWebMvc:
-	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
-DEBUG 15:32:02.264 - - _.s.w.s.HandlerMapping.Mappings - 
-	o.s.w.u.SwaggerConfigResource:
-	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
-DEBUG 15:32:02.268 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
-DEBUG 15:32:02.471 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
-WARN  15:32:02.482 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  15:32:02.531 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  15:32:02.543 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.557 seconds (process running for 1.801)  
-INFO  15:32:07.674 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.  
-INFO  15:32:07.680 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  15:32:07.680 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  15:32:07.680 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
-INFO  15:32:17.250 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 206 ms  
-DEBUG 15:32:17.389 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
-DEBUG 15:32:42.556 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240202153226108  
-DEBUG 15:33:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:33:00.011024  
-DEBUG 15:34:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:34:00.016445  
-DEBUG 15:34:59.350 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240202153432226  
-DEBUG 15:35:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:35:00.005124  
-DEBUG 15:36:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:36:00.017906  
-DEBUG 15:37:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:37:00.012975  
-DEBUG 15:38:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-02T15:38:00.010282  
+BUILD FAILED in 384ms
