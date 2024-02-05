@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter
 class SimulationLogUtils {
 
     fun createLogFile(scenarioId: String, text: String) {
-        val logFile = File("logs/simulation/${scenarioId}.txt")
+        val logFile = File("logs/simulation/${scenarioId}.log")
 
         if(!logFile.exists()) {
             logFile.createNewFile()
@@ -21,7 +21,7 @@ class SimulationLogUtils {
         val formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS")
         val formattedTime = currentTime.format(formatter)
 
-        val log = "$formattedTime  - - $text"
+        val log = "$formattedTime  - - $text\n"
 
         try {
             val fileWriter = FileWriter(logFile, true)
