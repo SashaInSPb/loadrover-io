@@ -94,10 +94,9 @@ class FileUtils(
         return folderList
     }
 
-    fun deleteFile(path: Path) {
-        val file = File(path.toString())
+    fun deleteFile(directory: String) {
         try {
-            file.deleteRecursively()
+            File(directory).deleteRecursively()
         } catch (e: Exception) {
             logger.error("Failed to delete file: ${e.message}")
         }

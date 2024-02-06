@@ -75,9 +75,7 @@ class SimulationController(
 
             if (mappedSimulationId == request.scenarioId) {
                 val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/${result.scenarioId}"
-                val resultPath: Path = Path.of(resultDirectory)
-
-                fileUtils.deleteFile(resultPath)
+                fileUtils.deleteFile(resultDirectory)
             }
 
         }
