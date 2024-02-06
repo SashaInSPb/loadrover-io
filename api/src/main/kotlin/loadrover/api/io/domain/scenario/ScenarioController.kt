@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/scenario")
-@Tag(name = "", description = "/scenario")
+@Tag(name = "Scenario controller", description = "/scenario")
 class ScenarioController(
     private val scenarioService: ScenarioService,
 ) {

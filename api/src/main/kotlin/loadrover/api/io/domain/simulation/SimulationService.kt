@@ -17,8 +17,7 @@ import java.util.zip.ZipOutputStream
 
 @Service
 class SimulationService(
-    private val fileUtils: FileUtils,
-    private val loadroverConfig: LoadroverConfig
+    private val fileUtils: FileUtils
 ) {
     private val logger = LoggerFactory.getLogger(ScenarioService::class.java)
 
@@ -38,26 +37,8 @@ class SimulationService(
 //        }
 
         return SimulationDto.ResultResponse(
-            fileName = latestResult,
+            fileName = latestResult
         )
-    }
-
-    fun moveReadyToProgress(scenarioId: String) {
-        val sourceDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioId}.json"
-        val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${scenarioId}.json"
-
-        val sourcePath: Path = Path.of(sourceDirectory)
-        val progressPath: Path = Path.of(progressDirectory)
-
-        try {
-            Files.move(
-                sourcePath,
-                progressPath,
-                StandardCopyOption.REPLACE_EXISTING
-            )
-        } catch (e: Exception) {
-            logger.error("Failed to move file: ${e.message.toString()}")
-        }
     }
 
     // TODO: 프로세서가 멈추지 않는 문제 발생

@@ -45,7 +45,6 @@ data class FileDto(
     var workDate: LocalDateTime? = null
 )
 
-// TODO: 첫자 대문자인지 체크
 enum class HttpHeaderSection(
     val value: String
 ) {

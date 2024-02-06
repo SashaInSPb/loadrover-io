@@ -2,27 +2,29 @@ package loadrover.api.io.domain.simulation
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
+import loadrover.api.io.config.LoadroverConfig
+import loadrover.api.io.utils.FileUtils
 import loadrover.api.io.utils.SimulationLogUtils
 import org.slf4j.LoggerFactory
-import org.springframework.core.io.ResourceLoader
 import org.springframework.http.ResponseEntity
 import org.springframework.scheduling.annotation.Async
 import org.springframework.web.bind.annotation.*
 import java.io.File
+import java.nio.file.Path
 import java.nio.file.Paths
 import java.util.concurrent.CompletableFuture
 
 @RestController
 @RequestMapping("/simulation")
-@Tag(name = "", description = "/simulation")
+@Tag(name = "Simulation controller", description = "/simulation")
 class SimulationController(
     private val simulationService: SimulationService,
     private val simulationLogUtils: SimulationLogUtils,
-    private val resourceLoader: ResourceLoader
+    private val fileUtils: FileUtils,
+    private val loadroverConfig: LoadroverConfig
 ) {
     private val logger = LoggerFactory.getLogger(SimulationService::class.java)
 
-    //TODO: 테스트 진행 상황 알 수 있는 방법 알아보기
     @Async
     @PostMapping("/run")
     @Operation(summary = "", description = "")
@@ -35,14 +37,14 @@ class SimulationController(
 
         return CompletableFuture.supplyAsync {
 
-            executeScript(request.scenarioId)
+            executeGatlingScript(request.scenarioId)
 
             try {
                 // 기존 방식
 //                Runtime.getRuntime().exec("./gradlew :gatling:gatlingRun-work.${request.scenarioId} -stacktrace")
-
-                simulationService.moveReadyToProgress(request.scenarioId)
+                fileUtils.moveJsonFile(request.scenarioId, loadroverConfig.gatling.source, loadroverConfig.gatling.progress )
                 ResponseEntity.ok("Running simulation, scenarioId: ${request.scenarioId}")
+
             } catch (e: Exception) {
                 simulationLogUtils.createLogFile(request.scenarioId, e.message.toString())
                 ResponseEntity.status(500).body("Failed to run simulation, scenarioId: ${request.scenarioId}")
@@ -51,7 +53,7 @@ class SimulationController(
     }
 
     @GetMapping("/{scenarioId}")
-    @Operation(summary = "", description = "Test420240124205133197")
+    @Operation(summary = "", description = "")
     fun getSimulationResult(@PathVariable("scenarioId") scenarioId: String): SimulationDto.ResultResponse {
         return simulationService.getSimulationResult(scenarioId)
     }
@@ -59,12 +61,45 @@ class SimulationController(
     @Async
     @PostMapping("/retry")
     @Operation(summary = "", description = "")
-    fun retrySimulation(@RequestBody request: SimulationDto.RunSimulationRequest){
+    fun retrySimulation(@RequestBody request: SimulationDto.RunSimulationRequest): CompletableFuture<ResponseEntity<String>>{
+        if (logger.isDebugEnabled) {
+            logger.debug("API call received. scenarioId: ${request.scenarioId}")
+            simulationLogUtils.createLogFile(request.scenarioId, "Retry simulation")
+        }
+
+        // result에 있는 폴더 삭제
+        // 전 result 결과를 다 날리자, scenarioId가 현재 simulationId, dto 분리 필요 여부
+        val resultList = fileUtils.searchResultFolders()
+        for (result in resultList) {
+            val mappedSimulationId = result.scenarioId.replace("-\\d+".toRegex(),"")
+
+            if (mappedSimulationId == request.scenarioId) {
+                val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${result.scenarioId}"
+                val resultPath: Path = Path.of(resultDirectory)
+
+                fileUtils.deleteFile(resultPath)
+            }
+
+        }
+
+        return CompletableFuture.supplyAsync {
+            executeGatlingScript(request.scenarioId)
+
+            try {
+                // json 파일 complete -> progress로 변경
+                fileUtils.moveJsonFile(request.scenarioId, loadroverConfig.gatling.complete, loadroverConfig.gatling.progress)
+                ResponseEntity.ok("Running simulation, scenarioId: ${request.scenarioId}")
+
+            } catch (e: Exception) {
+                simulationLogUtils.createLogFile(request.scenarioId, e.message.toString())
+                ResponseEntity.status(500).body("Failed to run simulation, scenarioId: ${request.scenarioId}")
+            }
+        }
 
     }
 
-
-    private fun executeScript(scenarioId: String) {
+    // gatling shell script 실행 함수
+    private fun executeGatlingScript(scenarioId: String) {
         try {
             val processBuilder = ProcessBuilder(
                 "./gradlew",
@@ -80,6 +115,7 @@ class SimulationController(
                 rootDirectory
             )
 
+            // log 설정
             val logFile = File("logs/simulation/$scenarioId.log")
             processBuilder.redirectOutput(ProcessBuilder.Redirect.appendTo(logFile))
             processBuilder.redirectError(ProcessBuilder.Redirect.appendTo(logFile))

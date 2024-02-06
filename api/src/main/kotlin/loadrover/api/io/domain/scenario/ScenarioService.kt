@@ -46,10 +46,9 @@ class ScenarioService(
         codes.append("import io.gatling.javaapi.core.CoreDsl.*\n")
         codes.append("import io.gatling.javaapi.http.HttpDsl.*\n")
         codes.append("import java.lang.Exception\n")
-        codes.append("import org.slf4j.LoggerFactory\n\n")
+        codes.append("\n")
 
         codes.append("class ${scenarioClass}: Simulation() {\n")
-        codes.append("private val logger = LoggerFactory.getLogger(${scenarioClass}::class.java)\n\n")
         codes.append("val httpProtocol = http\n")
         codes.append("    .baseUrl(\"${host}\")\n")
         codes.append("    .inferHtmlResources()\n")
@@ -61,8 +60,6 @@ class ScenarioService(
         val headerIdx = 0
         val headerId = "headers_${headerIdx}"
 
-        codes.append("override fun before() { logger.debug(\"-------------------------------------------- Scenario $scenarioClass is about to start.------------------------------------------------------------------\") }\n")
-        codes.append("override fun after() { logger.debug(\"-------------------------------------------- Scenario $scenarioClass was completed.------------------------------------------------------------------\") }\n")
         codes.append("init {\n")
 
         // 상기 httpProtocol 메서드로 처리 가능할지 확인
@@ -198,6 +195,20 @@ class ScenarioService(
         return dataFormat.format(Date()).toString()
     }
 
+    // request json 파일로 저장
+    private fun saveSourceFile(request: ScenarioDto.RequestScenarioDto, scenarioUUID: String, scenarioClass: String) {
+        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioClass}.json"
+        val serializedObject = jacksonObjectMapper().writeValueAsString(request)
+
+        try {
+            File(savePath).bufferedWriter().use {
+                it.write(serializedObject)
+            }
+        } catch (e: Exception) {
+            logger.error("Failed to save JSON source file, ScenarioUUID: $scenarioUUID")
+        }
+    }
+
 //    private fun getHeader(agentType: UserAgent): List<ScenarioDto.HeaderField> {
 //        val headers: MutableList<ScenarioDto.HeaderField> = mutableListOf()
 //
@@ -236,20 +247,4 @@ class ScenarioService(
 //            headers.add(ScenarioDto.HeaderField(HttpHeaderSection.AUTHORIZATION.value, "bearer $jwtToken"))
 //        }
 //    }
-
-    // request json 파일로 저장
-    private fun saveSourceFile(request: ScenarioDto.RequestScenarioDto, scenarioUUID: String, scenarioClass: String) {
-        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioClass}.json"
-        val serializedObject = jacksonObjectMapper().writeValueAsString(request)
-
-        try {
-            File(savePath).bufferedWriter().use {
-                it.write(serializedObject)
-            }
-        } catch (e: Exception) {
-            logger.error("Failed to save JSON source file, ScenarioUUID: $scenarioUUID")
-        }
-    }
-
-
 }

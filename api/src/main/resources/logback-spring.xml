@@ -27,7 +27,6 @@
 
     <!-- log file name -->
     <property name="LOG_FILE_NAME" value="full_log"/>
-    <property name="ERR_LOG_FILE_NAME" value="err_log"/>
 
     <!-- pattern -->
     <property name="LOG_PATTERN"
@@ -43,72 +42,11 @@
             </encoder>
         </appender>
 
-        <!-- Error only log file -->
-        <appender name="ERR" class="ch.qos.logback.core.FileAppender">
-            <file>${LOG_PATH}/${ERR_LOG_FILE_NAME}.log</file>
-            <append>true</append>
-            <encoder>
-                <pattern>${LOG_PATTERN}</pattern>
-            </encoder>
-        </appender>
-
         <!-- Attach appenders to root -->
         <root level="DEBUG">
             <appender-ref ref="FILE"/>
-            <appender-ref ref="ERR"/>
         </root>
+
     </springProfile>
-
-<!--    <springProfile name="local">-->
-<!--        <logger name="org.springframework.cache" level="DEBUG"/>-->
-<!--        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
-<!--            <encoder>-->
-<!--                <pattern>${LOG_PATTERN}</pattern>-->
-<!--            </encoder>-->
-<!--        </appender>-->
-
-<!--        <root level="DEBUG">-->
-<!--            <appender-ref ref="STDOUT"/>-->
-<!--        </root>-->
-<!--    </springProfile>-->
-
-<!--    <springProfile name="local">-->
-<!--        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-<!--            <file>${LOG_PATH}/${LOG_FILE_NAME}.log</file>-->
-<!--            <append>true</append>-->
-
-<!--            <encoder>-->
-<!--                <pattern>${LOG_PATTERN}</pattern>-->
-<!--            </encoder>-->
-
-<!--            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
-<!--                <fileNamePattern>${LOG_PATH}/${LOG_FILE_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>-->
-<!--                <maxHistory>10</maxHistory>-->
-<!--            </rollingPolicy>-->
-
-<!--        </appender>-->
-
-<!--        <appender name="ERR" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-<!--            <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
-<!--                <level>error</level>-->
-<!--                <onMatch>ACCEPT</onMatch>-->
-<!--                <onMismatch>DENY</onMismatch>-->
-<!--            </filter>-->
-<!--            <file>${LOG_PATH}/${ERR_LOG_FILE_NAME}.log</file>-->
-<!--            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">-->
-<!--                <pattern>${LOG_PATTERN}</pattern>-->
-<!--            </encoder>-->
-<!--            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
-<!--                <fileNamePattern>${LOG_PATH}/${ERR_LOG_FILE_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>-->
-<!--            </rollingPolicy>-->
-<!--        </appender>-->
-
-
-<!--        <root level="DEBUG">-->
-<!--            <appender-ref ref="FILE"/>-->
-<!--            <appender-ref ref="ERR"/>-->
-<!--        </root>-->
-
-<!--    </springProfile>-->
 
 </configuration>

@@ -19,7 +19,7 @@ class SimulationScheduler(
 ) {
     private val logger = LoggerFactory.getLogger(SimulationScheduler::class.java)
 
-    @Scheduled(cron = "0 */1 * * * *") // 매 1분
+    @Scheduled(cron = "0 */1 * * * *") // 매 1분으로 설정
     fun moveProgressToComplete() {
         val progressFileList = fileUtils.searchFiles("progress")
         val resultFileIdList = fileUtils.searchResultFolders().map { it.scenarioId.replace("-\\d+".toRegex(),"") }
@@ -28,24 +28,10 @@ class SimulationScheduler(
             val scenarioId = progressFile.scenarioId
 
             if (resultFileIdList.contains(scenarioId)) {
-                val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${scenarioId}.json"
-                val completeDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.complete}/${scenarioId}.json"
-
-                val progressPath: Path = Path.of(progressDirectory)
-                val completePath: Path = Path.of(completeDirectory)
-
-                try {
-                    Files.move(
-                        progressPath,
-                        completePath,
-                        StandardCopyOption.REPLACE_EXISTING
-                    )
-                } catch (e: Exception) {
-                    logger.error("Failed to move file: ${e.message}")
-                }
+                fileUtils.moveJsonFile(scenarioId, loadroverConfig.gatling.progress, loadroverConfig.gatling.complete)
             }
         }
-        logger.debug("Check simulation result: ${LocalDateTime.now()}")
+        logger.debug("Check simulation result: {}", LocalDateTime.now())
     }
 
 }
