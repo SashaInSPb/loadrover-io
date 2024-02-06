@@ -1,15 +1,15 @@
 /build/**
 /api/build/**
 /gatling/build/**
-/logs/simulation/**
-/logs/full_log.log
+#/logs/simulation/**
+#/logs/full_log.log
 
 ### resources ##
-/gatling/src/gatling/resources/static/complete/**
-/gatling/src/gatling/resources/static/result/**
-/gatling/src/gatling/resources/static/progress/**
-/gatling/src/gatling/resources/static/source/**
-/gatling/src/gatling/kotlin/work/**
+#/gatling/src/gatling/resources/static/complete/**
+#/gatling/src/gatling/resources/static/result/**
+#/gatling/src/gatling/resources/static/progress/**
+#/gatling/src/gatling/resources/static/source/**
+#/gatling/src/gatling/kotlin/work/**
 
 ### IntelliJ IDEA ###
 .idea
