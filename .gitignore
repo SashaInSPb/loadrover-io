@@ -1,8 +1,8 @@
 /build/**
 /api/build/**
 /gatling/build/**
-#/logs/simulation/**
-#/logs/full_log.log
+/logs/simulation/**
+/logs/full_log.log
 
 ### resources ##
 #/gatling/src/gatling/resources/static/complete/**

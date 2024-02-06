@@ -15,7 +15,6 @@ import java.util.zip.ZipOutputStream
 class SimulationService(
     private val fileUtils: FileUtils
 ) {
-    private val logger = LoggerFactory.getLogger(ScenarioService::class.java)
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
         val resultList = fileUtils.searchResultFolders()
@@ -27,9 +26,9 @@ class SimulationService(
 
 //        // TODO: memory leak 발생
 //        try {
-////                    zipFolder(folderPath, "$folderPath/$zipFileName")
+////          zipFolder(folderPath, "$folderPath/$zipFileName")
 //        } catch (e: Error) {
-//            log.error("Failed to create zip file: ${e.message}")
+//            logger.error("Failed to create zip file: ${e.message}")
 //        }
 
         return SimulationDto.ResultResponse(

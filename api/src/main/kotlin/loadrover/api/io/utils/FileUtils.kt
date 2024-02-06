@@ -6,6 +6,7 @@ import loadrover.api.io.domain.scenario.ScenarioService
 import loadrover.api.io.domain.scenario.ScenarioStatus
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
+import java.io.File
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
 
@@ -94,8 +95,9 @@ class FileUtils(
     }
 
     fun deleteFile(path: Path) {
+        val file = File(path.toString())
         try {
-            Files.deleteIfExists(path)
+            file.deleteRecursively()
         } catch (e: Exception) {
             logger.error("Failed to delete file: ${e.message}")
         }
