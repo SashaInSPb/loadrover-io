@@ -1,6 +1,5 @@
 package loadrover.api.io.domain.simulation
 
-import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.domain.scenario.ScenarioService
 import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
@@ -9,9 +8,6 @@ import java.io.BufferedInputStream
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
-import java.nio.file.Files
-import java.nio.file.Path
-import java.nio.file.StandardCopyOption
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 

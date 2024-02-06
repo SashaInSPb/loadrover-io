@@ -22,4 +22,10 @@ class ScenarioController(
         return scenarioService.getFileList()
     }
 
+    @GetMapping("/{scenarioId}")
+    @Operation(summary = "", description = "")
+    fun getScenarioContent(@PathVariable("scenarioId") scenarioId: String): ScenarioDto.ResponseScenarioDto? {
+        return scenarioService.getScenarioContent(scenarioId)
+    }
+
 }

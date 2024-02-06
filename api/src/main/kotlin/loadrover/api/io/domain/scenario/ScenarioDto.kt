@@ -36,6 +36,34 @@ class ScenarioDto {
             val password: String
         )
     }
+
+    data class ResponseScenarioDto(
+        val task: TaskDetail,
+        val process: Map<Int, RequestDetail> = mapOf(),
+        val accountList: List<AccountDetail> = listOf()
+    ) {
+
+        data class TaskDetail(
+            val name: String,
+            val targetHost: String,
+            val concurrent: Int,
+            val authType: AuthType,
+            val jwtObjectName: String
+        )
+
+        data class RequestDetail(
+            val apiType: ApiType,
+            val apiUrl: String,
+            val loginUse: Boolean,
+            val params: String,
+            val pause: Int? = 0
+        )
+
+        data class AccountDetail(
+            val id: String,
+            val password: String
+        )
+    }
 }
 
 data class FileDto(

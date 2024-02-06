@@ -1,6 +1,7 @@
 package loadrover.api.io.domain.scenario
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.utils.FileUtils
 import org.springframework.stereotype.Service
@@ -8,6 +9,7 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 import org.slf4j.LoggerFactory
+import java.nio.file.Path
 import kotlin.math.ceil
 
 @Service
@@ -172,7 +174,7 @@ class ScenarioService(
         }
         codes.append(")\n")
         codes.append("} catch(e: Exception) {\n")
-        codes.append("logger.error(\"Error during scenario setup: \${e.message}\")")
+        codes.append("println(\"Error during scenario setup: \${e.message}\")")
         codes.append("}\n")
         codes.append("}\n")
         codes.append("}\n")
@@ -187,6 +189,32 @@ class ScenarioService(
             }
         } catch (e: Exception) {
             logger.error("Failed to create: ${e.message.toString()}, scenarioUUID: $scenarioUUID")
+        }
+    }
+
+    fun getScenarioContent(scenarioId: String): ScenarioDto.ResponseScenarioDto? {
+        val fileList = getFileList()
+        var filePath = ""
+
+        for (file in fileList) {
+            if (file.scenarioId == scenarioId) {
+                filePath = when (file.status) {
+                    ScenarioStatus.READY -> "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${file.scenarioId}.json"
+                    ScenarioStatus.PROGRESS -> "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${file.scenarioId}.json"
+                    ScenarioStatus.COMPLETE -> "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.complete}/${file.scenarioId}.json"
+                    else -> ""
+                }
+            }
+        }
+
+        val fileContent = File(filePath).readText(charset = Charsets.UTF_8)
+        val mapper = jacksonObjectMapper()
+
+        return try {
+            mapper.readValue<ScenarioDto.ResponseScenarioDto>(fileContent)
+        } catch (e: Exception) {
+            logger.error("Failed to get JSON source file: ${e.message.toString()}, scenarioUUID: $scenarioId")
+            null
         }
     }
 
