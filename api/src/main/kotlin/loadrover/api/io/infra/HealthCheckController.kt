@@ -9,4 +9,9 @@ class HealthCheckController {
     fun healthCheck(): String {
         return "OK"
     }
+
+    @GetMapping("/health-check2")
+    fun healthCheck2(): String {
+        return "OK"
+    }
 }
