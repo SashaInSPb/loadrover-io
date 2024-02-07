@@ -37,6 +37,8 @@ jobs:
     steps:
       - name: Run process
         run: |
+          cd ~/loadrover/live-directory/
+          
           nohup java -jar api-0.0.1-SNAPSHOT.jar --spring.profiles.active=local &
 
 
