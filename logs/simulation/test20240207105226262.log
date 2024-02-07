@@ -1,0 +1,146 @@
+10:52:48.130  - - Run simulation
+
+> Task :gatling:compileKotlin NO-SOURCE
+> Task :gatling:compileJava NO-SOURCE
+> Task :gatling:compileScala NO-SOURCE
+> Task :gatling:processResources NO-SOURCE
+> Task :gatling:classes UP-TO-DATE
+> Task :gatling:compileTestKotlin NO-SOURCE
+> Task :gatling:compileTestJava NO-SOURCE
+> Task :gatling:compileTestScala NO-SOURCE
+> Task :gatling:processTestResources NO-SOURCE
+> Task :gatling:testClasses UP-TO-DATE
+> Task :gatling:processGatlingResources
+> Task :gatling:compileGatlingKotlin
+> Task :gatling:compileGatlingJava NO-SOURCE
+> Task :gatling:compileGatlingScala NO-SOURCE
+> Task :gatling:gatlingClasses
+> Task :gatling:gatlingLogback UP-TO-DATE
+
+> Task :gatling:gatlingRun-work.test20240207105226262
+Simulation work.test20240207105226262 started...
+
+================================================================================
+2024-02-07 10:52:55                                           1s elapsed
+---- Requests ------------------------------------------------------------------
+> Global                                                   (OK=8      KO=0     )
+> request_POST_1                                           (OK=3      KO=0     )
+> request_POST_0                                           (OK=3      KO=0     )
+> request_GET_1                                            (OK=1      KO=0     )
+> request_GET_0                                            (OK=1      KO=0     )
+
+---- test20240207105226262-0 ---------------------------------------------------
+[##########################################################################]100%
+          waiting: 0      / active: 0      / done: 1     
+---- test20240207105226262-1 ---------------------------------------------------
+[##########################################################################]100%
+          waiting: 0      / active: 0      / done: 1     
+================================================================================
+
+Simulation work.test20240207105226262 completed in 1 seconds
+Parsing log file(s)...
+Parsing log file(s) done in 0s.
+Generating reports...
+
+================================================================================
+---- Global Information --------------------------------------------------------
+> request count                                          8 (OK=8      KO=0     )
+> min response time                                     26 (OK=26     KO=-     )
+> max response time                                    244 (OK=244    KO=-     )
+> mean response time                                    90 (OK=90     KO=-     )
+> std deviation                                         90 (OK=90     KO=-     )
+> response time 50th percentile                         44 (OK=44     KO=-     )
+> response time 75th percentile                        108 (OK=108    KO=-     )
+> response time 95th percentile                        244 (OK=244    KO=-     )
+> response time 99th percentile                        244 (OK=244    KO=-     )
+> mean requests/sec                                      4 (OK=4      KO=-     )
+---- Response Time Distribution ------------------------------------------------
+> t < 800 ms                                             8 (100%)
+> 800 ms <= t < 1200 ms                                  0 (  0%)
+> t >= 1200 ms                                           0 (  0%)
+> failed                                                 0 (  0%)
+================================================================================
+
+Reports generated, please open the following file: file:///Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/resources/static/result/test20240207105226262-20240207015252120/index.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 7s
+4 actionable tasks: 3 executed, 1 up-to-date
+10:56:15.665  - - Retry simulation
+
+> Task :gatling:compileKotlin NO-SOURCE
+> Task :gatling:compileJava NO-SOURCE
+> Task :gatling:compileScala NO-SOURCE
+> Task :gatling:processResources NO-SOURCE
+> Task :gatling:classes UP-TO-DATE
+> Task :gatling:compileTestKotlin NO-SOURCE
+> Task :gatling:compileTestJava NO-SOURCE
+> Task :gatling:compileTestScala NO-SOURCE
+> Task :gatling:processTestResources NO-SOURCE
+> Task :gatling:testClasses UP-TO-DATE
+> Task :gatling:processGatlingResources
+> Task :gatling:compileGatlingKotlin
+> Task :gatling:compileGatlingJava NO-SOURCE
+> Task :gatling:compileGatlingScala NO-SOURCE
+> Task :gatling:gatlingClasses
+> Task :gatling:gatlingLogback UP-TO-DATE
+
+> Task :gatling:gatlingRun-work.test20240207105226262
+Simulation work.test20240207105226262 started...
+
+================================================================================
+2024-02-07 10:56:22                                           1s elapsed
+---- Requests ------------------------------------------------------------------
+> Global                                                   (OK=8      KO=0     )
+> request_POST_1                                           (OK=3      KO=0     )
+> request_POST_0                                           (OK=3      KO=0     )
+> request_GET_0                                            (OK=1      KO=0     )
+> request_GET_1                                            (OK=1      KO=0     )
+
+---- test20240207105226262-0 ---------------------------------------------------
+[##########################################################################]100%
+          waiting: 0      / active: 0      / done: 1     
+---- test20240207105226262-1 ---------------------------------------------------
+[##########################################################################]100%
+          waiting: 0      / active: 0      / done: 1     
+================================================================================
+
+Simulation work.test20240207105226262 completed in 1 seconds
+Parsing log file(s)...
+Parsing log file(s) done in 0s.
+Generating reports...
+
+================================================================================
+---- Global Information --------------------------------------------------------
+> request count                                          8 (OK=8      KO=0     )
+> min response time                                     22 (OK=22     KO=-     )
+> max response time                                    224 (OK=224    KO=-     )
+> mean response time                                    91 (OK=91     KO=-     )
+> std deviation                                         80 (OK=80     KO=-     )
+> response time 50th percentile                         56 (OK=56     KO=-     )
+> response time 75th percentile                        120 (OK=120    KO=-     )
+> response time 95th percentile                        224 (OK=224    KO=-     )
+> response time 99th percentile                        224 (OK=224    KO=-     )
+> mean requests/sec                                      4 (OK=4      KO=-     )
+---- Response Time Distribution ------------------------------------------------
+> t < 800 ms                                             8 (100%)
+> 800 ms <= t < 1200 ms                                  0 (  0%)
+> t >= 1200 ms                                           0 (  0%)
+> failed                                                 0 (  0%)
+================================================================================
+
+Reports generated, please open the following file: file:///Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/resources/static/result/test20240207105226262-20240207015619334/index.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+4 actionable tasks: 3 executed, 1 up-to-date
