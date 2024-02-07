@@ -22,19 +22,9 @@ jobs:
         run: |
           rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
 
-  kill-process:
-    name: kill-process
-    needs: build-and-push
-    runs-on: [ self-hosted, loadrover ] # loadrover-io-dev 라는 라벨의 self-hosted runner 사용
-    steps:
       - name: Kill process
         run: kill -9 $(lsof -ti :8800) || true
 
-  nohup:
-    name: nohup
-    needs: kill-process
-    runs-on: [ self-hosted, loadrover ] # loadrover-io-dev 라는 라벨의 self-hosted runner 사용
-    steps:
       - name: Run process
         run: |
           cd ~/loadrover/live-directory/
