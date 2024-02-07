@@ -23,9 +23,7 @@ jobs:
           rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
 
       - name : Kill process
-        continue-on-error: true
-        run: |
-          kill -9 $(lsof -ti :8800)
+        run: kill -9 $(lsof -ti :8800) || true
 
       - name : Run process
         run: |
