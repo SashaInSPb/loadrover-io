@@ -16,7 +16,7 @@ jobs:
 
       - name: Backup gatling directory
         run: |
-          rsync -av /home/loadrover/live-directory/gatling /tmp/gatling
+          rsync -av ~/loadrover/live-directory/gatling /tmp/gatling
 
       - name: Sync files excluding gatling
         run: |
