@@ -14,6 +14,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Backup gatling directory
+        run: |
+          rsync -av /home/loadrover/live-directory/gatling /tmp/gatling
+
+      - name: Sync files excluding gatling
+        run: |
+          rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
+
       # gradle build 를 위한 jdk 사용
 #      - name: Set up JDK 17
 #        uses: actions/setup-java@v2
