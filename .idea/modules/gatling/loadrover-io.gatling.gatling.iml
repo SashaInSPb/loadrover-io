@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static/progress" />
       <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static/result" />
       <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static/source" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../gatling/src/gatling/resources/static" />
     </content>
   </component>
   <component name="FacetManager">

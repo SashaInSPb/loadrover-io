@@ -1,8 +1,6 @@
-/build/**
-/api/build/**
-/gatling/**
-/logs/simulation/**
-/logs/full_log.log
+build/
+gatling/
+logs/*.log
 
 ### resources ##
 #/gatling/src/gatling/resources/static/complete/**
@@ -12,10 +10,10 @@
 #/gatling/src/gatling/kotlin/work/**
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+#.idea
+#*.iws
+#*.iml
+#*.ipr
 #out/
 #!**/src/main/**/out/
 #!**/src/test/**/out/

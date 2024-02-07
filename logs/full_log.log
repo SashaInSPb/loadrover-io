@@ -4680,3 +4680,13 @@ DEBUG 14:35:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 
 DEBUG 14:36:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:36:00.007739  
 DEBUG 14:37:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:37:00.006279  
 DEBUG 14:38:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:38:00.008286  
+DEBUG 14:39:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:39:00.021944  
+DEBUG 14:40:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:40:00.014539  
+DEBUG 14:40:59.987 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:40:59.987278  
+DEBUG 14:42:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:42:00.018248  
+DEBUG 14:43:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:43:00.005734  
+DEBUG 14:44:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:44:00.014377  
+DEBUG 14:45:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:45:00.012746  
+DEBUG 14:46:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:46:00.008185  
+DEBUG 14:47:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:47:00.013793  
+DEBUG 14:48:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:48:00.022207  
