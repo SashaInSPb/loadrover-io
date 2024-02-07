@@ -39,7 +39,7 @@ class SimulationController(
 
         return CompletableFuture.supplyAsync {
 
-            executeGatlingScript(request.scenarioId)
+            simulationService.executeGatlingScript(request.scenarioId)
 
             try {
                 // 기존 방식
@@ -60,7 +60,6 @@ class SimulationController(
         return simulationService.getSimulationResult(scenarioId)
     }
 
-    @Async
     @PostMapping("/retry")
     @Operation(summary = "부하테스트 재실행")
     fun retrySimulation(@RequestBody request: SimulationDto.RunSimulationRequest): CompletableFuture<ResponseEntity<String>>{
@@ -88,7 +87,7 @@ class SimulationController(
         }
 
         return CompletableFuture.supplyAsync {
-            executeGatlingScript(request.scenarioId)
+            simulationService.executeGatlingScript(request.scenarioId)
 
             try {
                 // json 파일 complete -> progress로 변경
@@ -101,41 +100,6 @@ class SimulationController(
             }
         }
 
-    }
-
-    // gatling shell script 실행 함수
-    private fun executeGatlingScript(scenarioId: String) {
-        try {
-            val processBuilder = ProcessBuilder(
-                "./gradlew",
-                ":gatling:gatlingRun-work.$scenarioId",
-                "-stacktrace"
-            )
-
-            // 프로젝트 root dir로 process 실행 설정
-            val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
-                .getResources("classpath*:gatling/**")
-
-            val resourceFile = File(resources.toString())
-
-
-            processBuilder.directory(
-                resourceFile.parentFile
-            )
-
-            // log 설정
-            val logFile = File("logs/simulation/$scenarioId.log")
-            processBuilder.redirectOutput(ProcessBuilder.Redirect.appendTo(logFile))
-            processBuilder.redirectError(ProcessBuilder.Redirect.appendTo(logFile))
-
-            val process = processBuilder.start()
-            val exitCode = process.waitFor()
-
-            println("Process exitCode: $exitCode")
-
-        } catch (e: Exception) {
-            logger.error("Failed to run: ${e.message.toString()}, scenarioUUID: $scenarioId")
-        }
     }
 
 }
