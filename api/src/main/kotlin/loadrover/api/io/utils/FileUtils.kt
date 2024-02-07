@@ -1,7 +1,9 @@
 package loadrover.api.io.utils
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.domain.scenario.FileDto
+import loadrover.api.io.domain.scenario.ScenarioDto
 import loadrover.api.io.domain.scenario.ScenarioService
 import loadrover.api.io.domain.scenario.ScenarioStatus
 import org.slf4j.LoggerFactory
@@ -47,7 +49,7 @@ class FileUtils(
                 }
             )
         } catch (e: Exception) {
-            println("Failed to read files: ${e.message}")
+            println("Failed to read files: ${e.message.toString()}")
         }
 
         return fileList
@@ -89,7 +91,7 @@ class FileUtils(
                 }
             )
         } catch (e: Exception) {
-            println("Failed to read files: ${e.message}")
+            println("Failed to read files: ${e.message.toString()}")
         }
         return folderList
     }
@@ -98,7 +100,7 @@ class FileUtils(
         try {
             File(directory).deleteRecursively()
         } catch (e: Exception) {
-            logger.error("Failed to delete file: ${e.message}")
+            logger.error("Failed to delete file: ${e.message.toString()}")
         }
     }
 
@@ -116,7 +118,20 @@ class FileUtils(
                 StandardCopyOption.REPLACE_EXISTING
             )
         } catch (e: Exception) {
-            logger.error("Failed to move file: ${e.message.toString()}")
+            logger.error("Failed to move JSON file: ${e.message.toString()}, ScenarioUUID: $scenarioId")
+        }
+    }
+
+    fun saveJsonFile(request: ScenarioDto.RequestScenarioDto, scenarioUUID: String, scenarioClass: String) {
+        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioClass}.json"
+        val serializedObject = jacksonObjectMapper().writeValueAsString(request)
+
+        try {
+            File(savePath).bufferedWriter().use {
+                it.write(serializedObject)
+            }
+        } catch (e: Exception) {
+            logger.error("Failed to save JSON file: ${e.message.toString()}, ScenarioUUID: $scenarioUUID")
         }
     }
 

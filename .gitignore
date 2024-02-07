@@ -1,6 +1,6 @@
 /build/**
 /api/build/**
-/gatling/build/**
+/gatling/**
 /logs/simulation/**
 /logs/full_log.log
 
@@ -16,7 +16,7 @@
 *.iws
 *.iml
 *.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+#out/
+#!**/src/main/**/out/
+#!**/src/test/**/out/
 

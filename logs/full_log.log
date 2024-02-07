@@ -2944,3 +2944,1739 @@ DEBUG 19:02:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 
 DEBUG 19:03:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:03:00.006835  
 DEBUG 19:04:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:04:00.021509  
 DEBUG 19:05:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:05:00.006079  
+DEBUG 19:06:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:06:00.006465  
+DEBUG 19:07:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:07:00.007839  
+DEBUG 19:08:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:08:00.007504  
+DEBUG 19:09:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:09:00.015069  
+DEBUG 19:10:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:10:00.004955  
+DEBUG 19:11:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:11:00.015334  
+DEBUG 19:12:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:12:00.006937  
+DEBUG 19:13:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:13:00.010103  
+DEBUG 19:14:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:14:00.003386  
+DEBUG 19:15:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:15:00.012026  
+DEBUG 19:16:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:16:00.003143  
+DEBUG 19:17:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:17:00.007131  
+DEBUG 19:18:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:18:00.002519  
+DEBUG 19:19:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:19:00.019312  
+DEBUG 19:20:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:20:00.008016  
+DEBUG 19:21:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:21:00.004423  
+DEBUG 19:22:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:22:00.004285  
+DEBUG 19:23:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:23:00.016314  
+DEBUG 19:24:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:24:00.005648  
+DEBUG 19:25:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:25:00.004783  
+DEBUG 19:26:00.045 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:26:00.045418  
+DEBUG 19:29:57.413 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:29:57.412742  
+DEBUG 19:30:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:30:00.009806  
+DEBUG 19:31:54.419 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:31:54.418854  
+DEBUG 19:32:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T19:32:00.009345  
+DEBUG 20:09:09.785 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T20:09:09.785278  
+DEBUG 21:32:12.690 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T21:32:12.690399  
+DEBUG 22:40:31.761 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T22:40:31.761610  
+DEBUG 23:13:58.686 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T23:13:58.686578  
+DEBUG 23:20:44.130 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T23:20:44.130859  
+DEBUG 23:36:55.299 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T23:36:55.299088  
+DEBUG 23:37:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-06T23:37:00.009037  
+DEBUG 01:05:12.669 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T01:05:12.668921  
+DEBUG 02:43:48.795 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T02:43:48.795806  
+DEBUG 03:17:28.726 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T03:17:28.726778  
+DEBUG 04:43:22.573 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T04:43:22.573261  
+DEBUG 06:21:40.169 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T06:21:40.169709  
+DEBUG 07:09:41.736 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T07:09:41.736691  
+DEBUG 07:59:05.436 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T07:59:05.436660  
+DEBUG 09:50:38.613 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T09:50:38.613143  
+DEBUG 09:51:25.501 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T09:51:25.501017  
+DEBUG 09:52:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T09:52:00.007318  
+DEBUG 10:28:59.033 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:28:59.033  
+DEBUG 10:29:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:29:00.006041  
+DEBUG 10:30:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:30:00.005200  
+DEBUG 10:31:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:31:00.016437  
+DEBUG 10:32:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:32:00.014530  
+DEBUG 10:33:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:33:00.013958  
+DEBUG 10:34:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:34:00.004379  
+DEBUG 10:35:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:35:00.005123  
+DEBUG 10:36:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:36:00.015346  
+DEBUG 10:37:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:37:00.013660  
+DEBUG 10:38:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:38:00.003214  
+DEBUG 10:39:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:39:00.005743  
+DEBUG 10:40:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:40:00.023850  
+DEBUG 10:41:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:41:00.008085  
+DEBUG 10:42:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:42:00.003606  
+DEBUG 10:43:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:43:00.023315  
+DEBUG 10:44:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:44:00.009720  
+DEBUG 10:45:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:45:00.015751  
+DEBUG 10:46:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:46:00.006319  
+DEBUG 10:46:57.488 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
+DEBUG 10:46:57.571 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
+DEBUG 10:47:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:47:00.003953  
+DEBUG 10:48:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:48:00.013387  
+DEBUG 10:49:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:49:00.002629  
+DEBUG 10:50:00.065 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:50:00.065108  
+DEBUG 10:51:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:51:00.008771  
+DEBUG 10:52:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:52:00.018839  
+DEBUG 10:52:48.127 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240207105226262  
+DEBUG 10:53:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:53:00.007726  
+DEBUG 10:54:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:54:00.013677  
+DEBUG 10:55:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:55:00.006216  
+DEBUG 10:56:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:56:00.015390  
+DEBUG 10:56:15.662 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: test20240207105226262  
+DEBUG 10:57:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:57:00.005374  
+DEBUG 10:58:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:58:00.008410  
+DEBUG 10:59:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T10:59:00.011856  
+DEBUG 11:00:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:00:00.004980  
+DEBUG 11:01:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:01:00.004977  
+ERROR 11:01:26.269 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+DEBUG 11:02:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:02:00.013564  
+DEBUG 11:03:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:03:00.019516  
+DEBUG 11:04:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:04:00.006106  
+DEBUG 11:05:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:05:00.016010  
+DEBUG 11:06:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:06:00.012361  
+DEBUG 11:07:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:07:00.009358  
+DEBUG 11:08:28.451 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:08:28.451886  
+DEBUG 11:15:44.980 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:15:44.979927  
+DEBUG 11:16:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:16:00.002734  
+DEBUG 11:26:31.062 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:26:31.062067  
+DEBUG 11:27:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:27:00.004767  
+DEBUG 11:28:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:28:00.014697  
+DEBUG 11:29:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:29:00.011685  
+DEBUG 11:30:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:30:00.017562  
+DEBUG 11:31:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:31:00.012701  
+DEBUG 11:32:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:32:00.009262  
+DEBUG 11:33:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:33:00.013882  
+DEBUG 11:34:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:34:00.015339  
+DEBUG 11:35:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:35:00.006795  
+DEBUG 11:36:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:36:00.012984  
+DEBUG 11:37:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:37:00.005918  
+DEBUG 11:38:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:38:00.011797  
+DEBUG 11:39:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:39:00.008240  
+INFO  11:39:40.792 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 42680 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 11:39:40.794 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  11:39:40.794 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  11:39:41.489 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  11:39:41.494 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  11:39:41.494 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  11:39:41.547 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  11:39:41.548 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 720 ms  
+DEBUG 11:39:41.742 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 11:39:41.744 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 11:39:41.744 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 11:39:41.745 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 11:39:41.746 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 11:39:41.749 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 11:39:41.750 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 11:39:41.750 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 11:39:41.754 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 11:39:41.965 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  11:39:41.979 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+WARN  11:39:42.023 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'  
+INFO  11:39:42.025 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  11:39:42.033 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 11:39:42.041 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8800 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8800 or configure this application to listen on another port.
+  
+DEBUG 11:40:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:40:00.016620  
+DEBUG 11:41:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:41:00.010003  
+DEBUG 11:42:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:42:00.013212  
+DEBUG 11:43:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:43:00.008810  
+DEBUG 11:44:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:44:00.010956  
+DEBUG 11:45:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:45:00.005340  
+DEBUG 11:46:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:46:00.020604  
+ERROR 11:46:42.155 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 11:46:43.997 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+DEBUG 11:47:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:47:00.010186  
+ERROR 11:47:21.684 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 11:47:23.857 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+INFO  11:47:27.199 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 43215 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 11:47:27.201 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  11:47:27.201 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  11:47:27.796 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  11:47:27.801 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  11:47:27.801 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  11:47:27.853 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  11:47:27.854 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 623 ms  
+DEBUG 11:47:28.032 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 11:47:28.033 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 11:47:28.034 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 11:47:28.034 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 11:47:28.036 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 11:47:28.038 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 11:47:28.039 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 11:47:28.039 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 11:47:28.042 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 11:47:28.261 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  11:47:28.273 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+WARN  11:47:28.314 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'  
+INFO  11:47:28.316 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  11:47:28.322 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 11:47:28.332 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8800 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8800 or configure this application to listen on another port.
+  
+ERROR 11:47:30.204 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+INFO  11:47:53.697 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 43315 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 11:47:53.698 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  11:47:53.699 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  11:47:54.329 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  11:47:54.334 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  11:47:54.334 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  11:47:54.389 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  11:47:54.389 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 660 ms  
+DEBUG 11:47:54.591 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 11:47:54.594 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 11:47:54.594 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 11:47:54.595 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 11:47:54.596 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 11:47:54.599 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 11:47:54.599 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 11:47:54.600 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 11:47:54.603 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 11:47:54.827 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  11:47:54.844 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  11:47:54.902 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  11:47:54.910 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.495 seconds (process running for 1.718)  
+INFO  11:47:56.683 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  11:47:56.687 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  11:47:56.687 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  11:47:56.688 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 11:48:00.910 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:48:00.910195  
+ERROR 11:48:00.913 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+DEBUG 11:49:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:49:00.004571  
+DEBUG 11:50:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:50:00.011780  
+INFO  11:51:01.609 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 43588 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 11:51:01.611 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  11:51:01.612 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  11:51:02.391 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  11:51:02.396 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  11:51:02.397 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  11:51:02.447 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  11:51:02.447 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 793 ms  
+DEBUG 11:51:02.643 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 11:51:02.645 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 11:51:02.645 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 11:51:02.646 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 11:51:02.647 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 11:51:02.650 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 11:51:02.651 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 11:51:02.651 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 11:51:02.658 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 11:51:02.876 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  11:51:02.888 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  11:51:02.939 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  11:51:02.947 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.717 seconds (process running for 1.968)  
+INFO  11:51:11.603 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  11:51:11.608 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  11:51:11.608 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  11:51:11.609 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 11:51:11.634 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.Exception: Could not find scenario] with root cause java.lang.Exception: Could not find scenario
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:211)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 11:51:13.207 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.Exception: Could not find scenario] with root cause java.lang.Exception: Could not find scenario
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:211)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 11:51:26.948 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.Exception: Could not find scenario] with root cause java.lang.Exception: Could not find scenario
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:211)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+DEBUG 11:52:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:52:00.010661  
+INFO  11:52:11.919 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 43720 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 11:52:11.921 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  11:52:11.922 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  11:52:12.962 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  11:52:12.967 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  11:52:12.967 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  11:52:13.015 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  11:52:13.015 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1051 ms  
+DEBUG 11:52:13.214 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 11:52:13.216 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 11:52:13.216 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 11:52:13.217 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 11:52:13.219 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 11:52:13.222 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 11:52:13.222 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 11:52:13.223 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 11:52:13.227 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 11:52:13.449 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  11:52:13.464 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  11:52:13.512 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  11:52:13.520 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 2.064 seconds (process running for 2.295)  
+INFO  11:52:13.727 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  11:52:13.731 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  11:52:13.731 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  11:52:13.732 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 11:52:13.755 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 11:52:18.484 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 11:52:32.826 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.FileNotFoundException:  (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:210)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+DEBUG 11:53:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:53:00.011580  
+DEBUG 11:54:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:54:00.012609  
+DEBUG 11:55:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:55:00.006812  
+DEBUG 11:56:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:56:00.019413  
+DEBUG 11:57:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:57:00.025228  
+DEBUG 11:58:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:58:00.006281  
+DEBUG 11:59:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T11:59:00.013559  
+DEBUG 12:00:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:00:00.021387  
+DEBUG 12:01:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:01:00.009997  
+DEBUG 12:02:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:02:00.004381  
+INFO  12:03:02.357 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 44735 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 12:03:02.359 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  12:03:02.359 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  12:03:03.019 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  12:03:03.025 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  12:03:03.025 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  12:03:03.080 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  12:03:03.080 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 691 ms  
+DEBUG 12:03:03.251 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 12:03:03.253 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 12:03:03.254 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 12:03:03.255 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 12:03:03.256 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 12:03:03.259 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 12:03:03.259 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 12:03:03.259 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 12:03:03.263 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 12:03:03.490 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  12:03:03.501 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  12:03:03.548 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  12:03:03.556 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.49 seconds (process running for 1.737)  
+INFO  12:03:06.204 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  12:03:06.209 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  12:03:06.209 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  12:03:06.209 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+INFO  12:03:06.783 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 319 ms  
+DEBUG 12:03:09.282 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
+ERROR 12:03:15.969 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: loadrover.api.io.config.exception.NotFoundDataException: 데이터가 존재하지 않습니다.] with root cause loadrover.api.io.config.exception.NotFoundDataException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:214)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 12:03:40.695 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: loadrover.api.io.config.exception.NotFoundDataException: 데이터가 존재하지 않습니다.] with root cause loadrover.api.io.config.exception.NotFoundDataException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:214)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+DEBUG 12:04:02.196 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:04:02.196685  
+ERROR 12:04:03.019 - - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: loadrover.api.io.config.exception.NotFoundDataException: 데이터가 존재하지 않습니다.] with root cause loadrover.api.io.config.exception.NotFoundDataException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.scenario.ScenarioService.getScenarioContent(ScenarioService.kt:214)
+	at loadrover.api.io.domain.scenario.ScenarioController.getScenarioContent(ScenarioController.kt:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+DEBUG 12:05:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:05:00.008370  
+DEBUG 12:06:00.001 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:06:00.001723  
+DEBUG 12:07:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:07:00.007187  
+DEBUG 12:08:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:08:00.003239  
+DEBUG 12:09:00.001 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:09:00.001649  
+DEBUG 12:10:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:10:00.009791  
+DEBUG 12:11:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:11:00.009427  
+DEBUG 12:12:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:12:00.005710  
+DEBUG 12:13:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:13:00.002008  
+DEBUG 12:14:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:14:00.009735  
+DEBUG 12:15:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:15:00.006461  
+DEBUG 12:16:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:16:00.002820  
+INFO  12:16:48.268 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 45590 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 12:16:48.270 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  12:16:48.270 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  12:16:48.889 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  12:16:48.895 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  12:16:48.895 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  12:16:48.944 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  12:16:48.945 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 642 ms  
+DEBUG 12:16:49.130 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 12:16:49.132 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 12:16:49.133 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 12:16:49.134 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 12:16:49.135 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 12:16:49.137 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 12:16:49.137 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 12:16:49.138 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 12:16:49.141 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 12:16:49.320 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  12:16:49.337 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  12:16:49.391 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  12:16:49.399 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.5 seconds (process running for 1.748)  
+INFO  12:16:52.429 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  12:16:52.434 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  12:16:52.434 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  12:16:52.435 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 12:17:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:17:00.013220  
+INFO  12:17:06.821 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 372 ms  
+DEBUG 12:17:06.962 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
+DEBUG 12:18:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:18:00.006893  
+DEBUG 12:19:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:19:00.016711  
+DEBUG 12:20:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:20:00.009848  
+DEBUG 12:21:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:21:00.005287  
+DEBUG 12:22:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:22:00.010593  
+DEBUG 12:23:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:23:00.020743  
+INFO  12:23:41.107 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 46119 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 12:23:41.108 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  12:23:41.109 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  12:23:41.783 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  12:23:41.788 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  12:23:41.788 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  12:23:41.839 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  12:23:41.840 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 694 ms  
+DEBUG 12:23:42.026 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 12:23:42.028 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 12:23:42.028 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 12:23:42.030 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 12:23:42.031 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 12:23:42.034 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 12:23:42.035 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 12:23:42.035 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 12:23:42.039 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 12:23:42.315 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  12:23:42.334 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  12:23:42.413 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  12:23:42.421 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.656 seconds (process running for 1.906)  
+INFO  12:23:51.401 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  12:23:51.406 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  12:23:51.406 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  12:23:51.407 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 12:24:09.600 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:24:09.600219  
+DEBUG 12:25:22.624 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:25:22.623179  
+DEBUG 12:26:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:26:00.008437  
+INFO  12:26:43.945 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 46348 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 12:26:43.946 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  12:26:43.947 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  12:26:44.714 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  12:26:44.719 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  12:26:44.720 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  12:26:44.775 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  12:26:44.776 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 777 ms  
+DEBUG 12:26:45.003 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 12:26:45.004 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 12:26:45.005 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 12:26:45.006 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 12:26:45.007 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 12:26:45.009 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 12:26:45.010 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 12:26:45.010 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 12:26:45.013 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 12:26:45.272 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  12:26:45.284 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  12:26:45.336 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  12:26:45.343 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.737 seconds (process running for 1.975)  
+INFO  12:26:54.944 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  12:26:54.950 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  12:26:54.950 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  12:26:54.951 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 12:27:00.191 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:27:00.191654  
+DEBUG 12:28:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:28:00.006632  
+DEBUG 12:29:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:29:00.006864  
+DEBUG 12:30:00.031 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:30:00.026421  
+DEBUG 12:31:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:31:00.007773  
+DEBUG 12:32:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:32:00.024647  
+DEBUG 12:33:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:33:00.016295  
+DEBUG 12:34:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:34:00.009550  
+DEBUG 12:35:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:35:00.002526  
+DEBUG 12:36:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:36:00.009100  
+DEBUG 12:37:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:37:00.003824  
+DEBUG 12:38:00.002 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:38:00.002250  
+DEBUG 12:39:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:39:00.014077  
+DEBUG 12:40:00.033 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:40:00.033209  
+DEBUG 12:41:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:41:00.016543  
+DEBUG 12:42:00.029 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:42:00.029332  
+DEBUG 12:43:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:43:00.009880  
+DEBUG 12:44:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:44:00.004511  
+DEBUG 12:45:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:45:00.013530  
+DEBUG 12:46:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:46:00.006991  
+INFO  12:46:49.524 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 47762 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 12:46:49.526 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  12:46:49.527 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  12:46:50.184 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  12:46:50.190 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  12:46:50.190 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  12:46:50.242 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  12:46:50.243 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 681 ms  
+DEBUG 12:46:50.428 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 12:46:50.429 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 12:46:50.429 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 12:46:50.431 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 12:46:50.432 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 12:46:50.434 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 12:46:50.435 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 12:46:50.435 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 12:46:50.438 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 12:46:50.732 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  12:46:50.741 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  12:46:50.789 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  12:46:50.796 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.638 seconds (process running for 1.91)  
+DEBUG 12:47:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:47:00.009912  
+DEBUG 12:48:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:48:00.004695  
+INFO  12:48:06.797 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  12:48:06.810 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  12:48:06.810 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  12:48:06.812 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms  
+DEBUG 12:48:26.677 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: testtest20240207124806916  
+DEBUG 12:49:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:49:00.016178  
+DEBUG 12:50:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:50:00.016916  
+DEBUG 12:50:07.877 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: testtest20240207124806917  
+ERROR 12:50:09.223 - - l.a.i.d.scenario.ScenarioService - Failed to move JSON file: gatling/src/gatling/resources/static/complete/testtest20240207124806917.json, ScenarioUUID: testtest20240207124806917  
+DEBUG 12:50:58.092 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: testtest20240207124806917  
+DEBUG 12:51:02.849 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:51:02.849752  
+ERROR 12:51:30.267 - - l.a.i.d.scenario.ScenarioService - Failed to move JSON file: gatling/src/gatling/resources/static/complete/testtest20240207124806917.json, ScenarioUUID: testtest20240207124806917  
+DEBUG 12:51:36.039 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: testtest20240207124806916  
+DEBUG 12:52:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:52:00.007680  
+DEBUG 12:53:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:53:00.019763  
+DEBUG 12:54:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:54:00.011126  
+DEBUG 12:55:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:55:00.013333  
+DEBUG 12:56:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:56:00.014482  
+DEBUG 12:57:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:57:00.014723  
+DEBUG 12:58:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:58:00.023136  
+DEBUG 12:59:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T12:59:00.013030  
+DEBUG 13:00:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:00:00.013658  
+DEBUG 13:01:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:01:00.012618  
+DEBUG 13:02:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:02:00.020487  
+DEBUG 13:03:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:03:00.004938  
+DEBUG 13:04:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:04:00.005346  
+DEBUG 13:05:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:05:00.006128  
+DEBUG 13:06:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:06:00.014451  
+DEBUG 13:07:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:07:00.014652  
+DEBUG 13:08:00.098 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:08:00.098289  
+DEBUG 13:26:56.604 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:26:56.604082  
+DEBUG 13:27:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:27:00.017646  
+DEBUG 13:28:00.028 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:28:00.028315  
+DEBUG 13:29:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:29:00.013555  
+DEBUG 13:30:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:30:00.005569  
+DEBUG 13:31:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:31:00.012713  
+DEBUG 13:32:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:32:00.015693  
+DEBUG 13:33:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:33:00.010798  
+DEBUG 13:34:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:34:00.013189  
+DEBUG 13:35:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:35:00.005952  
+DEBUG 13:36:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:36:00.007065  
+DEBUG 13:37:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:37:00.004690  
+DEBUG 13:38:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:38:00.019106  
+DEBUG 13:39:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:39:00.014714  
+DEBUG 13:40:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:40:00.005304  
+DEBUG 13:41:00.004 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:41:00.004588  
+DEBUG 13:42:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:42:00.007860  
+DEBUG 13:43:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:43:00.015890  
+DEBUG 13:44:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:44:00.011478  
+DEBUG 13:45:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:45:00.010491  
+DEBUG 13:46:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:46:00.014163  
+DEBUG 13:47:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:47:00.006221  
+DEBUG 13:48:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:48:00.015723  
+DEBUG 13:49:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:49:00.016463  
+DEBUG 13:50:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:50:00.015235  
+DEBUG 13:51:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:51:00.005550  
+DEBUG 13:52:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:52:00.007418  
+DEBUG 13:52:59.987 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T13:52:59.987084  
+DEBUG 14:02:38.073 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:02:38.073031  
+DEBUG 14:03:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:03:00.006768  
+DEBUG 14:04:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:04:00.013228  
+DEBUG 14:05:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:05:00.009903  
+DEBUG 14:06:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:06:00.006114  
+DEBUG 14:07:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:07:00.007620  
+DEBUG 14:08:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:08:00.012535  
+DEBUG 14:09:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:09:00.009695  
+DEBUG 14:10:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:10:00.013770  
+DEBUG 14:11:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:11:00.011300  
+DEBUG 14:12:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:12:00.008855  
+DEBUG 14:13:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:13:00.008755  
+DEBUG 14:14:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:14:00.008862  
+DEBUG 14:15:00.003 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:15:00.003384  
+INFO  14:15:42.317 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 51866 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 14:15:42.319 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  14:15:42.319 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  14:15:42.984 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  14:15:42.989 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  14:15:42.989 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  14:15:43.040 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  14:15:43.040 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 686 ms  
+DEBUG 14:15:43.226 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{POST [/scenario]}: createScenario(RequestScenarioDto)
+	{GET [/scenario/list]}: getScenarioList()
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)  
+DEBUG 14:15:43.228 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)  
+DEBUG 14:15:43.228 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()  
+DEBUG 14:15:43.229 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 14:15:43.230 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 14:15:43.233 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 14:15:43.233 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 14:15:43.234 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 14:15:43.237 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 14:15:43.444 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  14:15:43.454 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  14:15:43.506 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  14:15:43.514 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.542 seconds (process running for 1.788)  
+INFO  14:15:56.107 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  14:15:56.110 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  14:15:56.111 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  14:15:56.111 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+INFO  14:15:56.645 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 287 ms  
+DEBUG 14:15:56.794 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
+DEBUG 14:16:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:16:00.023991  
+DEBUG 14:16:00.679 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: testtest20240207124806916  
+DEBUG 14:17:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:17:00.007657  
+DEBUG 14:18:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:18:00.011589  
+DEBUG 14:18:17.227 - - l.a.i.d.simulation.SimulationService - API call received. scenarioId: testtest20240207124806917  
+DEBUG 14:19:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:19:00.012119  
+DEBUG 14:20:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:20:00.013154  
+DEBUG 14:21:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:21:00.010122  
+DEBUG 14:22:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:22:00.008380  
+DEBUG 14:23:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:23:00.005297  
+DEBUG 14:24:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:24:00.008467  
+DEBUG 14:25:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:25:00.008797  
+DEBUG 14:26:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:26:00.014445  
+DEBUG 14:27:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:27:00.019313  
+DEBUG 14:28:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:28:00.018479  
+DEBUG 14:29:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:29:00.022322  
+DEBUG 14:30:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:30:00.019353  
+DEBUG 14:31:00.049 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:31:00.049220  
+DEBUG 14:32:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:32:00.015028  
+DEBUG 14:33:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:33:00.009357  
+DEBUG 14:34:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:34:00.007727  
+DEBUG 14:35:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:35:00.007727  
+DEBUG 14:36:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:36:00.007739  
+DEBUG 14:37:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:37:00.006279  
+DEBUG 14:38:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-07T14:38:00.008286  

@@ -3,13 +3,14 @@ package loadrover.api.io.domain.scenario
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import loadrover.api.io.config.LoadroverConfig
+import loadrover.api.io.config.exception.ExceptionCode
+import loadrover.api.io.config.exception.NotFoundDataException
 import loadrover.api.io.utils.FileUtils
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
-import org.slf4j.LoggerFactory
-import java.nio.file.Path
 import kotlin.math.ceil
 
 @Service
@@ -36,7 +37,7 @@ class ScenarioService(
         val scenarioUUID = getUUID()
         val scenarioClass = "${request.task.name.lowercase()}${scenarioUUID}"
 
-        saveSourceFile(request, scenarioUUID, scenarioClass)
+        fileUtils.saveJsonFile(request, scenarioUUID, scenarioClass)
 
         val userAgent = UserAgent.CHROME_114
         val host = request.task.targetHost
@@ -207,6 +208,11 @@ class ScenarioService(
             }
         }
 
+        // 예외 처리
+        if (filePath == "") {
+            throw NotFoundDataException(ExceptionCode.NOT_FOUND_CONTENTS)
+        }
+
         val fileContent = File(filePath).readText(charset = Charsets.UTF_8)
         val mapper = jacksonObjectMapper()
 
@@ -221,20 +227,6 @@ class ScenarioService(
     private fun getUUID(): String {
         val dataFormat = SimpleDateFormat("yyyyMMddHHmmssSSS")
         return dataFormat.format(Date()).toString()
-    }
-
-    // request json 파일로 저장
-    private fun saveSourceFile(request: ScenarioDto.RequestScenarioDto, scenarioUUID: String, scenarioClass: String) {
-        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioClass}.json"
-        val serializedObject = jacksonObjectMapper().writeValueAsString(request)
-
-        try {
-            File(savePath).bufferedWriter().use {
-                it.write(serializedObject)
-            }
-        } catch (e: Exception) {
-            logger.error("Failed to save JSON source file, ScenarioUUID: $scenarioUUID")
-        }
     }
 
 //    private fun getHeader(agentType: UserAgent): List<ScenarioDto.HeaderField> {

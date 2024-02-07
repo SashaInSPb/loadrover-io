@@ -3,6 +3,8 @@ package loadrover.api.io.domain.simulation
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
 import loadrover.api.io.config.LoadroverConfig
+import loadrover.api.io.config.exception.ExceptionCode
+import loadrover.api.io.config.exception.NotFoundDataException
 import loadrover.api.io.utils.FileUtils
 import loadrover.api.io.utils.SimulationLogUtils
 import org.slf4j.LoggerFactory
@@ -10,7 +12,6 @@ import org.springframework.http.ResponseEntity
 import org.springframework.scheduling.annotation.Async
 import org.springframework.web.bind.annotation.*
 import java.io.File
-import java.nio.file.Path
 import java.nio.file.Paths
 import java.util.concurrent.CompletableFuture
 
@@ -42,7 +43,7 @@ class SimulationController(
             try {
                 // 기존 방식
 //                Runtime.getRuntime().exec("./gradlew :gatling:gatlingRun-work.${request.scenarioId} -stacktrace")
-                fileUtils.moveJsonFile(request.scenarioId, loadroverConfig.gatling.source, loadroverConfig.gatling.progress )
+                fileUtils.moveJsonFile(request.scenarioId, loadroverConfig.gatling.source, loadroverConfig.gatling.progress)
                 ResponseEntity.ok("Running simulation, scenarioId: ${request.scenarioId}")
 
             } catch (e: Exception) {
@@ -68,16 +69,22 @@ class SimulationController(
         }
 
         // result에 있는 폴더 삭제
-        // 전 result 결과를 다 날리자, scenarioId가 현재 simulationId, dto 분리 필요 여부
         val resultList = fileUtils.searchResultFolders()
+        var resultMatchCount = 0
+
         for (result in resultList) {
             val mappedSimulationId = result.scenarioId.replace("-\\d+".toRegex(),"")
 
             if (mappedSimulationId == request.scenarioId) {
                 val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/${result.scenarioId}"
                 fileUtils.deleteFile(resultDirectory)
-            }
 
+                resultMatchCount += 1
+            }
+        }
+
+        if (resultMatchCount == 0) {
+            throw NotFoundDataException(ExceptionCode.NOT_FOUND_CONTENTS)
         }
 
         return CompletableFuture.supplyAsync {
