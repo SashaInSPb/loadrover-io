@@ -1,6 +1,6 @@
 build/
-gatling/
 logs/*.log
+#gatling/
 
 ### resources ##
 #/gatling/src/gatling/resources/static/complete/**
