@@ -25,12 +25,6 @@ jobs:
       - name: Kill process
         run: kill -9 $(lsof -ti :8800) || true
 
-      - name: Run process
-        run: |
-          cd ~/loadrover/live-directory/
-          
-          nohup java -jar api-0.0.1-SNAPSHOT.jar --spring.profiles.active=local &
-
 
       # gradle build 를 위한 jdk 사용
 #      - name: Set up JDK 17
