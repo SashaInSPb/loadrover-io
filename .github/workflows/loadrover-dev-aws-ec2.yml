@@ -22,6 +22,16 @@ jobs:
         run: |
           rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
 
+      - name : Kill process
+        continue-on-error: true
+        run: |
+          kill -9 $(lsof -ti :8800)
+
+      - name : Run process
+        run: |
+          nohup java -jar api-0.0.1-SNAPSHOT.jar --spring.profiles.active=local &
+
+
       # gradle build 를 위한 jdk 사용
 #      - name: Set up JDK 17
 #        uses: actions/setup-java@v2
