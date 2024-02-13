@@ -115,7 +115,7 @@ class SimulationController(
             )
 
             val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
-                .getResources("classpath*:gatling/**") ?: throw IllegalStateException("Classpath root not found")
+                .getResources("classpath*:gatling/**")
 
             val resourceFile = File(resources.toString())
 
