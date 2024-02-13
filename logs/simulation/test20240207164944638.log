@@ -1,0 +1,97 @@
+15:30:58.203  - - Run simulation
+
+> Task :gatling:compileKotlin NO-SOURCE
+> Task :gatling:compileJava NO-SOURCE
+> Task :gatling:compileScala NO-SOURCE
+> Task :gatling:processResources NO-SOURCE
+> Task :gatling:classes UP-TO-DATE
+> Task :gatling:compileTestKotlin NO-SOURCE
+> Task :gatling:compileTestJava NO-SOURCE
+> Task :gatling:compileTestScala NO-SOURCE
+> Task :gatling:processTestResources NO-SOURCE
+> Task :gatling:testClasses UP-TO-DATE
+> Task :gatling:compileGatlingKotlin UP-TO-DATE
+> Task :gatling:compileGatlingJava NO-SOURCE
+> Task :gatling:compileGatlingScala NO-SOURCE
+> Task :gatling:processGatlingResources
+> Task :gatling:gatlingClasses
+> Task :gatling:gatlingLogback UP-TO-DATE
+
+> Task :gatling:gatlingRun-work.test20240207164944638
+Simulation work.test20240207164944638 started...
+15:31:02.381 [ERROR] i.g.h.a.HttpRequestAction - 'request_POST_0' failed to execute: No attribute named 'accessToken0' is defined
+15:31:02.381 [ERROR] i.g.h.a.HttpRequestAction - 'request_POST_1' failed to execute: No attribute named 'accessToken1' is defined
+15:31:03.384 [ERROR] i.g.h.a.HttpRequestAction - 'request_POST_0' failed to execute: No attribute named 'accessToken0' is defined
+15:31:03.384 [ERROR] i.g.h.a.HttpRequestAction - 'request_POST_1' failed to execute: No attribute named 'accessToken1' is defined
+15:31:03.384 [ERROR] i.g.h.a.HttpRequestAction - 'request_GET_0' failed to execute: No attribute named 'accessToken0' is defined
+15:31:03.384 [ERROR] i.g.h.a.HttpRequestAction - 'request_GET_1' failed to execute: No attribute named 'accessToken1' is defined
+
+================================================================================
+2024-02-13 15:31:03                                           1s elapsed
+---- Requests ------------------------------------------------------------------
+> Global                                                   (OK=0      KO=2     )
+> request_POST_1                                           (OK=0      KO=1     )
+> request_POST_0                                           (OK=0      KO=1     )
+---- Errors --------------------------------------------------------------------
+> status.find.in([200, 209], 304), found 404                          2 (25.00%)
+> request_POST_0: Failed to build request: No attribute named 'a      2 (25.00%)
+ccessToken0' is defined 
+> request_POST_1: Failed to build request: No attribute named 'a      2 (25.00%)
+ccessToken1' is defined 
+> request_GET_0: Failed to build request: No attribute named 'ac      1 (12.50%)
+cessToken0' is defined 
+> request_GET_1: Failed to build request: No attribute named 'ac      1 (12.50%)
+cessToken1' is defined 
+
+---- test20240207164944638-1 ---------------------------------------------------
+[##########################################################################]100%
+          waiting: 0      / active: 0      / done: 1     
+---- test20240207164944638-0 ---------------------------------------------------
+[##########################################################################]100%
+          waiting: 0      / active: 0      / done: 1     
+================================================================================
+
+Simulation work.test20240207164944638 completed in 1 seconds
+Parsing log file(s)...
+Parsing log file(s) done in 0s.
+Generating reports...
+
+================================================================================
+---- Global Information --------------------------------------------------------
+> request count                                          2 (OK=0      KO=2     )
+> min response time                                     33 (OK=-      KO=33    )
+> max response time                                     33 (OK=-      KO=33    )
+> mean response time                                    33 (OK=-      KO=33    )
+> std deviation                                          0 (OK=-      KO=0     )
+> response time 50th percentile                         33 (OK=-      KO=33    )
+> response time 75th percentile                         33 (OK=-      KO=33    )
+> response time 95th percentile                         33 (OK=-      KO=33    )
+> response time 99th percentile                         33 (OK=-      KO=33    )
+> mean requests/sec                                      1 (OK=-      KO=1     )
+---- Response Time Distribution ------------------------------------------------
+> t < 800 ms                                             0 (  0%)
+> 800 ms <= t < 1200 ms                                  0 (  0%)
+> t >= 1200 ms                                           0 (  0%)
+> failed                                                 2 (100%)
+---- Errors --------------------------------------------------------------------
+> request_POST_0: Failed to build request: No attribute named 'a      2 (25.00%)
+ccessToken0' is defined 
+> status.find.in([200, 209], 304), found 404                          2 (25.00%)
+> request_POST_1: Failed to build request: No attribute named 'a      2 (25.00%)
+ccessToken1' is defined 
+> request_GET_1: Failed to build request: No attribute named 'ac      1 (12.50%)
+cessToken1' is defined 
+> request_GET_0: Failed to build request: No attribute named 'ac      1 (12.50%)
+cessToken0' is defined 
+================================================================================
+
+Reports generated, please open the following file: file:///Users/sasha/IdeaProjects/2bytes.loadrover-server/gatling/src/gatling/resources/static/result/test20240207164944638-20240213063100900/index.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 5s
+4 actionable tasks: 2 executed, 2 up-to-date
