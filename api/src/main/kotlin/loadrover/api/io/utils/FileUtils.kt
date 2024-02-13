@@ -138,6 +138,7 @@ class FileUtils(
     }
 
     // 덮어쓰기 메서드 추가
+    // 기존 json file 삭제 필요
     fun reviseJsonFile(request: ScenarioDto.ScenarioReviseDto) {
         val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${request.scenarioId}.json"
         val serializedObject = jacksonObjectMapper().writeValueAsString(request.removeScenarioId())

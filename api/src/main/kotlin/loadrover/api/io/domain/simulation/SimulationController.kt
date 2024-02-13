@@ -8,6 +8,8 @@ import loadrover.api.io.config.exception.NotFoundDataException
 import loadrover.api.io.utils.FileUtils
 import loadrover.api.io.utils.SimulationLogUtils
 import org.slf4j.LoggerFactory
+import org.springframework.core.io.DefaultResourceLoader
+import org.springframework.core.io.support.ResourcePatternUtils
 import org.springframework.http.ResponseEntity
 import org.springframework.scheduling.annotation.Async
 import org.springframework.web.bind.annotation.*
@@ -112,14 +114,14 @@ class SimulationController(
                 "-stacktrace"
             )
 
-            val classPathRoot = Paths.get(Thread.currentThread().contextClassLoader.getResource("")!!.toURI()).toFile()
-            logger.debug("ClassPath: $classPathRoot")
-            val rootDirectory = classPathRoot.parentFile.parentFile.parentFile.parentFile.parentFile
-            logger.debug("RootDirectory: $rootDirectory")
+            val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
+                .getResources("classpath*:gatling/**") ?: throw IllegalStateException("Classpath root not found")
+
+            val resourceFile = File(resources.toString())
 
             // 프로젝트 root dir로 process 실행 설정
             processBuilder.directory(
-                rootDirectory
+                resourceFile.parentFile
             )
 
             // log 설정
