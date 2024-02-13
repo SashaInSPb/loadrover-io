@@ -113,7 +113,9 @@ class SimulationController(
             )
 
             val classPathRoot = Paths.get(Thread.currentThread().contextClassLoader.getResource("")!!.toURI()).toFile()
+            logger.debug("ClassPath: $classPathRoot")
             val rootDirectory = classPathRoot.parentFile.parentFile.parentFile.parentFile.parentFile
+            logger.debug("RootDirectory: $rootDirectory")
 
             // 프로젝트 root dir로 process 실행 설정
             processBuilder.directory(
