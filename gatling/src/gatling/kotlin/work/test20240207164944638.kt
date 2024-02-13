@@ -7,7 +7,7 @@ import java.lang.Exception
 
 class test20240207164944638: Simulation() {
 val httpProtocol = http
-    .baseUrl("https://api-dev.boracat.io/tms")
+    .baseUrl("https://api-dev.boracat.io/tms121212")
     .inferHtmlResources()
     .acceptEncodingHeader("gzip, deflate, br")
     .acceptLanguageHeader("ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7")

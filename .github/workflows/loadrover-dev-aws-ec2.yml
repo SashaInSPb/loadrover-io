@@ -20,11 +20,10 @@ jobs:
 
       - name: Sync files excluding gatling
         run: |
-          rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
+          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
 
       - name: Kill process
         run: kill -9 $(lsof -ti :8800) || true
-
 
       # gradle build 를 위한 jdk 사용
 #      - name: Set up JDK 17

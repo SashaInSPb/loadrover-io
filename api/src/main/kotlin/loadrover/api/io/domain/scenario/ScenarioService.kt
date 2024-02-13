@@ -8,7 +8,9 @@ import loadrover.api.io.config.exception.NotFoundDataException
 import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
+import java.io.BufferedWriter
 import java.io.File
+import java.io.FileWriter
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.ceil
@@ -33,7 +35,7 @@ class ScenarioService(
         return result.toMutableSet()
     }
 
-    fun createScenario(request: ScenarioDto.RequestScenarioDto) {
+    fun createScenario(request: ScenarioDto.ScenarioCreateDto) {
         val scenarioUUID = getUUID()
         val scenarioClass = "${request.task.name.lowercase()}${scenarioUUID}"
 
@@ -180,18 +182,40 @@ class ScenarioService(
         codes.append("}\n")
         codes.append("}\n")
 
-        val saveWorkPath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
+        val saveFilePath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${scenarioClass}.kt"
 
         try {
-            val codeString: String = codes.toString()
-
-            File(saveWorkPath).bufferedWriter().use {
-                it.write(codeString)
+            File(saveFilePath).bufferedWriter().use {
+                it.write(codes.toString())
             }
         } catch (e: Exception) {
             logger.error("Failed to create: ${e.message.toString()}, scenarioUUID: $scenarioUUID")
         }
     }
+
+    fun reviseScenario(request: ScenarioDto.ScenarioReviseDto) {
+
+        val workList = fileUtils.searchFiles(loadroverConfig.gatling.work).map { it.scenarioId }
+
+        if (!workList.contains(request.scenarioId)) {
+            throw NotFoundDataException(ExceptionCode.NOT_FOUND_CONTENTS)
+        }
+
+        fileUtils.reviseJsonFile(request)
+
+        val codes = createClassFile(request)
+        val filePath = "${loadroverConfig.gatling.workPath}/${loadroverConfig.gatling.work}/${request.scenarioId}.kt"
+
+        try {
+            BufferedWriter(FileWriter(filePath)).use {
+                it.write(codes)
+            }
+        } catch (e: Exception) {
+            logger.error("Failed to revise class file: ${e.message.toString()}, scenarioUUID: ${request.scenarioId}")
+        }
+
+    }
+
 
     fun getScenarioContent(scenarioId: String): ScenarioDto.ResponseScenarioDto? {
         val fileList = getFileList()
@@ -227,6 +251,151 @@ class ScenarioService(
     private fun getUUID(): String {
         val dataFormat = SimpleDateFormat("yyyyMMddHHmmssSSS")
         return dataFormat.format(Date()).toString()
+    }
+
+    private fun createClassFile(request: ScenarioDto.ScenarioReviseDto): String {
+        val userAgent = UserAgent.CHROME_114
+        val host = request.task.targetHost
+
+        val codes = StringBuilder()
+        codes.append("package work\n\n")
+
+        codes.append("import io.gatling.javaapi.core.*\n")
+        codes.append("import io.gatling.javaapi.core.CoreDsl.*\n")
+        codes.append("import io.gatling.javaapi.http.HttpDsl.*\n")
+        codes.append("import java.lang.Exception\n")
+        codes.append("\n")
+
+        codes.append("class ${request.scenarioId}: Simulation() {\n")
+        codes.append("val httpProtocol = http\n")
+        codes.append("    .baseUrl(\"${host}\")\n")
+        codes.append("    .inferHtmlResources()\n")
+        codes.append("    .acceptEncodingHeader(\"gzip, deflate, br\")\n")
+        codes.append("    .acceptLanguageHeader(\"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7\")\n")
+        codes.append("    .userAgentHeader(\"${userAgent.value}\")\n")
+        codes.append("\n")
+
+        val headerIdx = 0
+        val headerId = "headers_${headerIdx}"
+
+        codes.append("init {\n")
+
+        // 상기 httpProtocol 메서드로 처리 가능할지 확인
+        codes.append("var ${headerId}: Map<String, String> = mutableMapOf(\n")
+        codes.append("\"accept\" to \"application/json, text/plain, */*\",\n")
+        codes.append("\"Content-Type\" to \"application/json\"\n")
+        codes.append(")\n")
+
+        val accountListSize = request.accountList.size
+        for (idx in 0 until accountListSize + 1) {
+
+            // account List 내 원소가 없을 때,
+            if (idx > accountListSize - 1 && idx != 0) {
+                break
+            }
+
+            codes.append("val scn${idx} = scenario(\"${request.scenarioId}-$idx\")\n")
+
+            for (action in request.process) {
+                when (action.value.apiType) {
+                    ApiType.GET -> {
+                        codes.append(".exec(")
+                        codes.append("http(\"request_${action.value.apiType}_${idx}\")")
+                        codes.append(".get(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)")
+                        if (request.accountList.isNotEmpty()) {
+                            codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken${idx}}\")")
+                        }
+
+                        codes.append(")\n")
+                        codes.append(".pause(${action.value.pause})\n")
+                    }
+
+                    ApiType.POST -> {
+                        var payload = action.value.params
+                            .replace("\n", "")
+                            .replace("\"","\\\"")
+                            .replace("\\s".toRegex(), "")
+
+                        // 로그인용 payload 작성
+                        if (action.value.loginUse && request.accountList.isNotEmpty()) {
+                            payload =
+                                "{\"email\":\"${request.accountList[idx].id}\",\"password\":\"${request.accountList[idx].password}\",\"loginSite\":\"LPM\"}".replace(
+                                    "\"",
+                                    "\\\""
+                                )
+                        }
+
+                        codes.append(".exec(")
+                        codes.append("http(\"request_${action.value.apiType}_${idx}\")")
+                        codes.append(".post(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)")
+                        if (!action.value.loginUse && request.accountList.isNotEmpty()) {
+                            codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken${idx}}\")")
+                        }
+
+                        codes.append(".body(StringBody(\"${payload}\"))")
+                        if (action.value.loginUse) {
+                            codes.append(".check(jsonPath(\"$.accessToken\").saveAs(\"accessToken${idx}\"))\n")
+                        }
+
+                        codes.append(")\n")
+                        codes.append(".pause(${action.value.pause})\n")
+                    }
+
+                    ApiType.PUT -> {
+                        val payload = action.value.params
+                            .replace("\n", "")
+                            .replace("\"","\\\"")
+                            .replace("\\s".toRegex(), "")
+
+                        codes.append(".exec(")
+                        codes.append(("http(\"request_${action.value.apiType}_${idx}\")"))
+                        codes.append(".put(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)")
+                        if (request.accountList.isNotEmpty()) {
+                            codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken${idx}}\")")
+                        }
+
+                        codes.append(".body(StringBody(\"${payload}\"))")
+                        codes.append(")\n")
+                        codes.append(".pause(${action.value.pause})\n")
+                    }
+
+                    ApiType.DELETE -> {
+                        codes.append(".exec(")
+                        codes.append(("http(\"request_${action.value.apiType}_${idx}\")"))
+                        codes.append(".delete(\"${action.value.apiUrl}\")")
+                        codes.append(".headers($headerId)\n")
+                        if (request.accountList.isNotEmpty()) {
+                            codes.append(".header(\"${HttpHeaderSection.AUTHORIZATION.value}\", \"bearer #{accessToken${idx}}\")")
+                        }
+                        codes.append(")\n")
+                        codes.append(".pause(${action.value.pause})\n")
+                    }
+                }
+            }
+        }
+
+        codes.append("try {\n")
+        codes.append("this.setUp(\n")
+        val concurrentUsers = if (accountListSize == 0) request.task.concurrent else ceil(request.task.concurrent.toDouble() / accountListSize).toInt()
+
+        for (idx in 0 until accountListSize + 1) {
+            // account List 내 원소가 없을 때,
+            if (idx > accountListSize - 1 && idx != 0) {
+                break
+            }
+            codes.append("scn$idx.injectOpen(atOnceUsers(${concurrentUsers})).protocols(httpProtocol),\n")
+        }
+        codes.append(")\n")
+        codes.append("} catch(e: Exception) {\n")
+        codes.append("println(\"Error during scenario setup: \${e.message}\")")
+        codes.append("}\n")
+        codes.append("}\n")
+        codes.append("}\n")
+
+        return codes.toString()
     }
 
 //    private fun getHeader(agentType: UserAgent): List<ScenarioDto.HeaderField> {

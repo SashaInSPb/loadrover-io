@@ -28,7 +28,7 @@ class SimulationController(
 
     @Async
     @PostMapping("/run")
-    @Operation(summary = "", description = "")
+    @Operation(summary = "부하테스트 실행")
     fun runSimulation(@RequestBody request: SimulationDto.RunSimulationRequest): CompletableFuture<ResponseEntity<String>> {
 
         if (logger.isDebugEnabled) {
@@ -54,14 +54,14 @@ class SimulationController(
     }
 
     @GetMapping("/{scenarioId}")
-    @Operation(summary = "", description = "")
+    @Operation(summary = "부하테스트 결과 조회")
     fun getSimulationResult(@PathVariable("scenarioId") scenarioId: String): SimulationDto.ResultResponse {
         return simulationService.getSimulationResult(scenarioId)
     }
 
     @Async
     @PostMapping("/retry")
-    @Operation(summary = "", description = "")
+    @Operation(summary = "부하테스트 재실행")
     fun retrySimulation(@RequestBody request: SimulationDto.RunSimulationRequest): CompletableFuture<ResponseEntity<String>>{
         if (logger.isDebugEnabled) {
             logger.debug("API call received. scenarioId: ${request.scenarioId}")

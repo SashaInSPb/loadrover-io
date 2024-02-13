@@ -2,7 +2,6 @@ package loadrover.api.io.config
 
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.NotFoundDataException
-import org.apache.logging.log4j.util.StringMap
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -32,7 +31,7 @@ class WebApiExceptionHandler: ResponseEntityExceptionHandler() {
 
     @ExceptionHandler(NotFoundDataException::class)
     fun handleNotFoundDataException(e: NotFoundDataException): ResponseEntity<Any> {
-        val apiError = ApiError(e.baseResponseCode.httpStatus, e.baseResponseCode.message, "204 error")
+        val apiError = ApiError(e.baseResponseCode.httpStatus, e.baseResponseCode.message, "404 error")
         return ResponseEntity(apiError, HttpHeaders(), apiError.status)
     }
 }

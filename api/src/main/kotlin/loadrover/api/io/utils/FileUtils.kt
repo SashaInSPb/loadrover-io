@@ -8,7 +8,9 @@ import loadrover.api.io.domain.scenario.ScenarioService
 import loadrover.api.io.domain.scenario.ScenarioStatus
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
+import java.io.BufferedWriter
 import java.io.File
+import java.io.FileWriter
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
 
@@ -34,8 +36,8 @@ class FileUtils(
 
                         fileList.plusAssign(
                             FileDto(
-                                scenarioTitle = fileName.removeSuffix(".json").replace("\\d{17}$".toRegex(),""),
-                                scenarioId = fileName.removeSuffix(".json"),
+                                scenarioTitle = if (path == "work") fileName.removeSuffix(".kt") else fileName.removeSuffix(".json").replace("\\d{17}$".toRegex(),""),
+                                scenarioId = if (path == "work") fileName.removeSuffix(".kt") else fileName.removeSuffix(".json"),
                                 status = when (path) {
                                     loadroverConfig.gatling.source -> ScenarioStatus.READY
                                     loadroverConfig.gatling.progress -> ScenarioStatus.PROGRESS
@@ -122,7 +124,7 @@ class FileUtils(
         }
     }
 
-    fun saveJsonFile(request: ScenarioDto.RequestScenarioDto, scenarioUUID: String, scenarioClass: String) {
+    fun saveJsonFile(request: ScenarioDto.ScenarioCreateDto, scenarioUUID: String, scenarioClass: String) {
         val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioClass}.json"
         val serializedObject = jacksonObjectMapper().writeValueAsString(request)
 
@@ -132,6 +134,20 @@ class FileUtils(
             }
         } catch (e: Exception) {
             logger.error("Failed to save JSON file: ${e.message.toString()}, ScenarioUUID: $scenarioUUID")
+        }
+    }
+
+    // 덮어쓰기 메서드 추가
+    fun reviseJsonFile(request: ScenarioDto.ScenarioReviseDto) {
+        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${request.scenarioId}.json"
+        val serializedObject = jacksonObjectMapper().writeValueAsString(request.removeScenarioId())
+
+        try {
+            BufferedWriter(FileWriter(savePath)).use {
+                it.write(serializedObject)
+            }
+        } catch (e: Exception) {
+            logger.error("Failed to save revised JSON file: ${e.message.toString()}, ScenarioUUID: ${request.scenarioId}")
         }
     }
 
