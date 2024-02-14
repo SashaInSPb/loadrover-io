@@ -16,4 +16,7 @@ dependencies {
 
 	//string
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+	//html parsing
+	implementation("org.jsoup:jsoup:1.15.3")
 }

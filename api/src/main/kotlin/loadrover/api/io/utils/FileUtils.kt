@@ -4,7 +4,6 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.domain.scenario.FileDto
 import loadrover.api.io.domain.scenario.ScenarioDto
-import loadrover.api.io.domain.scenario.ScenarioService
 import loadrover.api.io.domain.scenario.ScenarioStatus
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
@@ -18,7 +17,7 @@ import java.nio.file.attribute.BasicFileAttributes
 class FileUtils(
     private val loadroverConfig: LoadroverConfig
 ) {
-    private val logger = LoggerFactory.getLogger(ScenarioService::class.java)
+    private val logger = LoggerFactory.getLogger(FileUtils::class.java)
 
     fun searchFiles(path: String): MutableSet<FileDto> {
         val fileDirectory = if (path == "work") "${loadroverConfig.gatling.workPath}/${path}" else "${loadroverConfig.gatling.path}/${path}"
@@ -51,7 +50,7 @@ class FileUtils(
                 }
             )
         } catch (e: Exception) {
-            println("Failed to read files: ${e.message.toString()}")
+            logger.error("Failed to read files: ${e.message.toString()}")
         }
 
         return fileList
@@ -93,12 +92,12 @@ class FileUtils(
                 }
             )
         } catch (e: Exception) {
-            println("Failed to read files: ${e.message.toString()}")
+            logger.error("Failed to read files: ${e.message.toString()}")
         }
         return folderList
     }
 
-    fun deleteFile(directory: String) {
+    fun deleteDirectory(directory: String) {
         try {
             File(directory).deleteRecursively()
         } catch (e: Exception) {

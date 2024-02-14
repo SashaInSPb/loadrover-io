@@ -1,26 +1,25 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<link rel="shortcut icon" type="image/x-icon" href="style/favicon.ico"/>
-<link href="style/style.css" rel="stylesheet" type="text/css" />
-<link href="style/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/gatling.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/ellipsis.js"></script>
-<script src="js/all_sessions.js"></script>
-<script src="js/stats.js"></script>
-<script src="js/highstock.js"></script>
-<script src="js/highcharts-more.js"></script>
-<script src="js/theme.js"></script>
-<script src="js/unpack.js"></script>
-<title>Gatling Stats - Global Information</title>
-</head>
-<body>
-<script>
+ <head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="style/favicon.ico">
+  <link href="style/style.css" rel="stylesheet" type="text/css">
+  <link href="style/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/gatling.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/ellipsis.js"></script>
+  <script src="js/all_sessions.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/highstock.js"></script>
+  <script src="js/highcharts-more.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/unpack.js"></script>
+  <title>Gatling Stats - Global Information</title>
+ </head>
+ <body>
+  <script>
   const storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   if (storedTheme) document.documentElement.setAttribute('data-theme', storedTheme)
 
@@ -32,136 +31,109 @@
     localStorage.setItem('theme', targetTheme);
   };
 </script>
-<div class="app-container">
-<div class="frise"></div>
-<div class="head">
-  <div class="gatling-open-source">
-    <a class="gatling-logo gatling-logo-light" href="https://gatling.io" target="blank_" title="Gatling Home Page"><img alt="Gatling" src="style/logo-light.svg"/></a>
-    <a class="gatling-logo gatling-logo-dark" href="https://gatling.io" target="blank_" title="Gatling Home Page"><img alt="Gatling" src="style/logo-dark.svg"/></a>
-    <a class="gatling-documentation" href="https://gatling.io/docs/" target="_blank">Documentation</a>
-  </div>
-  <div class="nav spacer"></div>
-  <a class="enterprise" href="https://gatling.io/enterprise/next-step/" target="_blank"><strong>Try</strong>
-    <img class="logo-enterprise-light" alt="Gatling Enterprise" src="style/logo-enterprise-light.svg"/>
-    <img class="logo-enterprise-dark" alt="Gatling Enterprise" src="style/logo-enterprise-dark.svg"/>
-  </a>
-  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle user interface mode">
-    <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
-    <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
-  </button>
-</div>
-<div class="container details">
-  <div class="nav">
-    <ul></ul>
-  </div>
-    <div class="cadre">
-      <div class="content">
-        <div class="content-header">
-          <div class="onglet">
-            testrun20240207105511878
-          </div>
-          <div class="sous-menu" id="sousMenu">
-            <div class="sous-menu-spacer">
-              <div class="item ouvert"><a href="index.html">Global</a></div>
-                <div class="item "><a id="details_link" href="#">Details</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="content-in">
-            <div class="container-article">
-            <div class="article">
-              
-              
-<div class="schema-container">
-
-            <div id="ranges" class="schema ranges">
-            </div>
-
-            <div class="schema polar">
-              <div id="container_number_of_requests"></div>
-            </div>
-<div class="simulation-card">
-  <div class="simulation-version-information">
-  <span class="simulation-information-title">Gatling Version</span>
-    <span class="simulation-information-item">
-      <span class="simulation-information-label">Version: </span>
-      <span>3.10.3</span>
-    </span>
-    <span class="simulation-information-item">
-      <span class="simulation-information-label">Released: </span>
-      <span>2023-12-20</span>
-    </span>
-  </div>
-  <div id="simulation-information" class="simulation-version-information">
-    <span class="simulation-information-title">Run Information</span>
-    <div class="simulation-information-container">
-      <span class="simulation-information-item">
-        <span class="simulation-information-label">Date: </span>
-        <span>2024-02-13 06:34:28 GMT</span>
-      </span>
-      <span class="simulation-information-item">
-        <span class="simulation-information-label">Duration: </span>
-        <span>1s </span>
-      </span>
-      <span class="simulation-information-item">
-        <span class="simulation-information-label">Description: </span>
-        <span>&mdash;</span>
-      </span>
-
+  <div class="app-container">
+   <div class="frise"></div>
+   <div class="head">
+    <div class="gatling-open-source">
+     <h1 class="gatling-logo gatling-logo-light"><img alt="2bytes" src="/static/h_logo_purple.svg" style="width: 113%; height: auto;"></h1>
+     <h1 class="gatling-logo gatling-logo-dark"><img alt="2bytes" src="/static/h_logo_white.svg" style="width: 113%; height: auto;"></h1>
     </div>
-  </div>
-</div>
-</div>
-
-                      <div id="statistics_table_container">
-                        <div id="stats" class="statistics extensible-geant collapsed">
-                            <div class="title">
-                              <div id="statistics_title" class="title_base"><span class="title_base_stats">Stats</span><span class="expand-table">Fixed height</span><span id="toggle-stats" class="toggle-table"></span><span class="collapse-table">Full size</span></div>
-                              <div class="right">
-                                  <button class="statistics-button expand-all-button">Expand all groups</button>
-                                  <button class="statistics-button collapse-all-button">Collapse all groups</button>
-                                  <button id="statistics_full_screen" class="statistics-button" onclick="openStatisticsTableModal()"><img alt="Fullscreen" src="style/fullscreen.svg"></button>
-                              </div>
-                            </div>
-                            <div class="scrollable">
-                              <table id="container_statistics_head" class="statistics-in extensible-geant">
-                                  <thead>
-                                      <tr>
-                                          <th rowspan="2" id="col-1" class="header sortable sorted-up"><span>Requests</span></th>
-                                          <th colspan="5" class="header"><span class="executions">Executions</span></th>
-                                          <th colspan="8" class="header"><span class="response-time">Response Time (ms)</span></th>
-                                      </tr>
-                                      <tr>
-                                          <th id="col-2" class="header sortable"><span>Total</span></th>
-                                          <th id="col-3" class="header sortable"><span>OK</span></th>
-                                          <th id="col-4" class="header sortable"><span>KO</span></th>
-                                          <th id="col-5" class="header sortable"><span>% KO</span></th>
-                                          <th id="col-6" class="header sortable"><span><abbr title="Count of events per second">Cnt/s</abbr></span></th>
-                                          <th id="col-7" class="header sortable"><span>Min</span></th>
-<th id="col-8" class="header sortable"><span>50th pct</span></th>
-<th id="col-9" class="header sortable"><span>75th pct</span></th>
-<th id="col-10" class="header sortable"><span>95th pct</span></th>
-<th id="col-11" class="header sortable"><span>99th pct</span></th>
-<th id="col-12" class="header sortable"><span>Max</span></th>
-<th id="col-13" class="header sortable"><span>Mean</span></th>
-<th id="col-14" class="header sortable"><span><abbr title="Standard Deviation">Std Dev</abbr></span></th>
-                                      </tr>
-                                  </thead>
-                                  <tbody></tbody>
-                              </table>
-                              <table id="container_statistics_body" class="statistics-in extensible-geant">
-                                  <tbody></tbody>
-                              </table>
-                            </div>
-                        </div>
-                      </div>
-<dialog id="statistics_table_modal" class="statistics-table-modal">
-  <div class="statistics-table-modal-header"><button class="button-modal" onclick="closeStatisticsTableModal()"><img alt="Close" src="style/close.svg"></button></div>
-  <div class="statistics-table-modal-container">
-    <div id="statistics_table_modal_content" class="statistics-table-modal-content"></div>
-  </div>
-</dialog>
-<script>
+    <div class="nav spacer"></div> <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle user interface mode"> <span class="toggle-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg></span> <span class="toggle-light">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+       <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg></span> </button>
+   </div>
+   <div class="container details">
+    <div class="nav">
+     <ul></ul>
+    </div>
+    <div class="cadre">
+     <div class="content">
+      <div class="content-header">
+       <div class="onglet">
+        testrun20240207105511878
+       </div>
+       <div class="sous-menu" id="sousMenu">
+        <div class="sous-menu-spacer">
+         <div class="item ouvert">
+          <a href="index.html">Global</a>
+         </div>
+         <div class="item ">
+          <a id="details_link" href="#">Details</a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="content-in">
+       <div class="container-article">
+        <div class="article">
+         <div class="schema-container">
+          <div id="ranges" class="schema ranges">
+          </div>
+          <div class="schema polar">
+           <div id="container_number_of_requests"></div>
+          </div>
+          <div class="simulation-card">
+           <div class="simulation-version-information"><span class="simulation-information-title">Gatling Version</span> <span class="simulation-information-item"> <span class="simulation-information-label">Version: </span> <span>3.10.3</span> </span> <span class="simulation-information-item"> <span class="simulation-information-label">Released: </span> <span>2023-12-20</span> </span>
+           </div>
+           <div id="simulation-information" class="simulation-version-information"><span class="simulation-information-title">Run Information</span>
+            <div class="simulation-information-container"><span class="simulation-information-item"> <span class="simulation-information-label">Date: </span> <span>2024-02-13 06:34:28 GMT</span> </span> <span class="simulation-information-item"> <span class="simulation-information-label">Duration: </span> <span>1s </span> </span> <span class="simulation-information-item"> <span class="simulation-information-label">Description: </span> <span>—</span> </span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div id="statistics_table_container">
+          <div id="stats" class="statistics extensible-geant collapsed">
+           <div class="title">
+            <div id="statistics_title" class="title_base">
+             <span class="title_base_stats">Stats</span><span class="expand-table">Fixed height</span><span id="toggle-stats" class="toggle-table"></span><span class="collapse-table">Full size</span>
+            </div>
+            <div class="right"><button class="statistics-button expand-all-button">Expand all groups</button> <button class="statistics-button collapse-all-button">Collapse all groups</button> <button id="statistics_full_screen" class="statistics-button" onclick="openStatisticsTableModal()"><img alt="Fullscreen" src="style/fullscreen.svg"></button>
+            </div>
+           </div>
+           <div class="scrollable">
+            <table id="container_statistics_head" class="statistics-in extensible-geant">
+             <thead>
+              <tr>
+               <th rowspan="2" id="col-1" class="header sortable sorted-up"><span>Requests</span></th>
+               <th colspan="5" class="header"><span class="executions">Executions</span></th>
+               <th colspan="8" class="header"><span class="response-time">Response Time (ms)</span></th>
+              </tr>
+              <tr>
+               <th id="col-2" class="header sortable"><span>Total</span></th>
+               <th id="col-3" class="header sortable"><span>OK</span></th>
+               <th id="col-4" class="header sortable"><span>KO</span></th>
+               <th id="col-5" class="header sortable"><span>% KO</span></th>
+               <th id="col-6" class="header sortable"><span><abbr title="Count of events per second">Cnt/s</abbr></span></th>
+               <th id="col-7" class="header sortable"><span>Min</span></th>
+               <th id="col-8" class="header sortable"><span>50th pct</span></th>
+               <th id="col-9" class="header sortable"><span>75th pct</span></th>
+               <th id="col-10" class="header sortable"><span>95th pct</span></th>
+               <th id="col-11" class="header sortable"><span>99th pct</span></th>
+               <th id="col-12" class="header sortable"><span>Max</span></th>
+               <th id="col-13" class="header sortable"><span>Mean</span></th>
+               <th id="col-14" class="header sortable"><span><abbr title="Standard Deviation">Std Dev</abbr></span></th>
+              </tr>
+             </thead>
+             <tbody></tbody>
+            </table>
+            <table id="container_statistics_body" class="statistics-in extensible-geant">
+             <tbody></tbody>
+            </table>
+           </div>
+          </div>
+         </div> <dialog id="statistics_table_modal" class="statistics-table-modal">
+          <div class="statistics-table-modal-header">
+           <button class="button-modal" onclick="closeStatisticsTableModal()"><img alt="Close" src="style/close.svg"></button>
+          </div>
+          <div class="statistics-table-modal-container">
+           <div id="statistics_table_modal_content" class="statistics-table-modal-content"></div>
+          </div> 
+         </dialog>
+         <script>
 function openStatisticsTableModal () {
   const statsTable = document.getElementById("stats");
   const statsTableModal = document.getElementById("statistics_table_modal");
@@ -196,34 +168,28 @@ function closeStatisticsTableModal () {
   statsTableModal.close();
 }
 </script>
-
-            <div class="schema geant">
-              <div id="active_users" class="geant"></div>
-            </div>
-
-            <div class="schema geant">
-              <div id="responsetimeDistributionContainer" class="geant"></div>
-            </div>
-
-            <div class="schema geant">
-              <div id="responsetimepercentilesovertimeokPercentilesContainer" class="geant"></div>
-            </div>
-
-            <div class="schema geant">
-                <div id="requests" class="geant"></div>
-            </div>
-
-            <div class="schema geant">
-                <div id="responses" class="geant"></div>
-            </div>
-
-            </div>
-          </div>
+         <div class="schema geant">
+          <div id="active_users" class="geant"></div>
+         </div>
+         <div class="schema geant">
+          <div id="responsetimeDistributionContainer" class="geant"></div>
+         </div>
+         <div class="schema geant">
+          <div id="responsetimepercentilesovertimeokPercentilesContainer" class="geant"></div>
+         </div>
+         <div class="schema geant">
+          <div id="requests" class="geant"></div>
+         </div>
+         <div class="schema geant">
+          <div id="responses" class="geant"></div>
+         </div>
         </div>
+       </div>
       </div>
+     </div>
     </div>
-</div>
-<script>
+   </div>
+   <script>
     var pageStats = stats.stats;
     $(document).ready(function() {
         $('.simulation-tooltip').popover({trigger:'hover', placement:'left'});
@@ -1119,6 +1085,6 @@ requestsChart.setTitle({
 
     });
 </script>
-</div>
-</body>
+  </div>
+ </body>
 </html>

@@ -5707,3 +5707,1586 @@ DEBUG 19:14:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 
 DEBUG 19:15:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:15:00.007034  
 DEBUG 19:16:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:16:00.020672  
 DEBUG 19:17:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:17:00.022404  
+DEBUG 19:18:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:18:00.023005  
+DEBUG 19:19:00.030 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:19:00.030566  
+DEBUG 19:20:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:20:00.025712  
+DEBUG 19:21:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:21:00.015853  
+DEBUG 19:22:00.032 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:22:00.032351  
+DEBUG 19:23:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:23:00.025040  
+DEBUG 19:24:00.030 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:24:00.030214  
+DEBUG 19:25:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:25:00.018257  
+DEBUG 19:26:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:26:00.024407  
+DEBUG 19:27:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:27:00.024045  
+DEBUG 19:28:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:28:00.016963  
+DEBUG 19:29:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:29:00.015812  
+DEBUG 19:30:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:30:00.023849  
+DEBUG 19:31:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:31:00.024330  
+DEBUG 19:32:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:32:00.022840  
+DEBUG 19:33:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:33:00.023161  
+DEBUG 19:34:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:34:00.022947  
+DEBUG 19:35:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:35:00.018785  
+DEBUG 19:36:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:36:00.007316  
+DEBUG 19:37:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:37:00.024995  
+DEBUG 19:38:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:38:00.015341  
+DEBUG 19:39:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:39:00.017184  
+DEBUG 19:40:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:40:00.023860  
+DEBUG 19:41:00.009 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:41:00.009450  
+DEBUG 19:41:59.998 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:41:59.998455  
+DEBUG 19:43:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:43:00.012771  
+DEBUG 19:44:00.006 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:44:00.006887  
+DEBUG 19:45:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:45:00.012877  
+DEBUG 19:46:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:46:00.015690  
+DEBUG 19:47:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:47:00.025837  
+DEBUG 19:48:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:48:00.011985  
+DEBUG 19:49:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:49:00.017580  
+DEBUG 19:50:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:50:00.011671  
+DEBUG 19:51:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:51:00.025956  
+DEBUG 19:52:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-13T19:52:00.015858  
+INFO  16:22:41.688 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 56017 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 16:22:41.690 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  16:22:41.690 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  16:22:42.396 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:22:42.401 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:22:42.401 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:22:42.453 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:22:42.454 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 733 ms  
+DEBUG 16:22:42.640 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 16:22:42.641 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 16:22:42.641 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 16:22:42.642 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 16:22:42.643 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 16:22:42.646 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 16:22:42.646 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 16:22:42.647 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 16:22:42.650 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 16:22:42.884 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  16:22:42.904 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:22:42.960 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:22:42.969 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.624 seconds (process running for 2.159)  
+DEBUG 16:23:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:23:00.023231  
+INFO  16:23:04.138 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  16:23:04.142 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  16:23:04.142 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  16:23:04.142 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+INFO  16:23:04.770 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 306 ms  
+DEBUG 16:23:04.932 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
+DEBUG 16:24:00.001 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:24:00.001617  
+DEBUG 16:25:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:25:00.018075  
+DEBUG 16:26:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:26:00.018513  
+DEBUG 16:27:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:27:00.013339  
+INFO  16:27:43.736 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 56382 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 16:27:43.739 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  16:27:43.740 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  16:27:44.435 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:27:44.440 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:27:44.440 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:27:44.491 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:27:44.492 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 714 ms  
+DEBUG 16:27:44.679 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 16:27:44.681 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 16:27:44.681 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 16:27:44.682 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 16:27:44.684 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 16:27:44.686 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 16:27:44.687 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 16:27:44.687 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 16:27:44.691 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 16:27:44.887 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  16:27:44.907 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:27:44.964 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:27:44.974 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.586 seconds (process running for 1.928)  
+INFO  16:27:49.724 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  16:27:49.729 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  16:27:49.730 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  16:27:49.730 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+DEBUG 16:28:09.935 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:28:09.935353  
+DEBUG 16:29:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:29:00.016194  
+DEBUG 16:30:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:30:00.024799  
+DEBUG 16:31:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:31:00.021952  
+DEBUG 16:32:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:32:00.020688  
+DEBUG 16:33:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:33:00.018677  
+DEBUG 16:34:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:34:00.017023  
+DEBUG 16:35:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:35:00.017185  
+DEBUG 16:36:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:36:00.020569  
+DEBUG 16:37:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:37:00.023999  
+INFO  16:37:47.735 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 57029 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 16:37:47.736 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  16:37:47.737 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  16:37:48.340 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:37:48.345 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:37:48.345 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:37:48.395 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:37:48.395 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 630 ms  
+DEBUG 16:37:48.586 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 16:37:48.588 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 16:37:48.588 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 16:37:48.589 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 16:37:48.590 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 16:37:48.593 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 16:37:48.593 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 16:37:48.593 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 16:37:48.597 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 16:37:48.799 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  16:37:48.811 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:37:48.861 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:37:48.869 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.409 seconds (process running for 1.647)  
+DEBUG 16:38:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:38:00.010834  
+DEBUG 16:39:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:39:00.017641  
+INFO  16:39:11.955 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  16:39:11.960 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  16:39:11.960 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  16:39:11.963 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
+DEBUG 16:40:18.495 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:40:18.495237  
+DEBUG 16:41:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:41:00.008226  
+INFO  16:41:06.530 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 57243 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 16:41:06.532 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  16:41:06.532 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  16:41:07.136 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:41:07.141 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:41:07.141 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:41:07.193 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:41:07.194 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 632 ms  
+DEBUG 16:41:07.399 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 16:41:07.401 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 16:41:07.401 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 16:41:07.402 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 16:41:07.403 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 16:41:07.406 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 16:41:07.407 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 16:41:07.407 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 16:41:07.410 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 16:41:07.622 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  16:41:07.636 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:41:07.693 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:41:07.702 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.436 seconds (process running for 1.658)  
+INFO  16:41:36.914 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 57280 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 16:41:36.915 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  16:41:36.916 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  16:41:37.539 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:41:37.545 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:41:37.545 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:41:37.596 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:41:37.597 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 649 ms  
+DEBUG 16:41:37.794 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 16:41:37.795 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 16:41:37.795 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 16:41:37.796 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 16:41:37.798 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 16:41:37.801 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 16:41:37.801 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 16:41:37.801 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 16:41:37.805 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 16:41:37.978 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  16:41:37.998 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:41:38.048 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:41:38.056 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.408 seconds (process running for 1.622)  
+INFO  16:41:50.676 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  16:41:50.680 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  16:41:50.681 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  16:41:50.681 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+DEBUG 16:42:06.147 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:42:06.147150  
+DEBUG 16:43:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:43:00.016495  
+DEBUG 16:44:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:44:00.026462  
+DEBUG 16:45:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:45:00.024778  
+DEBUG 16:46:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:46:00.016674  
+DEBUG 16:47:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:47:00.009990  
+DEBUG 16:48:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:48:00.018766  
+DEBUG 16:49:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:49:00.010731  
+INFO  16:49:46.034 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 57879 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 16:49:46.035 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  16:49:46.036 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  16:49:46.672 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:49:46.678 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:49:46.678 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:49:46.729 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:49:46.729 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 666 ms  
+DEBUG 16:49:46.930 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 16:49:46.931 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 16:49:46.932 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 16:49:46.933 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 16:49:46.934 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 16:49:46.937 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 16:49:46.937 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 16:49:46.938 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 16:49:46.942 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 16:49:47.127 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  16:49:47.145 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:49:47.195 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:49:47.203 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.435 seconds (process running for 1.683)  
+INFO  16:49:52.227 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  16:49:52.231 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  16:49:52.231 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  16:49:52.232 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 16:50:01.646 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:50:01.646073  
+DEBUG 16:51:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:51:00.010471  
+DEBUG 16:52:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:52:00.024278  
+DEBUG 16:53:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:53:00.023957  
+DEBUG 16:54:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:54:00.025572  
+DEBUG 16:55:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:55:00.025388  
+DEBUG 16:56:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:56:00.017049  
+INFO  16:56:22.063 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 58342 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 16:56:22.065 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  16:56:22.065 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  16:56:22.689 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:56:22.695 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:56:22.695 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:56:22.747 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:56:22.748 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 651 ms  
+DEBUG 16:56:22.942 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 16:56:22.944 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 16:56:22.944 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 16:56:22.945 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 16:56:22.946 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 16:56:22.949 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 16:56:22.950 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 16:56:22.950 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 16:56:22.953 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 16:56:23.170 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  16:56:23.183 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:56:23.234 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:56:23.242 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.459 seconds (process running for 1.706)  
+INFO  16:56:35.754 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  16:56:35.758 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  16:56:35.759 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  16:56:35.759 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+DEBUG 16:57:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:57:00.017954  
+DEBUG 16:58:00.040 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:58:00.040517  
+DEBUG 16:59:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T16:59:00.019623  
+DEBUG 17:00:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:00:00.020931  
+DEBUG 17:01:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:01:00.011653  
+DEBUG 17:02:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:02:00.023726  
+DEBUG 17:03:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:03:00.014731  
+DEBUG 17:04:00.029 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:04:00.029354  
+DEBUG 17:05:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:05:00.016632  
+DEBUG 17:06:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:06:00.012375  
+DEBUG 17:07:00.027 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:07:00.027278  
+DEBUG 17:08:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:08:00.019781  
+DEBUG 17:09:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:09:00.025073  
+DEBUG 17:10:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:10:00.026499  
+DEBUG 17:11:00.032 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:11:00.032574  
+DEBUG 17:12:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:12:00.021467  
+DEBUG 17:13:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:13:00.025254  
+DEBUG 17:14:00.027 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:14:00.027638  
+INFO  17:14:29.062 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 59466 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 17:14:29.063 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  17:14:29.064 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  17:14:29.688 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:14:29.694 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:14:29.694 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:14:29.751 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:14:29.752 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 657 ms  
+DEBUG 17:14:29.936 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 17:14:29.938 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 17:14:29.938 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 17:14:29.939 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 17:14:29.940 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 17:14:29.943 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 17:14:29.943 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 17:14:29.943 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 17:14:29.947 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 17:14:30.169 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  17:14:30.183 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:14:30.239 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:14:30.248 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.462 seconds (process running for 1.72)  
+INFO  17:14:36.287 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  17:14:36.293 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:14:36.293 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:14:36.294 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 17:15:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:15:00.020105  
+DEBUG 17:16:00.041 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:16:00.041509  
+DEBUG 17:17:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:17:00.017509  
+DEBUG 17:18:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:18:00.021505  
+DEBUG 17:19:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:19:00.019699  
+DEBUG 17:20:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:20:00.014345  
+DEBUG 17:21:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:21:00.017438  
+DEBUG 17:22:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:22:00.022335  
+INFO  17:22:34.187 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 60330 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 17:22:34.189 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  17:22:34.189 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  17:22:34.834 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:22:34.839 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:22:34.839 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:22:34.889 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:22:34.890 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 665 ms  
+DEBUG 17:22:35.097 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 17:22:35.098 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 17:22:35.099 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 17:22:35.103 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 17:22:35.105 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 17:22:35.107 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 17:22:35.108 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 17:22:35.108 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 17:22:35.113 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 17:22:35.326 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  17:22:35.340 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+WARN  17:22:35.386 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'  
+INFO  17:22:35.388 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  17:22:35.396 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 17:22:35.405 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8800 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8800 or configure this application to listen on another port.
+  
+INFO  17:22:51.524 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 329 ms  
+DEBUG 17:23:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:23:00.017494  
+INFO  17:23:19.855 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 60397 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 17:23:19.857 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  17:23:19.857 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  17:23:20.478 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:23:20.484 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:23:20.484 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:23:20.541 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:23:20.542 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 655 ms  
+DEBUG 17:23:20.740 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 17:23:20.741 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 17:23:20.742 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 17:23:20.743 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 17:23:20.744 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 17:23:20.747 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 17:23:20.747 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 17:23:20.747 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 17:23:20.751 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 17:23:20.928 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  17:23:20.942 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+WARN  17:23:20.987 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'  
+INFO  17:23:20.989 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  17:23:20.996 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 17:23:21.005 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8800 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8800 or configure this application to listen on another port.
+  
+DEBUG 17:24:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:24:00.015525  
+INFO  17:24:26.481 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 60519 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 17:24:26.483 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  17:24:26.483 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  17:24:27.141 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:24:27.148 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:24:27.148 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:24:27.216 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:24:27.217 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 693 ms  
+DEBUG 17:24:27.399 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 17:24:27.401 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 17:24:27.401 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 17:24:27.402 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 17:24:27.403 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 17:24:27.406 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 17:24:27.406 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 17:24:27.407 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 17:24:27.410 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 17:24:27.625 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  17:24:27.638 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+WARN  17:24:27.682 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'  
+INFO  17:24:27.684 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  17:24:27.691 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 17:24:27.701 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8800 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8800 or configure this application to listen on another port.
+  
+DEBUG 17:25:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:25:00.020951  
+INFO  17:25:50.139 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 60642 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 17:25:50.140 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  17:25:50.141 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  17:25:50.766 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:25:50.772 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:25:50.772 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:25:50.827 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:25:50.827 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 658 ms  
+DEBUG 17:25:51.019 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 17:25:51.021 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 17:25:51.021 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 17:25:51.022 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 17:25:51.023 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 17:25:51.026 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 17:25:51.026 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 17:25:51.027 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 17:25:51.030 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 17:25:51.275 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  17:25:51.294 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:25:51.348 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:25:51.356 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.493 seconds (process running for 1.72)  
+DEBUG 17:26:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:26:00.011109  
+INFO  17:26:05.934 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 60666 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 17:26:05.935 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  17:26:05.936 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  17:26:06.537 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:26:06.542 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:26:06.543 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:26:06.594 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:26:06.594 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 630 ms  
+DEBUG 17:26:06.785 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 17:26:06.787 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 17:26:06.787 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 17:26:06.788 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 17:26:06.789 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 17:26:06.791 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 17:26:06.792 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 17:26:06.792 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 17:26:06.796 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 17:26:07.036 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  17:26:07.055 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:26:07.106 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:26:07.114 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.444 seconds (process running for 1.666)  
+INFO  17:26:09.793 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  17:26:09.797 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:26:09.798 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:26:09.798 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+INFO  17:26:10.290 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 315 ms  
+DEBUG 17:26:11.614 - - o.s.api.AbstractOpenApiResource - Fetching openApi document from cache  
+DEBUG 17:27:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:27:00.013390  
+DEBUG 17:28:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:28:00.019994  
+DEBUG 17:29:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:29:00.019228  
+DEBUG 17:30:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:30:00.014568  
+DEBUG 17:31:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:31:00.015932  
+DEBUG 17:32:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:32:00.022102  
+DEBUG 17:33:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:33:00.014988  
+DEBUG 17:34:00.085 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:34:00.085780  
+DEBUG 17:35:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:35:00.008531  
+DEBUG 17:36:00.039 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:36:00.039112  
+DEBUG 17:37:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:37:00.013593  
+DEBUG 17:38:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:38:00.021052  
+DEBUG 17:39:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:39:00.013835  
+INFO  17:39:52.199 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 61590 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 17:39:52.200 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  17:39:52.201 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  17:39:52.881 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:39:52.888 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:39:52.888 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:39:52.941 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:39:52.942 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 711 ms  
+DEBUG 17:39:53.133 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 17:39:53.135 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 17:39:53.135 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 17:39:53.136 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 17:39:53.137 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 17:39:53.140 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 17:39:53.140 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 17:39:53.140 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 17:39:53.144 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 17:39:53.349 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  17:39:53.362 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:39:53.413 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:39:53.420 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.494 seconds (process running for 1.751)  
+DEBUG 17:40:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:40:00.026028  
+DEBUG 17:41:00.033 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:41:00.033115  
+DEBUG 17:42:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:42:00.011780  
+DEBUG 17:43:00.035 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:43:00.035067  
+DEBUG 17:44:00.034 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:44:00.033883  
+DEBUG 17:45:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:45:00.026365  
+DEBUG 17:46:00.028 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:46:00.028079  
+DEBUG 17:47:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:47:00.017431  
+DEBUG 17:48:00.032 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:48:00.032171  
+DEBUG 17:49:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:49:00.024823  
+DEBUG 17:50:00.030 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:50:00.030086  
+DEBUG 17:51:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:51:00.023436  
+DEBUG 17:52:00.021 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:52:00.021180  
+DEBUG 17:53:00.033 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:53:00.032573  
+DEBUG 17:54:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:54:00.016018  
+DEBUG 17:55:00.038 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:55:00.038590  
+DEBUG 17:56:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:56:00.010504  
+DEBUG 17:57:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:57:00.025593  
+DEBUG 17:58:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:58:00.012549  
+DEBUG 17:59:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T17:59:00.019566  
+DEBUG 18:00:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:00:00.020239  
+DEBUG 18:01:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:01:00.018847  
+DEBUG 18:02:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:02:00.016537  
+DEBUG 18:03:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:03:00.020174  
+DEBUG 18:04:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:04:00.013041  
+DEBUG 18:05:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:05:00.013099  
+DEBUG 18:06:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:06:00.019791  
+DEBUG 18:07:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:07:00.015355  
+INFO  18:07:33.909 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 63455 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:07:33.911 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:07:33.911 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:07:34.551 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:07:34.556 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:07:34.556 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:07:34.607 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:07:34.608 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 636 ms  
+DEBUG 18:07:34.801 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:07:34.803 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:07:34.803 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:07:34.804 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:07:34.805 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:07:34.808 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:07:34.808 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:07:34.809 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:07:34.813 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:07:35.025 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:07:35.044 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:07:35.119 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:07:35.128 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.596 seconds (process running for 1.837)  
+INFO  18:07:53.287 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 63491 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:07:53.289 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:07:53.290 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:07:53.975 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:07:53.980 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:07:53.981 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:07:54.031 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:07:54.031 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 696 ms  
+DEBUG 18:07:54.231 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:07:54.235 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:07:54.235 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:07:54.236 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:07:54.237 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:07:54.241 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:07:54.242 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:07:54.242 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:07:54.246 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:07:54.481 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:07:54.495 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:07:54.544 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:07:54.551 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.618 seconds (process running for 1.845)  
+DEBUG 18:08:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:08:00.014510  
+INFO  18:08:31.130 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 63533 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:08:31.132 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:08:31.132 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:08:31.783 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:08:31.789 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:08:31.789 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:08:31.840 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:08:31.841 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 678 ms  
+DEBUG 18:08:32.030 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:08:32.032 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:08:32.049 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check2]}: healthCheck2()
+	{GET [/health-check]}: healthCheck()  
+DEBUG 18:08:32.050 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:08:32.051 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:08:32.054 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:08:32.055 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:08:32.057 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:08:32.061 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:08:32.284 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:08:32.304 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:08:32.357 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:08:32.365 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.552 seconds (process running for 1.774)  
+INFO  18:08:35.742 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  18:08:35.747 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:08:35.747 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:08:35.748 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 18:09:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:09:00.019294  
+DEBUG 18:10:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:10:00.024472  
+INFO  18:10:18.821 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 63669 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:10:18.822 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:10:18.823 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:10:19.499 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:10:19.505 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:10:19.505 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:10:19.566 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:10:19.567 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 698 ms  
+DEBUG 18:10:19.754 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:10:19.756 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:10:19.756 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:10:19.757 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:10:19.758 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:10:19.761 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:10:19.761 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:10:19.762 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:10:19.765 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:10:19.955 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:10:19.974 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:10:20.032 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:10:20.043 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.577 seconds (process running for 1.811)  
+INFO  18:10:40.925 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 63705 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:10:40.926 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:10:40.927 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:10:41.575 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:10:41.580 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:10:41.580 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:10:41.640 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:10:41.641 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 684 ms  
+DEBUG 18:10:41.821 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:10:41.824 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:10:41.824 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:10:41.825 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:10:41.826 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:10:41.829 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:10:41.830 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:10:41.830 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:10:41.834 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:10:42.060 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:10:42.074 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:10:42.134 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:10:42.141 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.505 seconds (process running for 1.741)  
+INFO  18:10:43.565 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  18:10:43.570 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:10:43.570 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:10:43.571 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+DEBUG 18:11:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:11:00.019409  
+DEBUG 18:12:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:12:00.024041  
+DEBUG 18:13:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:13:00.011954  
+INFO  18:13:24.036 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 63889 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:13:24.038 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:13:24.038 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:13:24.679 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:13:24.685 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:13:24.685 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:13:24.736 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:13:24.737 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 662 ms  
+DEBUG 18:13:24.919 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:13:24.920 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:13:24.921 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:13:24.922 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:13:24.923 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:13:24.926 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:13:24.926 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:13:24.926 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:13:24.930 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:13:25.123 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:13:25.143 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:13:25.219 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:13:25.228 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.555 seconds (process running for 1.797)  
+INFO  18:13:41.644 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 63924 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:13:41.645 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:13:41.645 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:13:42.298 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:13:42.304 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:13:42.304 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:13:42.355 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:13:42.355 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 678 ms  
+DEBUG 18:13:42.542 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:13:42.543 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:13:42.544 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:13:42.545 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:13:42.546 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:13:42.549 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:13:42.549 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:13:42.550 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:13:42.553 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:13:42.739 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:13:42.757 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:13:42.808 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:13:42.817 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.486 seconds (process running for 1.772)  
+INFO  18:13:43.732 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  18:13:43.737 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:13:43.737 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:13:43.738 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 18:14:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:14:00.017535  
+DEBUG 18:15:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:15:00.019074  
+DEBUG 18:16:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:16:00.019346  
+DEBUG 18:18:57.387 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:18:57.387067  
+DEBUG 18:19:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:19:00.017916  
+DEBUG 18:22:54.790 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:22:54.789869  
+DEBUG 18:23:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:23:00.013850  
+DEBUG 18:24:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:24:00.016039  
+DEBUG 18:25:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:25:00.016469  
+DEBUG 18:26:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:26:00.019994  
+DEBUG 18:27:00.034 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:27:00.034739  
+DEBUG 18:28:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:28:00.011278  
+DEBUG 18:29:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:29:00.017488  
+DEBUG 18:30:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:30:00.018339  
+DEBUG 18:31:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:31:00.018524  
+DEBUG 18:32:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:32:00.020062  
+INFO  18:32:10.601 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 64902 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:32:10.602 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:32:10.602 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:32:11.238 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:32:11.243 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:32:11.244 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:32:11.295 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:32:11.296 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 662 ms  
+DEBUG 18:32:11.475 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:32:11.476 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:32:11.476 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:32:11.477 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:32:11.478 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:32:11.481 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:32:11.482 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:32:11.482 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:32:11.486 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:32:11.664 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:32:11.677 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:32:11.726 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:32:11.733 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.45 seconds (process running for 1.708)  
+DEBUG 18:33:00.030 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:33:00.030066  
+INFO  18:33:09.768 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 64983 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:33:09.770 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:33:09.771 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:33:10.371 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:33:10.376 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:33:10.376 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:33:10.426 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:33:10.427 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 626 ms  
+DEBUG 18:33:10.606 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:33:10.608 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:33:10.608 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:33:10.609 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:33:10.610 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:33:10.613 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:33:10.613 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:33:10.614 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:33:10.617 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:33:10.792 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:33:10.808 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:33:10.856 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:33:10.863 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.468 seconds (process running for 1.694)  
+DEBUG 18:34:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:34:00.016522  
+INFO  18:34:05.473 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 65059 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:34:05.474 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:34:05.475 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:34:06.166 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:34:06.171 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:34:06.171 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:34:06.228 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:34:06.229 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 719 ms  
+DEBUG 18:34:06.423 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:34:06.425 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:34:06.425 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:34:06.426 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:34:06.427 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:34:06.430 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:34:06.431 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:34:06.431 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:34:06.435 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:34:06.635 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:34:06.647 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:34:06.701 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:34:06.710 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.523 seconds (process running for 1.754)  
+INFO  18:34:18.978 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  18:34:18.992 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:34:18.992 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:34:18.992 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+INFO  18:34:19.576 - - o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 305 ms  
+DEBUG 18:35:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:35:00.019318  
+INFO  18:36:03.918 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 65195 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 18:36:03.920 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  18:36:03.920 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  18:36:04.546 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:36:04.551 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:36:04.551 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:36:04.613 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:36:04.614 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 661 ms  
+DEBUG 18:36:04.812 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 18:36:04.813 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 18:36:04.814 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 18:36:04.814 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 18:36:04.815 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 18:36:04.818 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 18:36:04.819 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 18:36:04.819 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 18:36:04.823 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 18:36:05.000 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  18:36:05.022 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:36:05.074 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:36:05.082 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.475 seconds (process running for 1.718)  
+INFO  18:36:07.044 - - o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.  
+INFO  18:36:07.049 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:36:07.049 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:36:07.050 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+DEBUG 18:37:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:37:00.013978  
+DEBUG 18:38:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:38:00.011699  
+DEBUG 18:39:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:39:00.022229  
+DEBUG 18:40:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:40:00.010943  
+DEBUG 18:41:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:41:00.010319  
+DEBUG 18:42:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:42:00.024875  
+DEBUG 18:43:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:43:00.020355  
+DEBUG 18:44:00.020 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:44:00.020278  
+DEBUG 18:45:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:45:00.026314  
+DEBUG 18:46:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:46:00.022375  
+DEBUG 18:47:00.028 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:47:00.028480  
+DEBUG 18:48:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:48:00.014132  
+DEBUG 18:49:00.028 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:49:00.028753  
+DEBUG 18:50:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:50:00.022215  
+DEBUG 18:51:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:51:00.019407  
+DEBUG 18:52:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:52:00.016695  
+DEBUG 18:53:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:53:00.010551  
+DEBUG 18:54:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:54:00.025701  
+DEBUG 18:55:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:55:00.023731  
+DEBUG 18:56:00.007 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:56:00.007841  
+DEBUG 18:57:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:57:00.016640  
+DEBUG 18:58:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:58:00.022352  
+DEBUG 18:59:00.019 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T18:59:00.019281  
+DEBUG 19:00:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:00:00.011353  
+DEBUG 19:01:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:01:00.014114  
+DEBUG 19:02:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:02:00.015459  
+DEBUG 19:03:00.015 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:03:00.015475  
+DEBUG 19:04:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:04:00.023590  
+DEBUG 19:05:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:05:00.013625  
+DEBUG 19:06:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:06:00.023893  
+DEBUG 19:07:00.023 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:07:00.023060  
+DEBUG 19:08:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:08:00.013714  
+DEBUG 19:09:00.025 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:09:00.025504  
+DEBUG 19:10:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:10:00.017532  
+DEBUG 19:11:00.005 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:11:00.005182  
+DEBUG 19:12:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:12:00.018556  
+DEBUG 19:13:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:13:00.014476  
+DEBUG 19:14:00.029 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:14:00.028762  
+DEBUG 19:15:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:15:00.014152  
+DEBUG 19:16:00.028 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:16:00.028451  
+DEBUG 19:17:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:17:00.016426  
+DEBUG 19:18:00.018 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:18:00.018184  
+DEBUG 19:19:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:19:00.025827  
+DEBUG 19:20:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:20:00.026797  
+DEBUG 19:21:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:21:00.016595  
+DEBUG 19:22:00.024 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:22:00.024703  
+DEBUG 19:23:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:23:00.016657  
+DEBUG 19:24:00.016 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:24:00.016162  
+DEBUG 19:25:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:25:00.012881  
+DEBUG 19:26:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:26:00.013899  
+DEBUG 19:27:00.017 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:27:00.017069  
+DEBUG 19:28:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:28:00.008255  
+DEBUG 19:29:00.032 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:29:00.032242  
+DEBUG 19:30:00.022 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:30:00.022701  
+DEBUG 19:31:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:31:00.026718  
+DEBUG 19:32:00.012 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:32:00.012277  
+DEBUG 19:33:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:33:00.013118  
+DEBUG 19:34:00.011 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:34:00.010989  
+DEBUG 19:35:00.008 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:35:00.008774  
+DEBUG 19:36:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:36:00.010868  
+DEBUG 19:37:00.013 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:37:00.012987  
+DEBUG 19:38:00.010 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:38:00.010509  
+INFO  19:39:02.160 - - loadrover.api.io.ApiApplicationKt - Starting ApiApplicationKt using Java 17.0.5 with PID 69255 (/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/classes/kotlin/main started by sasha in /Users/sasha/IdeaProjects/2bytes.loadrover-server)  
+DEBUG 19:39:02.162 - - loadrover.api.io.ApiApplicationKt - Running with Spring Boot v3.1.7, Spring v6.0.15  
+INFO  19:39:02.162 - - loadrover.api.io.ApiApplicationKt - The following 1 profile is active: "local"  
+INFO  19:39:02.843 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  19:39:02.848 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  19:39:02.848 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  19:39:02.900 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  19:39:02.901 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 701 ms  
+DEBUG 19:39:03.087 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.ScenarioController:
+	{GET [/scenario/{scenarioId}]}: getScenarioContent(String)
+	{POST [/scenario]}: createScenario(ScenarioCreateDto)
+	{PUT [/scenario]}: reviseScenario(ScenarioReviseDto)
+	{GET [/scenario/list]}: getScenarioList()  
+DEBUG 19:39:03.089 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.d.s.SimulationController:
+	{POST [/simulation/run]}: runSimulation(RunSimulationRequest)
+	{GET [/simulation/{scenarioId}]}: getSimulationResult(String)
+	{POST [/simulation/retry]}: retrySimulation(RunSimulationRequest)
+	{GET [/simulation/test]}: editHtmlTest()  
+DEBUG 19:39:03.089 - - _.s.w.s.HandlerMapping.Mappings - 
+	l.a.i.i.HealthCheckController:
+	{GET [/health-check]}: healthCheck()
+	{GET [/health-check2]}: healthCheck2()  
+DEBUG 19:39:03.090 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)  
+DEBUG 19:39:03.091 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.MultipleOpenApiWebMvcResource:
+	{GET [/api-docs/{group}], produces [application/json]}: openapiJson(HttpServletRequest,String,String,Locale)
+	{GET [/api-docs.yaml/{group}], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,String,Locale)  
+DEBUG 19:39:03.094 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)  
+DEBUG 19:39:03.095 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)  
+DEBUG 19:39:03.095 - - _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)  
+DEBUG 19:39:03.098 - - _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}  
+DEBUG 19:39:03.298 - - _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}  
+WARN  19:39:03.317 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  19:39:03.370 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  19:39:03.377 - - loadrover.api.io.ApiApplicationKt - Started ApiApplicationKt in 1.631 seconds (process running for 1.871)  
+DEBUG 19:40:37.473 - - loadrover.api.io.utils.HtmlUtils - Revise result html: 2024-02-14T19:40:37.473363  
+DEBUG 19:41:13.292 - - loadrover.api.io.utils.HtmlUtils - Revise result html: 2024-02-14T19:41:13.291813  
+DEBUG 19:41:51.928 - - loadrover.api.io.utils.HtmlUtils - Revise result html: 2024-02-14T19:41:51.927992  
+DEBUG 19:42:11.789 - - loadrover.api.io.utils.HtmlUtils - Revise result html: 2024-02-14T19:42:11.789212  
+ERROR 19:42:14.071 - - loadrover.api.io.utils.FileUtils - Failed to move JSON file: gatling/src/gatling/resources/static/progress/testrun20240207105511878.json, ScenarioUUID: testrun20240207105511878  
+DEBUG 19:42:15.821 - - loadrover.api.io.utils.HtmlUtils - Revise result html: 2024-02-14T19:42:15.821263  
+DEBUG 19:42:20.826 - - loadrover.api.io.utils.HtmlUtils - Revise result html: 2024-02-14T19:42:20.826173  
+DEBUG 19:42:26.789 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:42:26.789542  
+DEBUG 19:43:00.040 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:43:00.040879  
+DEBUG 19:44:00.027 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:44:00.027024  
+DEBUG 19:45:00.026 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:45:00.026335  
+DEBUG 19:46:00.014 - - l.a.i.d.s.SimulationScheduler - Check simulation result: 2024-02-14T19:46:00.014146  

@@ -6,6 +6,7 @@ import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.config.exception.ExceptionCode
 import loadrover.api.io.config.exception.NotFoundDataException
 import loadrover.api.io.utils.FileUtils
+import loadrover.api.io.utils.HtmlUtils
 import loadrover.api.io.utils.SimulationLogUtils
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.DefaultResourceLoader
@@ -14,7 +15,6 @@ import org.springframework.http.ResponseEntity
 import org.springframework.scheduling.annotation.Async
 import org.springframework.web.bind.annotation.*
 import java.io.File
-import java.nio.file.Paths
 import java.util.concurrent.CompletableFuture
 
 @RestController
@@ -24,6 +24,7 @@ class SimulationController(
     private val simulationService: SimulationService,
     private val simulationLogUtils: SimulationLogUtils,
     private val fileUtils: FileUtils,
+    private val htmlUtils: HtmlUtils,
     private val loadroverConfig: LoadroverConfig
 ) {
     private val logger = LoggerFactory.getLogger(SimulationService::class.java)
@@ -70,7 +71,6 @@ class SimulationController(
             simulationLogUtils.createLogFile(request.scenarioId, "Retry simulation")
         }
 
-        // result에 있는 폴더 삭제
         val resultList = fileUtils.searchResultFolders()
         var resultMatchCount = 0
 
@@ -79,7 +79,7 @@ class SimulationController(
 
             if (mappedSimulationId == request.scenarioId) {
                 val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/${result.scenarioId}"
-                fileUtils.deleteFile(resultDirectory)
+                fileUtils.deleteDirectory(resultDirectory)
 
                 resultMatchCount += 1
             }
@@ -114,12 +114,13 @@ class SimulationController(
                 "-stacktrace"
             )
 
+            // 프로젝트 root dir로 process 실행 설정
             val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
                 .getResources("classpath*:gatling/**")
 
             val resourceFile = File(resources.toString())
 
-            // 프로젝트 root dir로 process 실행 설정
+
             processBuilder.directory(
                 resourceFile.parentFile
             )
@@ -136,6 +137,12 @@ class SimulationController(
         } catch (e: Exception) {
             logger.error("Failed to run: ${e.message.toString()}, scenarioUUID: $scenarioId")
         }
+    }
+
+    @GetMapping("/test")
+    fun editHtmlTest() {
+        val simulationId = "test20240207164944638-20240213063100900"
+        htmlUtils.reviseHtmlHeader(simulationId)
     }
 
 }

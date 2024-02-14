@@ -1,8 +1,6 @@
 package loadrover.api.io.domain.simulation
 
-import loadrover.api.io.domain.scenario.ScenarioService
 import loadrover.api.io.utils.FileUtils
-import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.BufferedInputStream
 import java.io.File
