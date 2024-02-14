@@ -6,7 +6,6 @@ import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.config.exception.ExceptionCode
 import loadrover.api.io.config.exception.NotFoundDataException
 import loadrover.api.io.utils.FileUtils
-import loadrover.api.io.utils.HtmlUtils
 import loadrover.api.io.utils.SimulationLogUtils
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.DefaultResourceLoader
@@ -24,7 +23,6 @@ class SimulationController(
     private val simulationService: SimulationService,
     private val simulationLogUtils: SimulationLogUtils,
     private val fileUtils: FileUtils,
-    private val htmlUtils: HtmlUtils,
     private val loadroverConfig: LoadroverConfig
 ) {
     private val logger = LoggerFactory.getLogger(SimulationService::class.java)
@@ -134,15 +132,10 @@ class SimulationController(
             val exitCode = process.waitFor()
 
             println("Process exitCode: $exitCode")
+
         } catch (e: Exception) {
             logger.error("Failed to run: ${e.message.toString()}, scenarioUUID: $scenarioId")
         }
-    }
-
-    @GetMapping("/test")
-    fun editHtmlTest() {
-        val simulationId = "test20240207164944638-20240213063100900"
-        htmlUtils.reviseHtmlHeader(simulationId)
     }
 
 }
