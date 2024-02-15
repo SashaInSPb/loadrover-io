@@ -15,7 +15,7 @@ class SimulationService(
 ) {
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
-        val resultList = fileUtils.searchResultFolders()
+        val resultList = fileUtils.searchResultDirectories()
         val filteredList = resultList
             .filter { it.scenarioId.contains(scenarioId) }
             .map { it.scenarioId }

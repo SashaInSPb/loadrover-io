@@ -1,9 +1,9 @@
 build/
 api/build/
-gatling/build/
 logs/*.log
 logs/full_log.log
 gatling/
+!/gatling/src/gatling/resources/image/**
 
 ### resources ##
 #/gatling/src/gatling/resources/static/complete/**

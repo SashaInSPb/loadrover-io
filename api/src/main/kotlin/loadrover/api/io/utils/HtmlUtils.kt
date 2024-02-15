@@ -34,7 +34,7 @@ class HtmlUtils(
         enterpriseLogo?.remove()
 
         val wrapperClass = resultHtml.select("div.gatling-open-source")
-        wrapperClass.html("<h1 class=\"gatling-logo gatling-logo-light\"><img alt=\"2bytes\" src=\"/static/h_logo_purple.svg\" style=\"width: 113%; height: auto;\"/></h1>\n<h1 class=\"gatling-logo gatling-logo-dark\"><img alt=\"2bytes\" src=\"/static/h_logo_white.svg\" style=\"width: 113%; height: auto;\"/></h1>")
+        wrapperClass.html("<h1 class=\"gatling-logo gatling-logo-light\"><img alt=\"2bytes\" src=\"style/h_logo_purple.svg\" style=\"width: 113%; height: auto;\"/></h1>\n<h1 class=\"gatling-logo gatling-logo-dark\"><img alt=\"2bytes\" src=\"style/h_logo_white.svg\" style=\"width: 113%; height: auto;\"/></h1>")
 
         val outputFile = File(filePath)
 

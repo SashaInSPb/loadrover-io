@@ -33,5 +33,6 @@ loadrover:
     work-path: gatling/src/gatling/kotlin
     complete: complete
     result: result
+    image-path: gatling/src/gatling/resources/image
   output:
     class-name-prefix: "local"

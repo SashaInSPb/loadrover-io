@@ -57,7 +57,7 @@ class FileUtils(
     }
 
     // 파일이 아닌 폴더로 결과물이 있는 result 출력용
-    fun searchResultFolders(): MutableSet<FileDto> {
+    fun searchResultDirectories(): MutableSet<FileDto> {
         val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
         val resultPath: Path = Path.of(resultDirectory)
         val folderList: MutableSet<FileDto> = mutableSetOf()
@@ -148,6 +148,28 @@ class FileUtils(
             }
         } catch (e: Exception) {
             logger.error("Failed to save revised JSON file: ${e.message.toString()}, ScenarioUUID: ${request.scenarioId}")
+        }
+    }
+
+    fun copyResourceFile(simulationId: String){
+        val fileTypes = listOf("h_logo_purple.svg", "h_logo_white.svg")
+
+        for (fileType in fileTypes) {
+            val sourceDirectory = "${loadroverConfig.gatling.imagePath}/${fileType}"
+            val targetDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/${simulationId}/style/${fileType}"
+
+            val sourcePath: Path = Path.of(sourceDirectory)
+            val targetPath: Path = Path.of(targetDirectory)
+
+            try {
+                Files.copy(
+                    sourcePath,
+                    targetPath,
+                    StandardCopyOption.REPLACE_EXISTING
+                )
+            } catch (e: Exception) {
+                logger.error("Failed to save revised JSON file: ${e.message.toString()}, ScenarioUUID: $simulationId")
+            }
         }
     }
 

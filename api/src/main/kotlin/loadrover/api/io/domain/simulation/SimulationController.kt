@@ -69,7 +69,7 @@ class SimulationController(
             simulationLogUtils.createLogFile(request.scenarioId, "Retry simulation")
         }
 
-        val resultList = fileUtils.searchResultFolders()
+        val resultList = fileUtils.searchResultDirectories()
         var resultMatchCount = 0
 
         for (result in resultList) {

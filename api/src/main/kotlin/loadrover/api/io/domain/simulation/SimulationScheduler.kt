@@ -21,7 +21,7 @@ class SimulationScheduler(
     @Scheduled(cron = "0 */1 * * * *") // 매 1분으로 설정
     fun moveProgressToComplete() {
         val progressFileList = fileUtils.searchFiles("progress")
-        val resultFolderList = fileUtils.searchResultFolders()
+        val resultFolderList = fileUtils.searchResultDirectories()
 
         for (progressFile in progressFileList) {
             val scenarioId = progressFile.scenarioId
@@ -32,6 +32,7 @@ class SimulationScheduler(
                 if (resultFileId == scenarioId) {
                     fileUtils.moveJsonFile(scenarioId, loadroverConfig.gatling.progress, loadroverConfig.gatling.complete)
                     // result html 헤더 수정
+                    fileUtils.copyResourceFile(resultFolder.scenarioId)
                     htmlUtils.reviseHtmlHeader(resultFolder.scenarioId)
                 }
             }
