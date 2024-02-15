@@ -2,14 +2,6 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
-#logging:
-#  level:
-#    root: INFO
-#    org.springframework.web: DEBUG
-#    com.yourpackage: DEBUG
-#  pattern:
-#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
-
 server:
   servlet:
     encoding:
@@ -41,5 +33,6 @@ loadrover:
     work-path: gatling/src/gatling/kotlin
     complete: complete
     result: result
+    image-path: gatling/src/gatling/resources/image
   output:
     class-name-prefix: "local"

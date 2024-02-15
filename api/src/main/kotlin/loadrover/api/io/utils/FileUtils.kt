@@ -1,9 +1,15 @@
 package loadrover.api.io.utils
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.domain.scenario.FileDto
+import loadrover.api.io.domain.scenario.ScenarioDto
 import loadrover.api.io.domain.scenario.ScenarioStatus
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
+import java.io.BufferedWriter
+import java.io.File
+import java.io.FileWriter
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
 
@@ -11,6 +17,7 @@ import java.nio.file.attribute.BasicFileAttributes
 class FileUtils(
     private val loadroverConfig: LoadroverConfig
 ) {
+    private val logger = LoggerFactory.getLogger(FileUtils::class.java)
 
     fun searchFiles(path: String): MutableSet<FileDto> {
         val fileDirectory = if (path == "work") "${loadroverConfig.gatling.workPath}/${path}" else "${loadroverConfig.gatling.path}/${path}"
@@ -28,8 +35,8 @@ class FileUtils(
 
                         fileList.plusAssign(
                             FileDto(
-                                scenarioTitle = fileName.removeSuffix(".json").replace("\\d{17}$".toRegex(),""),
-                                scenarioId = fileName.removeSuffix(".json"),
+                                scenarioTitle = if (path == "work") fileName.removeSuffix(".kt") else fileName.removeSuffix(".json").replace("\\d{17}$".toRegex(),""),
+                                scenarioId = if (path == "work") fileName.removeSuffix(".kt") else fileName.removeSuffix(".json"),
                                 status = when (path) {
                                     loadroverConfig.gatling.source -> ScenarioStatus.READY
                                     loadroverConfig.gatling.progress -> ScenarioStatus.PROGRESS
@@ -43,14 +50,14 @@ class FileUtils(
                 }
             )
         } catch (e: Exception) {
-            println("Failed to read files: ${e.message}")
+            logger.error("Failed to read files: ${e.message.toString()}")
         }
 
         return fileList
     }
 
     // 파일이 아닌 폴더로 결과물이 있는 result 출력용
-    fun searchResultFolders(): MutableSet<FileDto> {
+    fun searchResultDirectories(): MutableSet<FileDto> {
         val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
         val resultPath: Path = Path.of(resultDirectory)
         val folderList: MutableSet<FileDto> = mutableSetOf()
@@ -70,12 +77,11 @@ class FileUtils(
                                     scenarioTitle = simulationId
                                         .replace("-\\d+".toRegex(),"")
                                         .replace("\\d{17}$".toRegex(),""),
-                                    scenarioId = simulationId
-                                        .replace("-\\d+".toRegex(),""),
+                                    scenarioId = simulationId,
                                     status = ScenarioStatus.COMPLETE
                                 )
                             )
-//                            println("Directory Name: ${dir.fileName}, Path: $dir")
+
                         }
                         return FileVisitResult.CONTINUE
                     }
@@ -86,9 +92,85 @@ class FileUtils(
                 }
             )
         } catch (e: Exception) {
-            println("Failed to read files: ${e.message}")
+            logger.error("Failed to read files: ${e.message.toString()}")
         }
         return folderList
+    }
+
+    fun deleteDirectory(directory: String) {
+        try {
+            File(directory).deleteRecursively()
+        } catch (e: Exception) {
+            logger.error("Failed to delete file: ${e.message.toString()}")
+        }
+    }
+
+    fun moveJsonFile(scenarioId: String, startFolder: String, destinationFolder: String) {
+        val startDirectory = "${loadroverConfig.gatling.path}/${startFolder}/${scenarioId}.json"
+        val destinationDirectory = "${loadroverConfig.gatling.path}/${destinationFolder}/${scenarioId}.json"
+
+        val startPath: Path = Path.of(startDirectory)
+        val destinationPath: Path = Path.of(destinationDirectory)
+
+        try {
+            Files.move(
+                startPath,
+                destinationPath,
+                StandardCopyOption.REPLACE_EXISTING
+            )
+        } catch (e: Exception) {
+            logger.error("Failed to move JSON file: ${e.message.toString()}, ScenarioUUID: $scenarioId")
+        }
+    }
+
+    fun saveJsonFile(request: ScenarioDto.ScenarioCreateDto, scenarioUUID: String, scenarioClass: String) {
+        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${scenarioClass}.json"
+        val serializedObject = jacksonObjectMapper().writeValueAsString(request)
+
+        try {
+            File(savePath).bufferedWriter().use {
+                it.write(serializedObject)
+            }
+        } catch (e: Exception) {
+            logger.error("Failed to save JSON file: ${e.message.toString()}, ScenarioUUID: $scenarioUUID")
+        }
+    }
+
+    // 덮어쓰기 메서드 추가
+    // 기존 json file 삭제 필요
+    fun reviseJsonFile(request: ScenarioDto.ScenarioReviseDto) {
+        val savePath = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.source}/${request.scenarioId}.json"
+        val serializedObject = jacksonObjectMapper().writeValueAsString(request.removeScenarioId())
+
+        try {
+            BufferedWriter(FileWriter(savePath)).use {
+                it.write(serializedObject)
+            }
+        } catch (e: Exception) {
+            logger.error("Failed to save revised JSON file: ${e.message.toString()}, ScenarioUUID: ${request.scenarioId}")
+        }
+    }
+
+    fun copyResourceFile(simulationId: String){
+        val fileTypes = listOf("h_logo_purple.svg", "h_logo_white.svg")
+
+        for (fileType in fileTypes) {
+            val sourceDirectory = "${loadroverConfig.gatling.imagePath}/${fileType}"
+            val targetDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/${simulationId}/style/${fileType}"
+
+            val sourcePath: Path = Path.of(sourceDirectory)
+            val targetPath: Path = Path.of(targetDirectory)
+
+            try {
+                Files.copy(
+                    sourcePath,
+                    targetPath,
+                    StandardCopyOption.REPLACE_EXISTING
+                )
+            } catch (e: Exception) {
+                logger.error("Failed to save revised JSON file: ${e.message.toString()}, ScenarioUUID: $simulationId")
+            }
+        }
     }
 
 }

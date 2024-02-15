@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loadrover-io.iml" filepath="$PROJECT_DIR$/.idea/modules/loadrover-io.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/loadrover-io.api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/loadrover-io.api.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/loadrover-io.api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/loadrover-io.api.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gatling/loadrover-io.gatling.gatling.iml" filepath="$PROJECT_DIR$/.idea/modules/gatling/loadrover-io.gatling.gatling.iml" />

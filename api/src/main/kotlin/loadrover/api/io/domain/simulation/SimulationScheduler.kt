@@ -2,50 +2,42 @@ package loadrover.api.io.domain.simulation
 
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.utils.FileUtils
+import loadrover.api.io.utils.HtmlUtils
 import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.scheduling.annotation.EnableScheduling
 import org.springframework.scheduling.annotation.Scheduled
-import java.nio.file.Files
-import java.nio.file.Path
-import java.nio.file.StandardCopyOption
 import java.time.LocalDateTime
 
 @EnableScheduling
 @SpringBootApplication
 class SimulationScheduler(
     private val fileUtils: FileUtils,
-    private val loadroverConfig: LoadroverConfig
+    private val loadroverConfig: LoadroverConfig,
+    private val htmlUtils: HtmlUtils
 ) {
-    private val log = LoggerFactory.getLogger(SimulationService::class.java)
+    private val logger = LoggerFactory.getLogger(SimulationScheduler::class.java)
 
-    @Scheduled(cron = "0 */1 * * * *") // 매 1분
+    @Scheduled(cron = "0 */1 * * * *") // 매 1분으로 설정
     fun moveProgressToComplete() {
         val progressFileList = fileUtils.searchFiles("progress")
-        val resultFileIdList = fileUtils.searchResultFolders().map { it.scenarioId }
+        val resultFolderList = fileUtils.searchResultDirectories()
 
         for (progressFile in progressFileList) {
             val scenarioId = progressFile.scenarioId
 
-            if (progressFile.scenarioId in resultFileIdList) {
-                val progressDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.progress}/${scenarioId}.json"
-                val completeDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.complete}/${scenarioId}.json"
+            for (resultFolder in resultFolderList) {
+                val resultFileId = resultFolder.scenarioId.replace("-\\d+".toRegex(),"")
 
-                val progressPath: Path = Path.of(progressDirectory)
-                val completePath: Path = Path.of(completeDirectory)
-
-                try {
-                    Files.move(
-                        progressPath,
-                        completePath,
-                        StandardCopyOption.REPLACE_EXISTING
-                    )
-                } catch (e: Exception) {
-                    log.error("Failed to move file: ${e.message}")
+                if (resultFileId == scenarioId) {
+                    fileUtils.moveJsonFile(scenarioId, loadroverConfig.gatling.progress, loadroverConfig.gatling.complete)
+                    // result html 헤더 수정
+                    fileUtils.copyResourceFile(resultFolder.scenarioId)
+                    htmlUtils.reviseHtmlHeader(resultFolder.scenarioId)
                 }
             }
         }
-        println("Check simulation result: ${LocalDateTime.now()}")
+        logger.debug("Check simulation result: {}", LocalDateTime.now())
     }
 
 }

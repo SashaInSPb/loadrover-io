@@ -1,15 +1,56 @@
 package loadrover.api.io.domain.scenario
 
+import io.swagger.v3.oas.annotations.media.Schema
 import java.time.LocalDateTime
 
 class ScenarioDto {
 
-    data class HeaderField(
-        val section: String,
-        val value: String
+    @Schema(description = "시나리오 생성 request")
+    data class ScenarioCreateDto(
+        val task: TaskDetail,
+        val process: Map<Int, RequestDetail> = mapOf(),
+        val accountList: List<AccountDetail> = listOf()
     )
 
-    data class RequestScenarioDto(
+    @Schema(description = "시나리오 수정 request")
+    data class ScenarioReviseDto(
+        val scenarioId: String,
+        val task: TaskDetail,
+        val process: Map<Int, RequestDetail> = mapOf(),
+        val accountList: List<AccountDetail> = listOf()
+    ) {
+        fun removeScenarioId(): ScenarioCreateDto {
+            return ScenarioCreateDto(
+                task = this.task,
+                process = this.process,
+                accountList = this.accountList
+            )
+        }
+    }
+
+    data class TaskDetail(
+        val name: String,
+        val targetHost: String,
+        val concurrent: Int,
+        val authType: AuthType,
+        val jwtObjectName: String
+    )
+
+    data class RequestDetail(
+        val apiType: ApiType,
+        val apiUrl: String,
+        val loginUse: Boolean,
+        val params: String,
+        val pause: Int? = 0
+    )
+
+    data class AccountDetail(
+        val id: String,
+        val password: String
+    )
+
+    @Schema(description = "시나리오 조회 response")
+    data class ResponseScenarioDto(
         val task: TaskDetail,
         val process: Map<Int, RequestDetail> = mapOf(),
         val accountList: List<AccountDetail> = listOf()
@@ -38,6 +79,7 @@ class ScenarioDto {
     }
 }
 
+@Schema(description = "시나리오 리스트 dto")
 data class FileDto(
     val scenarioTitle: String,
     val scenarioId: String,
@@ -45,7 +87,11 @@ data class FileDto(
     var workDate: LocalDateTime? = null
 )
 
-// TODO: 첫자 대문자인지 체크
+data class HeaderField(
+    val section: String,
+    val value: String
+)
+
 enum class HttpHeaderSection(
     val value: String
 ) {

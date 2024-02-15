@@ -18,6 +18,7 @@ data class LoadroverConfig(
         val workPath: String,
         val progress: String,
         val complete: String,
-        val result: String
+        val result: String,
+        val imagePath: String
     )
 }
