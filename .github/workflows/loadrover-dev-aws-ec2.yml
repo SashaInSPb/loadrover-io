@@ -20,7 +20,7 @@ jobs:
 
       - name: Sync files excluding gatling
         run: |
-          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S rsync -av ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
+          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
 
       - name: Kill process
         run: kill -9 $(lsof -ti :8800) || true
