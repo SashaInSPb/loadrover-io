@@ -1,5 +1,8 @@
 build/
+api/build/
+gatling/build/
 logs/*.log
+logs/full_log.log
 gatling/
 
 ### resources ##
