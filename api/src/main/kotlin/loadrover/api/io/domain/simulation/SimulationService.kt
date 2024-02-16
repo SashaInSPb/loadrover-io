@@ -1,11 +1,9 @@
 package loadrover.api.io.domain.simulation
 
 import loadrover.api.io.utils.FileUtils
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import java.io.BufferedInputStream
-import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
+import java.io.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
@@ -13,6 +11,7 @@ import java.util.zip.ZipOutputStream
 class SimulationService(
     private val fileUtils: FileUtils
 ) {
+    private val logger = LoggerFactory.getLogger(SimulationService::class.java)
 
     fun getSimulationResult(scenarioId: String): SimulationDto.ResultResponse {
         val resultList = fileUtils.searchResultDirectories()
@@ -22,9 +21,9 @@ class SimulationService(
 
         val latestResult = filteredList.maxByOrNull { extractNumberAfterHyphen(it) }
 
-//        // TODO: memory leak 발생
 //        try {
-////          zipFolder(folderPath, "$folderPath/$zipFileName")
+////          zipAll(folderPath, "$folderPath/$zipFileName")
+//
 //        } catch (e: Error) {
 //            logger.error("Failed to create zip file: ${e.message}")
 //        }
@@ -34,31 +33,41 @@ class SimulationService(
         )
     }
 
-    // TODO: 프로세서가 멈추지 않는 문제 발생
-    private fun zipFolder(folderPath: String, zipFilePath: String) {
-        FileOutputStream(zipFilePath).use { fos ->
-            ZipOutputStream(fos).use { zos ->
-                val sourceFile = File(folderPath)
-                zipFile(sourceFile, "", zos)
-            }
+    fun zipAll(directory: String, zipFile: String) {
+        val sourceFile = File(directory)
+
+        ZipOutputStream(BufferedOutputStream(FileOutputStream(zipFile))).use {
+            zipFiles(it, sourceFile, "")
         }
     }
 
-    private fun zipFile(fileToZip: File, parentPath: String, zipOut: ZipOutputStream) {
-        val filePath = if (parentPath.isNotEmpty()) "$parentPath/${fileToZip.name}" else fileToZip.name
+    fun zipFiles(zipOut: ZipOutputStream, sourceFile: File, parentDirPath: String) {
+        val data = ByteArray(2048)
 
-        if (fileToZip.isDirectory) {
-            val entries = fileToZip.listFiles() ?: return
-            for (childFile in entries) {
-                zipFile(childFile, filePath, zipOut)
-            }
-        } else {
-            FileInputStream(fileToZip).use { fis ->
-                BufferedInputStream(fis).use { bis ->
-                    val zipEntry = ZipEntry(filePath)
-                    zipOut.putNextEntry(zipEntry)
-                    bis.copyTo(zipOut)
-                    zipOut.closeEntry()
+        sourceFile.listFiles()?.forEach { f ->
+            if (f.isDirectory) {
+                val path = if (parentDirPath == "") f.name else parentDirPath + File.separator + f.name
+                val entry = ZipEntry(path + File.separator)
+                entry.time = f.lastModified()
+                entry.isDirectory
+                entry.size = f.length()
+                zipFiles(zipOut, f, path)
+
+            } else {
+                FileInputStream(f).use { fi ->
+                    BufferedInputStream(fi).use { origin ->
+                        val path = parentDirPath + File.separator + f.name
+                        val entry = ZipEntry(path)
+                        entry.time = f.lastModified()
+                        entry.isDirectory
+                        entry.size = f.length()
+                        zipOut.putNextEntry(entry)
+                        while (true) {
+                            val readBytes = origin.read(data)
+                            if (readBytes == -1) break
+                            zipOut.write(data, 0, readBytes)
+                        }
+                    }
                 }
             }
         }

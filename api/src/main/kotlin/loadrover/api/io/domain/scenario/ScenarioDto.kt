@@ -87,6 +87,11 @@ data class FileDto(
     var workDate: LocalDateTime? = null
 )
 
+@Schema(description = "result 폴더 내 html 파일 dto")
+data class HtmlFileDto(
+    val fileName: String
+)
+
 data class HeaderField(
     val section: String,
     val value: String
