@@ -3,6 +3,7 @@ package loadrover.api.io.utils
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverConfig
 import loadrover.api.io.domain.scenario.FileDto
+import loadrover.api.io.domain.scenario.HtmlFileDto
 import loadrover.api.io.domain.scenario.ScenarioDto
 import loadrover.api.io.domain.scenario.ScenarioStatus
 import org.slf4j.LoggerFactory
@@ -51,6 +52,36 @@ class FileUtils(
             )
         } catch (e: Exception) {
             logger.error("Failed to read files: ${e.message.toString()}")
+        }
+
+        return fileList
+    }
+
+    fun searchHtmlFiles(simulationId: String): MutableSet<HtmlFileDto> {
+        val fileDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/$simulationId"
+        val directoryPath: Path = Path.of(fileDirectory)
+        val fileList: MutableSet<HtmlFileDto> = mutableSetOf()
+
+        try {
+            Files.walkFileTree(
+                directoryPath,
+                setOf(FileVisitOption.FOLLOW_LINKS),
+                Integer.MAX_VALUE,
+                object: SimpleFileVisitor<Path>() {
+                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        val fileName = file?.fileName.toString()
+
+                        fileList.plusAssign(
+                            HtmlFileDto(
+                                fileName = fileName
+                            )
+                        )
+                        return FileVisitResult.CONTINUE
+                    }
+                }
+            )
+        } catch (e: Exception) {
+            logger.error("Failed to read html files: ${e.message.toString()}")
         }
 
         return fileList
