@@ -2,11 +2,16 @@ package loadrover.api.io.domain.simulation
 
 import loadrover.api.io.utils.FileUtils
 import org.slf4j.LoggerFactory
+import org.springframework.core.io.DefaultResourceLoader
+import org.springframework.core.io.support.ResourcePatternUtils
+import org.springframework.scheduling.annotation.Async
+import org.springframework.scheduling.annotation.EnableAsync
 import org.springframework.stereotype.Service
 import java.io.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
+@EnableAsync
 @Service
 class SimulationService(
     private val fileUtils: FileUtils
@@ -70,6 +75,42 @@ class SimulationService(
                     }
                 }
             }
+        }
+    }
+
+    @Async
+    // gatling shell script 실행 함수
+    fun executeGatlingScript(scenarioId: String) {
+        try {
+            val processBuilder = ProcessBuilder(
+                "./gradlew",
+                ":gatling:gatlingRun-work.$scenarioId",
+                "-stacktrace"
+            )
+
+            // 프로젝트 root dir로 process 실행 설정
+            val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
+                .getResources("classpath*:gatling/**")
+
+            val resourceFile = File(resources.toString())
+
+
+            processBuilder.directory(
+                resourceFile.parentFile
+            )
+
+            // log 설정
+            val logFile = File("logs/simulation/$scenarioId.log")
+            processBuilder.redirectOutput(ProcessBuilder.Redirect.appendTo(logFile))
+            processBuilder.redirectError(ProcessBuilder.Redirect.appendTo(logFile))
+
+            val process = processBuilder.start()
+            val exitCode = process.waitFor()
+
+            println("Process exitCode: $exitCode")
+
+        } catch (e: Exception) {
+            logger.error("Failed to run: ${e.message.toString()}, scenarioUUID: $scenarioId")
         }
     }
 
