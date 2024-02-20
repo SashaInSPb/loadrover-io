@@ -5,13 +5,12 @@ import org.slf4j.LoggerFactory
 import org.springframework.core.io.DefaultResourceLoader
 import org.springframework.core.io.support.ResourcePatternUtils
 import org.springframework.scheduling.annotation.Async
-import org.springframework.scheduling.annotation.EnableAsync
 import org.springframework.stereotype.Service
 import java.io.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
-@EnableAsync
+
 @Service
 class SimulationService(
     private val fileUtils: FileUtils
