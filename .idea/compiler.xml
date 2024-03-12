@@ -7,8 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.1.7/89cf61d21c3f774f55fbf5ecf5059644839c2fa4/spring-boot-configuration-processor-3.1.7.jar" />
         </processorPath>
-        <module name="loadrover-io.api.main" />
-        <module name="loadrover-io.gatling.main" />
+        <module name="loadrover.io.loadrover-io.api.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

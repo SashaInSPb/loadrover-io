@@ -1,1 +1,0 @@
-{"task":{"name":"test38","targetHost":"http://localhost:8089/tms","concurrent":1,"authType":"JWT","jwtObjectName":""},"process":{"1":{"apiType":"POST","apiUrl":"/auth/authentication","loginUse":false,"params":"","pause":1},"2":{"apiType":"GET","apiUrl":"/mywork/detail","loginUse":true,"params":"","pause":1}},"accountList":[{"id":"taewan@2bytescorp.com","password":"qwer1234!"}]}

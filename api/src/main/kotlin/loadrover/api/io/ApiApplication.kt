@@ -6,9 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.boot.runApplication
 import org.springframework.scheduling.annotation.EnableAsync
 
-@SpringBootApplication(scanBasePackages = ["loadrover.api.io", "gatling"])
-@EntityScan(basePackages = ["loadrover.api.io", "gatling"])
-@ConfigurationPropertiesScan(basePackages = ["loadrover.api.io", "gatling"])
+@SpringBootApplication(scanBasePackages = ["loadrover.api.io"])
+@EntityScan(basePackages = ["loadrover.api.io"])
+@ConfigurationPropertiesScan(basePackages = ["loadrover.api.io"])
 @EnableAsync
 class ApiApplication
 

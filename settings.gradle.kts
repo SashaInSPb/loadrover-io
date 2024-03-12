@@ -11,4 +11,3 @@ pluginManagement {
 
 rootProject.name = "loadrover-io"
 include("api")
-include("gatling")

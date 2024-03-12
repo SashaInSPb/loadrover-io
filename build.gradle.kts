@@ -77,23 +77,8 @@ subprojects {
 
 // api
 project(":api") {
-	dependencies {
-		implementation(project(":gatling"))
-	}
-
 	tasks.withType<Test> {
 		exclude("**/*")
 		useJUnitPlatform()
-	}
-}
-
-// gatling
-project(":gatling") {
-	// jar는 만드나, boot로 실행되는 jar는 만들지 않도록 하는 설정
-	tasks.jar {
-		enabled = true
-	}
-	tasks.bootJar {
-		enabled = false
 	}
 }
