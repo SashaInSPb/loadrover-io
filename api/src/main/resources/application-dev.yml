@@ -1,6 +1,25 @@
 spring:
   main:
     allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mariadb://localhost:3306/loadrover
+    username: root
+    password: hiworld
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    defer-datasource-initialization: true
+    show-sql: true
+    generate-ddl: true
+    open-in-view: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        auto_quote_keyword: true
 
 server:
   servlet:
