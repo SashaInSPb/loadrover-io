@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import loadrover.api.io.domain.base.BaseEntity
 
 @Entity
-@Table(name ="generator")
+@Table(name ="host")
 class HostEntity(
 
     @Enumerated(EnumType.STRING)

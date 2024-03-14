@@ -24,7 +24,6 @@ class TaskDto {
     data class TaskCreateRequest(
         val projectId: Long,
         val title: String,
-        val file: MultipartFile,
         val host: MutableSet<String>
     )
 

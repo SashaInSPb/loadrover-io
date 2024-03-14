@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface TaskRepository: JpaRepository<TaskEntity, Long> {
-    @EntityGraph(attributePaths = ["run", "run.generator"])
+    @EntityGraph(attributePaths = ["runList"])
     fun findByProjectId(id: Long): MutableList<TaskEntity>
 }

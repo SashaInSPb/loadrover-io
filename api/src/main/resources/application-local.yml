@@ -15,19 +15,20 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true
         auto_quote_keyword: true
-
-server:
-  port: 8800
   servlet:
-    encoding:
-      force-response: true
     multipart:
       max-file-size: 1600KB
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+  port: 8800
 
 springdoc:
   swagger-ui:
@@ -57,3 +58,16 @@ loadrover:
     image-path: gatling/src/gatling/resources/image
   output:
     class-name-prefix: "local"
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIA34W5ZACHXML3ROOM
+      secret-key: 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  #추후 변경필요.
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+    s3:
+      bucket: dev-sg-admin-static
+      cloud-front-domain: d1ipvhagx28fo9.cloudfront.net

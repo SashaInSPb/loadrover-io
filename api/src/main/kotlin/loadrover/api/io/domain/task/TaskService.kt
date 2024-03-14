@@ -2,7 +2,10 @@ package loadrover.api.io.domain.task
 
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
+import loadrover.api.io.domain.base.BaseDto
 import loadrover.api.io.domain.project.ProjectRepository
+import loadrover.api.io.domain.scenario.FileDto
+import loadrover.api.io.infra.AwsS3Service
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -11,7 +14,8 @@ import org.springframework.web.multipart.MultipartFile
 @Service
 class TaskService(
     private val taskRepository: TaskRepository,
-    private val projectRepository: ProjectRepository
+    private val projectRepository: ProjectRepository,
+    private val awsS3Service: AwsS3Service,
 ) {
     private val logger = LoggerFactory.getLogger(TaskService::class.java)
 
@@ -56,12 +60,16 @@ class TaskService(
             throw BaseException(ExceptionCode.NOT_FOUND_CONTENTS)
         }
 
-        // TODO: task upload
+        val file = BaseDto.FileDto(scenarioFile)
+
+        // 에러 발생
+        val fileUploadPathInfo = awsS3Service.upload(file.getUploadPath(), file.upLoadFile.inputStream)
 
         val task = TaskEntity(
             title = request.title,
             status = TaskStatus.NEW,
-            fileName = "",
+            fileName = file.fileName,
+            // 파일 내용 추출 필요
             description = "",
             runCount = 0,
             project = project

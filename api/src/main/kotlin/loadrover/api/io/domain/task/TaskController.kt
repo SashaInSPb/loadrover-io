@@ -28,7 +28,7 @@ class TaskController(
     @PostMapping("", consumes = ["multipart/form-data"])
     @Operation(summary = "작업 생성")
     fun createTask(
-        @RequestPart request: TaskDto.TaskCreateRequest,
+        @RequestPart("taskCreateRequest") request: TaskDto.TaskCreateRequest,
         @RequestPart("scenarioFile") scenarioFile: MultipartFile
     ) {
         taskService.createTask(request, scenarioFile)
