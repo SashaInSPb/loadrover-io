@@ -16,9 +16,6 @@ class RunEntity(
     var reportPath: String? = null, // 보고서 링크
 
     @ManyToOne
-    var generator: GeneratorEntity,
-
-    @ManyToOne
     var task: TaskEntity
 
 ): BaseEntity() {

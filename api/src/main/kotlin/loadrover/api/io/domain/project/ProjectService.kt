@@ -2,7 +2,6 @@ package loadrover.api.io.domain.project
 
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
-import loadrover.api.io.domain.scenario.ScenarioService
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

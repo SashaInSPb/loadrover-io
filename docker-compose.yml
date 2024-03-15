@@ -1,19 +1,19 @@
-#version: "3.8"
-#
-#services:
-#  load-test-be:
-#    build:
-#      context: .
-#      dockerfile: api/Dockerfile.dev
-#    container_name: load-test-be
-#    ports:
-#      - "3020:8800"
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=dev # 환경 변수 설정
-#      - TZ=Asia/Seoul # 타임존 설정
-#    networks:
-#      - load-test-network
-#
+version: "3.8"
+
+services:
+  load-test-be:
+    build:
+      context: .
+      dockerfile: api/Dockerfile.dev
+    container_name: load-test-be
+    ports:
+      - "3020:8800"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev # 환경 변수 설정
+      - TZ=Asia/Seoul # 타임존 설정
+    networks:
+      - load-test-network
+
 #  gatling:
 #    container_name: gatling
 #    build:
@@ -27,7 +27,7 @@
 #      - load-test-be
 #    networks:
 #      - load-test-network
-#
-#networks:
-#  load-test-network:
-#    driver: bridge
+
+networks:
+  load-test-network:
+    driver: bridge

@@ -10,33 +10,53 @@ jobs:
     name: build-and-push
     runs-on: [self-hosted, loadrover] # loadrover-io-dev 라는 라벨의 self-hosted runner 사용
     steps:
+      # docker-compose install
+      - name: Install Docker Compose
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S apt-get update
+          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S apt-get install -y docker-compose
+
       # docker-compose.yml 파일 복사
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Backup gatling directory
-        run: |
-          rsync -av ~/loadrover/live-directory/gatling /tmp/gatling
-
-      - name: Sync files excluding gatling
-        run: |
-          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S rsync -av --exclude='gatling/' ~/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/ ~/loadrover/live-directory/
-
-      - name: Kill process
-        run: kill -9 $(lsof -ti :8800) || true
-
       # gradle build 를 위한 jdk 사용
-#      - name: Set up JDK 17
-#        uses: actions/setup-java@v2
-#        with:
-#          java-version: "17"
-#          distribution: "temurin"
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: "17"
+          distribution: "temurin"
 
       # ./gradlew 권한 설정
-#      - name: Run chmod to make gradlew executable
-#        run: chmod +x ./gradlew
+      - name: Run chmod to make gradlew executable
+        run: chmod +x ./gradlew
 
       # gradle build (배포할 프로젝트 jar 파일 생성)
-#      - name: Build with Gradle
-#        run: ./gradlew clean :api:build --exclude-task test
-#        shell: bash
+      - name: Build with Gradle
+        run: ./gradlew clean :api:build --exclude-task test
+        shell: bash
+
+      # docker image run
+      - name: Docker Compose up
+        run: |
+          cd /home/bcat_fe/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server
+
+          if docker-compose ps -q load-test-be >/dev/null; then
+            docker-compose stop
+            docker rmi $(docker images '*load-test-be*' -q) || true
+            docker rmi $(docker images '*gatling*' -q) || true
+          fi
+
+            docker-compose build && 
+            docker-compose up -d
+
+          cd /home/bcat_fe/load-test/actions-runner/_work/load-test.web/load-test.web
+
+          if docker-compose ps -q nginx >/dev/null; then
+            docker-compose stop
+            docker rmi $(docker images '*nginx*' -q) || true
+          fi
+          docker-compose build
+          docker-compose up -d

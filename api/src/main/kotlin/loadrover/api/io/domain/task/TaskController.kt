@@ -34,9 +34,13 @@ class TaskController(
         taskService.createTask(request, scenarioFile)
     }
 
-    @PutMapping
+    // 향후
+    @PutMapping("", consumes = ["multipart/form-data"])
     @Operation(summary = "작업 수정")
-    fun updateTask(@RequestBody @Valid request: TaskDto.TaskUpdateRequest) {
+    fun updateTask(
+        @RequestPart("taskUpdateRequest") request: TaskDto.TaskUpdateRequest,
+        @RequestPart("scenarioFile") scenarioFile: MultipartFile
+    ) {
         taskService.updateTask(request)
     }
 

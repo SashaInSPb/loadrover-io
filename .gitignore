@@ -5,20 +5,12 @@ logs/full_log.log
 !/gatling/src/gatling/resources/image/**
 gatling/
 
-
-### resources ##
-#/gatling/src/gatling/resources/static/complete/**
-#/gatling/src/gatling/resources/static/result/**
-#/gatling/src/gatling/resources/static/progress/**
-#/gatling/src/gatling/resources/static/source/**
-#/gatling/src/gatling/kotlin/work/**
-
 ### IntelliJ IDEA ###
-#.idea
-#*.iws
-#*.iml
-#*.ipr
-#out/
-#!**/src/main/**/out/
-#!**/src/test/**/out/
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 

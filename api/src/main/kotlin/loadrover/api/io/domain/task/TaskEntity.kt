@@ -2,6 +2,7 @@ package loadrover.api.io.domain.task
 
 import jakarta.persistence.*
 import loadrover.api.io.domain.base.BaseEntity
+import loadrover.api.io.domain.generator.GeneratorEntity
 import loadrover.api.io.domain.project.ProjectEntity
 import loadrover.api.io.domain.run.RunEntity
 
@@ -26,7 +27,7 @@ class TaskEntity(
     var runCount: Int? = 0, // 실행 횟수
 
     @ManyToOne
-    var project: ProjectEntity // 상위 프로젝트
+    var project: ProjectEntity
 
 ): BaseEntity() {
 
@@ -37,8 +38,11 @@ class TaskEntity(
     @OneToMany(mappedBy = "task", cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     var runList: MutableSet<RunEntity> = LinkedHashSet()
 
+    @OneToMany(mappedBy = "task", cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
+    var generatorList: MutableSet<GeneratorEntity> = LinkedHashSet()
+
 }
 
 enum class TaskStatus {
-    NEW
+    NEW, PROGRESS, COMPLETE
 }

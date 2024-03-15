@@ -21,6 +21,14 @@ class BaseDto {
         fun getUploadPath(): String {
             return uploadFileName
         }
+
+        fun getContentsFromFile(upLoadFile: MultipartFile, limit: Int): String {
+            val inputStream = upLoadFile.inputStream
+            val bufferedReader = inputStream.bufferedReader()
+            val charArray = CharArray(limit)
+            bufferedReader.read(charArray, 0 , limit)
+            return String(charArray)
+        }
     }
 
     data class UploadResultDto(

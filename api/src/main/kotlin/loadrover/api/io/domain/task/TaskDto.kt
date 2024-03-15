@@ -1,6 +1,7 @@
 package loadrover.api.io.domain.task
 
 import io.swagger.v3.oas.annotations.media.Schema
+import loadrover.api.io.domain.generator.Type
 import org.springframework.web.multipart.MultipartFile
 
 class TaskDto {
@@ -16,7 +17,7 @@ class TaskDto {
         val title: String,
         val status: TaskStatus,
         val fileName: String? = null,
-        val host: MutableSet<String>,
+        val host: MutableSet<GeneratorDto>,
         val description: String? = null
     )
 
@@ -24,7 +25,7 @@ class TaskDto {
     data class TaskCreateRequest(
         val projectId: Long,
         val title: String,
-        val host: MutableSet<String>
+        val host: MutableSet<GeneratorDto>
     )
 
     @Schema(description = "작업 수정 request")
@@ -32,6 +33,12 @@ class TaskDto {
         val taskId: Long,
         val title: String,
         val file: MultipartFile,
-        val host: MutableSet<String>
+        val host: MutableSet<GeneratorDto>
+    )
+
+    @Schema(description = "작업 generator 정보")
+    data class GeneratorDto(
+        val host: String,
+        val type: Type
     )
 }

@@ -3,8 +3,8 @@ package loadrover.api.io.domain.task
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
 import loadrover.api.io.domain.base.BaseDto
+import loadrover.api.io.domain.generator.GeneratorEntity
 import loadrover.api.io.domain.project.ProjectRepository
-import loadrover.api.io.domain.scenario.FileDto
 import loadrover.api.io.infra.AwsS3Service
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
@@ -29,7 +29,12 @@ class TaskService(
                     title = task.title,
                     status = task.status,
                     fileName = task.fileName,
-                    host = mutableSetOf(),
+                    host = task.generatorList.map {
+                        TaskDto.GeneratorDto(
+                            host = it.hostAddress,
+                            type = it.type
+                        )
+                    }.toMutableSet(),
                     description = task.description
                 )
             )
@@ -49,31 +54,48 @@ class TaskService(
             title = task.title,
             status = task.status,
             fileName = task.fileName,
-            host = mutableSetOf(),
+            host = task.generatorList.map {
+                TaskDto.GeneratorDto(
+                    host = it.hostAddress,
+                    type = it.type
+                )
+            }.toMutableSet(),
             description = task.description
         )
     }
 
     @Transactional
     fun createTask(request: TaskDto.TaskCreateRequest, scenarioFile: MultipartFile) {
-        val project = projectRepository.findById(request.projectId).orElseThrow{
+        val project = projectRepository.findById(request.projectId).orElseThrow {
             throw BaseException(ExceptionCode.NOT_FOUND_CONTENTS)
         }
 
         val file = BaseDto.FileDto(scenarioFile)
 
-        // 에러 발생
-        val fileUploadPathInfo = awsS3Service.upload(file.getUploadPath(), file.upLoadFile.inputStream)
+        awsS3Service.upload(file.getUploadPath(), file.upLoadFile.inputStream)
 
         val task = TaskEntity(
             title = request.title,
             status = TaskStatus.NEW,
             fileName = file.fileName,
-            // 파일 내용 추출 필요
-            description = "",
+            // 파일 내용 미리보기
+            description = file.getContentsFromFile(scenarioFile, 500),
             runCount = 0,
             project = project
         )
+
+        val generatorList: MutableList<GeneratorEntity> = mutableListOf()
+        for (generator in request.host) {
+            generatorList.plusAssign(
+                GeneratorEntity(
+                    hostAddress = generator.host,
+                    type = generator.type,
+                    task = task
+                )
+            )
+        }
+
+        task.generatorList = generatorList.toMutableSet()
 
         try {
             taskRepository.save(task)
