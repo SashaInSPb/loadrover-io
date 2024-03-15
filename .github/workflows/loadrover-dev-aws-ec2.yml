@@ -82,13 +82,13 @@ jobs:
 
           echo "api docker-compose stop and rm and pull and up"
           if docker-compose ps -q load-test-be >/dev/null; then
-            docker-compose -f docker-compose.yml stop api &&
+            docker-compose stop api &&
             -f docker-compose.yml rm -f api &&
-            docker-compose -f docker-compose.yml rm pull api &&
-            docker-compose -f docker-compose.yml up -d api
+            docker-compose rm pull api &&
+            docker-compose up -d api
           else
-            docker-compose -f docker-compose.yml rm pull api &&
-            docker-compose -f docker-compose.yml up -d api
+            docker-compose rm pull api &&
+            docker-compose up -d api
           fi
              
           echo "non-use image remove"
