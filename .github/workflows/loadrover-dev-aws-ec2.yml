@@ -83,7 +83,7 @@ jobs:
           echo "api docker-compose stop and rm and pull and up"
           if docker-compose ps -q load-test-be >/dev/null; then
             docker-compose -f docker-compose.yml stop api &&
-            docker-compose -f docker-compose.yml rm -f api &&
+            -f docker-compose.yml rm -f api &&
             docker-compose -f docker-compose.yml rm pull api &&
             docker-compose -f docker-compose.yml up -d api
           else

@@ -8,7 +8,7 @@ enum class ExceptionCode(httpStatusCode: HttpStatus, message: String) {
     CREATE_FAIL(HttpStatus.INTERNAL_SERVER_ERROR, "등록에 실패하였습니다."), // 500
     UPDATE_FAIL(HttpStatus.INTERNAL_SERVER_ERROR, "수정에 실패하였습니다."), // 500
     BAD_REQUEST(HttpStatus.BAD_REQUEST, "잘못된 값 요청입니다."), // 400
-    UPLOAD_FAIL(HttpStatus.INTERNAL_SERVER_ERROR, "S3 업로드에 실패하였습니다"); // 요거 확인좀
+    UPLOAD_FAIL(HttpStatus.INTERNAL_SERVER_ERROR, "S3 업로드에 실패하였습니다"); // 요거 확인 필요
 
     val httpStatus: HttpStatus = httpStatusCode
     val message: String = message
