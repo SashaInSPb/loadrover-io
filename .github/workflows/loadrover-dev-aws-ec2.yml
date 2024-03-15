@@ -7,17 +7,8 @@ on:
 
 jobs:
   build-and-push:
-    name: build-and-push
-    runs-on: [self-hosted, loadrover] # loadrover-io-dev 라는 라벨의 self-hosted runner 사용
+    runs-on:  ubuntu-latest
     steps:
-      # docker-compose install
-      - name: Install Docker Compose
-        env:
-          DEBIAN_FRONTEND: noninteractive
-        run: |
-          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S apt-get update
-          echo "${{ secrets.SUDO_PASSWORD_FE }}" | sudo -S apt-get install -y docker-compose
-
       # docker-compose.yml 파일 복사
       - name: Checkout code
         uses: actions/checkout@v3
@@ -38,25 +29,67 @@ jobs:
         run: ./gradlew clean :api:build --exclude-task test
         shell: bash
 
+      # docker hub 로그인 (docker hub username, token 값 필요)
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}  # docker hub username
+          password: ${{ secrets.DOCKERHUB_TOKEN }}   # docker hub token
+
+      # 이전 버전 이미지 삭제
+      - name: Delete existing Docker image
+        run: docker rmi 2bytesdev/loadrover-io:api || true
+        continue-on-error: true
+
+      # docker image build and push
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./api  # dockerfile 저장 경로 -> 프로젝트 최상단 경로부터 시작
+          file: ./api/Dockerfile.dev  # dockerfile 파일명
+          push: true
+          tags: 2bytesdev/loadrover-io:api # docker hub repository name:imageName-tag
+
+  deploy:
+    needs: build-and-push
+    name: Deploy to AWS EC2
+    runs-on: [self-hosted, loadrover-api-dev] # loadrover-api-dev 라는 라벨의 self-hosted runner 사용
+    steps:
+      # docker hub 로그인 (docker hub username, token 값 필요)
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}  # docker hub username
+          password: ${{ secrets.DOCKERHUB_TOKEN }}   # docker hub token
+
+      # docker-compose install
+      - name: Install Docker Compose
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S apt-get update
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S apt-get install -y docker-compose
+
+      # docker-compose.yml 파일 복사
+      - name: Checkout
+        uses: actions/checkout@v3
+
       # docker image run
       - name: Docker Compose up
         run: |
-          cd /home/bcat_fe/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server
+          echo "move to loadrover directory"
+          cd /home/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/api
 
+          echo "api docker-compose stop and rm and pull and up"
           if docker-compose ps -q load-test-be >/dev/null; then
-            docker-compose stop
-            docker rmi $(docker images '*load-test-be*' -q) || true
-            docker rmi $(docker images '*gatling*' -q) || true
+            docker-compose -f docker-compose.yml stop api &&
+            docker-compose -f docker-compose.yml rm -f api &&
+            docker-compose -f docker-compose.yml rm pull api &&
+            docker-compose -f docker-compose.yml up -d api
+          else
+            docker-compose -f docker-compose.yml rm pull api &&
+            docker-compose -f docker-compose.yml up -d api
           fi
-
-            docker-compose build && 
-            docker-compose up -d
-
-          cd /home/bcat_fe/load-test/actions-runner/_work/load-test.web/load-test.web
-
-          if docker-compose ps -q nginx >/dev/null; then
-            docker-compose stop
-            docker rmi $(docker images '*nginx*' -q) || true
-          fi
-          docker-compose build
-          docker-compose up -d
+             
+          echo "non-use image remove"
+          docker image prune --force

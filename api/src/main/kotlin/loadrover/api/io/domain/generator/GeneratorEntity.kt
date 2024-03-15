@@ -2,9 +2,7 @@ package loadrover.api.io.domain.generator
 
 import jakarta.persistence.*
 import loadrover.api.io.domain.base.BaseEntity
-import loadrover.api.io.domain.run.RunEntity
 import loadrover.api.io.domain.task.TaskEntity
-import java.time.LocalDateTime
 
 @Entity
 @Table(name ="generator")

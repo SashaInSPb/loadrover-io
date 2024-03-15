@@ -5977,3 +5977,22 @@ DEBUG 12:16:26.104 - - o.h.o.r.l.o.h.o.r.loading.collection - (SetInitializer) R
 DEBUG 12:16:26.104 - - org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.collection.internal.EagerCollectionAssembler@69050271  
 DEBUG 12:16:26.104 - - o.h.s.results.internal.ResultsHelper - Collection fully initialized: [loadrover.api.io.domain.task.TaskEntity.generatorList#3]  
 DEBUG 12:17:35.534 - - com.amazonaws.internal.SdkSSLSocket - closing dev-sg-admin-static.s3.ap-northeast-2.amazonaws.com/52.219.56.63:443  
+WARN  12:26:53.092 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m18s652ms).  
+WARN  13:07:51.161 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m27s791ms).  
+WARN  13:14:19.284 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m28s17ms).  
+WARN  13:25:10.021 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m50s664ms).  
+WARN  13:44:17.745 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m7s661ms).  
+WARN  13:56:45.169 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m27s425ms).  
+WARN  14:07:45.409 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m30s290ms).  
+DEBUG 14:30:17.866 - - c.a.http.IdleConnectionReaper - Reaper thread:  java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.amazonaws.http.IdleConnectionReaper.run(IdleConnectionReaper.java:188)
+ 
+INFO  14:30:17.867 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+DEBUG 14:30:17.868 - - c.a.http.IdleConnectionReaper - Shutting down reaper thread.  
+DEBUG 14:30:17.868 - - o.h.internal.SessionFactoryImpl - HHH000031: Closing  
+DEBUG 14:30:17.869 - - o.h.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@7d93d3ac] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@22561412]  
+DEBUG 14:30:17.869 - - o.h.s.i.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries  
+DEBUG 14:30:17.870 - - o.h.b.r.i.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries  
+INFO  14:30:17.870 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  14:30:17.906 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
