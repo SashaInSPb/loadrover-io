@@ -43,7 +43,24 @@
         </appender>
 
         <!-- Attach appenders to root -->
-        <root level="DEBUG">
+        <root level="ERROR">
+            <appender-ref ref="FILE"/>
+        </root>
+
+    </springProfile>
+
+    <springProfile name="dev">
+        <!-- Single log file for all logs -->
+        <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+            <file>${LOG_PATH}/${LOG_FILE_NAME}.log</file>
+            <append>true</append>
+            <encoder>
+                <pattern>${LOG_PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <!-- Attach appenders to root -->
+        <root level="ERROR">
             <appender-ref ref="FILE"/>
         </root>
 
