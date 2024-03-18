@@ -81,9 +81,9 @@ jobs:
           cd /home/loadrover/actions-runner/_work/2bytes.loadrover-server/2bytes.loadrover-server/api
 
           echo "api docker-compose stop and rm and pull and up"
-          if docker-compose ps -q load-test-be >/dev/null; then
+          if docker-compose ps -q api >/dev/null; then
             docker-compose stop api &&
-            -f docker-compose.yml rm -f api &&
+            docker-compose rm -f api &&
             docker-compose rm pull api &&
             docker-compose up -d api
           else

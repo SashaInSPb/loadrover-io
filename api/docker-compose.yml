@@ -2,9 +2,9 @@ version: "3.8"
 
 services:
   api:
-    #    build:
-    #      context: .
-    #      dockerfile: api/Dockerfile.dev
+#    build:
+#      context: .
+#      dockerfile: Dockerfile.dev
     image: 2bytesdev/loadrover-io:api
     container_name: api
     ports:
@@ -12,9 +12,9 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=dev # 환경 변수 설정
       - TZ=Asia/Seoul # 타임존 설정
-    networks:
-      - load-test-network
-
-networks:
-  load-test-network:
-    driver: bridge
+#    networks:
+#      - load-test-network
+#
+#networks:
+#  load-test-network:
+#    driver: bridge
