@@ -46,18 +46,6 @@ springdoc:
   default-produces-media-type: application/json
   paths-to-match: /**
 
-loadrover:
-  gatling:
-    path: gatling/src/gatling/resources/static
-    source: source
-    progress: progress
-    work: work
-    work-path: gatling/src/gatling/kotlin
-    complete: complete
-    result: result
-  output:
-    class-name-prefix: "local"
-
 cloud:
   aws:
     credentials:

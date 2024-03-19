@@ -4,6 +4,7 @@ logs/*.log
 logs/full_log.log
 !/gatling/src/gatling/resources/image/**
 gatling/
+.gradle
 
 ### IntelliJ IDEA ###
 .idea
