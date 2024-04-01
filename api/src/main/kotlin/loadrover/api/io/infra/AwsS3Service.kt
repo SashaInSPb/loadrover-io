@@ -1,15 +1,20 @@
 package loadrover.api.io.infra
 
+import com.amazonaws.services.s3.model.AmazonS3Exception
 import com.amazonaws.services.s3.model.ObjectMetadata
+import com.amazonaws.services.s3.model.S3Object
+import com.amazonaws.services.s3.model.S3ObjectInputStream
 import com.amazonaws.util.IOUtils
 import loadrover.api.io.config.AwsConfig
 import loadrover.api.io.config.AwsS3Properties
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
 import loadrover.api.io.domain.base.BaseDto
+import nonapi.io.github.classgraph.utils.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.ByteArrayInputStream
+import java.io.File
 import java.io.InputStream
 
 @Service
@@ -49,9 +54,25 @@ class AwsS3Service (
         )
     }
 
-    fun get(filePath: String) {
+//    fun getObject(filePath: String): File {
 
-    }
+        // 다운로드 파일 경로
+//        val downloadFilePath = "${System.getProperty("java.io.tmpdir")}/${FilenameUtils.getName(key)}"
+//        val downloadFile = File(downloadFilePath)
+//
+//        try {
+//            val s3Object: S3Object = awsConfig.amazonS3Client().getObject(awsS3Properties.s3.bucket, filePath)
+//            val inputStream: S3ObjectInputStream = s3Object.objectContent
+//
+//            FileUtils.copyInputStreamToFile(inputStream, downloadFile)
+//
+//        } catch (e: AmazonS3Exception) {
+//            throw IllegalArgumentException(e.toString())
+//        } catch (e: Exception) {
+//            throw java.lang.IllegalArgumentException(e.toString())
+//        }
+
+//    }
 
     fun rename(source: String, target: String) {
         if (source == target) {

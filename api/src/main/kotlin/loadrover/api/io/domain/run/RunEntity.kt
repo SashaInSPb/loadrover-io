@@ -15,6 +15,9 @@ class RunEntity(
     @Column(nullable = true)
     var reportPath: String? = null, // 보고서 링크
 
+    @Column(nullable = true)
+    var hostIp: String? = null, // generator IP
+
     @ManyToOne
     var task: TaskEntity
 

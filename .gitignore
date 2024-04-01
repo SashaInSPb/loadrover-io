@@ -2,9 +2,7 @@ build/
 api/build/
 logs/*.log
 logs/full_log.log
-!/gatling/src/gatling/resources/image/**
-gatling/
-.gradle
+.gradle/
 
 ### IntelliJ IDEA ###
 .idea
