@@ -28,11 +28,12 @@ class RunService(
 
         try {
             val processBuilder = ProcessBuilder(
-                "./jmeter.sh -n -t test.jmx -l $log.jtl"
+                "./jmeter.sh -n -t bin/test.jmx -l $log.jtl"
             )
 
+            // bin root로 설정
             val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
-                .getResources("classpath*:static/apache-jmeter-5.6.3/bin/examples/**")
+                .getResources("classpath*:**/user.properties")
 
             val resourceFile = File(resources.toString())
 
@@ -44,7 +45,7 @@ class RunService(
 
             // jar 파일 경로
             processBuilder.directory(
-                resourceFile.parentFile
+                resourceFile
             )
 
             val process = processBuilder.start()
@@ -57,7 +58,7 @@ class RunService(
         }
 
         // RunEntity 저장
-        val taskEntity = taskRepository.findById(taskId).orElseThrow{
+        val taskEntity = taskRepository.findById(taskId).orElseThrow {
             throw BaseException(ExceptionCode.NOT_FOUND_CONTENTS)
         }
 
@@ -72,7 +73,7 @@ class RunService(
         val runEntity = RunEntity(
             runOrder = if (previousRunCount == 0) 1 else newRunCount,
             task = taskEntity,
-            hostIp =  hostIpList
+            hostIp = hostIpList
         )
 
         try {

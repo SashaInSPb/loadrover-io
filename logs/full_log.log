@@ -111,3 +111,149 @@ INFO  14:30:00.401 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 
 INFO  14:30:00.402 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
 ERROR 14:30:07.101 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-01T14:30:07.094433.jtl": error=2, No such file or directory  
 ERROR 14:41:04.229 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-01T14:40:43.627762.jtl": error=2, No such file or directory  
+INFO  18:51:09.803 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:51:09.851 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.  
+INFO  18:51:10.170 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:51:10.175 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:51:10.175 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:51:10.231 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:51:10.231 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 922 ms  
+INFO  18:51:10.496 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:51:10.514 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:51:10.742 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4449a60b  
+INFO  18:51:10.747 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:51:11.700 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:51:13.001 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:51:13.085 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:51:19.030 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:51:19.030 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:51:19.031 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 18:51:50.813 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T18:51:23.180917.jtl": error=2, No such file or directory  
+INFO  18:52:17.944 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  18:52:17.945 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  18:52:17.977 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:52:20.244 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:52:20.292 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.  
+INFO  18:52:20.600 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:52:20.605 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:52:20.605 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:52:20.660 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:52:20.661 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 873 ms  
+INFO  18:52:20.906 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:52:20.919 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:52:21.267 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@569a26ab  
+INFO  18:52:21.268 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:52:22.194 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:52:23.305 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:52:23.417 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:52:24.015 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:52:24.015 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:52:24.016 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+WARN  18:55:12.641 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m51s267ms).  
+ERROR 18:55:12.664 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T18:52:24.036823.jtl" (in directory "[Lorg.springframework.core.io.Resource;@3e287c85"): error=2, No such file or directory  
+INFO  18:55:14.987 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  18:55:14.988 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  18:55:15.021 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:55:17.265 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:55:17.298 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.  
+INFO  18:55:17.598 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:55:17.603 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:55:17.603 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:55:17.661 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:55:17.661 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 857 ms  
+INFO  18:55:17.901 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:55:17.914 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:55:18.064 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@351ede23  
+INFO  18:55:18.070 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:55:18.947 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:55:20.180 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:55:20.261 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:55:36.661 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:55:36.661 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:55:36.665 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
+ERROR 18:56:11.450 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T18:55:36.689231.jtl" (in directory "[Lorg.springframework.core.io.Resource;@118e3e4"): error=2, No such file or directory  
+INFO  18:58:07.820 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  18:58:07.822 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  18:58:07.854 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:58:09.945 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:58:09.986 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.  
+INFO  18:58:10.291 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:58:10.297 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:58:10.297 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:58:10.350 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:58:10.350 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 861 ms  
+INFO  18:58:10.585 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:58:10.599 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:58:10.827 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@15371de2  
+INFO  18:58:10.828 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:58:11.770 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:58:12.933 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:58:13.009 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  19:05:43.834 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  19:05:43.835 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  19:05:43.839 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
+ERROR 19:06:13.636 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T19:05:43.876021.jtl" (in directory "[Lorg.springframework.core.io.Resource;@6488d54d"): error=2, No such file or directory  
+INFO  19:06:33.717 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  19:06:33.718 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  19:06:33.750 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  19:06:36.087 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  19:06:36.132 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.  
+INFO  19:06:36.444 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  19:06:36.450 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  19:06:36.450 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  19:06:36.513 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  19:06:36.514 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 887 ms  
+INFO  19:06:36.762 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  19:06:36.775 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  19:06:37.009 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@77204651  
+INFO  19:06:37.010 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  19:06:37.856 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  19:06:39.131 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  19:06:39.216 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  19:06:53.897 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  19:06:53.897 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  19:06:53.899 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms  
+ERROR 19:07:09.326 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T19:06:53.929302.jtl": error=2, No such file or directory  
+INFO  19:08:55.788 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  19:08:55.791 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  19:08:55.824 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  19:11:59.711 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  19:11:59.749 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.  
+INFO  19:12:00.073 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  19:12:00.078 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  19:12:00.079 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  19:12:00.134 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  19:12:00.135 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 906 ms  
+INFO  19:12:00.410 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  19:12:00.425 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  19:12:00.586 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@70777a65  
+INFO  19:12:00.587 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  19:12:01.555 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  19:12:02.692 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  19:12:02.771 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  19:12:03.353 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  19:12:03.353 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  19:12:03.354 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 19:13:10.565 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T19:12:03.374428.jtl" (in directory "[Lorg.springframework.core.io.Resource;@1b0c836"): error=2, No such file or directory  
+INFO  19:13:32.442 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  19:13:32.443 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  19:13:32.475 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  19:13:34.693 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  19:13:34.724 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.  
+INFO  19:13:35.029 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  19:13:35.035 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  19:13:35.035 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  19:13:35.089 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  19:13:35.090 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 835 ms  
+INFO  19:13:35.326 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  19:13:35.338 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  19:13:35.649 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7a730479  
+INFO  19:13:35.650 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  19:13:36.504 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  19:13:37.768 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  19:13:37.849 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  19:13:47.023 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  19:13:47.023 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  19:13:47.024 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 19:13:50.113 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t bin/test.jmx -l 2024-04-02T19:13:47.047413.jtl" (in directory "[Lorg.springframework.core.io.Resource;@118e3e4"): error=2, No such file or directory  
+WARN  19:23:01.275 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m55s458ms).  
