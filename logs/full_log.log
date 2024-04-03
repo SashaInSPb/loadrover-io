@@ -1,35 +1,8 @@
-WARN  19:27:34.291 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m501ms).  
-WARN  19:48:53.150 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m18s716ms).  
-WARN  19:52:18.513 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m25s364ms).  
-WARN  19:54:23.060 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m4s546ms).  
-WARN  20:25:48.327 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m25s268ms).  
-WARN  21:31:46.737 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m58s410ms).  
-WARN  21:43:12.289 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m25s552ms).  
-WARN  22:46:17.081 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m4s792ms).  
-INFO  12:19:27.139 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  12:19:27.180 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.  
-INFO  12:19:27.496 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  12:19:27.502 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  12:19:27.502 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  12:19:27.557 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  12:19:27.558 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 996 ms  
-INFO  12:19:27.833 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  12:19:27.849 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  12:19:28.230 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@da5d5e1  
-INFO  12:19:28.231 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  12:19:29.251 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  12:19:30.488 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  12:19:30.570 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-WARN  12:33:09.359 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m10s983ms).  
-INFO  12:47:25.873 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  12:47:25.874 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  12:47:25.876 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms  
-ERROR 12:47:32.968 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-01T12:47:32.955014.jtl": error=2, No such file or directory  
-ERROR 12:47:33.281 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
-	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:61)
-	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:60)
+ERROR 16:31:52.785 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:60)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -45,14 +18,55 @@ ERROR 12:47:33.281 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
  
-WARN  13:22:47.433 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s461ms).  
-WARN  13:38:16.263 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s830ms).  
-ERROR 14:27:34.410 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-01T14:27:34.401822.jtl": error=2, No such file or directory  
-ERROR 14:27:34.704 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
-	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:61)
-	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:60)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:60)
+WARN  16:51:07.299 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m32s593ms).  
+INFO  16:59:26.413 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  16:59:26.416 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  16:59:26.445 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  16:59:28.739 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  16:59:28.779 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.  
+INFO  16:59:29.119 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:59:29.125 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:59:29.125 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:59:29.191 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:59:29.192 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 926 ms  
+INFO  16:59:29.457 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  16:59:29.474 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  16:59:29.562 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@da5d5e1  
+INFO  16:59:29.563 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  16:59:30.210 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  16:59:31.570 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:59:31.644 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  16:59:33.438 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  16:59:33.438 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  16:59:33.440 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+ERROR 16:59:54.665 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-03T16:59:33.463013.jtl" (in directory "."): error=2, No such file or directory  
+INFO  16:59:54.716 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  16:59:54.717 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+WARN  16:59:54.721 - - c.zaxxer.hikari.pool.ProxyConnection - HikariPool-1 - Connection org.mariadb.jdbc.Connection@da5d5e1 marked as broken because of SQLSTATE(08000), ErrorCode(1220) java.sql.SQLNonTransientConnectionException: Connection is closed
+	at org.mariadb.jdbc.client.impl.StandardClient.setReadOnly(StandardClient.java:469)
+	at org.mariadb.jdbc.Connection.setReadOnly(Connection.java:289)
+	at com.zaxxer.hikari.pool.ProxyConnection.setReadOnly(ProxyConnection.java:410)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.setReadOnly(HikariProxyConnection.java)
+	at org.springframework.jdbc.datasource.DataSourceUtils.prepareConnectionForTransaction(DataSourceUtils.java:190)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:153)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:420)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:601)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:94)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244)
+	at jdk.proxy2/jdk.proxy2.$Proxy148.findById(Unknown Source)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -68,12 +82,24 @@ ERROR 14:27:34.704 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
  
-ERROR 14:29:46.572 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-01T14:29:46.568264.jtl": error=2, No such file or directory  
-ERROR 14:29:46.774 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
-	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:61)
-	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:60)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:60)
+INFO  16:59:54.743 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+ERROR 16:59:54.744 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'entityManagerFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.orderedStream(DefaultListableBeanFactory.java:471)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:167)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:94)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244)
+	at jdk.proxy2/jdk.proxy2.$Proxy148.findById(Unknown Source)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -89,171 +115,319 @@ ERROR 14:29:46.774 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
  
-INFO  14:29:53.922 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
-INFO  14:29:53.924 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
-INFO  14:29:53.956 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
-INFO  14:29:56.572 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  14:29:56.618 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.  
-INFO  14:29:56.943 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  14:29:56.950 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  14:29:56.950 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  14:29:57.019 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  14:29:57.020 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 986 ms  
-INFO  14:29:57.317 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  14:29:57.333 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  14:29:57.547 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4345fd45  
-INFO  14:29:57.548 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  14:29:58.539 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  14:29:59.720 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  14:29:59.804 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  14:30:00.401 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  14:30:00.401 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  14:30:00.402 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 14:30:07.101 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-01T14:30:07.094433.jtl": error=2, No such file or directory  
-ERROR 14:41:04.229 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-01T14:40:43.627762.jtl": error=2, No such file or directory  
-INFO  18:51:09.803 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  18:51:09.851 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.  
-INFO  18:51:10.170 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  18:51:10.175 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  18:51:10.175 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  18:51:10.231 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  18:51:10.231 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 922 ms  
-INFO  18:51:10.496 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  18:51:10.514 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  18:51:10.742 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4449a60b  
-INFO  18:51:10.747 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  18:51:11.700 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  18:51:13.001 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  18:51:13.085 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  18:51:19.030 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  18:51:19.030 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  18:51:19.031 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 18:51:50.813 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T18:51:23.180917.jtl": error=2, No such file or directory  
-INFO  18:52:17.944 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
-INFO  18:52:17.945 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
-INFO  18:52:17.977 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
-INFO  18:52:20.244 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  18:52:20.292 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.  
-INFO  18:52:20.600 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  18:52:20.605 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  18:52:20.605 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  18:52:20.660 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  18:52:20.661 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 873 ms  
-INFO  18:52:20.906 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  18:52:20.919 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  18:52:21.267 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@569a26ab  
-INFO  18:52:21.268 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  18:52:22.194 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  18:52:23.305 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  18:52:23.417 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  18:52:24.015 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  18:52:24.015 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  18:52:24.016 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-WARN  18:55:12.641 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m51s267ms).  
-ERROR 18:55:12.664 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T18:52:24.036823.jtl" (in directory "[Lorg.springframework.core.io.Resource;@3e287c85"): error=2, No such file or directory  
-INFO  18:55:14.987 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
-INFO  18:55:14.988 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
-INFO  18:55:15.021 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
-INFO  18:55:17.265 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  18:55:17.298 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.  
-INFO  18:55:17.598 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  18:55:17.603 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  18:55:17.603 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  18:55:17.661 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  18:55:17.661 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 857 ms  
-INFO  18:55:17.901 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  18:55:17.914 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  18:55:18.064 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@351ede23  
-INFO  18:55:18.070 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  18:55:18.947 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  18:55:20.180 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  18:55:20.261 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  18:55:36.661 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  18:55:36.661 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  18:55:36.665 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
-ERROR 18:56:11.450 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T18:55:36.689231.jtl" (in directory "[Lorg.springframework.core.io.Resource;@118e3e4"): error=2, No such file or directory  
-INFO  18:58:07.820 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
-INFO  18:58:07.822 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
-INFO  18:58:07.854 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
-INFO  18:58:09.945 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  18:58:09.986 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.  
-INFO  18:58:10.291 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  18:58:10.297 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  18:58:10.297 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  18:58:10.350 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  18:58:10.350 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 861 ms  
-INFO  18:58:10.585 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  18:58:10.599 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  18:58:10.827 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@15371de2  
-INFO  18:58:10.828 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  18:58:11.770 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  18:58:12.933 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  18:58:13.009 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  19:05:43.834 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  19:05:43.835 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  19:05:43.839 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
-ERROR 19:06:13.636 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T19:05:43.876021.jtl" (in directory "[Lorg.springframework.core.io.Resource;@6488d54d"): error=2, No such file or directory  
-INFO  19:06:33.717 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
-INFO  19:06:33.718 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
-INFO  19:06:33.750 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
-INFO  19:06:36.087 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  19:06:36.132 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.  
-INFO  19:06:36.444 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  19:06:36.450 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  19:06:36.450 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  19:06:36.513 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  19:06:36.514 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 887 ms  
-INFO  19:06:36.762 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  19:06:36.775 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  19:06:37.009 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@77204651  
-INFO  19:06:37.010 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  19:06:37.856 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  19:06:39.131 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  19:06:39.216 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  19:06:53.897 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  19:06:53.897 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  19:06:53.899 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms  
-ERROR 19:07:09.326 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T19:06:53.929302.jtl": error=2, No such file or directory  
-INFO  19:08:55.788 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
-INFO  19:08:55.791 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
-INFO  19:08:55.824 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
-INFO  19:11:59.711 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  19:11:59.749 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.  
-INFO  19:12:00.073 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  19:12:00.078 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  19:12:00.079 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  19:12:00.134 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  19:12:00.135 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 906 ms  
-INFO  19:12:00.410 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  19:12:00.425 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  19:12:00.586 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@70777a65  
-INFO  19:12:00.587 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  19:12:01.555 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  19:12:02.692 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  19:12:02.771 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  19:12:03.353 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  19:12:03.353 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  19:12:03.354 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 19:13:10.565 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-02T19:12:03.374428.jtl" (in directory "[Lorg.springframework.core.io.Resource;@1b0c836"): error=2, No such file or directory  
-INFO  19:13:32.442 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
-INFO  19:13:32.443 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
-INFO  19:13:32.475 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
-INFO  19:13:34.693 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
-INFO  19:13:34.724 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.  
-INFO  19:13:35.029 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
-INFO  19:13:35.035 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
-INFO  19:13:35.035 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
-INFO  19:13:35.089 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
-INFO  19:13:35.090 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 835 ms  
-INFO  19:13:35.326 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
-INFO  19:13:35.338 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
-INFO  19:13:35.649 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7a730479  
-INFO  19:13:35.650 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
-INFO  19:13:36.504 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
-WARN  19:13:37.768 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
-INFO  19:13:37.849 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
-INFO  19:13:47.023 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
-INFO  19:13:47.023 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
-INFO  19:13:47.024 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
-ERROR 19:13:50.113 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t bin/test.jmx -l 2024-04-02T19:13:47.047413.jtl" (in directory "[Lorg.springframework.core.io.Resource;@118e3e4"): error=2, No such file or directory  
-WARN  19:23:01.275 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m55s458ms).  
+INFO  16:59:56.734 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  16:59:56.779 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.  
+INFO  16:59:57.090 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  16:59:57.095 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  16:59:57.095 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  16:59:57.150 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  16:59:57.150 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 872 ms  
+INFO  16:59:57.391 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  16:59:57.405 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  16:59:57.462 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3b2db389  
+INFO  16:59:57.463 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  16:59:58.031 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  16:59:59.428 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  16:59:59.533 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:00:01.063 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:00:01.063 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:00:01.064 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 17:00:08.782 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "/jmeter.sh -n -t test.jmx -l 2024-04-03T17:00:01.090322.jtl" (in directory "."): error=2, No such file or directory  
+ERROR 17:00:09.062 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+INFO  17:03:15.078 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:03:15.085 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:03:15.111 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  17:03:17.486 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:03:17.528 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.  
+INFO  17:03:17.831 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:03:17.837 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:03:17.837 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:03:17.899 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:03:17.900 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 874 ms  
+INFO  17:03:18.136 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:03:18.150 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:03:18.237 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@75e4fe3c  
+INFO  17:03:18.238 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:03:18.814 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:03:20.151 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:03:20.239 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:03:21.583 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:03:21.583 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:03:21.584 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms  
+ERROR 17:03:55.607 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+INFO  17:07:46.098 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:07:46.101 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:07:46.127 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  17:07:48.342 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:07:48.388 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.  
+INFO  17:07:48.694 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:07:48.699 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:07:48.699 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:07:48.755 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:07:48.755 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 891 ms  
+INFO  17:07:48.990 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:07:49.002 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:07:49.069 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6be50b35  
+INFO  17:07:49.069 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:07:49.646 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:07:50.792 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:07:50.869 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:07:53.355 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:07:53.355 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:07:53.356 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 17:09:01.663 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 17:10:01.776 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+INFO  17:10:42.372 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:10:42.374 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:10:42.403 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  17:10:46.189 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:10:46.231 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.  
+INFO  17:10:46.529 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:10:46.535 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:10:46.535 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:10:46.588 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:10:46.589 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 860 ms  
+INFO  17:10:46.831 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:10:46.844 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:10:46.920 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2328ec73  
+INFO  17:10:46.924 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:10:47.510 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:10:48.649 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:10:48.749 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:10:50.591 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:10:50.591 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:10:50.592 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 17:10:50.624 - - l.api.io.domain.run.RunController - Failed to run: Cannot run program "./jmeter.sh -n -t test.jmx -l 2024-04-03T17:10:50.620513.jtl" (in directory "/Users/sasha/IdeaProjects/2bytes.loadrover-server/api/build/resources/main/static/apache-jmeter-5.6.3/bin"): error=2, No such file or directory  
+ERROR 17:10:50.750 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+INFO  17:11:19.620 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:11:19.621 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:11:19.650 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  17:11:21.802 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:11:21.851 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.  
+INFO  17:11:22.157 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:11:22.162 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:11:22.162 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:11:22.220 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:11:22.221 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 961 ms  
+INFO  17:11:22.463 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:11:22.478 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:11:22.557 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4ef31221  
+INFO  17:11:22.557 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:11:23.145 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:11:24.221 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:11:24.309 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:11:26.653 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:11:26.654 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:11:26.684 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  17:11:55.410 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:11:55.448 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.  
+INFO  17:11:55.763 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:11:55.768 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:11:55.768 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:11:55.825 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:11:55.826 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 896 ms  
+INFO  17:11:56.098 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:11:56.113 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:11:56.191 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@75c33608  
+INFO  17:11:56.192 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:11:56.801 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:11:57.997 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:11:58.078 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:11:58.558 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:11:58.558 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:11:58.559 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 17:12:02.005 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 17:12:02.842 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 17:12:03.765 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 17:12:50.175 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+ERROR 17:13:04.092 - - o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void loadrover.api.io.domain.run.RunService.runSimulation(long) loadrover.api.io.config.exception.BaseException: 데이터가 존재하지 않습니다.
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:73)
+	at loadrover.api.io.domain.run.RunService$runSimulation$taskEntity$1.get(RunService.kt:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at loadrover.api.io.domain.run.RunService.runSimulation(RunService.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 

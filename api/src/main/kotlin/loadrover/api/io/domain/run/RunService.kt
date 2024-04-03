@@ -27,26 +27,30 @@ class RunService(
         val host = ""
 
         try {
-            val processBuilder = ProcessBuilder(
-                "./jmeter.sh -n -t bin/test.jmx -l $log.jtl"
-            )
+            val currentDirectory = System.getProperty("user.dir")
+            println("Current directory: $currentDirectory")
 
-            // bin root로 설정
-            val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
-                .getResources("classpath*:**/user.properties")
+            val jmeterScript = "./jmeter.sh"
+            val options = listOf("-n", "-t", "test.jmx", "-l", "2024-04-03T15:58:56.697422.jtl")
+            val processBuilder = ProcessBuilder(jmeterScript, *options.toTypedArray())
+            processBuilder.directory(File("$currentDirectory/api/build/resources/main/static/apache-jmeter-5.6.3/bin"))
 
-            val resourceFile = File(resources.toString())
+//             bin root로 설정
+//            val resources = ResourcePatternUtils.getResourcePatternResolver(DefaultResourceLoader())
+//                .getResources("classpath*:**/user.properties")
+
+//            val resourceFile = File(resources.toString())
 
 //            // log 설정
 //            processBuilder.redirectOutput(ProcessBuilder.Redirect.appendTo(logFile))
 //            processBuilder.redirectError(ProcessBuilder.Redirect.appendTo(logFile))
 
-            println("resourceFile: ${resourceFile.path}")
+//            println("resourceFile: ${resourceFile.path}")
 
             // jar 파일 경로
-            processBuilder.directory(
-                resourceFile
-            )
+//            processBuilder.directory(
+//                resourceFile
+//            )
 
             val process = processBuilder.start()
             val exitCode = process.waitFor()
