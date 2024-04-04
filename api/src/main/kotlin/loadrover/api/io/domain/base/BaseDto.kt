@@ -15,7 +15,7 @@ class BaseDto {
         val size: Long = upLoadFile.size
         val fileName: String = originalFile.substring(0, originalFile.indexOf("."))
         val extension: String = originalFile.substring(originalFile.lastIndexOf(".") + 1)
-        val convertFileName: String = "${LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmSS"))} - ${this.fileName} - ${UUID.randomUUID()}-${System.nanoTime()}"
+        val convertFileName: String = "${this.fileName}_${LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmSS"))}"
         val uploadFileName: String = "$convertFileName.$extension"
 
         fun getUploadPath(): String {

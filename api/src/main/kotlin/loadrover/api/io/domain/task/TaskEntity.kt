@@ -18,7 +18,7 @@ class TaskEntity(
     var status: TaskStatus,
 
     @Column(nullable = true, length = 100)
-    var fileName: String? = null, // 파일명
+    var uploadFileName: String? = null, // 파일명
 
     @Column(nullable = true, length = 500)
     var description: String? = null, // 작업 설명

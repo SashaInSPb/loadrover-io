@@ -16,7 +16,7 @@ class TaskDto {
     data class TaskDetailDto(
         val title: String,
         val status: TaskStatus,
-        val fileName: String? = null,
+        val uploadFileName: String? = null,
         val host: MutableSet<GeneratorDto>,
         val description: String? = null
     )

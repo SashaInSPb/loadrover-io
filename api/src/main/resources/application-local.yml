@@ -58,3 +58,8 @@ cloud:
     s3:
       bucket: dev-sg-admin-static
       cloud-front-domain: d1ipvhagx28fo9.cloudfront.net
+
+loadrover:
+  download-directory: api/build/resources/main/static/apache-jmeter-5.6.3/bin
+  working-directory: api/build/resources/main/static/apache-jmeter-5.6.3/bin
+  report-directory: api/build/resources/main/static/apache-jmeter-5.6.3/bin/report

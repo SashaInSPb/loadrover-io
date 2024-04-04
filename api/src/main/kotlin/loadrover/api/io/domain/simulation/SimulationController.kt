@@ -2,7 +2,7 @@
 //
 //import io.swagger.v3.oas.annotations.Operation
 //import io.swagger.v3.oas.annotations.tags.Tag
-//import loadrover.api.io.config.LoadroverConfig
+//import loadrover.api.io.config.LoadroverProperties
 //import loadrover.api.io.config.exception.ExceptionCode
 //import loadrover.api.io.config.exception.NotFoundDataException
 //import loadrover.api.io.utils.FileUtils
@@ -20,7 +20,7 @@
 //    private val simulationService: SimulationService,
 //    private val simulationLogUtils: SimulationLogUtils,
 //    private val fileUtils: FileUtils,
-//    private val loadroverConfig: LoadroverConfig
+//    private val loadroverConfig: LoadroverProperties
 //) {
 //    private val logger = LoggerFactory.getLogger(SimulationService::class.java)
 //

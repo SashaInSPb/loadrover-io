@@ -2,7 +2,9 @@ package loadrover.api.io.domain.run
 
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
+import loadrover.api.io.config.LoadroverProperties
 import loadrover.api.io.domain.task.TaskRepository
+import loadrover.api.io.infra.AwsS3Service
 import org.slf4j.LoggerFactory
 import org.springframework.scheduling.annotation.Async
 import org.springframework.stereotype.Service
@@ -12,24 +14,34 @@ import java.time.LocalDateTime
 @Service
 class RunService(
     private val runRepository: RunRepository,
-    private val taskRepository: TaskRepository
+    private val taskRepository: TaskRepository,
+    private val loadroverProperties: LoadroverProperties,
+    private val awsS3Service: AwsS3Service
 ) {
     private val logger = LoggerFactory.getLogger(RunController::class.java)
 
     @Async
     fun runSimulation(taskId: Long) {
 
+        val taskEntity = taskRepository.findById(taskId).orElseThrow {
+            throw BaseException(ExceptionCode.NOT_FOUND_CONTENTS)
+        }
+
+        // 현재 디렉토리
+//            val currentDirectory2 = System.getProperty("java.io.tmpdir")
+        val currentDirectory = System.getProperty("user.dir")
         val currentDateTime = LocalDateTime.now()
 
         try {
-            val currentDirectory = System.getProperty("user.dir")
-
             val jmeterScript = "./jmeter.sh"
-            val options = listOf("-n", "-t", "test.jmx", "-l", "$currentDateTime.jtl")
+            val testFile = awsS3Service.getObject(taskEntity.uploadFileName.toString())
+            val options = listOf("-n", "-t", testFile.name, "-l", "$currentDateTime.jtl", "-e", "-o", "$currentDirectory/${loadroverProperties.reportDirectory}/${testFile.name}")
+
             val processBuilder = ProcessBuilder(jmeterScript, *options.toTypedArray())
 
-            // bin directory로 변경
-            processBuilder.directory(File("$currentDirectory/api/build/resources/main/static/apache-jmeter-5.6.3/bin"))
+            processBuilder.directory(
+                File("$currentDirectory/${loadroverProperties.workingDirectory}")
+            )
 
             val process = processBuilder.start()
             val exitCode = process.waitFor()
@@ -40,13 +52,10 @@ class RunService(
             logger.error("Failed to run simulation: ${e.message.toString()}")
         }
 
-        // RunEntity 저장
-        val taskEntity = taskRepository.findById(taskId).orElseThrow {
-            throw BaseException(ExceptionCode.NOT_FOUND_CONTENTS)
-        }
-
         val previousRunCount = taskEntity.runCount
         val newRunCount = previousRunCount?.plus(1)
+        taskEntity.runCount = 3
+
         val hostIpList = ""
 
         for (generator in taskEntity.generatorList) {
@@ -61,6 +70,7 @@ class RunService(
 
         try {
             runRepository.save(runEntity)
+            taskRepository.save(taskEntity)
 
         } catch (e: Exception) {
             logger.error("Failed to save runEntity: ${e.message.toString()}, taskId: $taskId")

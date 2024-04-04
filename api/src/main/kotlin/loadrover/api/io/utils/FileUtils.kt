@@ -1,7 +1,7 @@
 //package loadrover.api.io.utils
 //
 //import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-//import loadrover.api.io.config.LoadroverConfig
+//import loadrover.api.io.config.LoadroverProperties
 //import loadrover.api.io.domain.scenario.FileDto
 //import loadrover.api.io.domain.scenario.HtmlFileDto
 //import loadrover.api.io.domain.scenario.ScenarioDto
@@ -16,7 +16,7 @@
 //
 //@Component
 //class FileUtils(
-//    private val loadroverConfig: LoadroverConfig
+//    private val loadroverConfig: LoadroverProperties
 //) {
 //    private val logger = LoggerFactory.getLogger(FileUtils::class.java)
 //
@@ -32,12 +32,12 @@
 //                Integer.MAX_VALUE,
 //                object: SimpleFileVisitor<Path>() {
 //                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-//                        val fileName = file?.fileName.toString()
+//                        val uploadFileName = file?.uploadFileName.toString()
 //
 //                        fileList.plusAssign(
 //                            FileDto(
-//                                scenarioTitle = if (path == "work") fileName.removeSuffix(".kt") else fileName.removeSuffix(".json").replace("\\d{17}$".toRegex(),""),
-//                                scenarioId = if (path == "work") fileName.removeSuffix(".kt") else fileName.removeSuffix(".json"),
+//                                scenarioTitle = if (path == "work") uploadFileName.removeSuffix(".kt") else uploadFileName.removeSuffix(".json").replace("\\d{17}$".toRegex(),""),
+//                                scenarioId = if (path == "work") uploadFileName.removeSuffix(".kt") else uploadFileName.removeSuffix(".json"),
 //                                status = when (path) {
 //                                    loadroverConfig.gatling.source -> ScenarioStatus.READY
 //                                    loadroverConfig.gatling.progress -> ScenarioStatus.PROGRESS
@@ -69,11 +69,11 @@
 //                Integer.MAX_VALUE,
 //                object: SimpleFileVisitor<Path>() {
 //                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-//                        val fileName = file?.fileName.toString()
+//                        val uploadFileName = file?.uploadFileName.toString()
 //
 //                        fileList.plusAssign(
 //                            HtmlFileDto(
-//                                fileName = fileName
+//                                uploadFileName = uploadFileName
 //                            )
 //                        )
 //                        return FileVisitResult.CONTINUE
@@ -100,7 +100,7 @@
 //                Int.MAX_VALUE,
 //                object : SimpleFileVisitor<Path>() {
 //                    override fun preVisitDirectory(dir: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-//                        val simulationId = dir?.fileName.toString()
+//                        val simulationId = dir?.uploadFileName.toString()
 //
 //                        if (dir?.nameCount == resultPath.nameCount + 1) {
 //                            folderList.plusAssign(

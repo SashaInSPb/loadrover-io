@@ -28,7 +28,7 @@ class TaskService(
                 TaskDto.TaskDetailDto(
                     title = task.title,
                     status = task.status,
-                    fileName = task.fileName,
+                    uploadFileName = task.uploadFileName,
                     host = task.generatorList.map {
                         TaskDto.GeneratorDto(
                             host = it.hostAddress,
@@ -53,7 +53,7 @@ class TaskService(
         return TaskDto.TaskDetailDto(
             title = task.title,
             status = task.status,
-            fileName = task.fileName,
+            uploadFileName = task.uploadFileName,
             host = task.generatorList.map {
                 TaskDto.GeneratorDto(
                     host = it.hostAddress,
@@ -77,7 +77,7 @@ class TaskService(
         val task = TaskEntity(
             title = request.title,
             status = TaskStatus.NEW,
-            fileName = file.fileName,
+            uploadFileName = file.uploadFileName,
             // 파일 내용 미리보기
             description = file.getContentsFromFile(scenarioFile, 500),
             runCount = 0,

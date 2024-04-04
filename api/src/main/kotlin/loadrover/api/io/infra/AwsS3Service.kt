@@ -7,20 +7,23 @@ import com.amazonaws.services.s3.model.S3ObjectInputStream
 import com.amazonaws.util.IOUtils
 import loadrover.api.io.config.AwsConfig
 import loadrover.api.io.config.AwsS3Properties
+import loadrover.api.io.config.LoadroverProperties
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
 import loadrover.api.io.domain.base.BaseDto
-import nonapi.io.github.classgraph.utils.FileUtils
+import org.apache.tomcat.util.http.fileupload.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.ByteArrayInputStream
 import java.io.File
 import java.io.InputStream
+import java.nio.charset.StandardCharsets
 
 @Service
 class AwsS3Service (
     private val awsConfig: AwsConfig,
-    private val awsS3Properties: AwsS3Properties
+    private val awsS3Properties: AwsS3Properties,
+    private val loadroverProperties: LoadroverProperties
 ) {
     private val logger = LoggerFactory.getLogger(AwsS3Service::class.java)
 
@@ -54,25 +57,27 @@ class AwsS3Service (
         )
     }
 
-//    fun getObject(filePath: String): File {
+    fun getObject(filePath: String): File {
 
-        // 다운로드 파일 경로
-//        val downloadFilePath = "${System.getProperty("java.io.tmpdir")}/${FilenameUtils.getName(key)}"
-//        val downloadFile = File(downloadFilePath)
-//
-//        try {
-//            val s3Object: S3Object = awsConfig.amazonS3Client().getObject(awsS3Properties.s3.bucket, filePath)
-//            val inputStream: S3ObjectInputStream = s3Object.objectContent
-//
-//            FileUtils.copyInputStreamToFile(inputStream, downloadFile)
-//
-//        } catch (e: AmazonS3Exception) {
-//            throw IllegalArgumentException(e.toString())
-//        } catch (e: Exception) {
-//            throw java.lang.IllegalArgumentException(e.toString())
-//        }
+//         다운로드 파일 경로
+//        val currentDirectory = System.getProperty("user.dir")
+        val downloadFilePath = "${System.getProperty("user.dir")}/${loadroverProperties.downloadDirectory}/$filePath"
+        val downloadFile = File(downloadFilePath)
 
-//    }
+        try {
+            val s3Object: S3Object = awsConfig.amazonS3Client().getObject(awsS3Properties.s3.bucket, filePath)
+            val inputStream: S3ObjectInputStream = s3Object.objectContent
+
+            inputStream.copyToFile(downloadFile)
+
+        } catch (e: AmazonS3Exception) {
+            throw IllegalArgumentException(e.toString())
+        } catch (e: Exception) {
+            throw java.lang.IllegalArgumentException(e.toString())
+        }
+
+        return downloadFile
+    }
 
     fun rename(source: String, target: String) {
         if (source == target) {
@@ -87,6 +92,14 @@ class AwsS3Service (
 
     fun delete(source: String) {
         awsConfig.amazonS3Client().deleteObject(awsS3Properties.s3.bucket, source)
+    }
+
+    fun InputStream.copyToFile(destination: File) {
+        this.use { input ->
+            destination.outputStream().use { output ->
+                input.copyTo(output)
+            }
+        }
     }
 
 

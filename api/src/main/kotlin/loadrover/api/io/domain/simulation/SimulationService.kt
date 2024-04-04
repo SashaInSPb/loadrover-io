@@ -33,7 +33,7 @@
 ////        }
 //
 //        return SimulationDto.ResultResponse(
-//            fileName = latestResult
+//            uploadFileName = latestResult
 //        )
 //    }
 //
