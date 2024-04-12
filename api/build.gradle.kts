@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	kotlin("plugin.jpa")
+	kotlin("jvm")
 }
 
 apply(plugin = "kotlin-jpa")
@@ -50,4 +51,10 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "17"
 	}
+}
+repositories {
+	mavenCentral()
+}
+kotlin {
+	jvmToolchain(17)
 }

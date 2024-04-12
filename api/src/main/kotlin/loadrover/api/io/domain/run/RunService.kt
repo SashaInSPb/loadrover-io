@@ -32,10 +32,17 @@ class RunService(
         val currentDirectory = System.getProperty("user.dir")
         val currentDateTime = LocalDateTime.now()
 
+        val generatorIpList = taskEntity.generatorList.joinToString(",") { it.hostAddress }
+
         try {
             val jmeterScript = "./jmeter.sh"
-            val testFile = awsS3Service.getObject(taskEntity.uploadFileName.toString())
-            val options = listOf("-n", "-t", testFile.name, "-l", "$currentDateTime.jtl", "-e", "-o", "$currentDirectory/${loadroverProperties.reportDirectory}/${testFile.name}")
+            val downLoadFile = awsS3Service.getObject(taskEntity.uploadFileName.toString())
+            val options = listOf(
+                "-n", "-t", downLoadFile.name,
+                if (generatorIpList !== "") "-R" else "", generatorIpList,
+                "-l", "$currentDateTime.jtl",
+                "-e", "-o", "$currentDirectory/${loadroverProperties.reportDirectory}/${downLoadFile.name}"
+            )
 
             val processBuilder = ProcessBuilder(jmeterScript, *options.toTypedArray())
 
@@ -54,18 +61,12 @@ class RunService(
 
         val previousRunCount = taskEntity.runCount
         val newRunCount = previousRunCount?.plus(1)
-        taskEntity.runCount = 3
-
-        val hostIpList = ""
-
-        for (generator in taskEntity.generatorList) {
-            hostIpList.plus(generator.hostAddress)
-        }
+        taskEntity.runCount = newRunCount
 
         val runEntity = RunEntity(
             runOrder = if (previousRunCount == 0) 1 else newRunCount,
             task = taskEntity,
-            hostIp = hostIpList
+            hostIp = generatorIpList
         )
 
         try {
@@ -73,7 +74,7 @@ class RunService(
             taskRepository.save(taskEntity)
 
         } catch (e: Exception) {
-            logger.error("Failed to save runEntity: ${e.message.toString()}, taskId: $taskId")
+            logger.error("Failed to save entity: ${e.message.toString()}, taskId: $taskId")
         }
     }
 }

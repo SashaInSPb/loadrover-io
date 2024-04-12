@@ -1292,3 +1292,152 @@ WARN  15:39:38.080 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread
 WARN  15:45:11.263 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s143ms).  
 WARN  16:29:48.132 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m6s245ms).  
 WARN  16:41:09.895 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m51s757ms).  
+INFO  17:24:15.504 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:24:15.539 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.  
+INFO  17:24:15.860 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:24:15.865 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:24:15.865 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:24:15.927 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:24:15.928 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 894 ms  
+INFO  17:24:16.187 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:24:16.205 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:24:16.294 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7d685f4e  
+INFO  17:24:16.295 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:24:16.960 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:24:18.146 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+WARN  17:24:18.225 - - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'  
+INFO  17:24:18.226 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:24:18.227 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:24:18.258 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  17:24:18.260 - - o.a.catalina.core.StandardService - Stopping service [Tomcat]  
+INFO  17:24:18.269 - - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.  
+ERROR 17:24:18.278 - - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8800 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8800 or configure this application to listen on another port.
+  
+INFO  17:25:10.672 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:25:10.712 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.  
+INFO  17:25:11.015 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:25:11.020 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:25:11.020 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:25:11.077 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:25:11.078 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 848 ms  
+INFO  17:25:11.306 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:25:11.318 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:25:11.382 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@236fd411  
+INFO  17:25:11.383 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:25:11.947 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:25:13.311 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:25:13.399 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:29:16.563 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:29:16.563 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:29:16.566 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
+ERROR 17:29:20.977 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: CH7S93ATN0DQD0CP; S3 Extended Request ID: C+VE5Gibq0uDRQL6gzGlcSLkP4btfDgZ7s7zFJw3Rd0Mz8FAdwS/Yiv62MTgimLftU4P17VePMo=; Proxy: null)  
+ERROR 17:29:20.977 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: CH7S93ATN0DQD0CP; S3 Extended Request ID: C+VE5Gibq0uDRQL6gzGlcSLkP4btfDgZ7s7zFJw3Rd0Mz8FAdwS/Yiv62MTgimLftU4P17VePMo=; Proxy: null), S3 Extended Request ID: C+VE5Gibq0uDRQL6gzGlcSLkP4btfDgZ7s7zFJw3Rd0Mz8FAdwS/Yiv62MTgimLftU4P17VePMo=  
+INFO  17:33:35.008 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:33:35.009 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:33:35.039 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  17:33:39.231 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:33:39.276 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.  
+INFO  17:33:39.574 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:33:39.579 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:33:39.579 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:33:39.633 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:33:39.634 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 904 ms  
+INFO  17:33:39.883 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:33:39.896 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:33:39.987 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7bda01da  
+INFO  17:33:39.988 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:33:40.598 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:33:41.797 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:33:41.881 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:00:03.163 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  18:00:03.165 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  18:00:03.196 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:09:57.984 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:09:58.095 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 3 JPA repository interfaces.  
+INFO  18:09:58.463 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:09:58.470 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:09:58.470 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:09:58.535 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:09:58.535 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1106 ms  
+INFO  18:09:58.798 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:09:58.812 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:09:58.903 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7d685f4e  
+INFO  18:09:58.904 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:09:59.524 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:10:01.066 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:10:01.205 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:10:18.599 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:10:18.600 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:10:18.601 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+INFO  18:11:25.785 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  18:11:25.788 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  18:11:25.822 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:11:30.966 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:11:31.013 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.  
+INFO  18:11:31.314 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:11:31.319 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:11:31.319 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:11:31.374 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:11:31.375 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 890 ms  
+INFO  18:11:31.600 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:11:31.612 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:11:31.688 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2f0cab82  
+INFO  18:11:31.689 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:11:32.373 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:11:33.932 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:11:34.005 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:11:43.934 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:11:43.935 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:11:43.938 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
+ERROR 18:12:35.881 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: AGGWBNNKVCYH8WZM; S3 Extended Request ID: pH1jRtuJ3F1OL3PgImK94/8J3y+2UOi5Rr9Ic/JLgoMEiN53senfQyf1idDl3w7Pe1la7g6zN/M=; Proxy: null)  
+ERROR 18:12:36.569 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: AGGWBNNKVCYH8WZM; S3 Extended Request ID: pH1jRtuJ3F1OL3PgImK94/8J3y+2UOi5Rr9Ic/JLgoMEiN53senfQyf1idDl3w7Pe1la7g6zN/M=; Proxy: null), S3 Extended Request ID: pH1jRtuJ3F1OL3PgImK94/8J3y+2UOi5Rr9Ic/JLgoMEiN53senfQyf1idDl3w7Pe1la7g6zN/M=  
+ERROR 18:19:21.713 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 6CGH1CZTT6R42DVT; S3 Extended Request ID: YrW3aYYr+PidCqcLDFpkLD4FFIUYmSp0cEFykbmPOZOb9X2E7dWN8WW3+dEwvFCXqXZ6w2N97VKgPvAVUfhtVQ==; Proxy: null)  
+ERROR 18:19:21.713 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 6CGH1CZTT6R42DVT; S3 Extended Request ID: YrW3aYYr+PidCqcLDFpkLD4FFIUYmSp0cEFykbmPOZOb9X2E7dWN8WW3+dEwvFCXqXZ6w2N97VKgPvAVUfhtVQ==; Proxy: null), S3 Extended Request ID: YrW3aYYr+PidCqcLDFpkLD4FFIUYmSp0cEFykbmPOZOb9X2E7dWN8WW3+dEwvFCXqXZ6w2N97VKgPvAVUfhtVQ==  
+ERROR 18:19:21.875 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 6CGM8E4ZK2RYJ4JN; S3 Extended Request ID: v8zg4VhHZP88sRzESF38zSSmx5lsgP1YrrhxXjUtsX9DO7CGv76NpwGrb/RsNIyvRC2eaif4MQ/gZWwDPRxDXw==; Proxy: null)  
+ERROR 18:19:21.875 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 6CGM8E4ZK2RYJ4JN; S3 Extended Request ID: v8zg4VhHZP88sRzESF38zSSmx5lsgP1YrrhxXjUtsX9DO7CGv76NpwGrb/RsNIyvRC2eaif4MQ/gZWwDPRxDXw==; Proxy: null), S3 Extended Request ID: v8zg4VhHZP88sRzESF38zSSmx5lsgP1YrrhxXjUtsX9DO7CGv76NpwGrb/RsNIyvRC2eaif4MQ/gZWwDPRxDXw==  
+WARN  18:19:49.512 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s296ms).  
+ERROR 18:19:49.783 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: GRWEE9Z3FMKCRYNY; S3 Extended Request ID: yrGmZBrpxUKIwqkewevWQiVekEA1hL7pyyo4G34HzMPuCz8ElSZscCkUpMqLiCrWL4dbYhZQ4yGwKj3kxvRyUQ==; Proxy: null)  
+ERROR 18:19:49.783 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: GRWEE9Z3FMKCRYNY; S3 Extended Request ID: yrGmZBrpxUKIwqkewevWQiVekEA1hL7pyyo4G34HzMPuCz8ElSZscCkUpMqLiCrWL4dbYhZQ4yGwKj3kxvRyUQ==; Proxy: null), S3 Extended Request ID: yrGmZBrpxUKIwqkewevWQiVekEA1hL7pyyo4G34HzMPuCz8ElSZscCkUpMqLiCrWL4dbYhZQ4yGwKj3kxvRyUQ==  
+ERROR 18:19:49.909 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: GRW0BW004EB9PS0S; S3 Extended Request ID: guJ/WzVzwzeQ0uYbKrXwfuoIIMQy/Mh7u7s4wV48P7qQksEvluYj/1F7M12Cu2cZbcoMXaX/XAIG0ca+xOW5/A==; Proxy: null)  
+ERROR 18:19:49.909 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: GRW0BW004EB9PS0S; S3 Extended Request ID: guJ/WzVzwzeQ0uYbKrXwfuoIIMQy/Mh7u7s4wV48P7qQksEvluYj/1F7M12Cu2cZbcoMXaX/XAIG0ca+xOW5/A==; Proxy: null), S3 Extended Request ID: guJ/WzVzwzeQ0uYbKrXwfuoIIMQy/Mh7u7s4wV48P7qQksEvluYj/1F7M12Cu2cZbcoMXaX/XAIG0ca+xOW5/A==  
+ERROR 18:19:57.824 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: JT5N43NCHP020MD8; S3 Extended Request ID: ZpQEXZf43yQyGWQRb4YDJu0Lf6paD70g1DAvCTtvuRww/tm2ISOhhu04M2eZejpXfz9Ynmtdr2k=; Proxy: null)  
+ERROR 18:19:57.826 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: JT5N43NCHP020MD8; S3 Extended Request ID: ZpQEXZf43yQyGWQRb4YDJu0Lf6paD70g1DAvCTtvuRww/tm2ISOhhu04M2eZejpXfz9Ynmtdr2k=; Proxy: null), S3 Extended Request ID: ZpQEXZf43yQyGWQRb4YDJu0Lf6paD70g1DAvCTtvuRww/tm2ISOhhu04M2eZejpXfz9Ynmtdr2k=  
+INFO  18:21:52.151 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  18:21:52.154 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  18:21:52.184 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:21:56.682 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:21:56.729 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.  
+INFO  18:21:57.045 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:21:57.050 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:21:57.050 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:21:57.112 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:21:57.115 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1054 ms  
+INFO  18:21:57.348 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:21:57.362 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:21:57.449 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1ef93e01  
+INFO  18:21:57.449 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:21:58.047 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:21:59.159 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:21:59.235 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:22:00.919 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:22:00.919 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:22:00.920 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+ERROR 18:22:06.033 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: BY5QY4K3KGKQQGR7; S3 Extended Request ID: KC4dRaBV2WhcLgVYvWFSO/q30fGKSg+njR9mY/jxKukKKcfR1AFubIenc7zqiXoeRFYPQmvnQ3g=; Proxy: null)  
+ERROR 18:22:10.623 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: BY5QY4K3KGKQQGR7; S3 Extended Request ID: KC4dRaBV2WhcLgVYvWFSO/q30fGKSg+njR9mY/jxKukKKcfR1AFubIenc7zqiXoeRFYPQmvnQ3g=; Proxy: null), S3 Extended Request ID: KC4dRaBV2WhcLgVYvWFSO/q30fGKSg+njR9mY/jxKukKKcfR1AFubIenc7zqiXoeRFYPQmvnQ3g=  
+ERROR 18:22:17.586 - - loadrover.api.io.infra.AwsS3Service - Failed to get file from S3: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 3DMD5K1713ZP7VR6; S3 Extended Request ID: o/dttOk8TZYymgYE5CR1V686Tc9S/s7WkBkxtIfYr6F71R8g4Hswj8nEpEjk3O2DuG5xdkDWZwQ=; Proxy: null)  
+ERROR 18:22:24.829 - - l.api.io.domain.run.RunController - Failed to run simulation: com.amazonaws.services.s3.model.AmazonS3Exception: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 3DMD5K1713ZP7VR6; S3 Extended Request ID: o/dttOk8TZYymgYE5CR1V686Tc9S/s7WkBkxtIfYr6F71R8g4Hswj8nEpEjk3O2DuG5xdkDWZwQ=; Proxy: null), S3 Extended Request ID: o/dttOk8TZYymgYE5CR1V686Tc9S/s7WkBkxtIfYr6F71R8g4Hswj8nEpEjk3O2DuG5xdkDWZwQ=  
+WARN  18:28:29.831 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s241ms).  

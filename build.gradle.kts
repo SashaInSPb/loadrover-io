@@ -85,3 +85,9 @@ project(":api") {
 		useJUnitPlatform()
 	}
 }
+dependencies {
+    implementation(kotlin("stdlib-jdk8"))
+}
+repositories {
+    mavenCentral()
+}
