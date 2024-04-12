@@ -44,7 +44,6 @@ class AwsS3Service (
             throw BaseException(ExceptionCode.UPLOAD_FAIL)
         }
 
-
         println("---upload file info start---")
         println(uploadPath)
         println("${awsS3Properties.s3.cloudFrontDomain}/${uploadPath}")
@@ -67,14 +66,19 @@ class AwsS3Service (
         try {
             val s3Object: S3Object = awsConfig.amazonS3Client().getObject(awsS3Properties.s3.bucket, filePath)
             val inputStream: S3ObjectInputStream = s3Object.objectContent
-
             inputStream.copyToFile(downloadFile)
 
         } catch (e: AmazonS3Exception) {
+            logger.error("Failed to get file from S3: ${e.message.toString()}")
             throw IllegalArgumentException(e.toString())
         } catch (e: Exception) {
+            logger.error("IllegalArgumentException: ${e.message.toString()}")
             throw java.lang.IllegalArgumentException(e.toString())
         }
+
+        println("---download file info start---")
+        println(downloadFilePath)
+        println("---download file info end---")
 
         return downloadFile
     }

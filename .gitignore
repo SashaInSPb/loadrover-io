@@ -2,7 +2,7 @@ build/
 api/build/
 logs/*.log
 logs/full_log.log
-.gradle/
+.gradle/**
 
 ### IntelliJ IDEA ###
 .idea
