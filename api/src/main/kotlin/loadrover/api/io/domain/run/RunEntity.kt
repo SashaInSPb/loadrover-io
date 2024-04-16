@@ -12,8 +12,8 @@ class RunEntity(
     @Column(nullable = true)
     var runOrder: Int? = 1, // 실행 순서
 
-    @Column(nullable = true)
-    var reportPath: String? = null, // 보고서 링크
+//    @Column(nullable = true)
+//    var reportPath: String? = null, // 보고서 링크
 
     @Column(nullable = true)
     var hostIp: String? = null, // generator IP

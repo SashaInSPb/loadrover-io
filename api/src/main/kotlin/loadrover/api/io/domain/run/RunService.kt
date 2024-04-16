@@ -39,7 +39,7 @@ class RunService(
             val downLoadFile = awsS3Service.getObject(taskEntity.uploadFileName.toString())
             val options = listOf(
                 "-n", "-t", downLoadFile.name,
-                if (generatorIpList !== "") "-R" else "", generatorIpList,
+//                if (generatorIpList !== "") "-R" else "", generatorIpList,
                 "-l", "$currentDateTime.jtl",
                 "-e", "-o", "$currentDirectory/${loadroverProperties.reportDirectory}/${downLoadFile.name}"
             )

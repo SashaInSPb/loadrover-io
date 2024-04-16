@@ -18,7 +18,6 @@ class FileUtils(
 
     // 폴더이름 리스트 뽑기
     fun searchDirectories(directory: String): MutableSet<BaseDto.ResultDto> {
-        val directory = loadroverConfig.reportDirectory
         val resultPath: Path = Path.of(directory)
         val folderList: MutableSet<BaseDto.ResultDto> = mutableSetOf()
 
@@ -52,7 +51,14 @@ class FileUtils(
         return folderList
     }
 
-    //TODO: memory leak 확인하기
+    //TODO: memory leak check
+    fun zipAll(directory: String, zipFile: String) {
+        val sourceFile = File(directory)
+
+        ZipOutputStream(BufferedOutputStream(FileOutputStream(zipFile))).use {
+            zipFiles(it, sourceFile, "")
+        }
+    }
     fun zipFiles(zipOut: ZipOutputStream, sourceFile: File, parentDirPath: String) {
         val data = ByteArray(2048)
 
@@ -82,6 +88,14 @@ class FileUtils(
                     }
                 }
             }
+        }
+    }
+
+    fun deleteDirectory(directory: String) {
+        try {
+            File(directory).deleteRecursively()
+        } catch (e: Exception) {
+            logger.error("Failed to delete file: ${e.message.toString()}")
         }
     }
 
@@ -150,14 +164,6 @@ class FileUtils(
 //        }
 //
 //        return fileList
-//    }
-
-//    fun deleteDirectory(directory: String) {
-//        try {
-//            File(directory).deleteRecursively()
-//        } catch (e: Exception) {
-//            logger.error("Failed to delete file: ${e.message.toString()}")
-//        }
 //    }
 //
 //    fun moveJsonFile(scenarioId: String, startFolder: String, destinationFolder: String) {

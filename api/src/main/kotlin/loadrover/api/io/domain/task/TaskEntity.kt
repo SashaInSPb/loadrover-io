@@ -23,6 +23,10 @@ class TaskEntity(
     @Column(nullable = true, length = 500)
     var description: String? = null, // 작업 설명
 
+    // FIXME: RunEntity로 옮길 것
+    @Column(nullable = true)
+    var reportPath: String? = null, // 보고서 링크
+
     @Column(nullable = true)
     var runCount: Int? = 0, // 실행 횟수
 
