@@ -27,11 +27,4 @@ class RunController(
         runService.runSimulation(taskId)
     }
 
-    @GetMapping("")
-    fun test() {
-
-
-
-    }
-
 }

@@ -14,13 +14,13 @@ import java.time.LocalDateTime
 
 @EnableScheduling
 @SpringBootApplication
-class ReportScheduler(
+class UploadReportScheduler(
     private val fileUtils: FileUtils,
     private val loadroverProperties: LoadroverProperties,
     private val awsS3Service: AwsS3Service,
     private val taskRepository: TaskRepository
 ) {
-    private val logger = LoggerFactory.getLogger(ReportScheduler::class.java)
+    private val logger = LoggerFactory.getLogger(UploadReportScheduler::class.java)
     @Scheduled(cron = "0 */1 * * * *") // 매 1분으로 설정
     fun checkReport() {
 

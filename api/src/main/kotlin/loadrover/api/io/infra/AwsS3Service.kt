@@ -49,7 +49,7 @@ class AwsS3Service (
         println("---upload file info end---")
 
         return BaseDto.UploadResultDto(
-            fullPath = "https://${awsS3Properties.s3.cloudFrontDomain}/${uploadPath}",
+            fullPath = awsConfig.amazonS3Client().getUrl(awsS3Properties.s3.bucket, uploadPath).toString(),
             path = "${awsS3Properties.s3.cloudFrontDomain}/${uploadPath}"
         )
     }
