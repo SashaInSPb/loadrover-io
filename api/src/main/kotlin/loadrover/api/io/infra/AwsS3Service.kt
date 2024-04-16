@@ -11,13 +11,11 @@ import loadrover.api.io.config.LoadroverProperties
 import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
 import loadrover.api.io.domain.base.BaseDto
-import org.apache.tomcat.util.http.fileupload.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.ByteArrayInputStream
 import java.io.File
 import java.io.InputStream
-import java.nio.charset.StandardCharsets
 
 @Service
 class AwsS3Service (

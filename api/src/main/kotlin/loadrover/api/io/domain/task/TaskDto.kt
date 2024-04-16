@@ -18,7 +18,8 @@ class TaskDto {
         val status: TaskStatus,
         val uploadFileName: String? = null,
         val host: MutableSet<GeneratorDto>,
-        val description: String? = null
+        val description: String? = null,
+        val reportPath: String? = null
     )
 
     @Schema(description = "작업 생성 request")

@@ -18,3 +18,57 @@ INFO  17:37:51.083 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port
 INFO  17:38:03.044 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
 INFO  17:38:03.045 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
 INFO  17:38:03.046 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  
+INFO  17:46:00.941 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  17:46:00.987 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.  
+INFO  17:46:01.373 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  17:46:01.379 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  17:46:01.379 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  17:46:01.436 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  17:46:01.436 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1557 ms  
+INFO  17:46:01.708 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  17:46:01.724 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  17:46:01.991 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6ca33187  
+INFO  17:46:01.992 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  17:46:02.802 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  17:46:04.096 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  17:46:04.172 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  17:56:48.089 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  17:56:48.089 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  17:56:48.092 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms  
+INFO  17:59:24.868 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  17:59:24.870 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  17:59:24.903 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:00:04.662 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:00:04.705 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.  
+INFO  18:00:05.038 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:00:05.045 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:00:05.045 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:00:05.103 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:00:05.104 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1078 ms  
+INFO  18:00:05.355 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:00:05.371 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:00:05.679 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3c3ab672  
+INFO  18:00:05.680 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:00:06.695 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:00:07.818 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:00:07.893 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:00:50.778 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'  
+INFO  18:00:50.781 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...  
+INFO  18:00:50.813 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.  
+INFO  18:02:57.354 - - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.  
+INFO  18:02:57.404 - - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.  
+INFO  18:02:57.775 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8800 (http)  
+INFO  18:02:57.781 - - o.a.catalina.core.StandardService - Starting service [Tomcat]  
+INFO  18:02:57.781 - - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]  
+INFO  18:02:57.843 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext  
+INFO  18:02:57.844 - - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1152 ms  
+INFO  18:02:58.116 - - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer  
+INFO  18:02:58.130 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...  
+INFO  18:02:58.483 - - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1a66be41  
+INFO  18:02:58.484 - - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.  
+INFO  18:02:59.476 - - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'  
+WARN  18:03:00.711 - - o.s.b.a.m.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)  
+INFO  18:03:00.794 - - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8800 (http) with context path ''  
+INFO  18:03:03.700 - - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+INFO  18:03:03.700 - - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+INFO  18:03:03.701 - - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms  

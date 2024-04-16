@@ -37,13 +37,13 @@ class ReportScheduler(
             )
 
             val file = File("$reportDirPath/${fileNameNoExtension}.zip")
-            val reportPath = awsS3Service.upload(file.name, file.inputStream())
+            val s3Url = awsS3Service.upload(file.name, file.inputStream())
 
             val taskEntity = taskRepository.findByUploadFileName(fileName).orElseThrow {
                 throw BaseException(ExceptionCode.NOT_FOUND_CONTENTS)
             }
 
-            taskEntity.reportPath = reportPath.fullPath
+            taskEntity.reportPath = s3Url.fullPath
 
             try {
                 taskRepository.save(taskEntity)

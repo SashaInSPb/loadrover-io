@@ -35,7 +35,8 @@ class TaskService(
                             type = it.type
                         )
                     }.toMutableSet(),
-                    description = task.description
+                    description = task.description,
+                    reportPath = task.reportPath
                 )
             )
         }
@@ -60,6 +61,7 @@ class TaskService(
                     type = it.type
                 )
             }.toMutableSet(),
+            reportPath = task.reportPath,
             description = task.description
         )
     }
