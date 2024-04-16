@@ -1,25 +1,62 @@
-//package loadrover.api.io.utils
-//
-//import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-//import loadrover.api.io.config.LoadroverProperties
-//import loadrover.api.io.domain.scenario.FileDto
-//import loadrover.api.io.domain.scenario.HtmlFileDto
-//import loadrover.api.io.domain.scenario.ScenarioDto
-//import loadrover.api.io.domain.scenario.ScenarioStatus
-//import org.slf4j.LoggerFactory
-//import org.springframework.stereotype.Component
-//import java.io.BufferedWriter
-//import java.io.File
-//import java.io.FileWriter
-//import java.nio.file.*
-//import java.nio.file.attribute.BasicFileAttributes
-//
-//@Component
-//class FileUtils(
-//    private val loadroverConfig: LoadroverProperties
-//) {
-//    private val logger = LoggerFactory.getLogger(FileUtils::class.java)
-//
+package loadrover.api.io.utils
+
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import loadrover.api.io.config.LoadroverProperties
+import org.slf4j.LoggerFactory
+import org.springframework.stereotype.Component
+import java.io.BufferedWriter
+import java.io.File
+import java.io.FileWriter
+import java.nio.file.*
+import java.nio.file.attribute.BasicFileAttributes
+
+@Component
+class FileUtils(
+    private val loadroverConfig: LoadroverProperties
+) {
+    private val logger = LoggerFactory.getLogger(FileUtils::class.java)
+
+    // 파일이 아닌 폴더로 결과물이 있는 result 출력용
+    fun searchResultDirectories(): MutableSet<FileDto> {
+        val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
+        val resultPath: Path = Path.of(resultDirectory)
+        val folderList: MutableSet<FileDto> = mutableSetOf()
+
+        try {
+            Files.walkFileTree(
+                resultPath,
+                setOf(FileVisitOption.FOLLOW_LINKS),
+                Int.MAX_VALUE,
+                object : SimpleFileVisitor<Path>() {
+                    override fun preVisitDirectory(dir: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        val simulationId = dir?.uploadFileName.toString()
+
+                        if (dir?.nameCount == resultPath.nameCount + 1) {
+                            folderList.plusAssign(
+                                FileDto(
+                                    scenarioTitle = simulationId
+                                        .replace("-\\d+".toRegex(),"")
+                                        .replace("\\d{17}$".toRegex(),""),
+                                    scenarioId = simulationId,
+                                    status = ScenarioStatus.COMPLETE
+                                )
+                            )
+
+                        }
+                        return FileVisitResult.CONTINUE
+                    }
+
+                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
+                        return FileVisitResult.CONTINUE
+                    }
+                }
+            )
+        } catch (e: Exception) {
+            logger.error("Failed to read files: ${e.message.toString()}")
+        }
+        return folderList
+    }
+
 //    fun searchFiles(path: String): MutableSet<FileDto> {
 //        val fileDirectory = if (path == "work") "${loadroverConfig.gatling.workPath}/${path}" else "${loadroverConfig.gatling.path}/${path}"
 //        val directoryPath: Path = Path.of(fileDirectory)
@@ -56,7 +93,7 @@
 //
 //        return fileList
 //    }
-//
+
 //    fun searchHtmlFiles(simulationId: String): MutableSet<HtmlFileDto> {
 //        val fileDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}/$simulationId"
 //        val directoryPath: Path = Path.of(fileDirectory)
@@ -86,48 +123,7 @@
 //
 //        return fileList
 //    }
-//
-//    // 파일이 아닌 폴더로 결과물이 있는 result 출력용
-//    fun searchResultDirectories(): MutableSet<FileDto> {
-//        val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
-//        val resultPath: Path = Path.of(resultDirectory)
-//        val folderList: MutableSet<FileDto> = mutableSetOf()
-//
-//        try {
-//            Files.walkFileTree(
-//                resultPath,
-//                setOf(FileVisitOption.FOLLOW_LINKS),
-//                Int.MAX_VALUE,
-//                object : SimpleFileVisitor<Path>() {
-//                    override fun preVisitDirectory(dir: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-//                        val simulationId = dir?.uploadFileName.toString()
-//
-//                        if (dir?.nameCount == resultPath.nameCount + 1) {
-//                            folderList.plusAssign(
-//                                FileDto(
-//                                    scenarioTitle = simulationId
-//                                        .replace("-\\d+".toRegex(),"")
-//                                        .replace("\\d{17}$".toRegex(),""),
-//                                    scenarioId = simulationId,
-//                                    status = ScenarioStatus.COMPLETE
-//                                )
-//                            )
-//
-//                        }
-//                        return FileVisitResult.CONTINUE
-//                    }
-//
-//                    override fun visitFile(file: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-//                        return FileVisitResult.CONTINUE
-//                    }
-//                }
-//            )
-//        } catch (e: Exception) {
-//            logger.error("Failed to read files: ${e.message.toString()}")
-//        }
-//        return folderList
-//    }
-//
+
 //    fun deleteDirectory(directory: String) {
 //        try {
 //            File(directory).deleteRecursively()
@@ -203,5 +199,5 @@
 //            }
 //        }
 //    }
-//
-//}
+
+}

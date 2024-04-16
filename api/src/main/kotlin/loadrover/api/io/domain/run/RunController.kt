@@ -23,9 +23,10 @@ import java.util.concurrent.CompletableFuture
 class RunController(
     private val runService: RunService
 ) {
-    @GetMapping("/{id}")
+    // TODO: runId를 던져주자
+    @GetMapping("/{taskId}")
     @Operation(summary = "부하테스트 실행")
-    fun runSimulation(@PathVariable("id") taskId: Long) {
+    fun runSimulation(@PathVariable("taskId") taskId: Long) {
         runService.runSimulation(taskId)
     }
 

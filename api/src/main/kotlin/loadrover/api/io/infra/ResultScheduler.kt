@@ -1,4 +1,4 @@
-package loadrover.api.io.domain.task
+package loadrover.api.io.infra
 
 import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -8,16 +8,19 @@ import java.time.LocalDateTime
 
 @EnableScheduling
 @SpringBootApplication
-class TaskResultScheduler(
+class ResultScheduler(
 ) {
-    private val logger = LoggerFactory.getLogger(TaskResultScheduler::class.java)
+    private val logger = LoggerFactory.getLogger(ResultScheduler::class.java)
 
-    //
+    // result 디렉토리를 뒤진다.
+    // result 파일명으로
+
     @Scheduled(cron = "0 */1 * * * *") // 매 1분으로 설정
     fun uploadReport() {
-
-//        val progressFileList = fileUtils.searchFiles("progress")
+//
 //        val resultFolderList = fileUtils.searchResultDirectories()
+
+
 //
 //        for (progressFile in progressFileList) {
 //            val scenarioId = progressFile.scenarioId
@@ -27,13 +30,10 @@ class TaskResultScheduler(
 //
 //                if (resultFileId == scenarioId) {
 //                    fileUtils.moveJsonFile(scenarioId, loadroverConfig.gatling.progress, loadroverConfig.gatling.complete)
-//                    // result html 헤더 수정
-//                    fileUtils.copyResourceFile(resultFolder.scenarioId)
-//                    htmlUtils.reviseHtmlHeader(resultFolder.scenarioId)
 //                }
 //            }
 //        }
-        logger.debug("Check simulation result: {}", LocalDateTime.now())
+        logger.debug("Check run result: {}", LocalDateTime.now())
     }
 
 }
