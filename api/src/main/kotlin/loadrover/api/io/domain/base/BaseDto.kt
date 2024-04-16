@@ -36,4 +36,8 @@ class BaseDto {
         val path: String
     )
 
+    data class ResultDto(
+        val resultFolderName: String
+    )
+
 }

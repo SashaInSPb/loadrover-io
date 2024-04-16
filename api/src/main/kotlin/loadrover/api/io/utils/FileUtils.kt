@@ -1,14 +1,14 @@
 package loadrover.api.io.utils
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import loadrover.api.io.config.LoadroverProperties
+import loadrover.api.io.domain.base.BaseDto
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
-import java.io.BufferedWriter
-import java.io.File
-import java.io.FileWriter
+import java.io.*
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
 
 @Component
 class FileUtils(
@@ -16,11 +16,11 @@ class FileUtils(
 ) {
     private val logger = LoggerFactory.getLogger(FileUtils::class.java)
 
-    // 파일이 아닌 폴더로 결과물이 있는 result 출력용
-    fun searchResultDirectories(): MutableSet<FileDto> {
-        val resultDirectory = "${loadroverConfig.gatling.path}/${loadroverConfig.gatling.result}"
-        val resultPath: Path = Path.of(resultDirectory)
-        val folderList: MutableSet<FileDto> = mutableSetOf()
+    // 폴더이름 리스트 뽑기
+    fun searchDirectories(directory: String): MutableSet<BaseDto.ResultDto> {
+        val directory = loadroverConfig.reportDirectory
+        val resultPath: Path = Path.of(directory)
+        val folderList: MutableSet<BaseDto.ResultDto> = mutableSetOf()
 
         try {
             Files.walkFileTree(
@@ -29,19 +29,14 @@ class FileUtils(
                 Int.MAX_VALUE,
                 object : SimpleFileVisitor<Path>() {
                     override fun preVisitDirectory(dir: Path?, attrs: BasicFileAttributes?): FileVisitResult {
-                        val simulationId = dir?.uploadFileName.toString()
+                        val fileName = dir?.fileName.toString()
 
                         if (dir?.nameCount == resultPath.nameCount + 1) {
                             folderList.plusAssign(
-                                FileDto(
-                                    scenarioTitle = simulationId
-                                        .replace("-\\d+".toRegex(),"")
-                                        .replace("\\d{17}$".toRegex(),""),
-                                    scenarioId = simulationId,
-                                    status = ScenarioStatus.COMPLETE
+                                BaseDto.ResultDto(
+                                    resultFolderName = fileName
                                 )
                             )
-
                         }
                         return FileVisitResult.CONTINUE
                     }
@@ -52,9 +47,42 @@ class FileUtils(
                 }
             )
         } catch (e: Exception) {
-            logger.error("Failed to read files: ${e.message.toString()}")
+            logger.error("Failed to read result directories: ${e.message.toString()}")
         }
         return folderList
+    }
+
+    //TODO: memory leak 확인하기
+    fun zipFiles(zipOut: ZipOutputStream, sourceFile: File, parentDirPath: String) {
+        val data = ByteArray(2048)
+
+        sourceFile.listFiles()?.forEach { f ->
+            if (f.isDirectory) {
+                val path = if (parentDirPath == "") f.name else parentDirPath + File.separator + f.name
+                val entry = ZipEntry(path + File.separator)
+                entry.time = f.lastModified()
+                entry.isDirectory
+                entry.size = f.length()
+                zipFiles(zipOut, f, path)
+
+            } else {
+                FileInputStream(f).use { fi ->
+                    BufferedInputStream(fi).use { origin ->
+                        val path = parentDirPath + File.separator + f.name
+                        val entry = ZipEntry(path)
+                        entry.time = f.lastModified()
+                        entry.isDirectory
+                        entry.size = f.length()
+                        zipOut.putNextEntry(entry)
+                        while (true) {
+                            val readBytes = origin.read(data)
+                            if (readBytes == -1) break
+                            zipOut.write(data, 0, readBytes)
+                        }
+                    }
+                }
+            }
+        }
     }
 
 //    fun searchFiles(path: String): MutableSet<FileDto> {
