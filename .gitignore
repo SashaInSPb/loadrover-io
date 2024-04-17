@@ -1,4 +1,4 @@
-build/
+#build/
 logs/*.log
 logs/full_log.log
 .gradle/**
