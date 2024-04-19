@@ -43,7 +43,7 @@
         </appender>
 
         <!-- Attach appenders to root -->
-        <root level="ERROR">
+        <root level="DEBUG">
             <appender-ref ref="FILE"/>
         </root>
 
@@ -60,7 +60,7 @@
         </appender>
 
         <!-- Attach appenders to root -->
-        <root level="ERROR">
+        <root level="DEBUG">
             <appender-ref ref="FILE"/>
         </root>
 

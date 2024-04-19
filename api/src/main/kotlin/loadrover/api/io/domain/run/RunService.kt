@@ -37,12 +37,14 @@ class RunService(
         try {
             val jmeterScript = "./jmeter.sh"
             val downLoadFile = awsS3Service.getObject(taskEntity.uploadFileName.toString())
-            val options = listOf(
+            val options = mutableListOf(
                 "-n", "-t", downLoadFile.name,
-                if (generatorIpList !== "") "-R" else "", generatorIpList,
                 "-l", "$currentDateTime.jtl",
                 "-e", "-o", "$currentDirectory/${loadroverProperties.reportDirectory}/${downLoadFile.name}"
             )
+
+            // Remote 분산 테스트 옵션 추가
+            if (generatorIpList !== "") options.plusAssign("-R$generatorIpList")
 
             val processBuilder = ProcessBuilder(jmeterScript, *options.toTypedArray())
 
