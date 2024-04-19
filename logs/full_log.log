@@ -22104,3 +22104,18 @@ DEBUG 12:26:00.691 - - l.api.io.infra.UploadReportScheduler - Check report: 2024
 DEBUG 12:27:00.006 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:27:00.006504  
 DEBUG 12:27:10.192 - - com.amazonaws.internal.SdkSSLSocket - closing dev-sg-admin-static.s3.ap-northeast-2.amazonaws.com/52.219.144.58:443  
 DEBUG 12:28:00.005 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:28:00.005421  
+DEBUG 12:29:00.005 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:29:00.005018  
+DEBUG 12:30:00.023 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:30:00.023142  
+DEBUG 12:31:00.020 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:31:00.020279  
+DEBUG 12:32:00.014 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:32:00.014583  
+DEBUG 12:33:00.030 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:33:00.029910  
+DEBUG 12:34:00.014 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:34:00.014695  
+DEBUG 12:35:00.026 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:35:00.026102  
+DEBUG 12:36:00.020 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:36:00.020254  
+DEBUG 12:37:00.007 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:37:00.007180  
+DEBUG 12:38:00.020 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:38:00.020767  
+DEBUG 12:39:00.013 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:39:00.013777  
+DEBUG 12:40:00.002 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:40:00.002357  
+DEBUG 12:41:00.001 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:41:00.001950  
+DEBUG 12:42:00.004 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:42:00.004457  
+DEBUG 12:43:00.002 - - l.api.io.infra.UploadReportScheduler - Check report: 2024-04-19T12:43:00.002482  
