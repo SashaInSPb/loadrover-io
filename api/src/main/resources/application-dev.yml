@@ -27,6 +27,17 @@ spring:
   servlet:
     multipart:
       max-file-size: 1600KB
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+  devtools:
+    livereload:
+      enabled: true
+  web:
+    resources:
+      static-locations: classpath:/static/
 
 server:
   servlet:

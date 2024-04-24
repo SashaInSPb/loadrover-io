@@ -8,7 +8,7 @@ import java.util.*
 @Repository
 interface TaskRepository: JpaRepository<TaskEntity, Long> {
     @EntityGraph(attributePaths = ["runList"])
-    fun findByProjectId(id: Long): MutableList<TaskEntity>
+    fun findByProjectId(id: Long?): MutableList<TaskEntity>
 
     fun findByUploadFileName(uploadFileName: String): Optional<TaskEntity>
 

@@ -6,14 +6,23 @@ import org.springframework.web.multipart.MultipartFile
 
 class TaskDto {
 
+    @Schema(description = "작업 리스트 조회 request")
+    data class TaskListRequest(
+        val projectId: Long?
+    )
+
     @Schema(description = "작업 리스트 조회 response")
     data class TaskListResponse(
-        @Schema(description = "작업 list")
-        val taskList: MutableList<TaskDetailDto> = mutableListOf()
+        val taskId: Long,
+        val title: String,
+        val status: TaskStatus,
+        val uploadFileName: String? = "",
+        val hostList: MutableSet<GeneratorDto>
     )
 
     @Schema(description = "작업 상세 조회 response")
     data class TaskDetailDto(
+        val taskId: Long,
         val title: String,
         val status: TaskStatus,
         val uploadFileName: String? = null,

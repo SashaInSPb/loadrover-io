@@ -12,10 +12,10 @@ class TaskController(
     private val taskService: TaskService
 ) {
 
-    @GetMapping("/list/{projectId}")
+    @GetMapping("/list")
     @Operation(summary = "작업 목록 조회")
-    fun getTaskList(@PathVariable("projectId") projectId: Long): TaskDto.TaskListResponse {
-        return taskService.getTaskList(projectId)
+    fun getTaskList(@RequestParam(value = "projectId", required = false) projectId: String): MutableList<TaskDto.TaskListResponse> {
+        return taskService.getTaskList(projectId.toLong())
     }
 
     @GetMapping("/{taskId}")
