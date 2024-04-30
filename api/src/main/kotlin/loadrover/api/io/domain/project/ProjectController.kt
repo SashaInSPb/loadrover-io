@@ -2,8 +2,6 @@ package loadrover.api.io.domain.project
 
 import io.swagger.v3.oas.annotations.Operation
 import jakarta.validation.Valid
-import loadrover.api.io.domain.task.TaskDto
-import loadrover.api.io.domain.task.TaskService
 import loadrover.api.io.utils.StringUtils
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -19,23 +17,23 @@ class ProjectController(
     @Operation(summary = "모든 프로젝트 목록 조회")
     fun getProjectList(@RequestParam(value = "projectId", required = false) projectId: String?, model: Model): String {
         val projectList = projectService.getAllProjectList()
-        println("ProjectId: $projectId")
 
         model.addAttribute("projectList", projectList)
+        // 프로젝트 수정 시, 불러와야 하는 데이터를 뿌려줘야 할 때
         model.addAttribute("projectListJsonString", StringUtils.objectToJsonString(projectList))
 
         return "views/project"
     }
 
-    @PostMapping
+    @PostMapping("")
     @Operation(summary = "프로젝트 생성")
     fun createProject(@RequestBody @Valid request: ProjectDto.ProjectCreateRequest) {
         projectService.createProject(request)
     }
 
-    @PutMapping
+    @PutMapping("")
     @Operation(summary = "프로젝트 수정")
-    fun updateProject(@RequestBody @Valid request: ProjectDto.ProjectUpdateRequest ) {
+    fun updateProject(@RequestBody request: ProjectDto.ProjectUpdateRequest) {
         projectService.updateProject(request)
     }
 

@@ -16,7 +16,7 @@ class TaskDto {
         val taskId: Long,
         val title: String,
         val status: TaskStatus,
-        val uploadFileName: String? = "",
+        val reportPath: String? = "",
         val hostList: MutableSet<GeneratorDto>
     )
 
@@ -35,7 +35,7 @@ class TaskDto {
     data class TaskCreateRequest(
         val projectId: Long,
         val title: String,
-        val host: MutableSet<GeneratorDto>
+        val host: MutableSet<GeneratorDto>? = mutableSetOf()
     )
 
     @Schema(description = "작업 수정 request")

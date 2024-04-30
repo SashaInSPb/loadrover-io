@@ -29,7 +29,7 @@ class TaskService(
                     taskId = task.id,
                     title = task.title,
                     status = task.status,
-                    uploadFileName = task.uploadFileName,
+                    reportPath = task.reportPath,
                     hostList = task.generatorList.map {
                         TaskDto.GeneratorDto(
                             host = it.hostAddress,
@@ -84,15 +84,15 @@ class TaskService(
         )
 
         val generatorList: MutableList<GeneratorEntity> = mutableListOf()
-        for (generator in request.host) {
-            generatorList.plusAssign(
-                GeneratorEntity(
-                    hostAddress = generator.host,
-                    type = generator.type,
-                    task = task
-                )
-            )
-        }
+//        for (generator in request.host) {
+//            generatorList.plusAssign(
+//                GeneratorEntity(
+//                    hostAddress = generator.host,
+//                    type = generator.type,
+//                    task = task
+//                )
+//            )
+//        }
 
         task.generatorList = generatorList.toMutableSet()
 
