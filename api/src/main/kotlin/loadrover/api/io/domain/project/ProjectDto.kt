@@ -9,7 +9,7 @@ class ProjectDto {
     data class ProjectListResponse(
         val projectId: Long,
         val title: String,
-        val clientName: String? = null,
+        val clientName: String? = "",
         val taskCount: Int,
         val startDateTime: String? = null,
         val endDateTime: String? = null,
@@ -18,7 +18,7 @@ class ProjectDto {
     @Schema(description = "프로젝트 생성 request")
     data class ProjectCreateRequest(
         val title: String,
-        val clientName: String? = null,
+        val clientName: String? = "",
         val startDateTime: LocalDateTime? = null,
         val endDateTime: LocalDateTime? = null
     )
@@ -27,7 +27,7 @@ class ProjectDto {
     data class ProjectUpdateRequest(
         val projectId: Long,
         val title: String,
-        val clientName: String? = null,
+        val clientName: String? = "",
         val startDateTime: LocalDateTime? = null,
         val endDateTime: LocalDateTime? = null
     )

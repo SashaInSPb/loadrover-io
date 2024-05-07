@@ -1,15 +1,10 @@
 package loadrover.api.io.domain.task
 
 import io.swagger.v3.oas.annotations.media.Schema
-import loadrover.api.io.domain.generator.Type
+import loadrover.api.io.domain.generator.HostType
 import org.springframework.web.multipart.MultipartFile
 
 class TaskDto {
-
-    @Schema(description = "작업 리스트 조회 request")
-    data class TaskListRequest(
-        val projectId: Long?
-    )
 
     @Schema(description = "작업 리스트 조회 response")
     data class TaskListResponse(
@@ -25,10 +20,10 @@ class TaskDto {
         val taskId: Long,
         val title: String,
         val status: TaskStatus,
-        val uploadFileName: String? = null,
-        val reportPath: String? = null,
+        val uploadFileName: String? = "",
+        val reportPath: String? = "",
         val host: MutableSet<GeneratorDto>,
-        val description: String? = null
+        val description: String? = ""
     )
 
     @Schema(description = "작업 생성 request")
@@ -49,6 +44,6 @@ class TaskDto {
     @Schema(description = "작업 generator 정보")
     data class GeneratorDto(
         val host: String,
-        val type: Type
+        val type: HostType
     )
 }

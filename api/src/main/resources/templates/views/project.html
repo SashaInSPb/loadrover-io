@@ -175,11 +175,17 @@
                         }
 
                         $.each(taskList, function(index, task) {
+                            let hostHtml = task.hostList.map ( ele =>
+                                '<span class="badge rounded-pill bg-danger">' + ele.type + '</span>' + '&nbsp;'
+                            ).join('')
+
+                            console.log(hostHtml)
+
                             html += '<tr>' +
                                         '<td style="vertical-align: middle">' + '<span>' + task.taskId + '</span>' + '</td>' +
                                         '<td style="vertical-align: middle">' + '<span>' + task.title + '</span>' + '</td>' +
                                         '<td style="vertical-align: middle"><a href="' + task.reportPath + '" target="_blank">' + task.reportPath + '</a></td>' +
-                                        '<td style="vertical-align: middle">' + '<span>' + task.hostList + '</span>'+ '</td>' +
+                                        '<td style="vertical-align: middle">' + hostHtml + '</td>' +
                                         '<td style="vertical-align: middle">' + '<span>' + '<button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-task-update" style="margin-bottom: 3px;">' + '수정하기' + '</button>' + '</span>'+ '</td>' +
                                         '<td style="vertical-align: middle">' + '<span>' + '<button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-task-execution" data-task-id="' + task.taskId + '" style="margin-bottom: 3px" id="runBtn";>' + '실행하기' + '</button>' + '</span>'+ '</td>' +
                                     '</tr>';
@@ -238,6 +244,30 @@
             $("#u_endDateTime").val(previousProject.endDateTime);
         }
 
+        function searchCheck() {
+            let checked = [];
+            $("input[name='type']:checked").each(function(index, value) {
+                if(value.defaultValue !== "") {
+                    checked.push(value.defaultValue);
+                }
+            });
+
+            let checkLength = checked.length;
+            let checkExcludeAllLength = ($("input[name='type']").length -1);
+
+            if (checkLength === checkExcludeAllLength) {
+                $("input[name='type']").prop("checked", false);
+                $("#s_language0").prop("checked", true);
+            } else {
+                $("#s_language0").prop("checked", false);
+            }
+
+            if (checkLength === 0) {
+                $("input[name='type']").prop("checked", false);
+                $("#s_language0").prop("checked", true);
+            }
+        }
+
     </script>
 </th:block>
 
@@ -274,7 +304,7 @@
                     <h1 class="h2 sg-padding-bottom-10">Project</h1>
 
                     <div>
-                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-project-register" style="margin-bottom: 3px;">추가</button>
+                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-project-register" style="margin-bottom: 3px;">프로젝트 추가</button>
                     </div>
                 </div>
 
@@ -494,6 +524,16 @@
                                         <label for="taskTitle">제목</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="제목을 입력해주세요." id="taskTitle" autofocus required autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label >host 설정</label>
+                                        <div class="form-check" style="margin-left: 1rem;" th:each="type, index: ${hostType}">
+                                            <input class="form-check-input" type="checkbox" name="type" th:id="'type'+${index.index}" th:value="${type.name}" required><!-- th:checked="${index.index == 0}">-->
+                                            <label class="form-check-label" th:for="'type'+${index.index}">
+                                                [[${type.value}]]
+                                            </label>
                                         </div>
                                     </div>
 

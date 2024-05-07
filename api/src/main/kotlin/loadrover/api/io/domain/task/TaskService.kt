@@ -78,23 +78,26 @@ class TaskService(
             status = TaskStatus.NEW,
             uploadFileName = file.uploadFileName,
             // 파일 내용 미리보기
-            description = file.getContentsFromFile(scenarioFile, 500),
+            description = file.getContentsFromFile(scenarioFile, 600),
             runCount = 0,
             project = project
         )
 
         val generatorList: MutableList<GeneratorEntity> = mutableListOf()
-//        for (generator in request.host) {
-//            generatorList.plusAssign(
-//                GeneratorEntity(
-//                    hostAddress = generator.host,
-//                    type = generator.type,
-//                    task = task
-//                )
-//            )
-//        }
 
-        task.generatorList = generatorList.toMutableSet()
+        if (request.host != null) {
+            for (generator in request.host) {
+                generatorList.plusAssign(
+                    GeneratorEntity(
+                        hostAddress = generator.host,
+                        type = generator.type,
+                        task = task
+                    )
+                )
+            }
+
+            task.generatorList = generatorList.toMutableSet()
+        }
 
         try {
             taskRepository.save(task)

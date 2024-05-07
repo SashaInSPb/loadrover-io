@@ -2,6 +2,7 @@ package loadrover.api.io.domain.project
 
 import io.swagger.v3.oas.annotations.Operation
 import jakarta.validation.Valid
+import loadrover.api.io.domain.generator.HostType
 import loadrover.api.io.utils.StringUtils
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -21,6 +22,7 @@ class ProjectController(
         model.addAttribute("projectList", projectList)
         // 프로젝트 수정 시, 불러와야 하는 데이터를 뿌려줘야 할 때
         model.addAttribute("projectListJsonString", StringUtils.objectToJsonString(projectList))
+        model.addAttribute("hostType", HostType.values())
 
         return "views/project"
     }
