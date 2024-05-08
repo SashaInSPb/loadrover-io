@@ -27,6 +27,17 @@ spring:
   servlet:
     multipart:
       max-file-size: 1600KB
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+  devtools:
+    livereload:
+      enabled: true
+  web:
+    resources:
+      static-locations: classpath:/static/
 
 server:
   servlet:
@@ -64,6 +75,6 @@ cloud:
       cloud-front-domain: d1ipvhagx28fo9.cloudfront.net
 
 loadrover:
-  download-directory: api/build/resources/main/static/apache-jmeter-5.6.3/bin
-  working-directory: api/build/resources/main/static/apache-jmeter-5.6.3/bin
-  report-directory: api/build/resources/main/static/apache-jmeter-5.6.3/bin/report
+  download-directory: api/src/main/resources/static/apache-jmeter-5.6.3/bin
+  working-directory: api/src/main/resources/static/apache-jmeter-5.6.3/bin
+  report-directory: api/src/main/resources/static/apache-jmeter-5.6.3/bin/report

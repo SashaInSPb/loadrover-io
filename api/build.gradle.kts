@@ -33,6 +33,7 @@ dependencies {
 
 	//string
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("com.google.code.gson:gson:2.10")
 
 	//html parsing
 	implementation("org.jsoup:jsoup:1.15.3")
@@ -44,6 +45,11 @@ dependencies {
 	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	//thymeleaf
+	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
 }
 
 tasks.withType<KotlinCompile> {

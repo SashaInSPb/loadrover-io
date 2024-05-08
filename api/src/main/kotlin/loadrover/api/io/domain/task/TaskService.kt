@@ -19,31 +19,28 @@ class TaskService(
 ) {
     private val logger = LoggerFactory.getLogger(TaskService::class.java)
 
-    fun getTaskList(projectId: Long): TaskDto.TaskListResponse {
-        val responseData: MutableList<TaskDto.TaskDetailDto> = mutableListOf()
+    fun getTaskList(projectId: Long?): MutableList<TaskDto.TaskListResponse> {
+        val responseData: MutableList<TaskDto.TaskListResponse> = mutableListOf()
         val taskList = taskRepository.findByProjectId(projectId)
 
         for (task in taskList) {
-            responseData.plusAssign(
-                TaskDto.TaskDetailDto(
+            responseData.add(
+                TaskDto.TaskListResponse(
+                    taskId = task.id,
                     title = task.title,
                     status = task.status,
-                    uploadFileName = task.uploadFileName,
-                    host = task.generatorList.map {
+                    reportPath = task.reportPath,
+                    hostList = task.generatorList.map {
                         TaskDto.GeneratorDto(
                             host = it.hostAddress,
                             type = it.type
                         )
-                    }.toMutableSet(),
-                    description = task.description,
-                    reportPath = task.reportPath
+                    }.toMutableSet()
                 )
             )
         }
 
-        return TaskDto.TaskListResponse(
-            taskList = responseData
-        )
+        return responseData
     }
 
     fun getTaskDetail(taskId: Long): TaskDto.TaskDetailDto {
@@ -52,6 +49,7 @@ class TaskService(
         }
 
         return TaskDto.TaskDetailDto(
+            taskId = task.id,
             title = task.title,
             status = task.status,
             uploadFileName = task.uploadFileName,
@@ -61,8 +59,7 @@ class TaskService(
                     type = it.type
                 )
             }.toMutableSet(),
-            reportPath = task.reportPath,
-            description = task.description
+            reportPath = task.reportPath
         )
     }
 
@@ -81,23 +78,26 @@ class TaskService(
             status = TaskStatus.NEW,
             uploadFileName = file.uploadFileName,
             // 파일 내용 미리보기
-            description = file.getContentsFromFile(scenarioFile, 500),
+            description = file.getContentsFromFile(scenarioFile, 600),
             runCount = 0,
             project = project
         )
 
         val generatorList: MutableList<GeneratorEntity> = mutableListOf()
-        for (generator in request.host) {
-            generatorList.plusAssign(
-                GeneratorEntity(
-                    hostAddress = generator.host,
-                    type = generator.type,
-                    task = task
-                )
-            )
-        }
 
-        task.generatorList = generatorList.toMutableSet()
+        if (request.host != null) {
+            for (generator in request.host) {
+                generatorList.plusAssign(
+                    GeneratorEntity(
+                        hostAddress = generator.host,
+                        type = generator.type,
+                        task = task
+                    )
+                )
+            }
+
+            task.generatorList = generatorList.toMutableSet()
+        }
 
         try {
             taskRepository.save(task)
