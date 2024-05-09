@@ -12,25 +12,24 @@ class ProjectService(
 ) {
     private val logger = LoggerFactory.getLogger(ProjectService::class.java)
 
-    fun getAllProjectList(): ProjectDto.AllProjectListResponse {
-        val responseData: MutableList<ProjectDto.AllProjectListResponse.ProjectDto> = mutableListOf()
+    fun getAllProjectList(): MutableList<ProjectDto.ProjectListResponse> {
+        val responseData = mutableListOf<ProjectDto.ProjectListResponse>()
         val projectList = projectRepository.findAll()
 
         for (project in projectList) {
-            responseData.plusAssign(
-                ProjectDto.AllProjectListResponse.ProjectDto(
+            responseData.add(
+                ProjectDto.ProjectListResponse(
                     projectId = project.id,
                     title = project.title,
+                    clientName = project.clientName,
                     taskCount = project.taskList.size,
-                    startDateTime = project.startDateTime,
-                    endDateTime = project.endDateTime
+                    startDateTime = project.startDateTime.toString(),
+                    endDateTime = project.endDateTime.toString()
                 )
             )
         }
 
-        return ProjectDto.AllProjectListResponse(
-            projectList = responseData.sortedBy { it.endDateTime }.toMutableList()
-        )
+        return responseData.sortedBy { it.endDateTime }.toMutableList()
     }
 
     @Transactional

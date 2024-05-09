@@ -13,7 +13,7 @@ class GeneratorEntity(
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
-    var type: Type,
+    var type: HostType,
 
     @ManyToOne
     var task: TaskEntity
@@ -26,6 +26,10 @@ class GeneratorEntity(
 
 }
 
-enum class Type {
-    HOST_1, HOST_2, HOST_3
+enum class HostType(
+    val value: String
+) {
+    HOST_1("10.88.12.189"),
+    HOST_2("10.88.12.190"),
+    HOST_3("10.88.12.138")
 }
