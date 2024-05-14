@@ -30,6 +30,5 @@ enum class HostType(
     val value: String
 ) {
     HOST_1("10.88.12.189"),
-    HOST_2("10.88.12.190"),
-    HOST_3("10.88.12.138")
+    HOST_2("10.88.12.190")
 }
