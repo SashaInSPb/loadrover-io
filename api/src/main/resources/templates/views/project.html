@@ -105,12 +105,19 @@
                e.preventDefault();
                console.log($("#t_projectId").val())
 
-               let formData = new FormData();
+                let formData = new FormData();
+                // 선택된 호스트들을 저장할 배열
+                let checkedHosts = [];
+
+                $("input[name='type']:checked").each(function() {
+                    checkedHosts.push($(this).val());
+                });
+
                formData.append("scenarioFile", $("#scenarioFile")[0].files[0]);
                formData.append("taskCreateRequest", new Blob([JSON.stringify({
                     "projectId": projectId,
                     "title": $("#taskTitle").val(),
-                    "host": null
+                    "host": checkedHosts
                 })], {
                         type: "application/json"
                 }));
@@ -198,6 +205,15 @@
                     }
                 });
             });
+
+            //not allowed multiple selection
+            $("input[type='checkbox'][name='orderNumber']").click(function(){
+                if($(this).prop('checked')) {
+                    $("input[type='checkbox'][name='orderNumber']").prop('checked', false);
+                    $(this).prop('checked',true);
+                }
+            });
+
         });
 
         $(document).on("click", "#runBtn", function(e) {
@@ -244,29 +260,6 @@
             $("#u_endDateTime").val(previousProject.endDateTime);
         }
 
-        function searchCheck() {
-            let checked = [];
-            $("input[name='type']:checked").each(function(index, value) {
-                if(value.defaultValue !== "") {
-                    checked.push(value.defaultValue);
-                }
-            });
-
-            let checkLength = checked.length;
-            let checkExcludeAllLength = ($("input[name='type']").length -1);
-
-            if (checkLength === checkExcludeAllLength) {
-                $("input[name='type']").prop("checked", false);
-                $("#s_language0").prop("checked", true);
-            } else {
-                $("#s_language0").prop("checked", false);
-            }
-
-            if (checkLength === 0) {
-                $("input[name='type']").prop("checked", false);
-                $("#s_language0").prop("checked", true);
-            }
-        }
 
     </script>
 </th:block>

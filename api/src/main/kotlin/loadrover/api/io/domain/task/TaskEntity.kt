@@ -20,7 +20,7 @@ class TaskEntity(
     @Column(nullable = true, length = 100)
     var uploadFileName: String? = null, // 파일명
 
-    @Column(nullable = true, length = 500)
+    @Column(nullable = true, length = 600)
     var description: String? = null, // 작업 설명
 
     // FIXME: RunEntity로 옮길 것
