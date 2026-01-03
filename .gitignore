@@ -13,3 +13,10 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+### JMeter ###
+*.log
+*.jmx
+
+### macOS ###
+.DS_Store
+
