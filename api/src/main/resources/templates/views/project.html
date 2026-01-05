@@ -100,19 +100,25 @@
                 });
             });
 
-            // task register submit event start
+            // task register submit event start // 작업 생성 모달
             $('#taskRegisterForm').on("submit", function(e) {
                e.preventDefault();
-               console.log($("#t_projectId").val())
+               console.log($("#t-projectId").val())
 
                let formData = new FormData();
                formData.append("scenarioFile", $("#scenarioFile")[0].files[0]);
                formData.append("taskCreateRequest", new Blob([JSON.stringify({
                     "projectId": projectId,
                     "title": $("#taskTitle").val(),
-                    "host": null
+                    // 이 값 처리 필요
+                    "host": $("input[name='type']:checked").map(function() {
+                        return {
+                            host: $(this).val().name,
+                            type: $(this).val()
+                        };
+                    }).get()
                 })], {
-                        type: "application/json"
+                    type: "application/json"
                 }));
 
                 console.log(formData)
@@ -143,12 +149,65 @@
                             title: '등록 실패',
                             text: xhr.responseText,
                             footer: '오류가 지속되면 관리자에게 문의해주세요.'
-                        })
+                        });
                     }
                 });
             });
             // task register submit event end
 
+            // task update submit event start
+            $('#taskUpdateForm').on("submit", function(e) {
+               e.preventDefault();
+               console.log($("#u_taskId").val())
+
+               // 데이터 바인딩 수정
+               let formData = new FormData();
+               formData.append("scenarioFile", $("#scenarioFile")[0].files[0]);
+               formData.append("taskUpdateRequest", new Blob([JSON.stringify({
+                    "taskId": $("#u_taskId").val(),
+                    "title": $("#u_taskTitle").val(),
+                    // 이 값 처리 필요,
+                    "host": $("input[name='u_type']:checked").map(function() {
+                        return {
+                            host: $(this).val().name,
+                            type: $(this).val()
+                        };
+                    }).get()
+                })], {
+                    type: "application/json"
+                }));
+
+                console.log(formData)
+
+                $.ajax({
+                    url: "/task",
+                    type: "PUT",
+                    contentType: "application/json",
+                    data: formData,
+                    success: function(data, status, xr) {
+                        swalWithBootstrapButtons.fire({
+                            icon: 'success',
+                            title: '수정 완료',
+                            text: '정상적으로 처리되었습니다.',
+                            showConfirmButton: false,
+                            timer: 2000
+                        })
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 2100);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(status.toString())
+                        swalWithBootstrapButtons.fire({
+                            icon: 'error',
+                            title: '수정 실패',
+                            text: xhr.responseText,
+                            footer: '오류가 지속되면 관리자에게 문의해주세요.'
+                        });
+                    }
+                });
+            });
+            // task update submit event end
 
             // Retrieve task list info by project
             $(document).on("click", "#projectTable tbody tr", function(e) {
@@ -186,7 +245,7 @@
                                         '<td style="vertical-align: middle">' + '<span>' + task.title + '</span>' + '</td>' +
                                         '<td style="vertical-align: middle"><a href="' + task.reportPath + '" target="_blank">' + task.reportPath + '</a></td>' +
                                         '<td style="vertical-align: middle">' + hostHtml + '</td>' +
-                                        '<td style="vertical-align: middle">' + '<span>' + '<button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-task-update" style="margin-bottom: 3px;">' + '수정하기' + '</button>' + '</span>'+ '</td>' +
+                                        '<td style="vertical-align: middle">' + '<span>' + '<button type="button" class="btn btn-sm btn-secondary update-btn" data-bs-toggle="modal" data-bs-target="#modal-form-task-update" style="margin-bottom: 3px;" data-task-id="' + task.taskId + '">' + '수정하기' + '</button>' + '</span>'+ '</td>' +
                                         '<td style="vertical-align: middle">' + '<span>' + '<button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-task-execution" data-task-id="' + task.taskId + '" style="margin-bottom: 3px" id="runBtn";>' + '실행하기' + '</button>' + '</span>'+ '</td>' +
                                     '</tr>';
                         });
@@ -198,11 +257,17 @@
                     }
                 });
             });
+
+            $(document).on('click', '.update-btn', function() {
+                let taskId = $(this).data('task-id');
+                console.log("taskId: " + taskId);
+                updateProjectInit(taskId);
+            });
+
         });
 
         $(document).on("click", "#runBtn", function(e) {
             e.preventDefault();
-            // 여기가 문제
             let taskId = $(this).data('task-id');
             console.log("taskId:", taskId);
 
@@ -244,28 +309,14 @@
             $("#u_endDateTime").val(previousProject.endDateTime);
         }
 
-        function searchCheck() {
-            let checked = [];
-            $("input[name='type']:checked").each(function(index, value) {
-                if(value.defaultValue !== "") {
-                    checked.push(value.defaultValue);
-                }
-            });
+        function updateTaskInit(taskId) {
+            let taskList = JSON.parse($("#taskListJsonString").val());
+            let previousTask = taskList.find(task => task.taskId === (taskId * 1));
+            console.log(previousTask)
 
-            let checkLength = checked.length;
-            let checkExcludeAllLength = ($("input[name='type']").length -1);
-
-            if (checkLength === checkExcludeAllLength) {
-                $("input[name='type']").prop("checked", false);
-                $("#s_language0").prop("checked", true);
-            } else {
-                $("#s_language0").prop("checked", false);
-            }
-
-            if (checkLength === 0) {
-                $("input[name='type']").prop("checked", false);
-                $("#s_language0").prop("checked", true);
-            }
+            $("#u_taskId").val(taskId);
+            $("#u_taskTitle").val(previousTask.title);
+            $("#u_host").val(previousTask.host);
         }
 
     </script>
@@ -276,16 +327,16 @@
         <input type="hidden" id="projectListJsonString" th:value="${projectListJsonString}"/>
         <img src="" id="testImg" style="visibility: hidden" alt=""/>
         <div class="py-4">
-<!--            <nav aria-label="breadcrumb" class="d-none d-md-inline-block">-->
-<!--                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">-->
-<!--                    <li class="breadcrumb-item">-->
-<!--                        <a href="#">-->
-<!--                            메인-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="breadcrumb-item"><a href="#">news</a></li>-->
-<!--                </ol>-->
-<!--            </nav>-->
+            <!--            <nav aria-label="breadcrumb" class="d-none d-md-inline-block">-->
+            <!--                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">-->
+            <!--                    <li class="breadcrumb-item">-->
+            <!--                        <a href="#">-->
+            <!--                            메인-->
+            <!--                        </a>-->
+            <!--                    </li>-->
+            <!--                    <li class="breadcrumb-item"><a href="#">news</a></li>-->
+            <!--                </ol>-->
+            <!--            </nav>-->
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0">
                     <h1 class="h4">LoadRover</h1>
@@ -295,20 +346,20 @@
                 </div>
             </div>
         </div>
-<!--        End of notice-->
+        <!--        End of notice-->
 
-<!--        ProjectList-->
+        <!--        ProjectList-->
         <div class="card border-0 shadow mb-4">
             <div class="card-body">
                 <div class="d-flex justify-content-between w-100 flex-wrap">
                     <h1 class="h2 sg-padding-bottom-10">Project</h1>
 
                     <div>
-                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-project-register" style="margin-bottom: 3px;">프로젝트 추가</button>
+                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#modal-form-project-register" style="margin-bottom: 3px;">프로젝트 추가
+                        </button>
                     </div>
                 </div>
-
-                <!-- [[${projectList}]] -->
 
                 <div th:if="${#lists.isEmpty(projectList)}">
                     등록된 프로젝트가 없습니다.
@@ -316,88 +367,95 @@
 
                 <div th:if="${!#lists.isEmpty(projectList)}">
                     <div class="table-responsive">
-                        <table class="table table-centered table-nowrap mb-0 rounded" id="projectTable" style="text-align: center">
+                        <table class="table table-centered table-nowrap mb-0 rounded" id="projectTable"
+                               style="text-align: center">
                             <thead class="thead-light">
-                                <tr style="vertical-align: middle">
-                                    <th class="border-0 rounded-start" style="width: 5%">ID</th>
-                                    <th class="border-0" style="width: 30%">TITLE</th>
-                                    <th class="border-0" style="width: 25%">CLIENT</th>
-                                    <th class="border-0" style="width: 10%">TASK COUNT</th>
-                                    <th class="border-0" style="width: 15%">시작시간</th>
-                                    <th class="border-0" style="width: 15%">종료시간</th>
-                                    <th class="border-0" style="width: 10%"></th>
-                                </tr>
+                            <tr style="vertical-align: middle">
+                                <th class="border-0 rounded-start" style="width: 5%">ID</th>
+                                <th class="border-0" style="width: 30%">TITLE</th>
+                                <th class="border-0" style="width: 25%">CLIENT</th>
+                                <th class="border-0" style="width: 10%">TASK COUNT</th>
+                                <th class="border-0" style="width: 15%">시작시간</th>
+                                <th class="border-0" style="width: 15%">종료시간</th>
+                                <th class="border-0" style="width: 10%"></th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr th:each="project, i: ${projectList}">
-                                    <td style="vertical-align: middle">
-                                        <span th:text="${project.projectId}"></span>
-                                    </td>
-                                    <td style="vertical-align: middle">
-                                        <span th:text="${project.title}"></span>
-                                    </td>
-                                    <td style="vertical-align: middle">
-                                        <span th:text="${project.clientName}"></span>
-                                    </td>
-                                    <td style="vertical-align: middle">
-                                        <span th:text="${project.taskCount}"></span>
-                                    </td>
-                                    <td style="vertical-align: middle">
-                                        <span th:text="${project.startDateTime}"></span>
-                                    </td>
-                                    <td style="vertical-align: middle">
-                                        <span th:text="${project.endDateTime}"></span>
-                                    </td>
-                                    <td style="vertical-align: middle">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-project-update" style="margin-bottom: 3px;"
-                                                th:projectId="${project.projectId}" th:onclick="updateProjectInit(this.getAttribute('projectId'))">수정하기</button>
-                                    </td>
-                                </tr>
+                            <tr th:each="project, i: ${projectList}">
+                                <td style="vertical-align: middle">
+                                    <span th:text="${project.projectId}"></span>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <span th:text="${project.title}"></span>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <span th:text="${project.clientName}"></span>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <span th:text="${project.taskCount}"></span>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <span th:text="${project.startDateTime}"></span>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <span th:text="${project.endDateTime}"></span>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal"
+                                            data-bs-target="#modal-form-project-update" style="margin-bottom: 3px;"
+                                            th:projectId="${project.projectId}"
+                                            th:onclick="updateProjectInit(this.getAttribute('projectId'))">수정하기
+                                    </button>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-<!--        projectList end-->
+        <!--        projectList end-->
 
-<!--        TaskList-->
+        <!--        TaskList-->
         <div class="card border-0 shadow mb-4">
             <div class="card-body">
                 <div class="d-flex justify-content-between w-100 flex-wrap">
                     <h1 class="h2 sg-padding-bottom-10">Task</h1>
-<!--                    modal component-->
+                    <!--                    modal component-->
                     <div id="createTaskButton">
-<!--                        <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-task-register" style="margin-bottom: 3px;">작업 추가</button>-->
+                        <!--                        <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form-task-register" style="margin-bottom: 3px;">작업 추가</button>-->
                     </div>
-<!--                    modal component-->
+                    <!--                    modal component-->
                 </div>
-                    <div class="table-responsive">
-                        <table class="table table-centered table-nowrap mb-0 rounded" id="taskTable" style="text-align: center">
-                            <thead class="thead-light">
-                            <tr style="vertical-align: middle">
-                                <th class="border-0 rounded-start" style="width: 5%">순번</th>
-                                <th class="border-0" style="width: 30%">작업명</th>
-                                <th class="border-0" style="width: 25%">파일명</th>
-                                <th class="border-0" style="width: 20%">호스트</th>
-                                <th class="border-0" style="width: 10%"></th>
-                                <th class="border-0" style="width: 10%"></th>
-                            </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table table-centered table-nowrap mb-0 rounded" id="taskTable"
+                           style="text-align: center">
+                        <thead class="thead-light">
+                        <tr style="vertical-align: middle">
+                            <th class="border-0 rounded-start" style="width: 5%">순번</th>
+                            <th class="border-0" style="width: 30%">작업명</th>
+                            <th class="border-0" style="width: 25%">파일명</th>
+                            <th class="border-0" style="width: 20%">호스트</th>
+                            <th class="border-0" style="width: 10%"></th>
+                            <th class="border-0" style="width: 10%"></th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-<!--        Project Register Modal Content -->
+        <!--        Project Register Modal Content -->
         <div class="col-lg-4">
-            <div class="modal fade" id="modal-form-project-register" tabindex="-1" role="dialog" aria-labelledby="modal-form-project-register" aria-hidden="true">
+            <div class="modal fade" id="modal-form-project-register" tabindex="-1" role="dialog"
+                 aria-labelledby="modal-form-project-register" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body p-0">
                             <div class="card p-3 p-lg-4">
-                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
 
                                 <div class="text-center text-md-center mb-4 mt-md-0">
                                     <h1 class="mb-0 h4">프로젝트 신규 등록</h1>
@@ -407,34 +465,40 @@
                                     <div class="form-group mb-4">
                                         <label for="title">제목</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요." id="title" autofocus required autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요." id="title"
+                                                   autofocus required autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label for="clientName">클라이언트</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="클라이언트 이름을 입력해주세요." id="clientName" autofocus required autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="클라이언트 이름을 입력해주세요."
+                                                   id="clientName" autofocus required autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label for="startDateTime">시작일자</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="시작 일자를 입력해주세요." id="startDateTime" autofocus autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="시작 일자를 입력해주세요."
+                                                   id="startDateTime" autofocus autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label for="endDateTime">종료일자</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="종료 일자를 입력해주세요." id="endDateTime" autofocus autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="종료 일자를 입력해주세요."
+                                                   id="endDateTime" autofocus autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="d-flex justify-content-between w-100 flex-wrap">
                                         <button type="submit" class="btn btn-secondary" id="submitBtn">등록</button>
-                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal" aria-label="Close">취소</button>
+                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal"
+                                                aria-label="Close">취소
+                                        </button>
                                     </div>
                                 </form>
 
@@ -444,16 +508,18 @@
                 </div>
             </div>
         </div>
-<!--        Project Register Modal Content End-->
+        <!--        Project Register Modal Content End-->
 
-<!--        Project modify Modal Content -->
+        <!--        Project Update Modal Content -->
         <div class="col-lg-4">
-            <div class="modal fade" id="modal-form-project-update" tabindex="-1" role="dialog" aria-labelledby="modal-form-project-update" aria-hidden="true">
+            <div class="modal fade" id="modal-form-project-update" tabindex="-1" role="dialog"
+                 aria-labelledby="modal-form-project-update" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body p-0">
                             <div class="card p-3 p-lg-4">
-                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
 
                                 <div class="text-center text-md-center mb-4 mt-md-0">
                                     <h1 class="mb-0 h4">프로젝트 수정</h1>
@@ -465,34 +531,40 @@
                                     <div class="form-group mb-4">
                                         <label for="u_title">제목</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요." id="u_title" autofocus required autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요."
+                                                   id="u_title" autofocus required autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label for="u_clientName">클라이언트</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="클라이언트 이름을 입력해주세요." id="u_clientName" autofocus required autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="클라이언트 이름을 입력해주세요."
+                                                   id="u_clientName" autofocus required autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label for="u_startDateTime">시작일자</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="시작 일자를 입력해주세요." id="u_startDateTime" autofocus autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="시작 일자를 입력해주세요."
+                                                   id="u_startDateTime" autofocus autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label for="u_endDateTime">종료일자</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="종료 일자를 입력해주세요." id="u_endDateTime" autofocus autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="종료 일자를 입력해주세요."
+                                                   id="u_endDateTime" autofocus autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="d-flex justify-content-between w-100 flex-wrap">
                                         <button type="submit" class="btn btn-secondary" id="u_submitBtn">등록</button>
-                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal" aria-label="Close">취소</button>
+                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal"
+                                                aria-label="Close">취소
+                                        </button>
                                     </div>
                                 </form>
 
@@ -502,35 +574,40 @@
                 </div>
             </div>
         </div>
-<!--        Project modify Modal Content End-->
+        <!--        Project Update Modal Content End-->
 
-<!--        Task Register Modal Content -->
+        <!--        Task Register Modal Content -->
         <div class="col-lg-4">
-            <div class="modal fade" id="modal-form-task-register" tabindex="-1" role="dialog" aria-labelledby="modal-form-task-register" aria-hidden="true">
+            <div class="modal fade" id="modal-form-task-register" tabindex="-1" role="dialog"
+                 aria-labelledby="modal-form-task-register" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body p-0">
                             <div class="card p-3 p-lg-4">
-                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
 
                                 <div class="text-center text-md-center mb-4 mt-md-0">
                                     <h1 class="mb-0 h4">작업 신규 등록</h1>
                                 </div>
 
                                 <form action="" class="mt-4" id="taskRegisterForm">
-                                    <input type="hidden" id="t_projectId">
+                                    <input type="hidden" id="t-projectId">
 
                                     <div class="form-group mb-4">
                                         <label for="taskTitle">제목</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요." id="taskTitle" autofocus required autocomplete="off">
+                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요."
+                                                   id="taskTitle" autofocus required autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label >host 설정</label>
-                                        <div class="form-check" style="margin-left: 1rem;" th:each="type, index: ${hostType}">
-                                            <input class="form-check-input" type="checkbox" name="type" th:id="'type'+${index.index}" th:value="${type.name}" required><!-- th:checked="${index.index == 0}">-->
+                                        <label>호스트 설정</label>
+                                        <div class="form-check" style="margin-left: 1rem;"
+                                             th:each="type, index: ${hostType}">
+                                            <input class="form-check-input" type="checkbox" name="type"
+                                                   th:id="'type'+${index.index}" th:value="${type.name}">
                                             <label class="form-check-label" th:for="'type'+${index.index}">
                                                 [[${type.value}]]
                                             </label>
@@ -541,15 +618,23 @@
                                         <label for="scenarioFile">시나리오 파일</label>
                                         <small>(용량 : 5mb 이하 jmx 형식)</small>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="" id="scenarioFileText" disabled>
-                                            <button class="btn btn-outline-gray-500 file-upload-browse" style="border-start-end-radius:8px; border-end-end-radius:8px;" type="button">파일 등록</button>
-                                            <input type="file" style="visibility: hidden; position: absolute;" class="form-control file-upload-default" placeholder="jmx 형식으로 등록하세요." name="scenarioFile" id="scenarioFile">
+                                            <input type="text" class="form-control" placeholder="" id="scenarioFileText"
+                                                   disabled>
+                                            <button class="btn btn-outline-gray-500 file-upload-browse"
+                                                    style="border-start-end-radius:8px; border-end-end-radius:8px;"
+                                                    type="button">파일 등록
+                                            </button>
+                                            <input type="file" style="visibility: hidden; position: absolute;"
+                                                   class="form-control file-upload-default"
+                                                   placeholder="jmx 형식으로 등록하세요." name="scenarioFile" id="scenarioFile">
                                         </div>
                                     </div>
 
                                     <div class="d-flex justify-content-between w-100 flex-wrap">
                                         <button type="submit" class="btn btn-secondary" id="taskSubmitBtn">등록</button>
-                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal" aria-label="Close">취소</button>
+                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal"
+                                                aria-label="Close">취소
+                                        </button>
                                     </div>
                                 </form>
 
@@ -559,64 +644,77 @@
                 </div>
             </div>
         </div>
-<!--        Task Register Modal Content End-->
+        <!--        Task Register Modal Content End-->
 
-<!--&lt;!&ndash;        Task modify Modal Content &ndash;&gt;-->
-<!--        <div class="col-lg-4">-->
-<!--            <div class="modal fade" id="modal-form-task-update" tabindex="-1" role="dialog" aria-labelledby="modal-form-task-update" aria-hidden="true">-->
-<!--                <div class="modal-dialog modal-dialog-centered" role="document">-->
-<!--                    <div class="modal-content">-->
-<!--                        <div class="modal-body p-0">-->
-<!--                            <div class="card p-3 p-lg-4">-->
-<!--                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>-->
+        <!--        Task Update Modal Content -->
+        <div class="col-lg-4">
+            <div class="modal fade" id="modal-form-task-update" tabindex="-1" role="dialog"
+                 aria-labelledby="modal-form-task-update" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card p-3 p-lg-4">
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
 
-<!--                                <div class="text-center text-md-center mb-4 mt-md-0">-->
-<!--                                    <h1 class="mb-0 h4">프로젝트 수정</h1>-->
-<!--                                </div>-->
+                                <div class="text-center text-md-center mb-4 mt-md-0">
+                                    <h1 class="mb-0 h4">작업 수정</h1>
+                                </div>
 
-<!--                                <form action="" class="mt-4" id="taskUpdateForm">-->
-<!--                                    <input type="hidden" id="u_projectId">-->
-<!--                                    <div class="form-group mb-4">-->
-<!--                                        <label for="u_title">제목</label>-->
-<!--                                        <div class="input-group">-->
-<!--                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요." id="u_title" autofocus required autocomplete="off">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                                <form action="" class="mt-4" id="taskUpdateForm">
+                                    <input type="hidden" id="u_taskId">
 
-<!--                                    <div class="form-group mb-4">-->
-<!--                                        <label for="u_clientName">클라이언트</label>-->
-<!--                                        <div class="input-group">-->
-<!--                                            <input type="text" class="form-control" placeholder="클라이언트 이름을 입력해주세요." id="u_clientName" autofocus required autocomplete="off">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                                    <div class="form-group mb-4">
+                                        <label for="u_taskTitle">제목</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="제목을 입력해주세요."
+                                                   id="u_taskTitle" autofocus required autocomplete="off">
+                                        </div>
+                                    </div>
 
-<!--                                    <div class="form-group mb-4">-->
-<!--                                        <label for="u_startDateTime">시작일자</label>-->
-<!--                                        <div class="input-group">-->
-<!--                                            <input type="text" class="form-control" placeholder="시작 일자를 입력해주세요." id="u_startDateTime" autofocus autocomplete="off">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                                    <div>
+                                        <label>호스트 설정</label>
+                                        <div class="form-check" style="margin-left: 1rem;"
+                                             th:each="type, index: ${hostType}">
+                                            <input class="form-check-input" type="checkbox" name="type"
+                                                   th:id="'u_type'+${index.index}" th:value="${type.name}">
+                                            <label class="form-check-label" th:for="'u_type'+${index.index}">
+                                                [[${type.value}]]
+                                            </label>
+                                        </div>
+                                    </div>
 
-<!--                                    <div class="form-group mb-4">-->
-<!--                                        <label for="u_endDateTime">종료일자</label>-->
-<!--                                        <div class="input-group">-->
-<!--                                            <input type="text" class="form-control" placeholder="종료 일자를 입력해주세요." id="u_endDateTime" autofocus autocomplete="off">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                                    <div class="form-group mb-4">
+                                        <label for="scenarioFile">시나리오 파일</label>
+                                        <small>(용량 : 5mb 이하 jmx 형식)</small>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="" id="u_scenarioFileText"
+                                                   disabled>
+                                            <button class="btn btn-outline-gray-500 file-upload-browse"
+                                                    style="border-start-end-radius:8px; border-end-end-radius:8px;"
+                                                    type="button">파일 등록
+                                            </button>
+                                            <input type="file" style="visibility: hidden; position: absolute;"
+                                                   class="form-control file-upload-default"
+                                                   placeholder="jmx 형식으로 등록하세요." name="scenarioFile" id="u_scenarioFile">
+                                        </div>
+                                    </div>
 
-<!--                                    <div class="d-flex justify-content-between w-100 flex-wrap">-->
-<!--                                        <button type="submit" class="btn btn-secondary" id="u_submitBtn">등록</button>-->
-<!--                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal" aria-label="Close">취소</button>-->
-<!--                                    </div>-->
-<!--                                </form>-->
+                                    <div class="d-flex justify-content-between w-100 flex-wrap">
+                                        <button type="submit" class="btn btn-secondary" id="u_taskSubmitBtn">등록</button>
+                                        <button type="reset" class="btn btn-outline-gray-500" data-bs-dismiss="modal"
+                                                aria-label="Close">취소
+                                        </button>
+                                    </div>
+                                </form>
 
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--&lt;!&ndash;        Project modify Modal Content End&ndash;&gt;-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        Project Update Modal Content End-->
 
     </th:block>
 </div>

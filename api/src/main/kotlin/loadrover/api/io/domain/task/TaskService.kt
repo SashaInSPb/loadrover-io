@@ -4,9 +4,11 @@ import loadrover.api.io.config.exception.BaseException
 import loadrover.api.io.config.exception.ExceptionCode
 import loadrover.api.io.domain.base.BaseDto
 import loadrover.api.io.domain.generator.GeneratorEntity
+import loadrover.api.io.domain.generator.GeneratorRepository
 import loadrover.api.io.domain.project.ProjectRepository
 import loadrover.api.io.infra.AwsS3Service
 import org.slf4j.LoggerFactory
+import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.multipart.MultipartFile
@@ -15,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile
 class TaskService(
     private val taskRepository: TaskRepository,
     private val projectRepository: ProjectRepository,
+    private val generatorRepository: GeneratorRepository,
     private val awsS3Service: AwsS3Service,
 ) {
     private val logger = LoggerFactory.getLogger(TaskService::class.java)
@@ -114,9 +117,34 @@ class TaskService(
             throw BaseException(ExceptionCode.NOT_FOUND_CONTENTS)
         }
 
-        task.title = request.title
+        val generatorList = generatorRepository.findAllByTaskId(request.taskId)
 
-        // TODO: task update
+        // FIXME: generatorList와 request.host를 비교하여 변경된 것만 업데이트
+        if (request.host != generatorList) {
+            // request와 generatorList를 비교
+            val newGeneratorList = mutableListOf<GeneratorEntity>()
+            request.host.forEach {
+                    newGeneratorList.add(
+                        GeneratorEntity(
+                            hostAddress = it.host,
+                            type = it.type,
+                            task = task
+                        )
+                    )
+                }
+
+            task.generatorList = newGeneratorList.toMutableSet()
+        }
+
+        // 파일명이 다를 경우에만 업로드 (timestamp로 구분)
+        if (request.file.name != task.uploadFileName) {
+            val file = BaseDto.FileDto(request.file)
+            awsS3Service.upload(file.getUploadPath(), file.upLoadFile.inputStream)
+            task.uploadFileName = file.uploadFileName
+            task.description = file.getContentsFromFile(request.file, 600)
+        }
+
+        task.title = request.title
 
         try {
             taskRepository.save(task)

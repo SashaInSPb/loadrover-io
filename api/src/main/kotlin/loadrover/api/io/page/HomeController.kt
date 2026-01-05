@@ -8,7 +8,7 @@ class HomeController {
 
     @GetMapping("/")
     fun defaultPage(): String {
-        return "views/home"
+        return "redirect:/project"
     }
 
 }
