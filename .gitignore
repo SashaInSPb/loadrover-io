@@ -4,6 +4,10 @@ logs/*.log
 logs/full_log.log
 .gradle/**
 
+# JAR files
+*.jar
+!gradle/wrapper/*.jar
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -13,3 +17,6 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+
+# macOS
+.DS_Store
